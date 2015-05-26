@@ -202,3 +202,25 @@ pre {
         }
     }
 }
+
+
+// Home Buttons
+.homebutton {
+   vertical-align:middle;
+   padding: 10px 7px 10px 0;
+   border-color: transparent;
+}
+
+strong {
+    font-weight: bold;
+}
+
+// image with captions
+.image-wrapper {
+    text-align: center;
+
+    .image-caption {
+        color: $grey-color;
+        margin-top: $spacing-unit / 3;
+    }
+}
