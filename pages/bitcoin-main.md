@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Bitcoin main address
 permalink: /bitcoin-main/
 ---
 
