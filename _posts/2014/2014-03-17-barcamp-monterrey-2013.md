@@ -23,7 +23,7 @@ asistentes en general; gracias a todos el evento se realizó exitosamente.
 <!--excerpt-->
 
 Yo participé con una plática sobre [computación
-voluntaria](http://lopezpedro.net/volunteer-computing "Volunteer computing").
+voluntaria]({{ site.baseurl }}/volunteer-computing "Volunteer computing").
 Grabé 4 desconferencias, los videos se encuentran en mi [canal
 YouTube](https://www.youtube.com/playlist?list=PLrJXVc9tUY-fdUkQqVbACs0p6ufJdJWG_).
 
