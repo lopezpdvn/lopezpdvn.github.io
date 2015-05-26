@@ -11,9 +11,9 @@ I'm a software engineer and a (post-)graduate student at
 [UANL](http://www.uanl.mx "UANL").  I live near Monterrey, México.
 
 My professional interests are: software development, software maintenance, C#,
-.NET, ASP.NET, Javascript, Unix/Linux, open source, web/HTTP and Python.
+.NET, ASP.NET, web/HTTP, Javascript, Unix/Linux, open source and Python.
 
-My personal interests are: rationality, software, altruism, music, medicine,
+My personal interests are: software, rationality, altruism, music, medicine,
 biotech and veganism.
 
 {% include buttons/email.html %}{% include buttons/openpgp.html %}{% include buttons/github.html %}{% include buttons/linkedin.html %}{% include buttons/bitcoin.html %}{% include buttons/fah.html %}
