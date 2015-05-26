@@ -7,8 +7,6 @@ categories: es
 tags: [es]
 ---
 
-{% capture img_src %}{{ site.baseurl }}/{{ site.images_dir }}/2014/donando-libros-monterrey-contacto-email{% endcapture %}
-
 El objetivo principal de este texto es exponer la insatisfactoria atención por
 medio de correo electrónico de parte de bibliotecas públicas de la zona de
 metropolitana de Monterrey. En los últimos meses contacté a 3 bibliotecas
@@ -16,6 +14,8 @@ locales con el propósito de donar libros o dinero para la adquisición de
 libros. Hasta ahora no he recibido respuestas aceptables. He estado retrasando
 la publicación de esta información por algunos meses, lamento los
 inconvenientes.
+
+{% capture img_src %}{{ site.baseurl }}/{{ site.images_dir }}/2014/donando-libros-monterrey-contacto-email{% endcapture %}
 
 Las bibliotecas en cuestión son:
 
