@@ -10,9 +10,6 @@ help:
 	@echo "  servelocal    Serve with the grahamc/jekyll image"
 	@echo "  push	       Push master branch to origin"
 
-clean:
-	-rm -rf $(SITEDIR)/*
-
 servelocal:
 	@$(SERVELOCALCMD)
 
