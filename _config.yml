@@ -13,6 +13,7 @@ permalink: "pretty"
 #permalink: "/blog/:year/:month/:title"
 permalink: "/:title"
 images_dir: "images"
+bitcoin_main_address: "121PXBqUyuvEqu4siiu7EHUU68kj87Bdfg"
 statement_org_ideas: >
   The ideas expressed in this website do not necessarily represent the opinion
   of my employer or any other organization.
