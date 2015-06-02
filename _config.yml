@@ -5,7 +5,7 @@ email: m@lopezpedro.net
 description: > # this means to ignore newlines until "baseurl:"
   Pedro I. Lopez's website.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://lopezpedro.net" # the base hostname & protocol for your site
+url: "http://pedroivanlopez.com" # the base hostname & protocol for your site
 twitter_username: dreilopz
 github_username:  lopezpdvn
 timezone: America/Monterrey
