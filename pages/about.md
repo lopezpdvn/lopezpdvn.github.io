@@ -6,7 +6,7 @@ permalink: /about/
 
 ## About me
 
-My name is Pedro I. Lopez .  I'm a software engineer and a (post-)graduate
+My name is {{ site.author }} .  I'm a software engineer and a (post-)graduate
 student at [UANL](http://www.uanl.mx "UANL").  I live near Monterrey, México.
 [[photo]({{ site.baseurl }}/{{ site.images_dir }}/lopezpdvn_2015_00.jpg "Photo")]
 
