@@ -1,0 +1,937 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>printerc &mdash; printer73x 1.0.2 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="printer73x 1.0.2 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">printer73x 1.0.2 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for printerc</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/env python</span>
+<span class="c"># coding=utf-8</span>
+<span class="c"># Author: Pedro I. López</span>
+<span class="c"># Contact: dreilopz@gmail.com</span>
+
+<span class="sd">&#39;&#39;&#39;Numerical controller for the printer73x system.</span>
+
+<span class="sd">**printerc** is an interactive command line interface for the numerical control</span>
+<span class="sd">of the **printer73x** system.  printerc drives printerm through mcircuit;</span>
+<span class="sd">printerc stablishes a serial connection with mcircuit, and mcircuit is coupled</span>
+<span class="sd">to printerm through the motors.  mcircuit (actually MM12, its subsystem) loads</span>
+<span class="sd">in its memory the routines that correspond to the translations across the</span>
+<span class="sd">:math:`X`, :math:`Y` and :math:`Z` axis, and then printerc execute these</span>
+<span class="sd">routines in order to produce the trajectory of the tool printing the image.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="c"># Standard library imports.</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">atexit</span>
+<span class="kn">import</span> <span class="nn">gc</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c"># Related third party imports.</span>
+<span class="kn">import</span> <span class="nn">serial</span>
+<span class="kn">import</span> <span class="nn">IPython</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span> <span class="c"># remove</span>
+<span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="kn">as</span> <span class="nn">mpimg</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.cm</span> <span class="kn">as</span> <span class="nn">cm</span>
+
+<span class="c"># Same as **printer73x**.</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s">&#39;0.09&#39;</span>
+
+<span class="c"># GLOBAL CONSTANT names.  *if main* section at bottom sets global names too.</span>
+<span class="c"># ==========================================================================</span>
+<span class="c"># ==========================================================================</span>
+<span class="n">LOGF</span> <span class="o">=</span> <span class="s">&#39;log.rst&#39;</span>
+<span class="sd">&#39;&#39;&#39;Path to the log file.&#39;&#39;&#39;</span>
+
+<span class="n">INTRO_MSG</span> <span class="o">=</span> <span class="s">&#39;&#39;&#39;</span><span class="se">\</span>
+
+<span class="s">**printerc**</span>
+
+<span class="s">Welcome!</span>
+
+<span class="s">&#39;&#39;&#39;</span>
+<span class="sd">&#39;&#39;&#39;Welcome message for command line interface.&#39;&#39;&#39;</span>
+
+<span class="c"># MM12</span>
+<span class="c"># ==========================================================================</span>
+<span class="n">TRANSITIONS_PER_STEP</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="sd">&#39;&#39;&#39;The board sets the microstepping format with the jumpers *MS1* and *MS2*.</span>
+<span class="sd">Use the following table to set this constant:</span>
+
+<span class="sd">============ ============ ===============</span>
+<span class="sd">MS1          MS2          TRANSITIONS_PER_STEP</span>
+<span class="sd">============ ============ ===============</span>
+<span class="sd">connected    connected    1</span>
+<span class="sd">disconnected connected    2</span>
+<span class="sd">connected    disconnected 4</span>
+<span class="sd">disconnected disconnected 8</span>
+<span class="sd">============ ============ ===============</span>
+
+<span class="sd">.. note:: Both stepper motor driver boards must have the same jumper</span>
+<span class="sd">          configuration.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="n">STEPS_PER_PIXEL</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="sd">&#39;&#39;&#39;Number of steps the stepper motor needs to translate 1 pixel across the</span>
+<span class="sd">:math:`X` or :math:`Y` axes.&#39;&#39;&#39;</span>
+
+<span class="n">TRANSITIONS_PER_PIXEL</span> <span class="o">=</span> <span class="n">STEPS_PER_PIXEL</span> <span class="o">*</span> <span class="n">TRANSITIONS_PER_STEP</span>
+<span class="sd">&#39;&#39;&#39;Number of low-to-high transitions the stepper motors need to translate 1</span>
+<span class="sd">pixel across the :math:`X` or :math:`Y` axes.&#39;&#39;&#39;</span>
+
+<span class="n">SRV_SIGNAL_CHANNEL_TARGET_OFF</span> <span class="o">=</span> <span class="mi">940</span>
+<span class="sd">&#39;&#39;&#39;:math:`Z` axis servo motor pulse width in units of quarter-:math:`\\mu s`</span>
+<span class="sd">that enables printing (moves the tool down).&#39;&#39;&#39;</span>
+
+<span class="n">SRV_SIGNAL_CHANNEL_TARGET_ON</span> <span class="o">=</span> <span class="mi">2175</span>
+<span class="n">SRV_SIGNAL_CHANNEL_TARGET_ON</span> <span class="o">=</span> <span class="mi">1580</span>
+<span class="sd">&#39;&#39;&#39;:math:`Z` axis servo motor pulse width in units of quarter-:math:`\\mu s`</span>
+<span class="sd">that disables printing (moves the tool up).&#39;&#39;&#39;</span>
+
+<span class="n">STEPPER_CHANNELS_TARGET_ON</span> <span class="o">=</span> <span class="mi">6800</span>
+<span class="sd">&#39;&#39;&#39;Target value in units of quarter-:math:`\\mu s` that drives the stepper</span>
+<span class="sd">channels high.&#39;&#39;&#39;</span>
+
+<span class="n">STEPPER_CHANNELS_TARGET_OFF</span> <span class="o">=</span> <span class="mi">5600</span>
+<span class="sd">&#39;&#39;&#39;Target value in units of quarter-:math:`\\mu s` that drives the stepper</span>
+<span class="sd">channels low.&#39;&#39;&#39;</span>
+
+<span class="n">MM12_AXES_CHANNELS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;X&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;dir_channel&#39;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s">&#39;dir_positive&#39;</span> <span class="p">:</span> <span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+        <span class="s">&#39;dir_negative&#39;</span> <span class="p">:</span> <span class="n">STEPPER_CHANNELS_TARGET_ON</span><span class="p">,</span>
+        <span class="s">&#39;step_channel&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s">&#39;Y&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;dir_channel&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s">&#39;dir_positive&#39;</span> <span class="p">:</span> <span class="n">STEPPER_CHANNELS_TARGET_ON</span><span class="p">,</span>
+        <span class="s">&#39;dir_negative&#39;</span> <span class="p">:</span> <span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+        <span class="s">&#39;step_channel&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s">&#39;Z&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;channel&#39;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s">&#39;on&#39;</span>      <span class="p">:</span> <span class="n">SRV_SIGNAL_CHANNEL_TARGET_OFF</span><span class="p">,</span>
+        <span class="s">&#39;off&#39;</span>     <span class="p">:</span> <span class="n">SRV_SIGNAL_CHANNEL_TARGET_ON</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+<span class="sd">&#39;&#39;&#39;Configuration of the MM12 channels for the servo and stepper motors outputs.&#39;&#39;&#39;</span>
+
+<span class="n">SUB_STEPPER_PIXEL_TEMPLATE</span> <span class="o">=</span> <span class="s">&#39;&#39;&#39;sub {name}</span>
+<span class="s">  {{{{ntransitions}}}}</span>
+<span class="s">  {dir} {dir_channel} servo          # set direction</span>
+<span class="s">  begin</span>
+<span class="s">    dup</span>
+<span class="s">    while</span>
+<span class="s">    {off} {step_channel} servo</span>
+<span class="s">    {{delay}} delay</span>
+<span class="s">    {on} {step_channel} servo</span>
+<span class="s">    {{delay}} delay</span>
+<span class="s">    1 minus</span>
+<span class="s">  repeat</span>
+<span class="s">  quit</span>
+<span class="s">&#39;&#39;&#39;</span>
+<span class="sd">&#39;&#39;&#39;Template for the MM12 script subroutines that drive a stepper motor in units</span>
+<span class="sd">of pixels,&#39;&#39;&#39;</span>
+
+<span class="n">SUB_STEPPER_PULSE_TEMPLATE</span> <span class="o">=</span> <span class="s">&#39;&#39;&#39;sub {name}</span>
+<span class="s">  {dir} {dir_channel} servo          # set direction</span>
+<span class="s">  {off} {step_channel} servo</span>
+<span class="s">  {{delay}} delay</span>
+<span class="s">  {on} {step_channel} servo</span>
+<span class="s">  {{delay}} delay</span>
+<span class="s">  quit</span>
+<span class="s">&#39;&#39;&#39;</span>
+<span class="sd">&#39;&#39;&#39;Template for the MM12 script subroutines that drive a stepper motor in units</span>
+<span class="sd">of low-to-high transitions, for a precise but slow translation.&#39;&#39;&#39;</span>
+
+<span class="n">SUB_SERVO_TEMPLATE</span> <span class="o">=</span> <span class="s">&#39;&#39;&#39;sub {name}</span>
+<span class="s">  {position} {channel} servo</span>
+<span class="s">  begin</span>
+<span class="s">    get_moving_state</span>
+<span class="s">  while</span>
+<span class="s">    # wait until is is no longer moving.</span>
+<span class="s">  repeat</span>
+<span class="s">  75 delay</span>
+<span class="s">  quit</span>
+<span class="s">&#39;&#39;&#39;</span>
+<span class="sd">&#39;&#39;&#39;Template for the MM12 script subroutine that drives the servo motor.&#39;&#39;&#39;</span>
+
+<span class="n">MM12_SCRIPT_INIT</span> <span class="o">=</span> <span class="s">&#39;&#39;&#39;</span><span class="se">\</span>
+<span class="s">{{servo_acceleration}} {servo_channel} acceleration</span>
+<span class="s">{{servo_speed}} {servo_channel} speed</span>
+<span class="s">&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">servo_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Z&#39;</span><span class="p">][</span><span class="s">&#39;channel&#39;</span><span class="p">])</span>
+<span class="sd">&#39;&#39;&#39;MM12 script initialization.&#39;&#39;&#39;</span>
+
+<span class="n">MM12_SUBROUTINES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;X-p&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_STEPPER_PULSE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;x_neg_pulse&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;dir_negative&#39;</span><span class="p">],</span>
+                <span class="n">dir_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;dir_channel&#39;</span><span class="p">],</span>
+                <span class="n">off</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+                <span class="n">step_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;step_channel&#39;</span><span class="p">],</span>
+                <span class="n">on</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_ON</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="s">&#39;X+p&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_STEPPER_PULSE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;x_pos_pulse&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;dir_positive&#39;</span><span class="p">],</span>
+                <span class="n">dir_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;dir_channel&#39;</span><span class="p">],</span>
+                <span class="n">off</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+                <span class="n">step_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;step_channel&#39;</span><span class="p">],</span>
+                <span class="n">on</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_ON</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="s">&#39;X-P&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_STEPPER_PIXEL_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;x_neg_pixel&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;dir_negative&#39;</span><span class="p">],</span>
+                <span class="n">dir_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;dir_channel&#39;</span><span class="p">],</span>
+                <span class="n">off</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+                <span class="n">step_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;step_channel&#39;</span><span class="p">],</span>
+                <span class="n">on</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_ON</span> <span class="p">),</span>
+    <span class="p">},</span>
+    <span class="s">&#39;X+P&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_STEPPER_PIXEL_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;x_pos_pixel&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;dir_positive&#39;</span><span class="p">],</span>
+                <span class="n">dir_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;dir_channel&#39;</span><span class="p">],</span>
+                <span class="n">off</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+                <span class="n">step_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;X&#39;</span><span class="p">][</span><span class="s">&#39;step_channel&#39;</span><span class="p">],</span>
+                <span class="n">on</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_ON</span> <span class="p">),</span>
+    <span class="p">},</span>
+    <span class="s">&#39;Y-p&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_STEPPER_PULSE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;y_neg_pulse&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;dir_negative&#39;</span><span class="p">],</span>
+                <span class="n">dir_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;dir_channel&#39;</span><span class="p">],</span>
+                <span class="n">off</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+                <span class="n">step_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;step_channel&#39;</span><span class="p">],</span>
+                <span class="n">on</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_ON</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="s">&#39;Y+p&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_STEPPER_PULSE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;y_pos_pulse&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;dir_positive&#39;</span><span class="p">],</span>
+                <span class="n">dir_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;dir_channel&#39;</span><span class="p">],</span>
+                <span class="n">off</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+                <span class="n">step_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;step_channel&#39;</span><span class="p">],</span>
+                <span class="n">on</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_ON</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="s">&#39;Y-P&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_STEPPER_PIXEL_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;y_neg_pixel&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;dir_negative&#39;</span><span class="p">],</span>
+                <span class="n">dir_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;dir_channel&#39;</span><span class="p">],</span>
+                <span class="n">off</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+                <span class="n">step_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;step_channel&#39;</span><span class="p">],</span>
+                <span class="n">on</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_ON</span> <span class="p">),</span>
+    <span class="p">},</span>
+    <span class="s">&#39;Y+P&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_STEPPER_PIXEL_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;y_pos_pixel&#39;</span><span class="p">,</span> <span class="nb">dir</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;dir_positive&#39;</span><span class="p">],</span>
+                <span class="n">dir_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;dir_channel&#39;</span><span class="p">],</span>
+                <span class="n">off</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_OFF</span><span class="p">,</span>
+                <span class="n">step_channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Y&#39;</span><span class="p">][</span><span class="s">&#39;step_channel&#39;</span><span class="p">],</span>
+                <span class="n">on</span><span class="o">=</span><span class="n">STEPPER_CHANNELS_TARGET_ON</span> <span class="p">),</span>
+    <span class="p">},</span>
+    <span class="s">&#39;Z-&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_SERVO_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;z_position_off&#39;</span><span class="p">,</span>
+                <span class="n">channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Z&#39;</span><span class="p">][</span><span class="s">&#39;channel&#39;</span><span class="p">],</span>
+                <span class="n">position</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Z&#39;</span><span class="p">][</span><span class="s">&#39;off&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="s">&#39;Z+&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;subroutine_id&#39;</span>       <span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s">&#39;subroutine_body&#39;</span> <span class="p">:</span>
+            <span class="n">SUB_SERVO_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">&#39;z_position_on&#39;</span><span class="p">,</span>
+                <span class="n">channel</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Z&#39;</span><span class="p">][</span><span class="s">&#39;channel&#39;</span><span class="p">],</span>
+                <span class="n">position</span><span class="o">=</span><span class="n">MM12_AXES_CHANNELS</span><span class="p">[</span><span class="s">&#39;Z&#39;</span><span class="p">][</span><span class="s">&#39;on&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+<span class="sd">&#39;&#39;&#39;Structure that builds and identifies the MM12 script subroutines.&#39;&#39;&#39;</span>
+
+<span class="n">MM12_SCRIPT_RUNNING</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\x00</span><span class="s">&#39;</span>
+<span class="sd">&#39;&#39;&#39;Byte value that the MM12 returns when the script is running.&#39;&#39;&#39;</span>
+
+<span class="n">MM12_SCRIPT_STOPPED</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\x01</span><span class="s">&#39;</span>
+<span class="sd">&#39;&#39;&#39;Byte value that the MM12 returns when the script is stopped.&#39;&#39;&#39;</span>
+<span class="c"># ==========================================================================</span>
+
+<span class="c"># ==========================================================================</span>
+<span class="c"># ==========================================================================</span>
+
+<div class="viewcode-block" id="Getch"><a class="viewcode-back" href="../index.html#printerc.Getch">[docs]</a><span class="k">class</span> <span class="nc">Getch</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Gets a single character from standard input.  Does not echo to the</span>
+<span class="sd">    screen.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ==========</span>
+
+<span class="sd">    .. [GETCHRECIPE] http://code.activestate.com/recipes/134892/</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">impl</span> <span class="o">=</span> <span class="n">_GetchWindows</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">impl</span> <span class="o">=</span> <span class="n">_GetchUnix</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">impl</span><span class="p">()</span>
+</div>
+<span class="k">class</span> <span class="nc">_GetchUnix</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;Unix implementation of class ``Getch``.&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">tty</span><span class="o">,</span> <span class="nn">sys</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">tty</span><span class="o">,</span> <span class="nn">termios</span>
+        <span class="n">fd</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">fileno</span><span class="p">()</span>
+        <span class="n">old_settings</span> <span class="o">=</span> <span class="n">termios</span><span class="o">.</span><span class="n">tcgetattr</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">tty</span><span class="o">.</span><span class="n">setraw</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">fileno</span><span class="p">())</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">termios</span><span class="o">.</span><span class="n">tcsetattr</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">termios</span><span class="o">.</span><span class="n">TCSADRAIN</span><span class="p">,</span> <span class="n">old_settings</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ch</span>
+
+<span class="k">class</span> <span class="nc">_GetchWindows</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;Windows implementation of class ``Getch``.&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">msvcrt</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">msvcrt</span>
+        <span class="k">return</span> <span class="n">msvcrt</span><span class="o">.</span><span class="n">getch</span><span class="p">()</span>
+
+<div class="viewcode-block" id="on_exit"><a class="viewcode-back" href="../index.html#printerc.on_exit">[docs]</a><span class="k">def</span> <span class="nf">on_exit</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Actions to do on exit.&#39;&#39;&#39;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">print</span> <span class="o">&gt;&gt;</span><span class="n">logf</span><span class="p">,</span> <span class="s">&#39;Closing ``{0}`` *command port*&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">port</span><span class="p">)</span>
+        <span class="n">sp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">print</span> <span class="o">&gt;&gt;</span><span class="n">logf</span><span class="p">,</span> <span class="s">&#39;END&#39;</span>
+    <span class="n">logf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">print</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">Thanks for using ``printerc``!</span><span class="se">\n</span><span class="s">&#39;</span>
+
+    <span class="c"># Invoke the garbage collector.</span>
+    <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="scan_serial_ports"><a class="viewcode-back" href="../index.html#printerc.scan_serial_ports">[docs]</a><span class="k">def</span> <span class="nf">scan_serial_ports</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Scan system for available physical or virtual serial ports.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    available : list of tuples</span>
+<span class="sd">        Each element of the list is a ``(num, name)`` tuple with the number and</span>
+<span class="sd">        name of the port.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Directly copied from example from `pyserial</span>
+<span class="sd">    &lt;http://sourceforge.net/projects/pyserial/files/package&gt;`_ project.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">available</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">available</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">portstr</span><span class="p">))</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">serial</span><span class="o">.</span><span class="n">SerialException</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">available</span>
+</div>
+<div class="viewcode-block" id="mm12_script_status"><a class="viewcode-back" href="../index.html#printerc.mm12_script_status">[docs]</a><span class="k">def</span> <span class="nf">mm12_script_status</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Indicate whether the MM12 script is running or stopped.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    script_status : {``MM12_SCRIPT_RUNNING``, ``MM12_SCRIPT_STOPPED``}</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">sp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\xae</span><span class="s">&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">sp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="translate"><a class="viewcode-back" href="../index.html#printerc.translate">[docs]</a><span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="n">adm</span><span class="p">,</span> <span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Translate the printerm tool across the :math:`XYZ` space.</span>
+
+<span class="sd">    printer73x can only perform translations across a single axis at a time.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    adm: str</span>
+<span class="sd">        *adm* stands for Axis, Direction, Mode.  Use the following table to</span>
+<span class="sd">        select the kind of translation you want to perform (where :math:`n` is</span>
+<span class="sd">        the number of pulses for the printerm tool to translate a pixel unit</span>
+<span class="sd">        across the respective axis).</span>
+
+<span class="sd">        ======= ================================================================</span>
+<span class="sd">        *adm*   translation</span>
+<span class="sd">        ======= ================================================================</span>
+<span class="sd">        ``X-p`` send 1 single pulse for negative translation across :math:`X`.</span>
+<span class="sd">        ``X+p`` send 1 single pulse for positive translation across :math:`X`.</span>
+<span class="sd">        ``X-P`` send :math:`n` pulses for negative translation across :math:`X`.</span>
+<span class="sd">        ``X+P`` send :math:`n` pulses for positive translation across :math:`X`.</span>
+<span class="sd">        ``Y-p`` send 1 single pulse for negative translation across :math:`Y`.</span>
+<span class="sd">        ``Y+p`` send 1 single pulse for positive translation across :math:`Y`.</span>
+<span class="sd">        ``Y-P`` send :math:`n` pulses for negative translation across :math:`Y`.</span>
+<span class="sd">        ``Y+P`` send :math:`n` pulses for positive translation across :math:`Y`.</span>
+<span class="sd">        ``Z-``  move the tool to the off position (:math:`Z`).</span>
+<span class="sd">        ``Z+``  move the tool to the on position (:math:`Z`).</span>
+<span class="sd">        ======= ================================================================</span>
+<span class="sd">    confirm: boolean, optional</span>
+<span class="sd">        If ``True``, the user must confirm the translation by pressing Enter</span>
+<span class="sd">        (default is ``False``).</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c"># Start until script is not running.</span>
+    <span class="k">while</span> <span class="n">mm12_script_status</span><span class="p">()</span> <span class="o">==</span> <span class="n">MM12_SCRIPT_RUNNING</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="n">subroutine_id</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span> <span class="n">MM12_SUBROUTINES</span><span class="p">[</span><span class="n">adm</span><span class="p">][</span><span class="s">&#39;subroutine_id&#39;</span><span class="p">])</span>
+    <span class="n">str2write</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;</span><span class="se">\xa7</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">subroutine_id</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">confirm</span><span class="p">:</span>
+        <span class="nb">raw_input</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">sp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">str2write</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+
+    <span class="c">#if &#39;Z&#39; in adm:</span>
+        <span class="c">#time.sleep(0.1)</span>
+</div>
+<div class="viewcode-block" id="build_mm12_script"><a class="viewcode-back" href="../index.html#printerc.build_mm12_script">[docs]</a><span class="k">def</span> <span class="nf">build_mm12_script</span><span class="p">(</span><span class="n">fpath</span><span class="p">,</span> <span class="n">ntransitions</span><span class="o">=</span><span class="n">TRANSITIONS_PER_PIXEL</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                      <span class="n">servo_acceleration</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">servo_speed</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Build a script to be loaded on the MM12.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    fpath : str-like</span>
+<span class="sd">        Path location where to save the script file.</span>
+<span class="sd">    ntransitions : int, optional</span>
+<span class="sd">        Number of low-to-high transitions to perform in the subroutines that</span>
+<span class="sd">        performs translation in units of pixels through the stepper motor</span>
+<span class="sd">        (default is ``TRANSITIONS_PER_PIXEL``).</span>
+<span class="sd">    delay : int, optional</span>
+<span class="sd">        Delay (in milliseconds) between each transition in the subroutines that</span>
+<span class="sd">        perform translation through the stepper motors (default is 1).</span>
+<span class="sd">    servo_acceleration : int, optional</span>
+<span class="sd">        Sets the acceleration of the servo signal channel in units of (0.25</span>
+<span class="sd">        us)/(10 ms)/(80 ms) (default is 0).</span>
+<span class="sd">    servo_speed : int, optional</span>
+<span class="sd">        Sets the speed of the servo signal channel in units of (0.25 us)/(10</span>
+<span class="sd">        ms) (default is 100).</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">get_subroutine_key_by_id</span><span class="p">(</span><span class="n">subroutine_id</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">MM12_SUBROUTINES</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">subroutine_id</span> <span class="ow">is</span> <span class="n">value</span><span class="p">[</span><span class="s">&#39;subroutine_id&#39;</span><span class="p">]:</span>
+                <span class="k">return</span> <span class="n">key</span>
+
+    <span class="k">for</span> <span class="n">intarg</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ntransitions</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">servo_acceleration</span><span class="p">,</span> <span class="n">servo_speed</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">intarg</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fpath</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">print</span> <span class="o">&gt;&gt;</span><span class="n">f</span><span class="p">,</span> <span class="n">MM12_SCRIPT_INIT</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">servo_acceleration</span><span class="o">=</span><span class="n">servo_acceleration</span><span class="p">,</span>
+                                       <span class="n">servo_speed</span><span class="o">=</span><span class="n">servo_speed</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span> <span class="n">MM12_SUBROUTINES</span><span class="p">)):</span>
+            <span class="n">subroutine_key</span> <span class="o">=</span> <span class="n">get_subroutine_key_by_id</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">subroutine_body</span> <span class="o">=</span> <span class="n">MM12_SUBROUTINES</span><span class="p">[</span><span class="n">subroutine_key</span><span class="p">][</span><span class="s">&#39;subroutine_body&#39;</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="s">&#39;Z&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">subroutine_key</span><span class="p">:</span>
+                <span class="n">subroutine_body</span> <span class="o">=</span> <span class="n">subroutine_body</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">delay</span><span class="o">=</span><span class="n">delay</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="s">&#39;P&#39;</span> <span class="ow">in</span> <span class="n">subroutine_key</span><span class="p">:</span>
+                    <span class="n">subroutine_body</span> <span class="o">=</span> <span class="n">subroutine_body</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ntransitions</span><span class="o">=</span><span class="n">ntransitions</span><span class="p">)</span>
+
+            <span class="k">print</span> <span class="o">&gt;&gt;</span><span class="n">f</span><span class="p">,</span> <span class="n">subroutine_body</span>
+</div>
+<div class="viewcode-block" id="prepare_img"><a class="viewcode-back" href="../index.html#printerc.prepare_img">[docs]</a><span class="k">def</span> <span class="nf">prepare_img</span><span class="p">(</span><span class="n">imgpath</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Perform any necessary processing for the input image to be reproduced by</span>
+<span class="sd">    printerm.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    imgpath : str-like</span>
+<span class="sd">        Path to the image file.  Must be PNG, 8-bit grayscale, non-interlaced.</span>
+<span class="sd">    invert : boolean, optional</span>
+<span class="sd">        Invert the image if ``True`` (default is ``False``).</span>
+<span class="sd">    show : boolean, optional</span>
+<span class="sd">        Show the image if ``True`` (default is ``False``).</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function sets the following global names:</span>
+
+<span class="sd">    **img** : array of booleans</span>
+<span class="sd">        2-d array representation of the image.</span>
+<span class="sd">    **b** : int</span>
+<span class="sd">        Image&#39;s height, number of rows in the array representation.</span>
+<span class="sd">    **w** : int</span>
+<span class="sd">        Image&#39;s width, number of columns in the array representation.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">global</span> <span class="n">img</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">w</span>
+    <span class="k">print</span> <span class="s">&#39;Loading ``{0}``...&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">imgpath</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">imgpath</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&#39;png&#39;</span><span class="p">)</span>
+    <span class="n">b</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">npixels</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">w</span>
+    <span class="n">nprints</span> <span class="o">=</span> <span class="n">nnotprints</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">w</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">print</span> <span class="s">&#39;Processing the image...&#39;</span>
+    <span class="c"># only total black and white, no grays.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.9</span><span class="p">:</span>
+                <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+    <span class="k">if</span> <span class="n">invert</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&#39;Inverting image...&#39;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                    <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+    <span class="c"># Check for pixel with and without color.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">nnotprints</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">nprints</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">nnotprints</span> <span class="o">+</span> <span class="n">nprints</span><span class="p">)</span> <span class="o">==</span> <span class="n">npixels</span>
+
+    <span class="c"># If ``nprints == 0`` then no pixel will be printed.</span>
+    <span class="k">assert</span> <span class="n">nprints</span> <span class="o">&gt;</span> <span class="mi">0</span>
+
+    <span class="k">print</span> <span class="s">&#39;Loaded ``{0}`` with {1} pixels, {2} of which have color&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+             <span class="n">imgpath</span><span class="p">,</span> <span class="n">npixels</span><span class="p">,</span> <span class="n">nprints</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s">&#39;all&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">show</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="connect_printerm"><a class="viewcode-back" href="../index.html#printerc.connect_printerm">[docs]</a><span class="k">def</span> <span class="nf">connect_printerm</span><span class="p">(</span><span class="n">commandport_id</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Connect printerc with printerm through the MM12 command port.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    commandport_id : str or int</span>
+<span class="sd">        Serial device name or port number number of the MM12 serial command</span>
+<span class="sd">        port.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">global</span> <span class="n">sp</span>
+
+    <span class="n">sp</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="n">commandport_id</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">sp</span><span class="o">.</span><span class="n">isOpen</span><span class="p">()</span>
+    <span class="k">print</span> <span class="o">&gt;&gt;</span><span class="n">logf</span><span class="p">,</span> <span class="s">&#39;``{0}`` just opened *command port* ``{1}``&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">PN</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">port</span><span class="p">)</span>
+
+
+    <span class="n">msg</span> <span class="o">=</span> <span class="s">&#39;``{0}`` is now connected to ``printerm`` through ``{1}``&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">PN</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">port</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="p">(</span><span class="n">logf</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">):</span>
+        <span class="k">print</span> <span class="o">&gt;&gt;</span><span class="n">f</span><span class="p">,</span> <span class="n">msg</span>
+</div>
+<div class="viewcode-block" id="manual_translation_mode"><a class="viewcode-back" href="../index.html#printerc.manual_translation_mode">[docs]</a><span class="k">def</span> <span class="nf">manual_translation_mode</span><span class="p">(</span><span class="n">precise</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Manually translate the printerm tool across the :math:`XY` plane.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    precise : boolean, optional</span>
+<span class="sd">        If ``True``, perform translation in units of single low-to-high transitions</span>
+<span class="sd">        sent to the stepper motor drivers (how much the tool is translated</span>
+<span class="sd">        depends on the microstep format selected through the XMS1, XMS2, YMS1,</span>
+<span class="sd">        YMS2 jumpers in mcircuit).  If ``False`` perform translation in units</span>
+<span class="sd">        of pixels (default is True).</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">if</span> <span class="n">precise</span><span class="p">:</span>
+        <span class="n">keys2translation</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s">&#39;h&#39;</span> <span class="p">:</span> <span class="s">&#39;X-p&#39;</span><span class="p">,</span>
+            <span class="s">&#39;l&#39;</span> <span class="p">:</span> <span class="s">&#39;X+p&#39;</span><span class="p">,</span>
+            <span class="s">&#39;j&#39;</span> <span class="p">:</span> <span class="s">&#39;Y+p&#39;</span><span class="p">,</span>
+            <span class="s">&#39;k&#39;</span> <span class="p">:</span> <span class="s">&#39;Y-p&#39;</span><span class="p">,</span>
+            <span class="s">&#39;i&#39;</span> <span class="p">:</span> <span class="s">&#39;Z+&#39;</span><span class="p">,</span>
+            <span class="s">&#39;o&#39;</span> <span class="p">:</span> <span class="s">&#39;Z-&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">keys2translation</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s">&#39;h&#39;</span> <span class="p">:</span> <span class="s">&#39;X-P&#39;</span><span class="p">,</span>
+            <span class="s">&#39;l&#39;</span> <span class="p">:</span> <span class="s">&#39;X+P&#39;</span><span class="p">,</span>
+            <span class="s">&#39;j&#39;</span> <span class="p">:</span> <span class="s">&#39;Y+P&#39;</span><span class="p">,</span>
+            <span class="s">&#39;k&#39;</span> <span class="p">:</span> <span class="s">&#39;Y-P&#39;</span><span class="p">,</span>
+            <span class="s">&#39;i&#39;</span> <span class="p">:</span> <span class="s">&#39;Z+&#39;</span><span class="p">,</span>
+            <span class="s">&#39;o&#39;</span> <span class="p">:</span> <span class="s">&#39;Z-&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="n">getch</span> <span class="o">=</span> <span class="n">Getch</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">ch</span> <span class="o">=</span> <span class="n">getch</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">ch</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">keys2translation</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">break</span>
+        <span class="k">while</span> <span class="n">mm12_script_status</span><span class="p">()</span> <span class="o">==</span> <span class="n">MM12_SCRIPT_RUNNING</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="n">translate</span><span class="p">(</span><span class="n">keys2translation</span><span class="p">[</span><span class="n">ch</span><span class="p">],</span> <span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="print_pixel"><a class="viewcode-back" href="../index.html#printerc.print_pixel">[docs]</a><span class="k">def</span> <span class="nf">print_pixel</span><span class="p">(</span><span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">confirm</span><span class="p">:</span>
+        <span class="nb">raw_input</span><span class="p">()</span>
+    <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z+&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z-&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="print_image"><a class="viewcode-back" href="../index.html#printerc.print_image">[docs]</a><span class="k">def</span> <span class="nf">print_image</span><span class="p">(</span><span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">report_position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&#39;At row {0}, column {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">print_img_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">print_pixel</span><span class="p">(</span><span class="n">confirm</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="s">&#39;Preparing to print an image with {0} rows and {1} columns&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">,</span>
+                                                                                 <span class="n">w</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">msg</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c"># We are at HOME position.</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+            <span class="k">print</span> <span class="s">&#39;Printing across the row {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">report_position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="n">print_img_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">w</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="n">translate</span><span class="p">(</span><span class="s">&#39;X+P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="k">print</span> <span class="s">&#39;Returning to a_{{{0}, 0}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="n">translate</span><span class="p">(</span><span class="s">&#39;X-P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
+
+            <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Y+P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">print</span> <span class="s">&#39;Returning to a_{{0, 0}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Y-P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="k">print</span> <span class="s">&#39;The image has been printed&#39;</span>
+
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="n">sp</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="k">print</span> <span class="s">&#39;Operation interrupted, flushing command port&#39;</span>
+</div>
+<div class="viewcode-block" id="print_image_better"><a class="viewcode-back" href="../index.html#printerc.print_image_better">[docs]</a><span class="k">def</span> <span class="nf">print_image_better</span><span class="p">(</span><span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">report_position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&#39;At row {0}, column {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">print_img_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">print_pixel</span><span class="p">(</span><span class="n">confirm</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">color_in_this_row</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">pixel</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="s">&#39;Preparing to print an image with {0} rows and {1} columns&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">,</span>
+                                                                                 <span class="n">w</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">msg</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c"># We are at HOME position.</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+            <span class="k">print</span> <span class="s">&#39;Printing across the row {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">report_position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="n">print_img_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">w</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="n">translate</span><span class="p">(</span><span class="s">&#39;X+P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Y+P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="k">print</span> <span class="s">&#39;Printing across the row {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">report_position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="n">print_img_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="n">translate</span><span class="p">(</span><span class="s">&#39;X-P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
+
+            <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Y+P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">print</span> <span class="s">&#39;Returning to a_{{0, 0}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Y-P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;X-P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="k">print</span> <span class="s">&#39;The image has been printed&#39;</span>
+
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="n">sp</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="k">print</span> <span class="s">&#39;Operation interrupted, flushing command port&#39;</span>
+</div>
+<div class="viewcode-block" id="print_image_better_better"><a class="viewcode-back" href="../index.html#printerc.print_image_better_better">[docs]</a><span class="k">def</span> <span class="nf">print_image_better_better</span><span class="p">(</span><span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Automatically print the input image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    confirm : boolean, optional</span>
+<span class="sd">        Wait for confirmation before any translation (default is ``False``).</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    Let :math:`\mathbf{A}` be the matrix representation of the input image.</span>
+<span class="sd">    :math:`a_{y,x}` as an element of :math:`\mathbf{A}`, represents a pixel.</span>
+<span class="sd">    Comparing :math:`\mathbf{A}` with the input image from a front perspective:</span>
+
+<span class="sd">    #. :math:`a_{0,0}` corresponds to the upper left corner of the input image.</span>
+
+<span class="sd">    #. :math:`a_{b-1,w-1}` corresponds to the lower right corner of the input</span>
+<span class="sd">       image.</span>
+
+<span class="sd">    Starting from the HOME position the printerm tool visit every element of</span>
+<span class="sd">    the row from :math:`a_{0,0}` to :math:`a_{0,w-1}` then moves to the next</span>
+<span class="sd">    row (:math:`a_{1,w-1}`) and visits every element of the row from</span>
+<span class="sd">    :math:`a_{1,w-1}` to :math:`a_{1,0}`, and so on until there are no more</span>
+<span class="sd">    rows to visit.  In any position, if the corresponding pixel is black then</span>
+<span class="sd">    the tool prints it.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">report_position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&#39;At row {0}, column {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">print_img_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">confirm</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">print_pixel</span><span class="p">(</span><span class="n">confirm</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">color_in_this_row</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">pixel</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="s">&#39;Preparing to print an image with {0} rows and {1} columns&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">,</span>
+                                                                                 <span class="n">w</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">msg</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c"># We are at HOME position.</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+            <span class="c"># To the right.</span>
+            <span class="k">print</span> <span class="s">&#39;Printing across the row {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">report_position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+                    <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z+&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">:</span>
+                        <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z-&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="k">pass</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">w</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z-&#39;</span><span class="p">)</span>
+                    <span class="k">break</span>
+                <span class="n">translate</span><span class="p">(</span><span class="s">&#39;X+P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z-&#39;</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Y+P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c"># To the left.</span>
+            <span class="k">print</span> <span class="s">&#39;Printing across the row {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">report_position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+                    <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z+&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">img</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">:</span>
+                    <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z-&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z-&#39;</span><span class="p">)</span>
+                    <span class="k">break</span>
+                <span class="n">translate</span><span class="p">(</span><span class="s">&#39;X-P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+                <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
+
+            <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Z-&#39;</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Y+P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">print</span> <span class="s">&#39;Returning to a_{{0, 0}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;Y-P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">translate</span><span class="p">(</span><span class="s">&#39;X-P&#39;</span><span class="p">,</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="k">print</span> <span class="s">&#39;The image has been printed&#39;</span>
+
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="n">sp</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="k">print</span> <span class="s">&#39;Operation interrupted, flushing command port&#39;</span>
+</div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c"># program name from file name.</span>
+    <span class="n">PN</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">logf</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOGF</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="o">&gt;&gt;</span><span class="n">logf</span><span class="p">,</span> <span class="s">&#39;START&#39;</span>
+    <span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">on_exit</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">Shell</span><span class="o">.</span><span class="n">IPShellEmbed</span><span class="p">()(</span> <span class="n">INTRO_MSG</span><span class="p">)</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">printer73x 1.0.2 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Pedro I. López.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
