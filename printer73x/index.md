@@ -6,6 +6,8 @@ permalink: /printer73x/
 
 # A CNC printer for binary images
 
+- [Github repo](https://github.com/{{ site.github_username }}/printer73x "printer73x at Github")
+
 **printer73x** is a CNC system for printing binary images. printer73x was
 developed for the school courses _734 - PROYECTO DE IMTC I_ and _735 - PROYECTO
 DE IMTC II_ (spanish for _mechatronics project_) at
