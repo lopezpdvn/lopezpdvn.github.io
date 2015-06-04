@@ -1,0 +1,885 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>cerca documentation &mdash; cerca 1.0.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="cerca 1.0.4 documentation" href="#" />
+    <link rel="next" title="cuc source code" href="cuc_source_code.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cuc_source_code.html" title="cuc source code"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">cerca 1.0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="cerca-documentation">
+<h1>cerca documentation<a class="headerlink" href="#cerca-documentation" title="Permalink to this headline">¶</a></h1>
+<p><em>Distance measurement system</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Pedro I. López</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Contact:</th><td class="field-body"><a class="reference external" href="mailto:dreilopz&#37;&#52;&#48;gmail&#46;com">dreilopz<span>&#64;</span>gmail<span>&#46;</span>com</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">License:</th><td class="field-body"><a class="reference external" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body">November 02, 2012</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Version:</th><td class="field-body">1.0.4</td>
+</tr>
+</tbody>
+</table>
+<p>Project&#8217;s website: <a class="reference external" href="http://www.dreilopz.me/cerca">http://www.dreilopz.me/cerca</a></p>
+<p>Video demonstration: <a class="reference external" href="http://youtu.be/OE_qz_wE0Hs">http://youtu.be/OE_qz_wE0Hs</a></p>
+<div class="figure">
+<img alt="_images/cerca_picture.png" src="_images/cerca_picture.png" />
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="introduction">
+<span id="section-introduction"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Project <strong>cerca</strong> is a PC-based distance measurement system, developed
+for the school course <em>482 - TÓPICOS SELECTOS DMI I</em> <a class="footnote-reference" href="#id4" id="id1">[1]</a> at <a class="reference external" href="http://www.fime.uanl.mx">FIME</a> <a class="reference external" href="http://www.uanl.mx">UANL</a>.  cerca has
+only been tested on Windows XP and Fedora 15 but should work on Windows
+Vista, Windows 7, Mac OS X, and most Linux distributions.  The software
+is implemented in Python 2 and C.  cerca was designed and implemented by
+Pedro I. López [<a class="reference external" href="mailto:dreilopz&#37;&#52;&#48;gmail&#46;com">dreilopz<span>&#64;</span>gmail<span>&#46;</span>com</a>].  The project is publicly released
+for educational purposes and under permissive licenses.</p>
+<p>The sections <a class="reference internal" href="#section-system-elements"><em>System elements</em></a> and
+<a class="reference internal" href="#section-system-design"><em>System design</em></a> list (symbolic) names of different elements
+of the system that are used throughout the document.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In this document the standard Unix-like path notation is used.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Every path is relative to the project&#8217;s distribution main
+directory.</p>
+</div>
+</div>
+<div class="section" id="system-requirements">
+<h2>System requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Supported operating system:<ul>
+<li>Windows XP (tested)</li>
+<li>Windows Vista</li>
+<li>Windows 7</li>
+<li>Most Linux distributions (tested on Fedora 15)</li>
+<li>Mac OSX</li>
+</ul>
+</li>
+<li>1 serial port RS232.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If your computer doesn&#8217;t have a physical serial port you will
+need to use an adaptor, for example an USB-RS232 adaptor with a
+compatible driver.</p>
+</div>
+</div>
+<div class="section" id="system-elements">
+<span id="section-system-elements"></span><h2>System elements<a class="headerlink" href="#system-elements" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See section <a class="reference internal" href="#section-system-design"><em>System design</em></a> for other system-wide
+definitions.</p>
+</div>
+<table border="1" class="docutils">
+<caption><strong>System components</strong></caption>
+<colgroup>
+<col width="1%" />
+<col width="23%" />
+<col width="58%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>quantity</em></th>
+<th class="head"><em>element</em></th>
+<th class="head"><em>description</em></th>
+<th class="head"><em>symbolic name</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>PC</td>
+<td>Personal computer with compatible operating system</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Object</td>
+<td>Solid object</td>
+<td><strong>OBJ</strong></td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>ATMEGA88PA</td>
+<td>8-bit microcontroller</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>4N26</td>
+<td>Opto-isolator</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>4 <img class="math" src="_images/math/b4015e1c6ac524d21f012629d6d35ae521671441.png" alt="\mathrm{MHz}"/> crystal</td>
+<td>Standard frequency crystal</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>22 <img class="math" src="_images/math/04cd45c98df1744581a001194f8c4c1eac634299.png" alt="\mathrm{pF}"/> capacitor</td>
+<td>Capacitor for oscilator subcircuit</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Stripboard</td>
+<td>7 x 14.5 <img class="math" src="_images/math/80720a67ae58da59ef0e9086920b7a3cd0dac7c8.png" alt="\mathrm{cm}"/> stripboard</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>0.1 <img class="math" src="_images/math/20925357f70fbf9ff87de248096bc78f2e10daac.png" alt="\mu \mathrm{P}"/> capacitor</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Power terminal</td>
+<td>-</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>330 <img class="math" src="_images/math/9e2b196e9b7e57d1ec99f6534c581ea9759d2170.png" alt="\Omega"/>, ½ <img class="math" src="_images/math/bf2bdece83817d037beee0e90f89562c4e928b0f.png" alt="\mathrm{W}"/> resistor</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>100 <img class="math" src="_images/math/9e2b196e9b7e57d1ec99f6534c581ea9759d2170.png" alt="\Omega"/>, ½ <img class="math" src="_images/math/bf2bdece83817d037beee0e90f89562c4e928b0f.png" alt="\mathrm{W}"/> resistor</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>220 <img class="math" src="_images/math/9e2b196e9b7e57d1ec99f6534c581ea9759d2170.png" alt="\Omega"/>, ½ <img class="math" src="_images/math/bf2bdece83817d037beee0e90f89562c4e928b0f.png" alt="\mathrm{W}"/> resistor</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>GP2Y0A21YK</td>
+<td>Distance measurement infrared sensor</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Blue LED</td>
+<td>5 <img class="math" src="_images/math/ce7e692ce3ada16bca1b35fe5bdabb1543c03536.png" alt="\mathrm{mm}"/> LED</td>
+<td><strong>VISOUT</strong></td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>White LED</td>
+<td>5 <img class="math" src="_images/math/ce7e692ce3ada16bca1b35fe5bdabb1543c03536.png" alt="\mathrm{mm}"/> LED</td>
+<td><strong>STATUSLED</strong></td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>PRT-00449</td>
+<td>RS232 shifter</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Buzzer</td>
+<td>3.7 <img class="math" src="_images/math/e679dd4b8410e08084137dffe9ec46bb4aa5f6d9.png" alt="\mathrm{kHz}"/>, 3-24 <img class="math" src="_images/math/914d94b8272fd8b700724b66171afdaab1c32ce8.png" alt="\mathrm{V}"/>, 95 <img class="math" src="_images/math/49458c491017a85d53f2367b349f286de83cdcf4.png" alt="\mathrm{dB}"/></td>
+<td><strong>AUDOUT</strong></td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>28-pin IC base</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>8-pin IC base</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>Generic screws</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Power switch</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Power jack</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Project case</td>
+<td>Plastic project case</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>RS232 cable</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Power supply</td>
+<td>5 <img class="math" src="_images/math/914d94b8272fd8b700724b66171afdaab1c32ce8.png" alt="\mathrm{V}"/> 1 <img class="math" src="_images/math/f50432bd5ef7c3a5821edb7f976f1e21bf52702c.png" alt="\mathrm{A}"/></td>
+<td><strong>PS</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="system-design">
+<span id="section-system-design"></span><h2>System design<a class="headerlink" href="#system-design" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See section <a class="reference internal" href="#section-system-elements"><em>System elements</em></a> for other
+system-wide definitions.</p>
+</div>
+<p>Project cerca&#8217;s purpose is to measure the distance between a
+solid object and the system, indicating this data to the user through an
+audiovisual signal.  The distance to be measured is in the range of
+10 to 80 <img class="math" src="_images/math/80720a67ae58da59ef0e9086920b7a3cd0dac7c8.png" alt="\mathrm{cm}"/> <a class="reference internal" href="#sensor">[SENSOR]</a>, and is the relative proximity
+between the optical sensor and a solid object.  Output is reported (a)
+visually through VISOUT and the live plotting on the PC if logging is on
+and (b) audibly through AUDOUT.  As OBJ gets closer to the GP2Y0A21YK
+the on-off period of VISOUT decrements, and viceversa.  The case for the
+auditory signal through AUDOUT is analogous.</p>
+<p>As stated in the section <a class="reference internal" href="#section-introduction"><em>Introduction</em></a>, cerca is a
+project developed for a school course.  The following are factors
+influencing the project&#8217;s design and implementation:</p>
+<ul class="simple">
+<li>High priority<ul>
+<li>Low implementation time.</li>
+<li>Portability across different systems.</li>
+<li>Simple design.</li>
+<li>Low cost.</li>
+</ul>
+</li>
+<li>Low priority<ul>
+<li>Extensibility.</li>
+<li>Ease of use.</li>
+<li>Ease of installation.</li>
+<li>Tight integration of the subsystems.</li>
+</ul>
+</li>
+</ul>
+<div class="figure" id="fig-cerca-system-diagram">
+<a class="reference internal image-reference" href="_images/cerca_system_diagram.png"><img alt="_images/cerca_system_diagram.png" src="_images/cerca_system_diagram.png" style="width: 474.4px; height: 314.4px;" /></a>
+<p class="caption">cerca&#8217;s system diagram.</p>
+</div>
+<p>The project is split in 2 subsystems connected through a serial
+communication in a client-server architecture (see Figure
+<a class="reference internal" href="#fig-cerca-system-diagram"><em>cerca&#8217;s system diagram.</em></a>):</p>
+<dl class="docutils">
+<dt><strong>cuc</strong></dt>
+<dd>(server) Main acquisition system, an electronic circuit including the
+ATMEGA88PA, GP2Y0A21YK (sensor), AUDOUT, VISOUT and PRT-00449 (RS232
+level shifter), all enclosed in a project case.</dd>
+<dt><strong>cpc</strong></dt>
+<dd>(client) PC and <tt class="docutils literal"><span class="pre">cpc.py</span></tt> Python program.  Optionally run to
+live-plot the acquisition and log the data to a file.</dd>
+</dl>
+</div>
+<div class="section" id="subsystems">
+<h2>Subsystems<a class="headerlink" href="#subsystems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cuc">
+<h3>cuc<a class="headerlink" href="#cuc" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="_images/cerca_picture1.png" src="_images/cerca_picture1.png" />
+</div>
+<p><strong>cuc</strong> is the main data acquisition system, an electronic circuit
+including the ATMEGA88PA, GP2Y0A21YK (sensor), AUDOUT, VISOUT and
+PRT-00449 (RS232 level shifter), all enclosed in a project case.  cerca
+and cuc have 2 operation modes:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Normal mode:</th><td class="field-body">cuc operates on its own without cpc, outputting the proximity to OBJ
+without units.  This is the default mode when cuc is turned on.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Serial mode:</th><td class="field-body">cpc makes cuc enter serial mode through the serial connection, see
+section <a class="reference internal" href="#section-operation"><em>Operation</em></a>.  In addition to the normal mode
+functionality, cerca plots the proximity versus time and displays it
+in <img class="math" src="_images/math/80720a67ae58da59ef0e9086920b7a3cd0dac7c8.png" alt="\mathrm{cm}"/>.  STATUSLED blinks faster.</td>
+</tr>
+</tbody>
+</table>
+<p>The ATMEGA88PA program
+<a class="reference internal" href="#section-cuc-c-source-code"><em>cuc.c</em></a> periodically executes the following
+tasks:</p>
+<ol class="arabic simple">
+<li>Analog to digital conversion of the GP2Y0A21YK&#8217;s output voltage,
+storing the result in a global variable (see <a class="reference internal" href="#ADC0_value" title="ADC0_value"><tt class="xref c c-func docutils literal"><span class="pre">ADC0_value()</span></tt></a>,
+<a class="reference internal" href="#set_distance" title="set_distance"><tt class="xref c c-func docutils literal"><span class="pre">set_distance()</span></tt></a> and <a class="reference internal" href="#DISTANCE" title="DISTANCE"><tt class="xref c c-data docutils literal"><span class="pre">DISTANCE</span></tt></a>).</li>
+<li>Updating the on-off period of VISOUT and AUDOUT using a timer that
+generates a square wave at the ATMEGA88PA&#8217;S OC1A pin.  The period of
+this signal is proportional to the distance measurement between
+GP2Y0A21YK and OBJ (see <a class="reference internal" href="#signal_update" title="signal_update"><tt class="xref c c-func docutils literal"><span class="pre">signal_update()</span></tt></a>).</li>
+<li>Send data (if) requested by cpc through serial transmission
+interruptions (see <a class="reference internal" href="#function-usart-isr"><em>ISR(USART_RX_vect)</em></a>).</li>
+</ol>
+<div class="section" id="cuc-c">
+<span id="section-cuc-c-source-code"></span><h4>cuc.c<a class="headerlink" href="#cuc-c" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="cuc_source_code.html"><em>cuc source code</em></a>.  Developed with <a class="reference external" href="http://www.nongnu.org/avr-libc/">avr-libc</a>.  Run on ATMEGA88PA inside cuc.</p>
+<dl class="var">
+<dt id="MODE">
+volatile unsigned char <tt class="descname">MODE</tt><a class="headerlink" href="#MODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>cuc&#8217;s operation mode, one of {<tt class="docutils literal"><span class="pre">SERIAL_MODE</span></tt>, <tt class="docutils literal"><span class="pre">NORMAL_MODE</span></tt>}.
+When <a class="reference internal" href="#MODE" title="MODE"><tt class="xref c c-data docutils literal"><span class="pre">MODE</span></tt></a> is <tt class="docutils literal"><span class="pre">SERIAL_MODE</span></tt>, STATUSLED blinks faster.  See
+<a class="reference internal" href="#MODE_DELAY" title="MODE_DELAY"><tt class="xref c c-data docutils literal"><span class="pre">MODE_DELAY</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="MODE_DELAY">
+volatile unsigned int <tt class="descname">MODE_DELAY</tt><a class="headerlink" href="#MODE_DELAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets STATUSLED blinking delay depending on what mode cuc is on (see
+<a class="reference internal" href="#MODE" title="MODE"><tt class="xref c c-data docutils literal"><span class="pre">MODE</span></tt></a>).</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="DISTANCE">
+volatile unsigned int <tt class="descname">DISTANCE</tt><a class="headerlink" href="#DISTANCE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number proportional to the distance between the GP2Y0A21YK and OBJ,
+stores the result of the analog to digital conversion of GP2Y0A21YK
+output.</p>
+</dd></dl>
+
+<span class="target" id="function-timer1-isr"></span><dl class="function">
+<dt id="ISR">
+<tt class="descname">ISR</tt><big>(</big>TIMER1_COMPA_vect<big>)</big><a class="headerlink" href="#ISR" title="Permalink to this definition">¶</a></dt>
+<dd><p>TIMER1 interrupt handler.  The sampling of GP2Y0A21YK data is done
+here if operating in <tt class="docutils literal"><span class="pre">NORMAL_MODE</span></tt>, otherwise the sampling is
+performed at <a class="reference internal" href="#function-usart-isr"><em>ISR(USART_RX_vect)</em></a>.</p>
+</dd></dl>
+
+<span class="target" id="function-usart-isr"></span><dl class="function">
+<dt>
+<tt class="descname">ISR</tt><big>(</big>USART_RX_vect<big>)</big></dt>
+<dd><p>USART interrupt handler.  The sampling of GP2Y0A21YK output is
+performed here if operating in <tt class="docutils literal"><span class="pre">SERIAL_MODE</span></tt>, otherwise it is done
+at <a class="reference internal" href="#function-timer1-isr"><em>ISR(TIMER1_COMPA_vect)</em></a>.  Sends
+conversion value to cpc when requested.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ReadUSART">
+unsigned char <tt class="descname">ReadUSART</tt><big>(</big>void<big>)</big><a class="headerlink" href="#ReadUSART" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads 1 byte from USART&#8217;s buffer.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="WriteUSART">
+void <tt class="descname">WriteUSART</tt><big>(</big>unsigned char<em>&nbsp;byte</em><big>)</big><a class="headerlink" href="#WriteUSART" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes 1 byte to USART&#8217;s buffer.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="signal_update">
+void <tt class="descname">signal_update</tt><big>(</big>unsigned int<em>&nbsp;timer1_top</em><big>)</big><a class="headerlink" href="#signal_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the square wave signal that drives VISOUT and AUDOUT.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="TIMER1_off">
+void <tt class="descname">TIMER1_off</tt><big>(</big>void<big>)</big><a class="headerlink" href="#TIMER1_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns TIMER1 off.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="TIMER1_on">
+void <tt class="descname">TIMER1_on</tt><big>(</big>void<big>)</big><a class="headerlink" href="#TIMER1_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns TIMER1 on.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ADC0_value">
+unsigned int <tt class="descname">ADC0_value</tt><big>(</big>void<big>)</big><a class="headerlink" href="#ADC0_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform analog to digital conversion and return the result.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="set_distance">
+void <tt class="descname">set_distance</tt><big>(</big>void<big>)</big><a class="headerlink" href="#set_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the distance value in <a class="reference internal" href="#DISTANCE" title="DISTANCE"><tt class="xref c c-data docutils literal"><span class="pre">DISTANCE</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ioinit">
+void <tt class="descname">ioinit</tt><big>(</big>void<big>)</big><a class="headerlink" href="#ioinit" title="Permalink to this definition">¶</a></dt>
+<dd><p>I/O system initialization (UART, TIMER1, STATUSLED, ADC).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="main">
+int <tt class="descname">main</tt><big>(</big>void<big>)</big><a class="headerlink" href="#main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function, call <a class="reference internal" href="#ioinit" title="ioinit"><tt class="xref c c-func docutils literal"><span class="pre">ioinit()</span></tt></a> then enter a infinite loop
+blinking STATUSLED with a delay that depends on the operation mode
+(<a class="reference internal" href="#MODE" title="MODE"><tt class="xref c c-data docutils literal"><span class="pre">MODE</span></tt></a> and <a class="reference internal" href="#MODE_DELAY" title="MODE_DELAY"><tt class="xref c c-data docutils literal"><span class="pre">MODE_DELAY</span></tt></a>).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="circuit">
+<h4>Circuit<a class="headerlink" href="#circuit" title="Permalink to this headline">¶</a></h4>
+<div class="figure" id="fig-cuc-circuit-diagram">
+<a class="reference internal image-reference" href="_images/cuc_circuit_diagram.png"><img alt="cuc circuit diagram" src="_images/cuc_circuit_diagram.png" style="width: 690.4px; height: 414.4px;" /></a>
+<p class="caption">cuc: Circuit diagram.</p>
+</div>
+<div class="figure" id="fig-cuc-circuit-protoboard">
+<a class="reference internal image-reference" href="_images/cuc_circuit_protoboard.png"><img alt="cuc circuit on protoboard" src="_images/cuc_circuit_protoboard.png" style="width: 472.0px; height: 354.4px;" /></a>
+<p class="caption">cuc: Circuit implemented on protoboard.</p>
+</div>
+<div class="figure" id="fig-cuc-circuit">
+<a class="reference internal image-reference" href="_images/cuc_circuit.png"><img alt="cuc circuit" src="_images/cuc_circuit.png" style="width: 472.0px; height: 354.4px;" /></a>
+<p class="caption">cuc: Circuit board.</p>
+</div>
+<div class="figure" id="fig-cuc-dev-building0">
+<a class="reference internal image-reference" href="_images/cuc_dev_building0.png"><img alt="cuc circuit in project case." src="_images/cuc_dev_building0.png" style="width: 472.0px; height: 354.4px;" /></a>
+<p class="caption">cuc: Circuit board in project case.</p>
+</div>
+<div class="figure" id="fig-cuc-dev-tests0">
+<a class="reference internal image-reference" href="_images/cuc_dev_tests0.png"><img alt="cuc testing" src="_images/cuc_dev_tests0.png" style="width: 472.0px; height: 354.4px;" /></a>
+<p class="caption">cuc: Testing.</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/cuc_case_0.png"><img alt="cuc case" src="_images/cuc_case_0.png" style="width: 409.6px; height: 307.2px;" /></a>
+<p class="caption">cuc: Final version.</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/cuc_case_1.png"><img alt="cuc case" src="_images/cuc_case_1.png" style="width: 409.6px; height: 307.2px;" /></a>
+<p class="caption">cuc: Final version.</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/cuc_case_2.png"><img alt="cuc case" src="_images/cuc_case_2.png" style="width: 409.6px; height: 307.2px;" /></a>
+<p class="caption">cuc: Final version.</p>
+</div>
+</div>
+</div>
+<div class="section" id="cpc">
+<h3>cpc<a class="headerlink" href="#cpc" title="Permalink to this headline">¶</a></h3>
+<p>PC and <a class="reference internal" href="#section-cpc-python-program"><em>cpc.py</em></a> Python program.  cpc and cuc
+are connected through a serial connection.</p>
+<div class="section" id="cpc-py">
+<span id="section-cpc-python-program"></span><h4>cpc.py<a class="headerlink" href="#cpc-py" title="Permalink to this headline">¶</a></h4>
+<p>Graphical application that live-plots and logs to a file the acquired
+data through cuc.  See screenshot in Figure <a class="reference internal" href="#fig-cpc-logging"><em>cpc: Logging the measurement.</em></a> and
+section <a class="reference internal" href="#section-operation"><em>Operation</em></a>.</p>
+<span class="target" id="module-cpc"></span><dl class="class">
+<dt id="cpc.UC">
+<em class="property">class </em><tt class="descclassname">cpc.</tt><tt class="descname">UC</tt><a class="reference internal" href="_modules/cpc.html#UC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.UC" title="Permalink to this definition">¶</a></dt>
+<dd><p>cuc software abstraction.</p>
+<dl class="method">
+<dt id="cpc.UC.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>port=None</em><big>)</big><a class="reference internal" href="_modules/cpc.html#UC.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.UC.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>port</strong> (<tt class="xref py py-class docutils literal"><span class="pre">cpc.serial.Serial</span></tt>) &#8211; serial port abstraction instance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cpc.UC.adc0D">
+<tt class="descname">adc0D</tt><a class="reference internal" href="_modules/cpc.html#UC.adc0D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.UC.adc0D" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+<p>Gets <a class="reference internal" href="#DISTANCE" title="DISTANCE"><tt class="xref c c-data docutils literal"><span class="pre">DISTANCE</span></tt></a> from cuc and returns it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cpc.UC.distance">
+<tt class="descname">distance</tt><a class="reference internal" href="_modules/cpc.html#UC.distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.UC.distance" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+<p>Computes actual distance measurement in cm <a class="reference internal" href="#sensor1">[SENSOR1]</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cpc.UC.execute_command">
+<tt class="descname">execute_command</tt><big>(</big><em>*command</em><big>)</big><a class="reference internal" href="_modules/cpc.html#UC.execute_command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.UC.execute_command" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>command</strong> (<em>sequence</em>) &#8211; cuc&#8217;s commands to execute (reading/writing data).</td>
+</tr>
+</tbody>
+</table>
+<p>Execute the command(s) in <tt class="docutils literal"><span class="pre">command</span></tt> through the serial
+connection.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cpc.UC.status">
+<tt class="descname">status</tt><a class="reference internal" href="_modules/cpc.html#UC.status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.UC.status" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">char</td>
+</tr>
+</tbody>
+</table>
+<p>Reports cuc&#8217;s status.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cpc.UC.mode">
+<tt class="descname">mode</tt><a class="reference internal" href="_modules/cpc.html#UC.mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.UC.mode" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">char</td>
+</tr>
+</tbody>
+</table>
+<p>Reports <a class="reference internal" href="#MODE" title="MODE"><tt class="xref c c-data docutils literal"><span class="pre">MODE</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cpc.UC.set_mode">
+<tt class="descname">set_mode</tt><big>(</big><em>mode</em><big>)</big><a class="reference internal" href="_modules/cpc.html#UC.set_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.UC.set_mode" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> &#8211; {<tt class="xref py py-data docutils literal"><span class="pre">SERIAL_MODE</span></tt>, <tt class="xref py py-data docutils literal"><span class="pre">NORMAL_MODE</span></tt>)</td>
+</tr>
+</tbody>
+</table>
+<p>Sets <a class="reference internal" href="#MODE" title="MODE"><tt class="xref c c-data docutils literal"><span class="pre">MODE</span></tt></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cpc.PlotPanel">
+<em class="property">class </em><tt class="descclassname">cpc.</tt><tt class="descname">PlotPanel</tt><big>(</big><em>wx.Panel</em><big>)</big><a class="reference internal" href="_modules/cpc.html#PlotPanel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.PlotPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update and display a plot periodically.  Uses a
+<tt class="xref py py-class docutils literal"><span class="pre">cpc.wx.Timer</span></tt>.</p>
+<dl class="method">
+<dt id="cpc.PlotPanel.onTimer">
+<tt class="descname">onTimer</tt><big>(</big><em>evt</em><big>)</big><a class="reference internal" href="_modules/cpc.html#PlotPanel.onTimer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.PlotPanel.onTimer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called periodically to sample distance and update plot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cpc.MainFrame">
+<em class="property">class </em><tt class="descclassname">cpc.</tt><tt class="descname">MainFrame</tt><big>(</big><em>wx.Frame</em><big>)</big><a class="reference internal" href="_modules/cpc.html#MainFrame"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.MainFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main wxPython application frame.</p>
+<dl class="method">
+<dt id="cpc.MainFrame.toggle_on_off">
+<tt class="descname">toggle_on_off</tt><big>(</big><em>event</em><big>)</big><a class="reference internal" href="_modules/cpc.html#MainFrame.toggle_on_off"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.MainFrame.toggle_on_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event handler that starts and stops periodic sampling.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cpc.Cerca">
+<em class="property">class </em><tt class="descclassname">cpc.</tt><tt class="descname">Cerca</tt><big>(</big><em>wx.App</em><big>)</big><a class="reference internal" href="_modules/cpc.html#Cerca"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.Cerca" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main wxPython application object.</p>
+<dl class="method">
+<dt id="cpc.Cerca.OnInit">
+<tt class="descname">OnInit</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/cpc.html#Cerca.OnInit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.Cerca.OnInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose the system serial port to use, select the directory and
+filename of the log file. open the serial port and create the cuc
+software abstraction (<a class="reference internal" href="#cpc.UC" title="cpc.UC"><tt class="xref py py-class docutils literal"><span class="pre">UC</span></tt></a>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cpc.Cerca.OnExit">
+<tt class="descname">OnExit</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/cpc.html#Cerca.OnExit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.Cerca.OnExit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the serial port.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="cpc.scan">
+<tt class="descclassname">cpc.</tt><tt class="descname">scan</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/cpc.html#scan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cpc.scan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scan available serial ports.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Install cpc dependencies:<ol class="arabic">
+<li>Install <em>Python</em> &gt;=2.7.1 CPython implementation; see <a class="reference external" href="http://docs.python.org/using/index.html">Python Setup
+and Usage</a>, sections
+2.1, 3.1 and/or 4.1.</li>
+<li>Install <em>pySerial</em> &gt;=2.5; see <a class="reference external" href="http://pyserial.sourceforge.net/pyserial.html">pySerial</a>, section
+<em>Installation</em>.</li>
+<li>Install <em>wxPython</em> &gt;= 2.8 (unicode); see <a class="reference external" href="http://wxpython.org/download.php">Downloads &amp; Stuff</a>, section <em>Stable Release</em> and
+follow the instructions that correspond to your platform/OS.</li>
+<li>Install <em>matplotlib</em> &gt;=1.0.1; see <a class="reference external" href="http://matplotlib.sourceforge.net/users/installing.html">Installing</a>.</li>
+</ol>
+</li>
+<li>Extract the cerca distribution package to a directory of your choice.</li>
+</ol>
+<p>Your cerca is now installed and ready to be operated.</p>
+</div>
+<div class="section" id="operation">
+<span id="section-operation"></span><h2>Operation<a class="headerlink" href="#operation" title="Permalink to this headline">¶</a></h2>
+<p>Follow these steps to operate cerca.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The screenshots provided are from cpc executed on Windows XP.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Plug the RS232 cable to the case and to your computer, either
+directly or through an adaptor.</p>
+</li>
+<li><p class="first">Position the case wherever you are performing the measurement.</p>
+</li>
+<li><p class="first">Plug PS to the cuc.</p>
+</li>
+<li><p class="first">Power up PS.</p>
+</li>
+<li><p class="first">Turn cuc on.</p>
+</li>
+<li><p class="first">Change current directory to <tt class="docutils literal"><span class="pre">cpc</span></tt> and execute the file <tt class="docutils literal"><span class="pre">cpc.py</span></tt>.</p>
+</li>
+<li><p class="first">Choose the serial port to use, see Figure
+<a class="reference internal" href="#fig-cpc-choosing-serial-port"><em>cpc: Choosing a serial port.</em></a>.</p>
+<div class="figure" id="fig-cpc-choosing-serial-port">
+<img alt="choosing a serial port in cpc" src="_images/cpc_choosing_serial_port.png" />
+<p class="caption">cpc: Choosing a serial port.</p>
+</div>
+</li>
+<li><p class="first">Browse for the directory where you will save the log file, see Figure
+<a class="reference internal" href="#fig-cpc-browse-directory"><em>cpc: Browse for directory to save log file.</em></a>.</p>
+<div class="figure" id="fig-cpc-browse-directory">
+<img alt="cpc browse directory" src="_images/cpc_browse_directory.png" />
+<p class="caption">cpc: Browse for directory to save log file.</p>
+</div>
+</li>
+<li><p class="first">Enter a filename for the log file.  Make sure to use the extenstion
+<tt class="docutils literal"><span class="pre">csv</span></tt>.  See Figure <a class="reference internal" href="#fig-cpc-log-filename"><em>cpc: Enter a filename for the log file.</em></a>.</p>
+<div class="figure" id="fig-cpc-log-filename">
+<img alt="cpc choose log filename" src="_images/cpc_log_filename.png" />
+<p class="caption">cpc: Enter a filename for the log file.</p>
+</div>
+</li>
+<li><p class="first">Figure <a class="reference internal" href="#fig-cpc-before-logging"><em>cpc: Window before starting logging.</em></a> shows the cpc window before
+starting logging.  Toggle the OFF button on screen to start logging
+in serial mode (STATUSLED blinks faster).</p>
+<div class="figure" id="fig-cpc-before-logging">
+<a class="reference internal image-reference" href="_images/cpc_before_logging.png"><img alt="cpc before logging" src="_images/cpc_before_logging.png" style="width: 455.0px; height: 420.0px;" /></a>
+<p class="caption">cpc: Window before starting logging.</p>
+</div>
+</li>
+<li><p class="first">The system is measuring the distance between cuc and OBJ, and
+reporting the acquired data through VISOUT, SOUT and the live plotting
+on PC;  see Figure <a class="reference internal" href="#fig-cpc-logging"><em>cpc: Logging the measurement.</em></a>.  You can stop the logging
+by pressing the button again, effectively returning to normal mode.
+Even when not logging VISOUT and SOUT will still report.  If the
+measurement is out of range the window will look like Figure
+<a class="reference internal" href="#fig-cpc-out-of-range"><em>cpc: Out of range measurement.</em></a>.</p>
+<div class="figure" id="fig-cpc-logging">
+<a class="reference internal image-reference" href="_images/cpc_logging.png"><img alt="cpc logging" src="_images/cpc_logging.png" style="width: 455.0px; height: 420.0px;" /></a>
+<p class="caption">cpc: Logging the measurement.</p>
+</div>
+<div class="figure" id="fig-cpc-out-of-range">
+<a class="reference internal image-reference" href="_images/cpc_out_of_range.png"><img alt="cpc out of range" src="_images/cpc_out_of_range.png" style="width: 455.0px; height: 420.0px;" /></a>
+<p class="caption">cpc: Out of range measurement.</p>
+</div>
+</li>
+<li><p class="first">To exit cpc just close the window.</p>
+</li>
+<li><p class="first">Turn cuc off (black switch).</p>
+</li>
+<li><p class="first">Power off PS.</p>
+</li>
+<li><p class="first">Unplug RS232 cable.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Improve cuc and cpc documentation.</li>
+</ol>
+</div>
+<div class="section" id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The complete name of the school subject is <em>Tópicos selectos de
+diseño de máquinas inteligentes</em>, which is spanish for <em>selected
+topics for intelligent machines design</em>.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils citation" frame="void" id="sensor" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[SENSOR]</a></td><td><em>GP2Y0A21YK/GP2Y0D21YK General Purpose Type Distance
+Measuring Sensors</em>.  Sharp.  Retrieved March 2, 2012, from
+<a class="reference external" href="http://www.sparkfun.com/datasheets/Components/GP2Y0A21YK.pdf">http://www.sparkfun.com/datasheets/Components/GP2Y0A21YK.pdf</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="sensor1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[SENSOR1]</a></td><td><em>Sensing distance (SHARP GP2Y0A21YK)</em>.  <strong>oomlout</strong>.
+Retrieved March 4, 2012, from <a class="reference external" href="http://oomlout.com/PROX/PROX-Guide.pdf">http://oomlout.com/PROX/PROX-Guide.pdf</a>.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">cerca documentation</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#system-requirements">System requirements</a></li>
+<li><a class="reference internal" href="#system-elements">System elements</a></li>
+<li><a class="reference internal" href="#system-design">System design</a></li>
+<li><a class="reference internal" href="#subsystems">Subsystems</a><ul>
+<li><a class="reference internal" href="#cuc">cuc</a><ul>
+<li><a class="reference internal" href="#cuc-c">cuc.c</a></li>
+<li><a class="reference internal" href="#circuit">Circuit</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cpc">cpc</a><ul>
+<li><a class="reference internal" href="#cpc-py">cpc.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#operation">Operation</a></li>
+<li><a class="reference internal" href="#todo">TODO</a></li>
+<li><a class="reference internal" href="#footnotes">Footnotes</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="cuc_source_code.html"
+                        title="next chapter">cuc source code</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cuc_source_code.html" title="cuc source code"
+             >next</a> |</li>
+        <li><a href="#">cerca 1.0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Pedro I. López.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
