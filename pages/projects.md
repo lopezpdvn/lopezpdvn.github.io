@@ -8,4 +8,4 @@ permalink: /projects/
 
 - [cerca]({{ site.baseurl }}/cerca): Distance measurement system
 
-- [mazerob](https://github.com/{{ site.github_username }}/mazerob): Maze solver robot
+- [mazerob]({{ site.baseurl }}/mazerob): Maze solver robot
