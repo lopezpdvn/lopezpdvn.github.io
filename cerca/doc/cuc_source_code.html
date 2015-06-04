@@ -1,0 +1,749 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>cuc source code &mdash; cerca 1.0.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="cerca 1.0.4 documentation" href="index.html" />
+    <link rel="prev" title="cerca documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="cerca documentation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">cerca 1.0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="cuc-source-code">
+<h1>cuc source code<a class="headerlink" href="#cuc-source-code" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320</pre></div></td><td class="code"><div class="highlight"><pre><span class="cm">/* (C) 2012 Pedro I. López &lt;dreilopz@gmail.com&gt;</span>
+<span class="cm"> * This source code is released under the new BSD license, a copy of the</span>
+<span class="cm"> * license is in the distribution directory.</span>
+<span class="cm"> */</span>
+
+<span class="cp">// Configuration and names --------------------------------------------</span>
+<span class="cp">#define DELAY   400.0</span>
+<span class="cp">#define F_CPU   4000000L</span>
+<span class="cp">#define USART_BAUDRATE 9600</span>
+<span class="cp">#define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)</span>
+
+<span class="cp">#define STATUS  PC5</span>
+<span class="cp">#define STATUS_CONFIG   DDRC |= _BV(DDC5)</span>
+<span class="cp">#define STATUS_TOGGLE   PORTC ^= _BV(STATUS)</span>
+<span class="cp">#define STATUS_OFF      PORTC &amp;= ~_BV(STATUS)</span>
+<span class="cp">#define STATUS_ON       PORTC |= _BV(STATUS)</span>
+
+<span class="cp">#define START &#39;\x00&#39;</span>
+<span class="cp">#define ACK &#39;\x03&#39;</span>
+<span class="cp">#define OK_STATUS &#39;\x06&#39;</span>
+<span class="cp">#define ERROR   &#39;\x0a&#39;</span>
+<span class="cp">#define END &#39;\x04&#39;</span>
+
+<span class="cp">#define READ &#39;\x01&#39;</span>
+<span class="cp">#define WRITE   &#39;\x0c&#39;</span>
+<span class="cp">#define REPORT_STATUS &#39;\x07&#39;</span>
+
+<span class="cp">#define DISTANCE_SAMPLE &#39;\x02&#39;</span>
+<span class="cp">#define ADC0_SAMPLE &#39;\x05&#39;</span>
+<span class="cp">#define OPMODE    &#39;\x0b&#39;</span>
+
+<span class="cp">#define NORMAL_MODE         &#39;\x08&#39;</span>
+<span class="cp">#define NORMAL_MODE_DELAY   500</span>
+<span class="cp">#define SERIAL_MODE         &#39;\x09&#39;</span>
+<span class="cp">#define SERIAL_MODE_DELAY   150</span>
+<span class="cp">// --------------------------------------------------------------------</span>
+
+<span class="cp">#include &lt;avr/io.h&gt;</span>
+<span class="cp">#include &lt;util/delay.h&gt;</span>
+<span class="cp">#include &lt;avr/interrupt.h&gt;</span>
+
+<span class="kt">void</span> <span class="n">ioinit</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">set_distance</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">ADC0_value</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">TIMER1_off</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">TIMER1_on</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">signal_update</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">timer1_top</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">ReadUSART</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">WriteUSART</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">byte</span><span class="p">);</span>
+
+<span class="k">volatile</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">MODE</span> <span class="o">=</span> <span class="n">NORMAL_MODE</span><span class="p">;</span>
+<span class="k">volatile</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">MODE_DELAY</span> <span class="o">=</span> <span class="n">NORMAL_MODE_DELAY</span><span class="p">;</span>
+<span class="k">volatile</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">DISTANCE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="n">ISR</span><span class="p">(</span><span class="n">TIMER1_COMPA_vect</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">set_distance</span><span class="p">();</span>
+    <span class="n">signal_update</span><span class="p">(</span><span class="n">DISTANCE</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">ISR</span><span class="p">(</span><span class="n">USART_RX_vect</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">rx_byte</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">b16</span><span class="p">;</span>
+
+    <span class="n">rx_byte</span> <span class="o">=</span> <span class="n">ReadUSART</span><span class="p">();</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">rx_byte</span> <span class="o">!=</span> <span class="n">START</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">WriteUSART</span><span class="p">(</span><span class="n">ERROR</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">WriteUSART</span><span class="p">(</span><span class="n">ACK</span><span class="p">);</span>
+    <span class="n">rx_byte</span> <span class="o">=</span> <span class="n">ReadUSART</span><span class="p">();</span>
+
+    <span class="k">switch</span> <span class="p">(</span> <span class="n">rx_byte</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">REPORT_STATUS</span>:
+            <span class="n">WriteUSART</span><span class="p">(</span><span class="sc">&#39;\x01&#39;</span><span class="p">);</span>
+            <span class="n">WriteUSART</span><span class="p">(</span><span class="n">OK_STATUS</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="n">READ</span>:
+            <span class="n">rx_byte</span> <span class="o">=</span> <span class="n">ReadUSART</span><span class="p">();</span>
+            <span class="k">switch</span> <span class="p">(</span> <span class="n">rx_byte</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">case</span> <span class="n">OPMODE</span>:
+                    <span class="n">WriteUSART</span><span class="p">(</span><span class="sc">&#39;\x01&#39;</span><span class="p">);</span>
+                    <span class="n">WriteUSART</span><span class="p">(</span><span class="n">MODE</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+
+                <span class="k">case</span> <span class="n">DISTANCE_SAMPLE</span>:
+                    <span class="n">b16</span> <span class="o">=</span> <span class="n">DISTANCE</span><span class="p">;</span>
+                    <span class="n">WriteUSART</span><span class="p">(</span><span class="sc">&#39;\x02&#39;</span><span class="p">);</span>
+                    <span class="n">WriteUSART</span><span class="p">(</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span> <span class="n">b16</span> <span class="p">);</span>
+                    <span class="n">WriteUSART</span><span class="p">(</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span> <span class="p">(</span><span class="n">b16</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+
+                <span class="k">case</span> <span class="n">ADC0_SAMPLE</span>:
+                    <span class="n">b16</span> <span class="o">=</span> <span class="n">ADC0_value</span><span class="p">();</span>
+                    <span class="n">WriteUSART</span><span class="p">(</span><span class="sc">&#39;\x02&#39;</span><span class="p">);</span>
+                    <span class="n">WriteUSART</span><span class="p">(</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span> <span class="n">b16</span> <span class="p">);</span>
+                    <span class="n">WriteUSART</span><span class="p">(</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span> <span class="p">(</span><span class="n">b16</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+
+                <span class="nl">default:</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="n">WRITE</span>:
+            <span class="n">rx_byte</span> <span class="o">=</span> <span class="n">ReadUSART</span><span class="p">();</span>
+            <span class="k">switch</span> <span class="p">(</span> <span class="n">rx_byte</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">case</span> <span class="n">OPMODE</span> :
+                    <span class="n">MODE</span> <span class="o">=</span> <span class="n">ReadUSART</span><span class="p">();</span>
+
+                    <span class="k">switch</span> <span class="p">(</span> <span class="n">MODE</span> <span class="p">)</span> <span class="p">{</span>
+                        <span class="k">case</span> <span class="n">SERIAL_MODE</span> :
+                            <span class="n">MODE_DELAY</span> <span class="o">=</span> <span class="n">SERIAL_MODE_DELAY</span><span class="p">;</span>
+                            <span class="k">break</span><span class="p">;</span>
+                        <span class="k">case</span> <span class="n">NORMAL_MODE</span> :
+                            <span class="n">MODE_DELAY</span> <span class="o">=</span> <span class="n">NORMAL_MODE_DELAY</span><span class="p">;</span>
+                            <span class="k">break</span><span class="p">;</span>
+                        <span class="nl">default:</span>
+                            <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+
+                    <span class="k">break</span><span class="p">;</span>
+
+                <span class="nl">default:</span>
+                    <span class="k">break</span><span class="p">;</span>
+
+            <span class="p">}</span>
+            <span class="n">WriteUSART</span><span class="p">(</span><span class="sc">&#39;\x00&#39;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+
+        <span class="nl">default:</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">ReadUSART</span><span class="p">()</span> <span class="o">!=</span> <span class="n">ACK</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">WriteUSART</span><span class="p">(</span><span class="n">ERROR</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">ReadUSART</span><span class="p">()</span> <span class="o">==</span> <span class="n">END</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">WriteUSART</span><span class="p">(</span><span class="n">ACK</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+    <span class="kt">unsigned</span> <span class="kt">char</span>
+<span class="n">ReadUSART</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">byte</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">UCSR0A</span> <span class="o">&amp;</span> <span class="n">_BV</span><span class="p">(</span><span class="n">RXC0</span><span class="p">))</span> <span class="p">);</span>
+    <span class="n">byte</span> <span class="o">=</span> <span class="n">UDR0</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">byte</span><span class="p">;</span>
+<span class="p">}</span>
+
+    <span class="kt">void</span>
+<span class="n">WriteUSART</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">byte</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">UCSR0A</span> <span class="o">&amp;</span> <span class="n">_BV</span><span class="p">(</span><span class="n">UDRE0</span><span class="p">))</span> <span class="p">);</span>
+    <span class="n">UDR0</span> <span class="o">=</span> <span class="n">byte</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">UCSR0A</span> <span class="o">&amp;</span> <span class="n">_BV</span><span class="p">(</span><span class="n">TXC0</span><span class="p">))</span> <span class="p">);</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+    <span class="kt">void</span>
+<span class="n">signal_update</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">timer1_top</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">timer1_top</span> <span class="o">&gt;</span> <span class="mi">950</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">TCCR1A</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">COM1A0</span><span class="p">);</span>
+        <span class="n">PORTB</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">PB1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">TCCR1A</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">COM1A0</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="n">timer1_top</span> <span class="o">&gt;</span> <span class="mi">700</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="n">OCR1A</span> <span class="o">=</span> <span class="p">((</span><span class="n">timer1_top</span> <span class="o">-</span> <span class="mi">250</span><span class="p">)</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="n">OCR1A</span> <span class="o">=</span> <span class="n">timer1_top</span> <span class="o">-</span> <span class="mi">250</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+    <span class="kt">void</span>
+<span class="n">TIMER1_off</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">TCCR1B</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="n">_BV</span><span class="p">(</span><span class="n">CS12</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">CS11</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">CS10</span><span class="p">));</span>
+<span class="p">}</span>
+
+    <span class="kt">void</span>
+<span class="n">TIMER1_on</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// (CS1 = 0b101) =&gt; clock source is f_clkio/1024.  Start timer.</span>
+    <span class="n">TCCR1B</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">CS11</span><span class="p">);</span>
+    <span class="n">TCCR1B</span> <span class="o">|=</span> <span class="p">(</span><span class="n">_BV</span><span class="p">(</span><span class="n">CS12</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">CS10</span><span class="p">));</span>
+<span class="p">}</span>
+
+    <span class="kt">unsigned</span> <span class="kt">int</span>
+<span class="n">ADC0_value</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">adc_value</span><span class="p">;</span>
+
+    <span class="n">ADCSRA</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">ADEN</span><span class="p">);</span>  <span class="c1">// Enable ADC.</span>
+    <span class="n">ADCSRA</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">ADSC</span><span class="p">);</span>  <span class="c1">// Start conversion.</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ADCSRA</span> <span class="o">&amp;</span> <span class="n">_BV</span><span class="p">(</span><span class="n">ADSC</span><span class="p">));</span>  <span class="c1">// Wait for result.</span>
+    <span class="n">ADCSRA</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">ADEN</span><span class="p">);</span>  <span class="c1">// Disable ADC.</span>
+
+    <span class="c1">// Value as an ``unsigned int`` from 2 ``unsigned char``s (bytes).</span>
+    <span class="n">adc_value</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span> <span class="n">ADCL</span><span class="p">;</span>
+    <span class="n">adc_value</span> <span class="o">|=</span> <span class="p">(((</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span> <span class="n">ADCH</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">adc_value</span><span class="p">;</span>
+<span class="p">}</span>
+
+    <span class="kt">void</span>
+<span class="n">set_distance</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">DISTANCE</span> <span class="o">=</span> <span class="p">(</span><span class="o">~</span><span class="p">(</span><span class="n">ADC0_value</span><span class="p">()))</span> <span class="o">&amp;</span> <span class="mh">0x3ff</span><span class="p">;</span>
+<span class="p">}</span>
+
+    <span class="kt">void</span>
+<span class="n">ioinit</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">cli</span><span class="p">();</span>  <span class="c1">// disable interrupts globally.</span>
+
+    <span class="c1">// UART conf. -------------------------------------------------------------</span>
+    <span class="c1">// Don&#39;t double the USART transmission speed.</span>
+    <span class="n">UCSR0A</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">U2X0</span><span class="p">);</span>
+
+    <span class="c1">// RX Complete Interrupt Enable.</span>
+    <span class="n">UCSR0B</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">RXCIE0</span><span class="p">);</span>
+
+    <span class="c1">// Character size in a frame the Receiver and Transmitter use.</span>
+    <span class="c1">// UCSZ0 = 0b011, so character size is 8 bit.</span>
+    <span class="n">UCSR0B</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">UCSZ02</span><span class="p">);</span>
+    <span class="n">UCSR0C</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">UCSZ01</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">UCSZ00</span><span class="p">);</span>
+
+    <span class="c1">// UMSEL0 = 0b00, so USART mode of operation is Asynchronous USART</span>
+    <span class="n">UCSR0C</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="n">_BV</span><span class="p">(</span><span class="n">UMSEL01</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">UMSEL00</span><span class="p">));</span>
+
+    <span class="c1">// UPM0 = 0b00, so parity is disabled.</span>
+    <span class="n">UCSR0C</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="n">_BV</span><span class="p">(</span><span class="n">UPM01</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">UPM00</span><span class="p">));</span>
+
+    <span class="c1">// USBS0 = 0, so we use 1 stop bit.</span>
+    <span class="n">UCSR0C</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">USBS0</span><span class="p">);</span>
+
+    <span class="c1">// Baud rate.</span>
+    <span class="n">UBRR0L</span> <span class="o">=</span> <span class="n">BAUD_PRESCALE</span><span class="p">;</span>
+    <span class="n">UBRR0H</span> <span class="o">=</span> <span class="p">(</span><span class="n">BAUD_PRESCALE</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span>
+
+    <span class="c1">// Turn on the transmitter and receiver.</span>
+    <span class="n">UCSR0B</span> <span class="o">|=</span> <span class="p">(</span><span class="n">_BV</span><span class="p">(</span><span class="n">RXEN0</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">TXEN0</span><span class="p">));</span>
+    <span class="c1">// ------------------------------------------------------------------------</span>
+
+    <span class="c1">// TIMER0 ---------------------------------------------------------</span>
+    <span class="c1">// Use TIMER0 to produce a simple squarewave on pin PB1/OC1A.</span>
+    <span class="n">DDRB</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">DDB1</span><span class="p">);</span>
+    <span class="n">PORTB</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">PB1</span><span class="p">);</span>
+
+    <span class="c1">// (OCR0A = ) =&gt; waveform frequency is  Hz approx.</span>
+    <span class="n">OCR1A</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+
+    <span class="c1">// (COM1A = 0b01) =&gt; toggle OC1A on Compare Match.</span>
+    <span class="n">TCCR1A</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">COM1A1</span><span class="p">);</span>
+    <span class="n">TCCR1A</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">COM1A0</span><span class="p">);</span>
+
+    <span class="c1">// (WGM1 = 0b0100) =&gt; (waveform generation mode is Clear Timer on Compare</span>
+    <span class="c1">// Match, TOP = 0CR1A).</span>
+    <span class="n">TCCR1A</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="n">_BV</span><span class="p">(</span><span class="n">WGM11</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">WGM10</span><span class="p">));</span>
+    <span class="n">TCCR1B</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">WGM12</span><span class="p">);</span>
+    <span class="n">TCCR1B</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">WGM13</span><span class="p">);</span>
+
+    <span class="c1">// (OCIE1A = 1) =&gt; TIMER1 Output Compare A Match interrupt enabled.</span>
+    <span class="n">TIMSK1</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">OCIE1A</span><span class="p">);</span>
+
+    <span class="n">TIMER1_on</span><span class="p">();</span>
+    <span class="c1">// ----------------------------------------------------------------</span>
+
+    <span class="c1">// STATUS LED. ------------------------------------------------------------</span>
+    <span class="n">STATUS_CONFIG</span><span class="p">;</span>
+    <span class="c1">// ------------------------------------------------------------------------</span>
+
+    <span class="c1">// ADC conf ---------------------------------------------------------------</span>
+    <span class="c1">// (REFS = 0b00) =&gt; AREF is voltage reference.</span>
+    <span class="n">ADMUX</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="n">_BV</span><span class="p">(</span><span class="n">REFS1</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">REFS0</span><span class="p">));</span>
+
+    <span class="c1">// (ADLAR = 0) =&gt; Result is right adjusted.</span>
+    <span class="n">ADMUX</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">ADLAR</span><span class="p">);</span>
+
+    <span class="c1">// (MUX = 0b00000) =&gt; Select ADC0/PC0 channel.</span>
+    <span class="n">ADMUX</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span><span class="n">_BV</span><span class="p">(</span><span class="n">MUX3</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">MUX2</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">MUX1</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">MUX0</span><span class="p">));</span>
+
+    <span class="c1">// (ADATE = 0) =&gt; Auto Trigger disabled.</span>
+    <span class="n">ADCSRA</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">ADATE</span><span class="p">);</span>
+
+    <span class="c1">// (ADIE = 0) =&gt; ADC Interrupt disabled.</span>
+    <span class="n">ADCSRA</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">ADIE</span><span class="p">);</span>
+
+    <span class="c1">// (ADPS = 0b110) =&gt; (ADC clock prescaler = 64);</span>
+    <span class="n">ADCSRA</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="n">_BV</span><span class="p">(</span><span class="n">ADPS0</span><span class="p">);</span>
+    <span class="n">ADCSRA</span> <span class="o">|=</span> <span class="p">(</span><span class="n">_BV</span><span class="p">(</span><span class="n">ADPS2</span><span class="p">)</span> <span class="o">|</span> <span class="n">_BV</span><span class="p">(</span><span class="n">ADPS1</span><span class="p">));</span>
+
+    <span class="c1">// Digital input buffers in ADC0 channel is disabled.</span>
+    <span class="n">DIDR0</span> <span class="o">|=</span> <span class="n">_BV</span><span class="p">(</span><span class="n">ADC0D</span><span class="p">);</span>
+    <span class="c1">// ------------------------------------------------------------------------</span>
+
+    <span class="n">sei</span><span class="p">();</span>
+<span class="p">}</span>
+
+    <span class="kt">int</span>
+<span class="n">main</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ioinit</span> <span class="p">();</span>
+
+    <span class="k">for</span> <span class="p">(;;)</span> <span class="p">{</span>
+        <span class="n">STATUS_TOGGLE</span><span class="p">;</span>
+        <span class="n">_delay_ms</span><span class="p">(</span><span class="n">MODE_DELAY</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">cerca documentation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/cuc_source_code.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="cerca documentation"
+             >previous</a> |</li>
+        <li><a href="index.html">cerca 1.0.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Pedro I. López.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
