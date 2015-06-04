@@ -6,6 +6,8 @@ permalink: /printer73x/
 
 # A CNC printer for binary images
 
+<a class="image-wrapper" href="doc/_images/printer73x.png"><img alt="printer73x picture." src="doc/_images/printer73x.png" style="width: 414.4px; height: 311.2px;" /></a>
+
 - [Github repo](https://github.com/{{ site.github_username }}/printer73x "printer73x at Github")
 
 **printer73x** is a CNC system for printing binary images. printer73x was
