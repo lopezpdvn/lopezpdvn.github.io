@@ -32,3 +32,7 @@ October 27, 2012.
 - [HTML documentation]({{ page.url }}doc)
 - [zip release](https://github.com/{{ site.github_username }}/cerca/zipball/v1.0.4)
 - [Video demonstration](https://www.youtube.com/watch?v=OE_qz_wE0Hs) at YouTube.
+
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/OE_qz_wE0Hs" frameborder="0" allowfullscreen></iframe>
+
+
