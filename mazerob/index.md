@@ -23,3 +23,9 @@ funded by [UANL](http://www.uanl.mx) through the
 - [HTML documentation]({{ page.url }}doc)
 - [zip release](https://github.com/{{ site.github_username }}/mazerob/archive/master.zip)
   (from github repo).
+- Video demo
+
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/j-1QjAreghc" frameborder="0" allowfullscreen></iframe>
+
+
+
