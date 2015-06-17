@@ -25,10 +25,13 @@ for this project, see file `LICENSE.txt`
 
 October 27, 2012.
 
-*   [HTML documentation]({{ page.url }}doc)
-*   [zip release](https://github.com/lopezpdvn/printer73x/zipball/v1.0.2) (from
+* [HTML documentation]({{ page.url }}doc)
+* [zip release](https://github.com/lopezpdvn/printer73x/zipball/v1.0.2) (from
     github).
-*   [Video demonstrations](http://www.youtube.com/playlist?list=PL7141B5B35BD03A5E) at _YouTube_.
+* [Video demonstrations](http://www.youtube.com/playlist?list=PL7141B5B35BD03A5E) at _YouTube_.
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL7141B5B35BD03A5E" frameborder="0" allowfullscreen></iframe>
+
 
 ## Credits
 
