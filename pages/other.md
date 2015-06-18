@@ -14,4 +14,4 @@ permalink: /other/
 
 - [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
 
-- [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): Pedro Ivan Lopez's blog.
+- [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): The newest stuff.
