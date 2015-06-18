@@ -13,3 +13,5 @@ permalink: /other/
   storage) to one or more projects.
 
 - [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
+
+- [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): Pedro Ivan Lopez's blog.
