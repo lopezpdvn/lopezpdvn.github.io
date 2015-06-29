@@ -4,7 +4,7 @@ title: cerca
 permalink: /cerca/
 ---
 
-### Distance measurement system
+# Distance measurement system
 
 <a class="image-wrapper" href="doc/_images/cerca_picture.png"><img alt="cerca picture." src="doc/_images/cerca_picture.png" style="width: 414.4px; height: 311.2px;" /></a>
 

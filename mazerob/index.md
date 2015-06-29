@@ -1,12 +1,12 @@
 ---
 layout: page
-title: mazerob, a PC-based distance measurement system
+title: mazerob
 permalink: /mazerob/
 ---
 
-### Maze solver robot
+# A robot that autonomously solves a maze
 
-<a class="image-wrapper" href="mazerob_explorer.jpg"><img alt="mazerob explorer picture." src="mazerob_explorer.jpg" style="width: 414.4px; height: 311.2px;" /></a> 
+<a class="image-wrapper" href="mazerob_explorer.jpg"><img alt="mazerob explorer picture." src="mazerob_explorer.jpg" style="width: 414.4px; height: 311.2px;" /></a>
 
 - [Project's website]({{ site.url }}/mazerob)
 - [Github repo](https://github.com/{{ site.github_username }}/mazerob)
