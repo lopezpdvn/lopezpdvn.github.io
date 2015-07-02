@@ -25,12 +25,13 @@ at [GiveWell](http://www.givewell.org "GiveWell").
 
 Volunteer computing is a type of distributed computing in which computer owners
 donate their computing resources (such as processing power and storage) to one
-or more projects. Please the [Volunteer Computing Page]({{ site.baseurl }}/volunteer-computing "Volunteer Computing Page").
+or more projects. Please the see the
+[Volunteer Computing Page]({{ site.baseurl }}/volunteer-computing "Volunteer Computing Page").
 
 ## Reducing meat and dairy consumption
 
 Eating less meat and dairy is an easy and effective way to help society. The
-[Reducitarian website](http://www.reducetarian.com "Reducitarian") is a good
+[Reducetarian website](http://www.reducetarian.com "Reducetarian") is a good
 place to start.
 
 > The Reducetarian Foundation develops unique education and research programs
