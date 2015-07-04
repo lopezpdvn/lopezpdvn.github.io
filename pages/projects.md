@@ -17,3 +17,6 @@ permalink: /projects/
 - [mazerob]({{ site.baseurl }}/mazerob): a robot that autonomously solves a
   maze, running on Java Virtual Machines on a personal computer and a Lego NXT
   Brick
+
+For other stuff see my
+[Github profile](https://github.com/{{ github_username }}).
