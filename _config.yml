@@ -24,6 +24,8 @@ statement_org_ideas: >
 # Build settings
 markdown: kramdown
 
+highlight: pygments
+
 defaults:
   -
     scope:
