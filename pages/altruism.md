@@ -4,6 +4,9 @@ title: Altruism
 permalink: /altruism/
 ---
 
+* TOC
+{:toc}
+
 ## Effective Altruism
 
 [Effective altruism](http://www.effectivealtruism.org "Effective Altruism") is
