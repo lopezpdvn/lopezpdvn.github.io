@@ -16,7 +16,8 @@ My professional interests are: software development, software maintenance, C#,
 My personal interests are: software, rationality, altruism, music, medicine,
 biotech and veganism.
 
-{% include buttons/email.html %}{% include buttons/openpgp.html %}{% include buttons/github.html %}{% include buttons/twitter.html %}{% include buttons/linkedin.html %}{% include buttons/youtube.html %}{% include buttons/bitcoin.html %}{% include buttons/fah.html %}
+{% include buttons/email.html %}{% include buttons/openpgp.html %}{% include buttons/github.html %}{% include buttons/gist.html %}{% include buttons/twitter.html %}{% include buttons/linkedin.html %}{% include buttons/youtube.html %}{% include buttons/bitcoin.html %}{% include buttons/fah.html %}
+
 
 ## About the website
 
@@ -24,3 +25,4 @@ This site is created with [Jekyll](http://jekyllrb.com) and is light on
 graphics.  You are encouraged to send general commentaries, complaints, broken
 links reports, corrections, and so on to 
 [{{ site.email }}](mailto:{{ site.email }}) .  {{ site.statement_org_ideas }} This site has been active since november 2011 and is permanently under construction.
+
