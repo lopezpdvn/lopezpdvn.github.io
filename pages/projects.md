@@ -18,5 +18,5 @@ permalink: /projects/
   maze, running on Java Virtual Machines on a personal computer and a Lego NXT
   Brick
 
-For other stuff see my
-[Github profile](https://github.com/{{ github_username }}).
+For other stuff see my [Github](https://github.com/{{ github_username }}) and
+[Gist](https://gist.github.com/{{ github_username }}) profiles.
