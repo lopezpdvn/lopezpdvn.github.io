@@ -6,7 +6,8 @@ permalink: /projects/
 
 - [aspnet5co]({{ site.baseurl }}/aspnet5co): A project that comprises the
   efforts by Pedro Ivan Lopez to advocate the [ASP.NET 5](http://www.asp.net/vnext)
-  framework and to collaborate on its development
+  framework, help to drive its adoption and introduce developers and other IT
+  professionals to it.
 
 - [printer73x]({{ site.baseurl }}/printer73x): a computer numerical control
   system for printing binary images
