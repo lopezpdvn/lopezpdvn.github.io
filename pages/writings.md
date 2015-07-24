@@ -1,25 +1,20 @@
 ---
 layout: page
-title: Other writings and publications
-permalink: /other-writings/
+title: Writings
+permalink: /writings/
 ---
-
-Some academic stuff. See also [projects]({{ site.baseurl }}/projects) and
-[blog]({{ site.baseurl }}/blog).
 
 * TOC
 {:toc}
 
-## Control Engineering
-
-- Basin, M.; Serna, M.; Lopez-Hernandez, P.I.,"[Central energy-to-peak filter design for uncertain linear systems](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6606296&isnumber=6605987 "Central energy-to-peak filter design for uncertain linear systems")", Control Conference (ASCC), 2013 9th Asian , vol., no., pp.1,6, 23-26 June 2013 doi: 10.1109/ASCC.2013.6606296.
-
-## Signal Processing
-
-In spanish. Keywords: signal processing, image processing, computer vision, computer perception, data acquisition, computer programming.
-
 {% capture docsrc %}{{ site.baseurl }}{{ page.permalink }}procesamiento-senales-laboratorio{% endcapture %}
 
+All my writings. See also [projects]({{ site.baseurl }}/projects) and
+[blog]({{ site.baseurl }}/blog).
+
+- [How to set up a debugging and development environment for Android on Linux](https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e) (July 24, 2015).
+- [Install Folding@home FAHClient on Linux as a systemd service unit](https://gist.github.com/{{ site.github_username }}/81397197ffead57c2e98) (July 17, 2015).
+- Basin, M.; Serna, M.; Lopez-Hernandez, P.I.,"[Central energy-to-peak filter design for uncertain linear systems](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6606296&isnumber=6605987 "Central energy-to-peak filter design for uncertain linear systems")", Control Conference (ASCC), 2013 9th Asian , vol., no., pp.1,6, 23-26 June 2013 doi: 10.1109/ASCC.2013.6606296.
 - Signal conditioning \|\| Acondicionamiento de señal [[pdf]({{ docsrc }}/acondicionamiento-senal.pdf)]
 - Analog inputs \|\| Entradas analógicas [[pdf]({{ docsrc }}/adquisicion-datos-entrada-analogica.pdf)]
 - Digital inputs and outputs \|\| Entradas y salidas digitales [[pdf]({{ docsrc }}/adquisicion-datos-entrada-salida-digital.pdf)]
