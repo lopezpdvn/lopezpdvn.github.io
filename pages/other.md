@@ -4,8 +4,8 @@ title: Other
 permalink: /other/
 ---
 
-- [Altruism page]({{ site.baseurl }}/altruism). Effective altruism, volunteer
-  computing, reducing meat and dairy consumption.
+- [Philanthropy page]({{ site.baseurl }}/philanthropy). Effective altruism,
+  volunteer computing, reducing meat and dairy consumption.
 
 - [Volunteer computing page]({{ site.baseurl }}/volunteer-computing).
   Volunteer computing is a type of distributed computing in which computer

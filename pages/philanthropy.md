@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Altruism
-permalink: /altruism/
+title: Philanthropy
+permalink: /philanthropy/
 ---
 
 * TOC
