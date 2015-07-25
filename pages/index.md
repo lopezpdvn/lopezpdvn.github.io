@@ -3,7 +3,6 @@ layout: default
 permalink: /
 ---
 
-{{ site.author }} is a software engineer and a (post-)graduate student at
-[UANL](http://www.uanl.mx).
+I'm a software engineer interested in web and large scale systems.
 
-{% include buttons/email.html %}{% include buttons/openpgp.html %}{% include buttons/github.html %}{% include buttons/gist.html %}{% include buttons/twitter.html %}{% include buttons/linkedin.html %}{% include buttons/youtube.html %}{% include buttons/bitcoin.html %}
+{% include buttons/email.html %}{% include buttons/github.html %}{% include buttons/gist.html %}{% include buttons/linkedin.html %}{% include buttons/twitter.html %}{% include buttons/youtube.html %}{% include buttons/bitcoin.html %}{% include buttons/openpgp.html %}
