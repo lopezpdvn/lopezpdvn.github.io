@@ -14,7 +14,7 @@ will help me track progress, compare against goals set in the past and try to
 measure overall impact.
 
 For the most part, July was kind of a slow month because of the house
-remodelling being done at home, which probably will be finished in the next
+remodeling being done at home, which probably will be finished in the next
 couple of weeks.
 
 Contents:
@@ -22,51 +22,13 @@ Contents:
 * TOC
 {:toc}
 
-## Android development and debugging ###################################
-
-I did some Android development and debugging in order to troubleshoot an
-application a friend is developing. Because of the way his application is
-designed, it needs root/admin permissions to access some features of the
-device.
-
-I don't normally use a custom ROM neither do I root my device[^3], but on this
-ocassion I temporarily installed Cyanogenmod on my Nexus 4 and obtained root
-permissions on the phone. The result of this is a [guide to set up a debugging and development environment for Android on Linux](https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e).
-
-## Folding@Home Client as a systemd service unit #######################
-
-I [fold][fah-statistics] on a regular basis on my desktop computer and my home
-server, both of which are running Fedora.  [Systemd][] keeps gaining popularity
-among the major Linux distributions including Fedora, Ubuntu, Debian and
-ArchLinux, but Folding@Home packages still haven't shipped with systemd
-support.
-
-I created a [systemd service unit file][] that allows to control the
-Folding@Home client as a regular systemd service unit, as well as a [short
-guide to install it and use it][fahclient-systemd].
-
-[fah-statistics]: http://fah-web2.stanford.edu/cgi-bin/main.py?qtype=userpage&username=dreilopz
-[Systemd]: http://freedesktop.org/wiki/Software/systemd/
-[systemd service unit file]: https://gist.github.com/{{ site.github_username }}/81c8bb867c51292045c6
-[fahclient-systemd]: https://gist.github.com/{{ site.github_username }}/81397197ffead57c2e98
-
-## Dotfiles repository #################################################
-
-I started a [dotfiles repository](https://github.com/{{ site.github_username }}/dotfiles) at Github. I think most one of the main reasons people maintain a personal dotfiles repository is to be able to easily synchronize their configuration files and directories across different hosts/machines. I haven't had this need since I synchronize my files with [Unison](http://www.cis.upenn.edu/~bcpierce/unison/) and [rsync](https://rsync.samba.org/) without using third-party services and also because I keep individual configurations as [gists](https://gist.github.com/{{ site.github_username }}).
-
-However it seems that it would be easier to maitain all configurations in a
-single Github repository as opposed to keeping each configuration as a separate
-Gist repository. Moreover, having all configuration files and directories
-together makes sharing and browsing easier.
-
 ## ASP.NET 5 & ASPNET5CO
 
 [ASPNET5CO]({{ site.url }}/aspnet5co) is a project that comprises my efforts to
-socially and technicaly advocate the ASP.NET 5 framework. This month I worked on the following:
+socially and technically advocate the [ASP.NET 5 software
+framework](https://www.asp.net/vnext). This month I worked on the following:
 
-- Created a [Dockerfile](https://github.com/{{ site.github_username }}/aspnet5co/blob/master/Dockerfile) for development on Linux with [Yeoman](http://yeoman.io/).
-- Improved the organization and presentation of the website.
-- Wrote new sections including: 
+- Wrote new sections including:
   - [The .NET Framework and its future][]
   - [Cross-platform development with .NET][]
   - [Introduction to ASP.NET 5][]
@@ -75,6 +37,8 @@ socially and technicaly advocate the ASP.NET 5 framework. This month I worked on
   - [Installation guide][]
   - [Development guide][]
   - [Documentation guide][]
+- Created a [Dockerfile](https://github.com/{{ site.github_username }}/aspnet5co/blob/master/Dockerfile) for development on Linux with [Yeoman](http://yeoman.io/).
+- Improved the organization and presentation of the website.
 
 [The .NET Framework and its future]: {{ site.url }}/aspnet5co/dotnet-framework-and-future/
 [Cross-platform development with .NET]: {{ site.url }}/aspnet5co/dotnet-cross-platform-development/
@@ -85,13 +49,51 @@ socially and technicaly advocate the ASP.NET 5 framework. This month I worked on
 [Development guide]: {{ site.url }}/aspnet5co/development
 [Documentation guide]: {{ site.url }}/aspnet5co/documentation
 
+## Android development and debugging ###################################
+
+I did some Android development and debugging in order to troubleshoot an
+application a friend is developing. Because of the way his application is
+designed, it needs root/admin permissions to access some features of the
+device.
+
+I don't normally use a custom ROM neither do I root my device[^3], but on this
+occasion I temporarily installed Cyanogenmod on my Nexus 4 and obtained root
+permissions on the phone. The result of this is a [guide to set up a debugging and development environment for Android on Linux](https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e).
+
+## Folding@Home Client as a systemd service unit #######################
+
+I fold on a regular basis on my desktop computer and my home server, both of
+which are running Fedora (see stats [here][fah-stats0] and [here][fah-stats1]).
+[Systemd][] keeps gaining popularity among the major Linux distributions
+including Fedora, Ubuntu, Debian and ArchLinux, but Folding@Home packages still
+haven't shipped with systemd support.
+
+I created a [systemd service unit file][] and a [short guide to install it and
+use it][fahclient-systemd]. This makes it possible to control the Folding@Home
+client as a regular systemd service unit.
+
+[fah-stats0]: http://fah-web2.stanford.edu/cgi-bin/main.py?qtype=userpage&username=dreilopz
+[fah-stats1]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628
+[Systemd]: http://freedesktop.org/wiki/Software/systemd/
+[systemd service unit file]: https://gist.github.com/{{ site.github_username }}/81c8bb867c51292045c6
+[fahclient-systemd]: https://gist.github.com/{{ site.github_username }}/81397197ffead57c2e98
+
+## Dotfiles repository #################################################
+
+I started a [dotfiles repository](https://github.com/{{ site.github_username }}/dotfiles) at Github. I think most one of the main reasons people maintain a personal dotfiles repository is to be able to easily synchronize their configuration files and directories across different hosts/machines. I haven't had this need since I synchronize my files with *Unison*/*rsync* over *SSH* without using third-party services and also because I keep individual configurations as [gists](https://gist.github.com/{{ site.github_username }}).
+
+However it seems that it would be easier to maintain all configurations in a
+single Github repository as opposed to keeping each configuration as a separate
+Gist repository. Moreover, having all configuration files and directories
+together makes sharing and browsing easier.
+
 ## Philanthropy/EA #####################################################
 
 As suggested by [Tom Ash](http://tog22.tumblr.com/) of [Charity
-Science](http://www.charityscience.com), I'm gonna be helping with the local
+Science](http://www.charityscience.com), I'll be helping with the local
 *Effective Altruism* presence here at Monterrey. The point of this is to have
-at least one person other people interested in EA could talk to. Be sure to
-contact me if you want to know more about effective altruism related ideas.[^2]
+at least one person other people interested in EA could talk to[^2]. Be sure to
+contact me if you want to know more about effective altruism related ideas.
 
 A mailing list and a [Facebook
 group](https://www.facebook.com/groups/739984722775452/) were set up, although
@@ -99,15 +101,21 @@ for the time being we may organize all Spanish-speaking EAs in a single group
 instead, probably *[Altruismo
 Eficaz](https://www.facebook.com/groups/1605543996325148/)*.
 
+*Folding@Home* from June 15 to July 15, I scored 8,036 points and folded 17 work-units. See a [graph of Total Daily Production History for July]({{ site.url }}/{{ site.images_dir }}/2015/07/folding_at_home_stats_july_2015.png).
+
 Finally, I made [GiveWell](http://www.givewell.org/) my chosen charity at
 [Amazon Smile](https://smile.amazon.com/).
 
 ## Other ###############################################################
 
-I watched the first 3 seasons of the TV series Mad Men.
+- I performed minor improvements to the presentation of my projects/repos at
+  Github and at this website. See [Projects]({{ site.url }}/projects) and my
+  [Github repos](https://github.com/{{ site.github_username }}/?tab=repositories).
+- I watched the first 3 seasons of the TV series Mad Men.
 
 ---
+<br/>
 
 [^1]: Peter Hurford posts his reviews on a quarterly basis instead.
-[^2]: This didn't really happened in July but in March, but I figured it's the kind of activity I should include in my personal reviews. :)
-[^3]: I don't usually require admin permissions and I don't currently root because I feel it might inadvertently introduce security vulnerabilities to the system.
+[^2]: This didn't really happened in July but in March, but I figured it's the kind of activity I should include in my personal reviews.
+[^3]: I don't usually require admin permissions and I feel rooting my main phone might inadvertently introduce security vulnerabilities to the system.
