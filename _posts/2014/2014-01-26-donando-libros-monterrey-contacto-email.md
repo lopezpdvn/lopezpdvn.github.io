@@ -5,6 +5,7 @@ date:   2014-01-26 14:49:23
 lang: es
 categories: es
 tags: [es]
+comments: true
 ---
 
 El objetivo principal de este texto es exponer la insatisfactoria atención por
