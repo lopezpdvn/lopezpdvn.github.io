@@ -24,7 +24,7 @@ Contents:
 
 ## ASP.NET 5 & ASPNET5CO ###############################################
 
-[ASPNET5CO]({{ site.baseurl }}/aspnet5co) is a project that comprises my efforts to
+[ASPNET5CO]({{ site.url }}/aspnet5co) is a project that comprises my efforts to
 socially and technically advocate the [ASP.NET 5 software
 framework](https://www.asp.net/vnext). This month I worked on the following:
 
@@ -40,14 +40,14 @@ framework](https://www.asp.net/vnext). This month I worked on the following:
 - Created a [Dockerfile](https://github.com/{{ site.github_username }}/aspnet5co/blob/master/Dockerfile) for development on Linux with [Yeoman](http://yeoman.io/).
 - Improved the organization and presentation of the website.
 
-[The .NET Framework and its future]: {{ site.baseurl }}/aspnet5co/dotnet-framework-and-future/
-[Cross-platform development with .NET]: {{ site.baseurl }}/aspnet5co/dotnet-cross-platform-development/
-[Introduction to ASP.NET 5]: {{ site.baseurl }}/aspnet5co/aspnet5-introduction/
-[ASP.NET 5 community]: {{ site.baseurl }}/aspnet5co/aspnet5-community
-[DNX, DNVM and DNU]: {{ site.baseurl }}/aspnet5co/dnx-dnvm-dnu
-[Installation guide]: {{ site.baseurl }}/aspnet5co/installation
-[Development guide]: {{ site.baseurl }}/aspnet5co/development
-[Documentation guide]: {{ site.baseurl }}/aspnet5co/documentation
+[The .NET Framework and its future]: {{ site.url }}/aspnet5co/dotnet-framework-and-future/
+[Cross-platform development with .NET]: {{ site.url }}/aspnet5co/dotnet-cross-platform-development/
+[Introduction to ASP.NET 5]: {{ site.url }}/aspnet5co/aspnet5-introduction/
+[ASP.NET 5 community]: {{ site.url }}/aspnet5co/aspnet5-community
+[DNX, DNVM and DNU]: {{ site.url }}/aspnet5co/dnx-dnvm-dnu
+[Installation guide]: {{ site.url }}/aspnet5co/installation
+[Development guide]: {{ site.url }}/aspnet5co/development
+[Documentation guide]: {{ site.url }}/aspnet5co/documentation
 
 ## Android development and debugging ###################################
 
@@ -102,7 +102,7 @@ instead, probably *[Altruismo
 Eficaz](https://www.facebook.com/groups/1605543996325148/)*.
 
 *Folding@Home* from June 15 to July 15, I scored 8,036 points and folded 17
-work-units. [Here's]({{ site.baseurl }}/{{ site.images_dir }}/2015/07/folding_at_home_stats_july_2015.png)
+work-units. [Here's]({{ site.url }}/{{ site.images_dir }}/2015/07/folding_at_home_stats_july_2015.png)
 a graph of total daily production history for July.
 
 Finally, I made [GiveWell](http://www.givewell.org/) my chosen charity at
@@ -110,7 +110,7 @@ Finally, I made [GiveWell](http://www.givewell.org/) my chosen charity at
 
 ## Other ###############################################################
 
-I performed minor improvements to the presentation and layout of my projects/repos at Github and at this website. See [Projects]({{ site.baseurl }}/projects) and my [Github repos](https://github.com/{{ site.github_username }}/?tab=repositories).
+I performed minor improvements to the presentation and layout of my projects/repos at Github and at this website. See [Projects]({{ site.url }}/projects) and my [Github repos](https://github.com/{{ site.github_username }}/?tab=repositories).
 
 ---
 <br/>
