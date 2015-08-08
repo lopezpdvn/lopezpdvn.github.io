@@ -5,6 +5,7 @@ date:   2014-03-17 14:21:23
 lang: es
 categories: es
 tags: [es]
+comments: true
 excerpt_separator: <!--excerpt-->
 ---
 

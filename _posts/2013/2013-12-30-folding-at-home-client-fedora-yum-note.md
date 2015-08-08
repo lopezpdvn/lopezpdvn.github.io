@@ -5,6 +5,7 @@ date:   2013-12-30 02:50:54
 lang: en
 categories: en
 tags: [en, volunteer computing]
+comments: true
 ---
 
 The [Folding@Home](http://folding.stanford.edu "Folding@Home website")
