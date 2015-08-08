@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "July 2015 in review"
-date:   2015-08-02 14:49:23
+date:   2015-08-08 00:00:00 CDT
 lang: en
 categories: en
 tags: [en, month-in-review]
@@ -22,7 +22,7 @@ Contents:
 * TOC
 {:toc}
 
-## ASP.NET 5 & ASPNET5CO
+## ASP.NET 5 & ASPNET5CO ###############################################
 
 [ASPNET5CO]({{ site.url }}/aspnet5co) is a project that comprises my efforts to
 socially and technically advocate the [ASP.NET 5 software
@@ -101,17 +101,16 @@ for the time being we may organize all Spanish-speaking EAs in a single group
 instead, probably *[Altruismo
 Eficaz](https://www.facebook.com/groups/1605543996325148/)*.
 
-*Folding@Home* from June 15 to July 15, I scored 8,036 points and folded 17 work-units. See a [graph of Total Daily Production History for July]({{ site.url }}/{{ site.images_dir }}/2015/07/folding_at_home_stats_july_2015.png).
+*Folding@Home* from June 15 to July 15, I scored 8,036 points and folded 17
+work-units. [Here's]({{ site.url }}/{{ site.images_dir }}/2015/07/folding_at_home_stats_july_2015.png)
+a graph of total daily production history for July.
 
 Finally, I made [GiveWell](http://www.givewell.org/) my chosen charity at
 [Amazon Smile](https://smile.amazon.com/).
 
 ## Other ###############################################################
 
-- I performed minor improvements to the presentation of my projects/repos at
-  Github and at this website. See [Projects]({{ site.url }}/projects) and my
-  [Github repos](https://github.com/{{ site.github_username }}/?tab=repositories).
-- I watched the first 3 seasons of the TV series Mad Men.
+I performed minor improvements to the presentation and layout of my projects/repos at Github and at this website. See [Projects]({{ site.url }}/projects) and my [Github repos](https://github.com/{{ site.github_username }}/?tab=repositories).
 
 ---
 <br/>
