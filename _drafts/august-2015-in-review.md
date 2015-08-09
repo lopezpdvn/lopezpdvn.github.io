@@ -9,13 +9,16 @@ tags: [en, month-in-review]
 - Finally started to play with node.js, currently using for sysadmin scripts
   instead of UNIX shell scripts (bash).
 
+- syspol repo
+
+- DataStructuresAlgorithmsCSharp repo
+
+- SoftwareEngineeringProblemsCSharp repo
+
 ## ASPNET5CO
 
 *Problems* repo, with multiproject solution on VS2015, main project targetting
 `dotnet` framework and test project as a DNX project.
-
-- Watched Season 4 of TV Series Mad Men.
-
 
 dreilopz
   Fri Aug 7 20:00:13 UTC 2015
