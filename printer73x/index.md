@@ -14,21 +14,23 @@ permalink: /printer73x/
 developed for the school courses _734 - PROYECTO DE IMTC I_ and _735 - PROYECTO
 DE IMTC II_ (spanish for _mechatronics project_) at
 [FIME](http://www.fime.uanl.mx/en/) [UANL](http://www.uanl.mx/). printer73x has
-only been tested on Windows XP and Fedora 15 but will work on Windows Vista,
-Windows 7, Mac OS X, and most Linux distributions. The software is written
-mainly in Python 2 and MATLAB.
+only been tested on Windows 7 and Fedora but will work on Mac OS X, most Linux
+distributions and Windows XP, Vista, 7 and 8.  The software is written mainly in Python 2 and MATLAB.
 
-printer73x 1.0 is released for educational purposes.  Multiple licenses apply
-for this project, see file `LICENSE.txt`
+printer73x 1.0.2 is released for educational purposes.  Multiple licenses apply
+for this project, see file
+[LICENSE.md](https://github.com/lopezpdvn/printer73x/blob/master/LICENSE.md).
 
 ## Version 1.0.2
 
-October 27, 2012.
+Released October 27, 2012.
 
-* [HTML documentation]({{ page.url }}doc)
-* [zip release](https://github.com/lopezpdvn/printer73x/zipball/v1.0.2) (from
+* [Online HTML documentation]({{ page.url }}doc)
+* [Zip release](https://github.com/lopezpdvn/printer73x/zipball/v1.0.2) (from
     github).
-* [Video demonstrations](http://www.youtube.com/playlist?list=PL7141B5B35BD03A5E) at _YouTube_.
+* [Video
+  demonstrations](http://www.youtube.com/playlist?list=PL7141B5B35BD03A5E) at
+  _YouTube_.
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL7141B5B35BD03A5E" frameborder="0" allowfullscreen></iframe>
 
