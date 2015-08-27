@@ -17,7 +17,7 @@ web/HTTP, Javascript, Unix/Linux, open source and Python.
 My personal interests are software, rationality, altruism, music, medicine,
 biotech and veganism.
 
-{% include buttons/email.html %}{% include buttons/github.html %}{% include buttons/gist.html %}{% include buttons/linkedin.html %}{% include buttons/twitter.html %}{% include buttons/youtube.html %}{% include buttons/bitcoin.html %}{% include buttons/fah.html %}{% include buttons/openpgp.html %}
+{% include buttons/email.html %}{% include buttons/github.html %}{% include buttons/gist.html %}{% include buttons/linkedin.html %}{% include buttons/twitter.html %}{% include buttons/rss.html %}{% include buttons/youtube.html %}{% include buttons/bitcoin.html %}{% include buttons/fah.html %}{% include buttons/openpgp.html %}
 
 ## About the website ##################################################
 
