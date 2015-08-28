@@ -9,7 +9,6 @@
         <ul class="contact-list">
           <li>{{ site.description }}</li>
           <li class="rss-subscribe">Subscribe to posts <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS.</a></li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
 
@@ -39,6 +38,14 @@
               <span class="username">PedroIvanLopez</span>
             </a>
           </li>
+
+          <li>
+          <a href="mailto:{{ site.email }}" alt="Email" title="Email">
+              <img class="icon" src="{{ site.baseurl }}/{{ site.images_dir }}/buttons/email.png" alt="Email" title="Email" height="15px" width="15px" />
+              <span class="username">Email</span>
+            </a>
+          </li>
+
 
         </ul>
       </div>
