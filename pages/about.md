@@ -11,10 +11,10 @@ Master's candidate in Information Engineering at [UANL](http://www.uanl.mx
 "UANL"). I live near Monterrey, México.
 [[photo]({{ site.baseurl }}/{{ site.images_dir }}/lopezpdvn_2015_00.jpg "Photo")]
 
-My professional interests are software development, C#, .NET, ASP.NET,
-web/HTTP, Javascript, Unix/Linux, open source and Python.
+My professional interests are software development, web/HTTP, C#, Javascript,
+.NET, ASP.NET, Unix/Linux, open source and Python.
 
-My personal interests are software, rationality, altruism, music, medicine,
+My personal interests are software, rationality, philanthropy, music, medicine,
 biotech and veganism.
 
 {% include buttons/email.html %}{% include buttons/github.html %}{% include buttons/gist.html %}{% include buttons/linkedin.html %}{% include buttons/twitter.html %}{% include buttons/rss.html %}{% include buttons/youtube.html %}{% include buttons/bitcoin.html %}{% include buttons/fah.html %}{% include buttons/openpgp.html %}
@@ -24,4 +24,5 @@ biotech and veganism.
 This site is created with [Jekyll](http://jekyllrb.com) and is light on
 graphics.  You are encouraged to send general commentaries, broken links
 reports, corrections, and so on to
-[{{ site.email }}](mailto:{{ site.email }}) .  {{ site.statement_org_ideas }} This site has been active since november 2011 and is permanently under construction.
+[{{ site.email }}](mailto:{{ site.email }}) .  {{ site.statement_org_ideas }} This
+site has been active since november 2011 and is permanently under construction.
