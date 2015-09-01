@@ -7,7 +7,7 @@ tags: [en, month-in-review]
 comments: false
 permalink: /august-2015-in-review/
 excerpt: August 2015 personal review, summary of activities, misc notes...
-effort: [20, 35]
+effort: [20, 35, 20]
 ---
 
 Now that most of the house remodelling at home is done, I have been moving back
