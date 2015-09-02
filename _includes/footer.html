@@ -5,14 +5,9 @@
       <!--<h2 class="footer-heading">{{ site.title }}</h2>-->
 
     <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.description }}</li>
-          <li class="rss-subscribe">Subscribe to posts <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS.</a></li>
-        </ul>
-      </div>
 
-      <div class="footer-col  footer-col-2">
+
+      <div class="footer-col  footer-col-1">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -40,6 +35,13 @@
           </li>
 
           <li>
+          <a href="{{ site.baseurl }}/feed.xml" alt="Email" title="Email">
+              <img class="icon" src="{{ site.baseurl }}/{{ site.images_dir }}/buttons/rss.png" alt="Email" title="Email" height="15px" width="15px" />
+              <span class="username">Posts via RSS</span>
+            </a>
+          </li>
+
+          <li>
           <a href="mailto:{{ site.email }}" alt="Email" title="Email">
               <img class="icon" src="{{ site.baseurl }}/{{ site.images_dir }}/buttons/email.png" alt="Email" title="Email" height="15px" width="15px" />
               <span class="username">Email</span>
@@ -50,7 +52,7 @@
         </ul>
       </div>
 
-      <div class="footer-col  footer-col-3">
+      <div class="footer-col  footer-col-2">
         <!--<p class="text">{{ site.description }}</p>-->
         <a rel="license"
                 href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
@@ -60,6 +62,15 @@
         {% include license_message.html %}
 
       </div>
+
+      <!--
+      <div class="footer-col  footer-col-3">
+        <ul class="contact-list">
+          <li>{{ site.description }}</li>
+        </ul>
+      </div>
+      -->
+
     </div>
 
   </div>
