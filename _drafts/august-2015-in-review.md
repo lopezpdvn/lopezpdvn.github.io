@@ -7,7 +7,7 @@ tags: [en, month-in-review]
 comments: false
 permalink: /august-2015-in-review/
 excerpt: August 2015 personal review, summary of activities, misc notes...
-effort: [20, 35, 20, 15, 60, 45, 25]
+effort: [20, 35, 20, 15, 60, 45, 25, 20]
 ---
 
 This is the August 2015 in review post. The previous monthly review post is
@@ -16,13 +16,13 @@ This is the August 2015 in review post. The previous monthly review post is
 * TOC
 {:toc}
 
-## Sysadmin scripts with Node.js #######################################
+## Sysadmin scripts with Node.js/JavaScript ############################
 
 I've been playing with [Node.js][], mostly using the synchronous version of the
-API[^1] to write system administration scripts.  One of my goals is to replace
-most of my sysadmin and short scripts written in UNIX shell and Python with
-Node.js programs.  I currently keep the (public versions of the) scripts in
-[this repo][nodejsplay].
+API[^1] to write system administration scripts in JavaScript.  One of my goals
+is to replace most of my sysadmin and short scripts written in UNIX shell and
+Python with Node.js programs.  I currently keep the (public versions of the)
+scripts in [this repo][nodejsplay].
 
 [^1]: I know, I know... where Node.js really excels is asynchronous programming. But for the moment I don't need to program network server stuff with JavaScript. And really, very few of my sysadmin needs would benefit from concurrency.
 
@@ -37,11 +37,11 @@ purpose of Syspol is to define a cross-platform system policy for applications
 and environments to implement partially or completely, therefore reducing
 design efforts in such programs and environments.
   
-Syspol will describe resources that a program module or environment should
+Syspol will describe resources that an environment or program module should
 provide in order to be Syspol-compliant, including environments variables and
 scripts/commands. Patterns for common services will also be defined, for
-example logging, program configuration, input and output, etc.  A program or a
-system can seek to implement certain features of Syspol, instead of having to
+example logging, program configuration, input and output, etc.  A program or
+system can seek to implement certain features of Syspol instead of having to
 implement it completely.
 
 During the initial phase of project Syspol I expect that most policies will be
@@ -52,7 +52,7 @@ functions/scripts.
 [Rule of Separation]: http://www.catb.org/esr/writings/taoup/html/ch01s06.html#id2877777
 [The Art of Unix Programming]: http://www.catb.org/esr/writings/taoup/
 
-## Fun with DNX ########################################################
+## Fun with DNX and C# #################################################
 
 In order to practice software engineering skills and [ASP.NET 5][] application
 design, and also just because it's fun, I created two new .NET projects.
@@ -79,9 +79,10 @@ ended](https://intelligence.org/2015/09/01/our-summer-fundraising-drive-is-compl
 [Machine Intelligence Research Institute]: https://intelligence.org
 [Summer Fundraiser]: https://intelligence.org/2015/07/17/miris-2015-summer-fundraiser/
 
-[Folding@Home during August][fah-stats] I scored ~15,000 points and ranked 48th
-of all the members of the [The Longevity Meme team][].  A graph of total daily
-production history for August can be found [here][fah-august-graph].
+[Folding@Home during August][fah-stats] I scored approximately 15,000 points
+and ranked 48th of all the members of the [The Longevity Meme team][].  A graph
+of total daily production history for August can be found
+[here][fah-august-graph].
 
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461
