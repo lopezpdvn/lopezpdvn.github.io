@@ -19,15 +19,16 @@ This is the August 2015 in review post. The previous monthly review post is
 ## Sysadmin scripts with Node.js/JavaScript ############################
 
 I've been playing with [Node.js][], mostly using the synchronous version of the
-API[^1] to write system administration scripts in JavaScript.  One of my goals
-is to replace most of my sysadmin and short scripts written in UNIX shell and
-Python with Node.js programs.  I currently keep the (public versions of the)
-scripts in [this repo][nodejsplay].
+API[^1] to write system administration scripts in JavaScript with the package
+[shelljs][].  One of my goals is to replace most of my sysadmin and short
+scripts written in UNIX shell and Python with Node.js programs.  I currently
+keep the (public versions of the) scripts in [this repo][nodejsplay].
 
 [^1]: I know, I know... where Node.js really excels is asynchronous programming. But for the moment I don't need to program network server stuff with JavaScript. And really, very few of my sysadmin needs would benefit from concurrency.
 
 [Node.js]: https://nodejs.org/
 [nodejsplay]: https://github.com/{{ site.github_username }}/nodejsplay
+[shelljs]: http://shelljs.org
 
 ## Project Syspol ######################################################
 
@@ -44,8 +45,13 @@ example logging, program configuration, input and output, etc.  A program or
 system can seek to implement certain features of Syspol instead of having to
 implement it completely.
 
+I think of Syspol as a way to standardize my own thinking so I spend less time
+making design decisions when I'm automating things on my different
+environments. I won't be trying to reinvent the wheel, instead I'll be adopting
+common and proven practices specially from the Unix culture.
+
 During the initial phase of project Syspol I expect that most policies will be
-about operating system environments, specially environment variables and
+about operating system environments, mainly environment variables and
 functions/scripts.
 
 [Syspol]: https://github.com/{{ site.github_username }}/syspol
@@ -91,8 +97,8 @@ of total daily production history for August can be found
 ## Other ###############################################################
 
 Now that most of the house remodeling at home is done, I have been moving back
-all my stuff to my bedroom. The remodeling has made some of my things very
-dusty so before moving them back to the bedroom I had to thoroughly clean them.
+all my stuff to the study and bedroom. The remodeling has made some of my
+things very dusty so before moving them back I had to thoroughly clean them.
 Starting the last week of August I'm again working full-time on my workstation
 and it really feels great to be back with full productivity.
 
