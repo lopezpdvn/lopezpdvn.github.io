@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "August 2015 in review"
+date:   2015-09-06 15:32:13 CDT 2015
 lang: en
 categories: en
 tags: [en, month-in-review]
-comments: false
+comments: true
 permalink: /august-2015-in-review/
 excerpt: August 2015 personal review, summary of activities, misc notes...
-effort: [20, 35, 20, 15, 60, 45, 25, 20]
 ---
 
 This is the August 2015 in review post. The previous monthly review post is
