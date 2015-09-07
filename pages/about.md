@@ -9,7 +9,7 @@ permalink: /about/
 I'm a software engineer interested in web and large scale systems. I'm a
 Master's candidate in Information Engineering at [UANL](http://www.uanl.mx
 "UANL"). I live near Monterrey, México.
-[[photo]({{ site.baseurl }}/{{ site.images_dir }}/lopezpdvn_2015_00.jpg "Photo")]
+[[photo]({{ site.baseurl }}/{{ site.images_dir }}/pedro_ivan_lopez_2015_01.jpg "Photo")]
 
 My professional interests are software development, web/HTTP, C#, Javascript,
 .NET, ASP.NET, Unix/Linux, open source and Python.
