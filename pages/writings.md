@@ -12,6 +12,8 @@ permalink: /writings/
 All my writings. See also [projects]({{ site.baseurl }}/projects) and
 [blog]({{ site.baseurl }}/blog).
 
+- [August 2015 in review]({% post_url 2015/2015-08-09-july-2015-in-review %}). *August 2015 personal review, summary of activities, misc notes...*
+- [July 2015 in review]({% post_url 2015/2015-08-09-july-2015-in-review %}). *July 2015 personal review, summary of activities, misc notes...*
 - [How to set up a debugging and development environment for Android on Linux](https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e) (July 24, 2015).
 - [Install Folding@home FAHClient on Linux as a systemd service unit](https://gist.github.com/{{ site.github_username }}/81397197ffead57c2e98) (July 17, 2015).
 - Basin, M.; Serna, M.; Lopez-Hernandez, P.I.,"[Central energy-to-peak filter design for uncertain linear systems](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6606296&isnumber=6605987 "Central energy-to-peak filter design for uncertain linear systems")", Control Conference (ASCC), 2013 9th Asian , vol., no., pp.1,6, 23-26 June 2013 doi: 10.1109/ASCC.2013.6606296.
