@@ -12,7 +12,7 @@ permalink: /writings/
 All my writings. See also [projects]({{ site.baseurl }}/projects) and
 [blog]({{ site.baseurl }}/blog).
 
-- [August 2015 in review]({% post_url 2015/2015-08-09-july-2015-in-review %}). *August 2015 personal review, summary of activities, misc notes...*
+- [August 2015 in review]({% post_url 2015/2015-09-06-august-2015-in-review %}). *August 2015 personal review, summary of activities, misc notes...*
 - [July 2015 in review]({% post_url 2015/2015-08-09-july-2015-in-review %}). *July 2015 personal review, summary of activities, misc notes...*
 - [How to set up a debugging and development environment for Android on Linux](https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e) (July 24, 2015).
 - [Install Folding@home FAHClient on Linux as a systemd service unit](https://gist.github.com/{{ site.github_username }}/81397197ffead57c2e98) (July 17, 2015).
