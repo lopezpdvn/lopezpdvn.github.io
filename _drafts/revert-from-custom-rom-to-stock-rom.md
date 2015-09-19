@@ -1,28 +1,36 @@
 ---
 layout: post
-title:  "Revert a Nexus device to stock ROM"
+title:  "Revert a Nexus device to factory image"
 lang: en
 date: Fri Sep 11 23:21:42 CDT 2015
 categories: en
 tags: [en, tech]
 comments: false
-permalink: /android-how-to-revert-from-custom-rom-to-stock-rom/
+permalink: /how-to-revert-nexus-device-to-factory-image/
 excerpt: ""
+effort: [40, 10]
 ---
 
 This post describes how to revert an Android operating system from a custom ROM
-like Cyanogenmod to the stock ROM. I tested this guide with a Nexus 5 running
-Cyanogenmod 12.1-20150704. The guide [Factory Images for Nexus Devices]a
+like Cyanogenmod to the stock ROM. I tested this guide with a Nexus 4 running
+Cyanogenmod 12.1-20150704. Use these notes together with my guide [How to set
+up a debugging and development environment for Android on
+Linux][android-debug-develop] and Google's [Factory Images for Nexus
+Devices][factory-images].
 
-The Nexus family of devices is developer-friendly and the [instructions
-published by Google](https://developers.google.com/android/nexus/images) are
-clear and easy to follow. Please see my guide [How to set up a debugging and
-development environment for Android on Linux][] and follow as necessary.
-Always remember to verify the integrity of the downloaded files by comparing
-the checksums.
+**Note**: I'm omitting values particular to my system (like ids, serial numbers
+and ports) with the notation `<variable>`.
+
+**Warning**: Following this procedure will result in loss of user and system
+data.  Always backup your data.
 
 {% capture android_debug_develop %}https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e{% endcapture %}
-[How to set up a debugging and development environment for Android on Linux]: {{ android_debug_develop }}
+
+[android-debug-develop]: {{ android_debug_develop }}
+[factory-images]: https://developers.google.com/android/nexus/images
+
+Always remember to verify the integrity of the downloaded files by comparing
+the checksums.
 
 {% highlight bash %}
 $ curl -O https://dl.google.com/dl/android/aosp/occam-lmy47v-factory-b0c4eb3d.tgz
