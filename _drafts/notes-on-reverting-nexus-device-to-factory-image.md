@@ -107,6 +107,7 @@ Change current directory into the one containing the script `flash-all.sh` and
 just execute it
 
 {% highlight bash %}
+$ cd occam-lmy47v
 $ ./flash-all.sh
 [113/574]
 sending 'bootloader' (2264 KB)...
