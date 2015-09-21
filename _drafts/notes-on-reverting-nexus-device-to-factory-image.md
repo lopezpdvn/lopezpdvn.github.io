@@ -7,8 +7,8 @@ categories: en
 tags: [en, tech]
 comments: false
 permalink: /notes-on-reverting-nexus-device-to-factory-image/
-excerpt: ""
-effort: [40, 10, 34]
+ixcerpt: ""
+effort: [40, 10, 34, 25]
 ---
 
 This post lists some notes on reverting an Android operating system from a
@@ -237,8 +237,8 @@ $ cat /proc/meminfo | head -1
 MemTotal:        1019096 kB
 {% endhighlight %}
 
-So I had to execute the install steps manually as shown in this [blog
-post](https://wolfpaulus.com/jounal/android-journal/android-5-1-nexus-6/):
+In this case you'll have to separately flash the images to the Nexus. Start by
+unzipping the ZIP file with the images
 
 {% highlight bash %}
 $ unzip image-occam-lmy47v.zip
@@ -249,8 +249,13 @@ inflating: boot.img
 inflating: recovery.img
 inflating: userdata.img
 inflating: system.img
+{% endhighlight %}
 
-$ ./flash-base.sh # Device will reboot into fastboot mode by itself twice
+Execute the script `flash-base.sh`.  The device will reboot into fastboot mode
+by itself twice
+
+{% highlight bash %}
+$ ./flash-base.sh
 sending 'bootloader' (2264 KB)...
 OKAY [  0.108s]
 writing 'bootloader'...
@@ -267,7 +272,11 @@ finished. total time: 4.028s
 rebooting into bootloader...
 OKAY [  0.000s]
 finished. total time: 0.051s
+{% endhighlight %}
 
+Flash the recovery and boot images
+
+{% highlight bash %}
 $ fastboot flash recovery recovery.img
 sending 'recovery' (6960 KB)...
 OKAY [  0.330s]
@@ -281,8 +290,13 @@ OKAY [  0.312s]
 writing 'boot'...
 OKAY [  0.262s]
 finished. total time: 0.575s
+{% endhighlight %}
 
-fastboot flash -S 512M system system.img
+Flash the system image.  Note that the command uses the option `-S 512M`,
+making fastboot flash the image in chunks.
+
+{% highlight bash %}
+$ fastboot flash -S 512M system system.img
 erasing 'system'...
 OKAY [  0.471s]
 sending sparse 'system' (518095 KB)...
@@ -294,9 +308,12 @@ OKAY [ 35.813s]
 writing 'system'...
 OKAY [ 12.635s]
 finished. total time: 127.845s
+{% endhighlight %}
 
-fastboot flash cache cache.img # ---- not this one?
-fastboot flash cache cache.img
+Flash the cache and userdata images.
+
+{% highlight bash %}
+$ fastboot flash cache cache.img
 erasing 'cache'...
 OKAY [  0.026s]
 sending 'cache' (13424 KB)...
@@ -305,7 +322,7 @@ writing 'cache'...
 OKAY [  0.530s]
 finished. total time: 1.222s
 
-fastboot flash userdata userdata.img
+$ fastboot flash userdata userdata.img
 erasing 'userdata'...
 OKAY [  0.474s]
 sending 'userdata' (98413 KB)...
@@ -313,23 +330,13 @@ OKAY [  4.849s]
 writing 'userdata'...
 OKAY [  3.662s]
 finished. total time: 8.986s
-
-
-fastboot reboot
 {% endhighlight %}
 
-Note that the command to flash the `system.img` image uses the option `-S
-512M`, making `fastboot` flash the image in chunks. Without the switch I was
-getting the error `error: cannot load 'system.img'` because of not enough
-available RAM in my system:
+Finally reboot the device
 
 {% highlight bash %}
-$ cat /proc/meminfo | head -1
-MemTotal:        1019096 kB
+$ fastboot reboot
 {% endhighlight %}
-
-????  then go to recovery mode and wipe user data and cache.  if not install
-twrp recovery.
 
 **Note**: If you seem to get the *boot loop* (boot animation never stops for
 more than 30 minutes), power off device, start in recovery mode and wipe the
@@ -339,7 +346,4 @@ user and cache data partitions. Then reboot.
 
 - [How to set up a debugging and development environment for Android on Linux][android-debug-develop]
 - [Factory Images for Nexus Devices][factory-images]
-
-<!-- TODO
-https://developers.google.com/android/nexus/images#occam
--->
+- [Installing Android 5.1 on the Nexus 6](https://wolfpaulus.com/jounal/android-journal/android-5-1-nexus-6/)
