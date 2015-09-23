@@ -2,27 +2,28 @@
 layout: post
 title:  "Notes on reverting a Nexus device to factory image"
 lang: en
-date: Fri Sep 11 23:21:42 CDT 2015
+date: Tue Sep 22 22:33:42 CDT 2015
 categories: en
 tags: [en, tech]
 comments: false
 permalink: /notes-on-reverting-nexus-device-to-factory-image/
-ixcerpt: ""
-effort: [40, 10, 34, 25]
+excerpt: ""
+effort: [40, 10, 34, 25, 36]
 ---
 
 This post lists some notes on reverting an Android operating system from a
-custom ROM like Cyanogenmod to the stock ROM, on Linux hosts. I tested this
-guide with a Nexus 4 running Cyanogenmod 12.1-20150704. Use these notes
-together with my guide [How to set up a debugging and development environment
-for Android on Linux][android-debug-develop] and Google's [Factory Images for
-Nexus Devices][factory-images].
+custom ROM like Cyanogenmod to the stock ROM, using a Linux machine as the
+development host. I tested this guide with a Nexus 4 running Cyanogenmod
+12.1-20150704. Use these notes together with my guide [How to set up a
+debugging and development environment for Android on
+Linux][android-debug-develop] and Google's [Factory Images for Nexus
+Devices][factory-images].
 
 **Note**: I'm omitting values particular to my system (like ids, serial numbers
 and ports) with the notation `<variable>`.
 
 **Warning**: Following this procedure will result in loss of user and system
-data.  Always backup your data.
+data.  *Always backup your data*.
 
 {% capture android_debug_develop %}https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e{% endcapture %}
 
@@ -60,7 +61,8 @@ $ tar xzf occam-lmy47v-factory-b0c4eb3d.tgz
 
 If you haven't set up your development and debugging environment, follow the
 steps in sections [Install the Android SDK Tools][], [Configure the Nexus
-device for development][] and [Unlock the bootloader][].
+device for development][] and [Unlock the bootloader][] of my guide mentioned
+before.
 
 [Install the Android SDK Tools]: {{ android_debug_develop }}#install-the-android-sdk-tools
 [Configure the Nexus device for development]: {{ android_debug_develop }}#configure-the-nexus-device-for-development
@@ -73,7 +75,7 @@ $ adb devices -l
 * daemon not running. starting it now on port <portnumber> *
 * daemon started successfully *
 List of devices attached
-XXXXXXXXXXXXXXXX       device usb:1-1 product:occam model:Nexus_4 device:mako
+<XXXXXXXXXXXXXXXX>       device usb:1-1 product:occam model:Nexus_4 device:mako
 {% endhighlight %}
 
 Boot into bootloader
@@ -89,8 +91,9 @@ $ fastboot devices -l
 <ok message, not errors>
 {% endhighlight %}
 
-Unlock bootloader (accept the disclaimer the device displays when entering
-below command, then you will see the output shown below)
+*This step will automatically wipe all device data*.  Unlock bootloader with
+below command.  Accept the disclaimer the device displays, then you will see
+the output shown below.
 
 {% highlight bash %}
 $ fastboot oem unlock # Accept disclaimer
@@ -201,12 +204,23 @@ rebooting...
 finished. total time: 78.004s
 {% endhighlight %}
 
+Your Nexus will boot the factory image, remember that the first boot usually
+takes more time than usual. If you seem to get the *boot loop* (boot animation
+never stops for more than 30 minutes), power off device, start in recovery mode
+and wipe the user and cache data partitions. Then reboot.
+
 ### Flashing the image on a memory constrained host ####################
 
-Trying to flash the image using a Linux netbook as a host failed
+The script `flash-all.sh` tries to flash the images without sparsing them,
+which won't work if you don't have enough RAM in your development computer. For
+example, trying to flash the images on my 1 GiB RAM netbook running Ubuntu
+failed as shown
 
 {% highlight bash %}
-./flash-all.sh
+$ cat /proc/meminfo | head -1
+MemTotal:        1019096 kB
+
+$ ./flash-all.sh
 sending 'bootloader' (2264 KB)...
 OKAY [  0.108s]
 writing 'bootloader'...
@@ -227,14 +241,6 @@ archive does not contain 'boot.sig'
 archive does not contain 'recovery.sig'
 failed to allocate 854788148 bytes
 error: update package missing system.img
-{% endhighlight %}
-
-This was due to fastboot failing to allocate enough memory to load the image
-into the Nexus device, the host had only 1 GiB RAM
-
-{% highlight bash %}
-$ cat /proc/meminfo | head -1
-MemTotal:        1019096 kB
 {% endhighlight %}
 
 In this case you'll have to separately flash the images to the Nexus. Start by
@@ -337,10 +343,6 @@ Finally reboot the device
 {% highlight bash %}
 $ fastboot reboot
 {% endhighlight %}
-
-**Note**: If you seem to get the *boot loop* (boot animation never stops for
-more than 30 minutes), power off device, start in recovery mode and wipe the
-user and cache data partitions. Then reboot.
 
 ## References ##########################################################
 
