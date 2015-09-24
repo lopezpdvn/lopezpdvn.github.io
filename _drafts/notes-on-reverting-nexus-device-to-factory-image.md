@@ -7,7 +7,6 @@ categories: en
 tags: [en, tech]
 comments: false
 permalink: /notes-on-reverting-nexus-device-to-factory-image/
-excerpt: ""
 effort: [40, 10, 34, 25, 36]
 ---
 
@@ -91,9 +90,8 @@ $ fastboot devices -l
 <ok message, not errors>
 {% endhighlight %}
 
-*This step will automatically wipe all device data*.  Unlock bootloader with
-below command.  Accept the disclaimer the device displays, then you will see
-the output shown below.
+*This step will wipe all device data*.  Unlock bootloader with below command.
+Accept the disclaimer displayed, then you will see the output shown below.
 
 {% highlight bash %}
 $ fastboot oem unlock # Accept disclaimer
@@ -217,6 +215,7 @@ example, trying to flash the images on my 1 GiB RAM netbook running Ubuntu
 failed as shown
 
 {% highlight bash %}
+$ # Showing available RAM
 $ cat /proc/meminfo | head -1
 MemTotal:        1019096 kB
 
@@ -244,7 +243,7 @@ error: update package missing system.img
 {% endhighlight %}
 
 In this case you'll have to separately flash the images to the Nexus. Start by
-unzipping the ZIP file with the images
+unzipping the ZIP file
 
 {% highlight bash %}
 $ unzip image-occam-lmy47v.zip
@@ -258,7 +257,7 @@ inflating: system.img
 {% endhighlight %}
 
 Execute the script `flash-base.sh`.  The device will reboot into fastboot mode
-by itself twice
+twice.
 
 {% highlight bash %}
 $ ./flash-base.sh
@@ -298,8 +297,7 @@ OKAY [  0.262s]
 finished. total time: 0.575s
 {% endhighlight %}
 
-Flash the system image.  Note that the command uses the option `-S 512M`,
-making fastboot flash the image in chunks.
+Flash the system image.
 
 {% highlight bash %}
 $ fastboot flash -S 512M system system.img
@@ -316,7 +314,18 @@ OKAY [ 12.635s]
 finished. total time: 127.845s
 {% endhighlight %}
 
-Flash the cache and userdata images.
+Note that the command uses the option `-S 512M`, making fastboot flash the
+image in chunks of (maximum) size 512 MB.  Use another argument according to
+your system's needs. In principle you can use this option to sparse the other
+images too, although you probably won't need to do that since they aren't as
+big as the system image.  Fastboot describes this option's usage as follows
+
+{% highlight bash %}
+  -S <size>[K|M|G]                         automatically sparse files greater
+                                         than size.  0 to disable
+{% endhighlight %}
+
+Flash the cache and user data images.
 
 {% highlight bash %}
 $ fastboot flash cache cache.img
