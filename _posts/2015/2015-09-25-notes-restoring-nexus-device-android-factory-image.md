@@ -1,20 +1,18 @@
 ---
 layout: post
-title:  "Notes on reverting a Nexus device to factory image"
+title:  "Notes on restoring a Nexus device to Android factory image"
 lang: en
-date: Tue Sep 22 22:33:42 CDT 2015
+date: Fri Sep 25 13:15:08 CDT 2015
 categories: en
-tags: [en, tech]
-comments: false
-permalink: /notes-on-reverting-nexus-device-to-factory-image/
-effort: [40, 10, 34, 25, 36]
+tags: [en, tech, engineering, android, linux]
+comments: true
+permalink: /notes-restoring-nexus-device-android-factory-image/
 ---
 
-This post lists some notes on reverting an Android operating system from a
-custom ROM like Cyanogenmod to the stock ROM, using a Linux machine as the
-development host. I tested this guide with a Nexus 4 running Cyanogenmod
-12.1-20150704. Use these notes together with my guide [How to set up a
-debugging and development environment for Android on
+This post lists some notes on restoring a Nexus device to Android factory image
+using a Linux machine as the development host.  I tested this guide with a
+Nexus 4 running Cyanogenmod 12.1-20150704. Use these notes together with my
+guide [How to set up a debugging and development environment for Android on
 Linux][android-debug-develop] and Google's [Factory Images for Nexus
 Devices][factory-images].
 
@@ -24,9 +22,7 @@ and ports) with the notation `<variable>`.
 **Warning**: Following this procedure will result in loss of user and system
 data.  *Always backup your data*.
 
-{% capture android_debug_develop %}https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e{% endcapture %}
-
-[android-debug-develop]: {{ android_debug_develop }}
+[android-debug-develop]: https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e
 [factory-images]: https://developers.google.com/android/nexus/images
 
 Contents:
@@ -62,6 +58,8 @@ If you haven't set up your development and debugging environment, follow the
 steps in sections [Install the Android SDK Tools][], [Configure the Nexus
 device for development][] and [Unlock the bootloader][] of my guide mentioned
 before.
+
+{% capture android_debug_develop %}https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e{% endcapture %}
 
 [Install the Android SDK Tools]: {{ android_debug_develop }}#install-the-android-sdk-tools
 [Configure the Nexus device for development]: {{ android_debug_develop }}#configure-the-nexus-device-for-development
