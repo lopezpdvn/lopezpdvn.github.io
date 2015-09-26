@@ -205,6 +205,13 @@ takes more time than usual. If you seem to get the *boot loop* (boot animation
 never stops for more than 30 minutes), power off device, start in recovery mode
 and wipe the user and cache data partitions. Then reboot.
 
+*This step is optional but recommended*. Re-lock the bootloader by booting into
+fastboot mode again and running below command.
+
+{% highlight bash %}
+$ fastboot oem lock
+{% endhighlight %}
+
 ### Flashing the image on a memory constrained host ####################
 
 The script `flash-all.sh` tries to flash the images without sparsing them,
@@ -343,6 +350,12 @@ OKAY [  4.849s]
 writing 'userdata'...
 OKAY [  3.662s]
 finished. total time: 8.986s
+{% endhighlight %}
+
+*This step is optional but recommended*. Re-lock the bootloader.
+
+{% highlight bash %}
+$ fastboot oem lock
 {% endhighlight %}
 
 Finally reboot the device
