@@ -208,7 +208,7 @@ and wipe the user and cache data partitions. Then reboot.
 ### Flashing the image on a memory constrained host ####################
 
 The script `flash-all.sh` tries to flash the images without sparsing them,
-which won't work if you don't have enough RAM in your development computer. For
+which won't work if you don't have enough RAM on your development computer. For
 example, trying to flash the images on my 1 GiB RAM netbook running Ubuntu
 failed as shown
 
