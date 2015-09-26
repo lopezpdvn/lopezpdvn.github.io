@@ -14,4 +14,4 @@ servelocal:
 	@$(SERVELOCALCMD)
 
 push:
-	git push origin master drafts
+	git push origin master
