@@ -20,7 +20,8 @@ This is the September 2015 in review post. The previous monthly review post is
 
 I wrote a short [post][post] to gather some notes on restoring Nexus devices to
 factory images (AKA stock ROMs). I'm basically referring to [one of my previous
-guides][devenv-android] as well as Google official documentation.
+guides][devenv-android] as well as Google official documentation. In addition,
+I'm showing how to flash the image on a RAM constrained host.
 
 [devenv-android]: https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e
 
@@ -51,69 +52,59 @@ kinds of syspol policies, for example programming patterns.
 
 ## Public code repositories activity
 
-Progress on projects.
+{% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
+
+Progress on projects:
+
+- [nodejsplay][]
+- [ASP.NET5-Co][aspnet5co-repo]
+- [DataStructuresAlgorithmsCSharp][]
+- [ASP.NET 5 Demo][]
+- [Software Engineering Problems in C#][SoftwareEngineeringProblemsCSharp]
+- [My personal website][personal-website]
+
+[nodejsplay]: {{ github_prefix }}/nodejsplay
+[aspnet5co-repo]: {{ github_prefix }}/aspnet5co
+[DataStructuresAlgorithmsCSharp]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp
+[ASP.NET 5 Demo]: {{ github_prefix }}/ASPNET5Demo
+[SoftwareEngineeringProblemsCSharp]: {{ github_prefix }}/SoftwareEngineeringProblemsCSharp
+[personal-website]: {{ github_prefix }}/lopezpdvn.github.io
 
 <!-- TODO
 Enumerate over active repos and show total number of commits and link to a
 graphical description of actity.
 -->
 
-[aspnet5co]: {{ site.url }}/aspnet5co
+## Philanthropy
+
+I spent some hours getting together with friends to talk about effective
+altruism and other philanthropy topics on two ocassions.
+
+[Folding@Home during September][fah-stats] I scored 25,382 points completing 48
+work units and ranked 48th of all the members of the [The Longevity Meme
+team][].  A graph of total daily production history for September can be found
+[here][fah-sep-graph].
+
+[fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628
+[The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461
+[fah-sep-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2015/09/folding_at_home_stats_september_2015.png
 
 ## Other
 
-Gave a presentation about my project [ASP.NET5-Co][aspnet5co] to a small group
-of professors at UANL. You can find the slides [here][slides].
+Miscellaneous activities:
 
+- Gave a presentation about my project [ASP.NET5-Co][aspnet5co] to a small
+  group of professors at UANL. Slides [here][slides].
+
+[aspnet5co]: {{ site.url }}/aspnet5co
 [slides]: https://onedrive.live.com/redir?resid=AA8C714468AC7153!115&authkey=!AM_D2AQdCx-IvY4&ithint=file%2cpptx
 
-- Made some time to play bass after a long time without playing.
+- Switched from Node.js/ShellJS scripts to [Gulp](http://gulpjs.com) for task
+  automation on the client and in general.
 
-## Philanthropy
+- Switched from manual handling of web client dependencies to
+  automatic management with [Bower](http://bower.io).
 
-Spent some hours getting together with friends to talk about effective altruism
-and other philanthropy topics on two ocassions.
-
-- Folding@Home activity.
+- Made some time to play bass and guitar after a long time without playing.
 
 ---
-<br/>
-
-<!--
- dreilopz
-    Last updated: Wed Sep 2 15:00:13 PDT 2015
-    Wed Sep 2 22:00:13 UTC 2015
-
-    Date of last work unit  2015-09-02 05:16:10
-    Total score     979225
-    Overall rank (if points are combined)   47500 of 1796277
-    Active clients (within 50 days)     2
-    Active clients (within 7 days)  2
-
- dreilopz
-	Last updated: Thu Oct 1 11:00:14 PDT 2015
-Thu Oct 1 18:00:14 UTC 2015
-
-Date of last work unit 	2015-10-01 04:08:23
-Total score 	1004014
-Overall rank (if points are combined) 	47292 of 1799444
-Active clients (within 50 days) 	2
-Active clients (within 7 days) 	2
-
-dreilopz has contributed work units with more than one different team number. The contributions are listed below. 
-
- Contributions by team and project:
-
-Donor 	dreilopz
-Team 	The Longevity Meme (32461)
-Score 	902461 (certificate)
-Donor Rank 	50291 of 1799444
-WU 	665 (certificate)
-Date of last
-work unit 	2015-10-01 04:08:23
-Active clients
-(within 50 days) 	2
-Active clients
-(within 7 days) 	2 
-
--->
