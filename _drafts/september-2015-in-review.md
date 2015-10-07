@@ -21,7 +21,7 @@ This is the September 2015 in review post. The previous monthly review post is
 I wrote a short [post][post] to gather some notes on restoring Nexus devices to
 factory images (AKA stock ROMs). I'm basically referring to [one of my previous
 guides][devenv-android] as well as Google official documentation. In addition,
-I'm showing how to flash the image on a RAM constrained host.
+I show how to flash the image on a RAM constrained host.
 
 [devenv-android]: https://gist.github.com/{{ site.github_username }}/dd2eb3512ac225d0ad0e
 
@@ -56,24 +56,23 @@ kinds of syspol policies, for example programming patterns.
 
 Progress on projects:
 
-- [nodejsplay][]
-- [ASP.NET5-Co][aspnet5co-repo]
-- [DataStructuresAlgorithmsCSharp][]
-- [ASP.NET 5 Demo][]
-- [Software Engineering Problems in C#][SoftwareEngineeringProblemsCSharp]
-- [My personal website][personal-website]
+- [nodejsplay][]: [*4 commits*] Script to restart instance of [Synergy][]
+  server on Unix/Linux machines.
+- [Data structures and algorithms in C#][DataStructuresAlgorithmsCSharp] [*24
+  commits*] Binary tree and graph implementations and traversals.
+- [My personal website][personal-website]: [*32 commits*] General maintenance
+  and blog posts.
+- [ASP.NET5-Co][aspnet5co-repo]: [*3 commits*] Minor rewriting
+- [ASP.NET 5 Demo][]: [*7 commits*] Short demo using examples from [ASP.NET 5
+  documentation][].
 
 [nodejsplay]: {{ github_prefix }}/nodejsplay
 [aspnet5co-repo]: {{ github_prefix }}/aspnet5co
 [DataStructuresAlgorithmsCSharp]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp
 [ASP.NET 5 Demo]: {{ github_prefix }}/ASPNET5Demo
-[SoftwareEngineeringProblemsCSharp]: {{ github_prefix }}/SoftwareEngineeringProblemsCSharp
 [personal-website]: {{ github_prefix }}/lopezpdvn.github.io
-
-<!-- TODO
-Enumerate over active repos and show total number of commits and link to a
-graphical description of actity.
--->
+[Synergy]: http://synergy-project.org
+[ASP.NET 5 documentation]: http://docs.asp.net
 
 ## Philanthropy
 
@@ -99,11 +98,13 @@ Miscellaneous activities:
 [aspnet5co]: {{ site.url }}/aspnet5co
 [slides]: https://onedrive.live.com/redir?resid=AA8C714468AC7153!115&authkey=!AM_D2AQdCx-IvY4&ithint=file%2cpptx
 
-- Switched from Node.js/ShellJS scripts to [Gulp](http://gulpjs.com) for task
-  automation on the client and in general.
+- Switched from plain Node.js/ShellJS scripts to [Gulp](http://gulpjs.com) for
+  tasks automation on the client and in general.
 
 - Switched from manual handling of web client dependencies to
   automatic management with [Bower](http://bower.io).
+
+- My [personal website]({{ site.url }}) got 1,273 views.
 
 - Made some time to play bass and guitar after a long time without playing.
 
