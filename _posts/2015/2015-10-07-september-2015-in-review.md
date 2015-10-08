@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "September 2015 in review"
-date:   Wed Oct  7 01:12:55 CDT 2015
+date:   Wed Oct  7 20:54:18 CDT 2015
 lang: en
 categories: en
 tags: [en, month-in-review]
-comments: false
+comments: true
 permalink: /september-2015-in-review/
 excerpt: September 2015 personal review, summary of activities, misc notes...
 ---
@@ -27,7 +27,7 @@ show how to flash the image on a RAM constrained development host.
 
 [post]: {% post_url 2015/2015-09-25-notes-restoring-nexus-device-android-factory-image %}
 
-## Update on Syspol
+## Update on Syspol ####################################################
 
 [Last month][syspol-aug] I started the [Syspol][] project with the goal of
 defining a cross-platform system policy for applications and environments to
@@ -58,7 +58,7 @@ directly added to the public version of the project.
 
 [Syspol]: {{ github_prefix }}/syspol
 
-## Public code repositories activity
+## Public code repositories activity ###################################
 
 Progress on projects:
 
@@ -80,10 +80,10 @@ Progress on projects:
 [Synergy]: http://synergy-project.org
 [ASP.NET 5 documentation]: http://docs.asp.net
 
-## Philanthropy
+## Philanthropy ########################################################
 
 I spent some hours getting together with friends to talk about effective
-altruism and other philanthropy topics on two occassions.
+altruism and other philanthropy topics on two occasions.
 
 [Folding@Home during September][fah-stats] I scored 25,382 points completing 48
 work units and ranked 48th of all the members of the [The Longevity Meme
@@ -94,7 +94,7 @@ team][].  A graph of total daily production history for September can be found
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461
 [fah-sep-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2015/09/folding_at_home_stats_september_2015.png
 
-## Other
+## Other ###############################################################
 
 Miscellaneous activities:
 
