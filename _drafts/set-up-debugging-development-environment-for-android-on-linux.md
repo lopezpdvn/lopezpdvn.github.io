@@ -1,4 +1,13 @@
-# How to set up a debugging and development environment for Android on Linux
+---
+layout: post
+title:  "How to set up a debugging and development environment for Android on Linux"
+date:   27 Jul 2015
+lang: en
+categories: en
+tags: [en, tech, engineering, android, linux]
+comments: true
+permalink: /set-up-debugging-development-environment-for-android-on-linux/
+---
 
 This post describes how to set up a debugging and development environment for
 Android based systems on an Ubuntu machine, specially for flashing custom
@@ -355,7 +364,3 @@ recovery and locked bootloader.
 
 * [Nexus 4 - Factory Image
   Restore](http://forums.androidcentral.com/nexus-4-rooting-roms-hacks/223923-guide-nexus-4-factory-image-restore.html).
-
-<!--
-TODO
--->
