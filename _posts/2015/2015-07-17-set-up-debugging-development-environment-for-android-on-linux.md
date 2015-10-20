@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to set up a debugging and development environment for Android on Linux"
-date:   27 Jul 2015
+date:   17 Jul 2015
 lang: en
 categories: en
 tags: [en, tech, engineering, android, linux]
