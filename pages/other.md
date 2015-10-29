@@ -15,3 +15,6 @@ permalink: /other/
 - [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
 
 - [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): The newest stuff.
+
+- [Anonymous feedback form]({{ site.anonymous_feedback_form }}).  Anonymously
+  tell me what you think about me.

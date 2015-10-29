@@ -19,6 +19,8 @@ statement_org_ideas: >
   The ideas expressed in this website do not necessarily represent the opinion
   of my employer or any other organization.
 
+anonymous_feedback_form: https://docs.google.com/forms/d/1yh47EqoOpMqcAhTjRjWE4NyTp3r6GfRSBjcCx_9qMqQ/viewform
+
 # Build settings
 markdown: kramdown
 
