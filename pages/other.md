@@ -12,9 +12,12 @@ permalink: /other/
   owners donate their computing resources (such as processing power and
   storage) to one or more projects.
 
-- [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
-
 - [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): The newest stuff.
+
+- [Music]({{ site.baseurl }}/music "Music"): I like music too.
 
 - [Anonymous feedback form]({{ site.anonymous_feedback_form }}).  Anonymously
   tell me what you think about me.
+
+- [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
+
