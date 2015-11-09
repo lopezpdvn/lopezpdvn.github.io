@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "October 2015 in review"
-date:   Sun Nov  8 08:26:24 CST 2015
+date:   Sun Nov  8 18:04:28 CST 2015
 lang: en
 categories: en
 tags: [en, month-in-review]
-comments: false
+comments: true
 permalink: /october-2015-in-review/
 excerpt: October 2015 personal review, summary of activities, misc notes...
 ---

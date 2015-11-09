@@ -9,6 +9,7 @@ permalink: /writings/
 All my writings. See also [projects]({{ site.baseurl }}/projects) and
 [blog]({{ site.baseurl }}/blog).
 
+- [October 2015 in review]({% post_url 2015/2015-11-08-october-2015-in-review %}). *October 2015 personal review, summary of activities, misc notes...* (8 Nov 2015)
 - [September 2015 in review]({% post_url 2015/2015-10-07-september-2015-in-review %}). *September 2015 personal review, summary of activities, misc notes...* (7 Oct 2015)
 - [Notes on restoring a Nexus device to Android factory image]({% post_url 2015/2015-09-25-notes-restoring-nexus-device-android-factory-image %}) (25 Sep 2015)
 - [August 2015 in review]({% post_url 2015/2015-09-06-august-2015-in-review %}). *August 2015 personal review, summary of activities, misc notes...* (6 Sep 2015)
