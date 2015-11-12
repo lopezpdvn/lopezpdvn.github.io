@@ -12,7 +12,7 @@ permalink: /other/
   owners donate their computing resources (such as processing power and
   storage) to one or more projects.
 
-- [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): The newest stuff.
+- [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): The latest stuff.
 
 - [Music]({{ site.baseurl }}/music "Music"): I like music too.
 
