@@ -34,12 +34,12 @@ Software Development Engineer interested in web and large scale systems
 
 ## Experience
 
-### Infosys Ltd, Monterrey, Nuevo León, Mexico
+### Infosys Ltd
 
-Systems Engineer, January 2013 to February 2015. Contractor for a Fortune 100
-multinational banking and financial services corporation. Development,
-administration and support team for a global trade finance application used
-mainly in North America and Asia
+*Monterrey, Nuevo León, Mexico*. Systems Engineer, January 2013 to February
+2015.  Contractor for a Fortune 100 multinational banking and financial
+services corporation. Development, administration and support team for a global
+trade finance application used mainly in North America and Asia
 
 - Coded and tested new agents/batch-jobs or new features of existing jobs in
   Java, C#, JavaScript and Windows Batch
@@ -62,17 +62,19 @@ mainly in North America and Asia
 - Knowledge management via documentation of known issues and fixes, to coach
   offshore resources
 
-### Center for the Development of the Software Industry, Monterrey, Nuevo León, Mexico.
+### Center for the Development of the Software Industry
 
-Software Engineer, October 2012 to January 2013
+*Monterrey, Nuevo León, Mexico*.  Software Engineer, October 2012 to January
+2013
 
 - Performed testing and quality assurance of an enterprise financial web
   platform for a Mexican bank, implemented in Java Enterprise Edition and
   JavaScript
 
-### School of Physics and Mathematics at UANL, Monterrey, Nuevo León, Mexico
+### School of Physics and Mathematics at UANL
 
-Research Assistant (internship), August 2011 to February 2012
+*Monterrey, Nuevo León, Mexico*. Research Assistant (internship), August 2011
+to February 2012
 
 - Developed and maintained robust control systems software in MATLAB and
   Simulink
@@ -81,9 +83,10 @@ Research Assistant (internship), August 2011 to February 2012
   P.I.,Central energy-to-peak filter design for uncertain linear systems,
   Control Conference (ASCC), June 2013
 
-### School of Mechanical and Electrical Engineering at UANL, Monterrey, Nuevo León, Mexico
+### School of Mechanical and Electrical Engineering at UANL
 
-Laboratory Assistant (internship), February 2012 to August 2012
+*Monterrey, Nuevo León, Mexico*.  Laboratory Assistant (internship), February
+2012 to August 2012
 
 - Supported students with Python, MATLAB and LabVIEW programming and
   electronics
