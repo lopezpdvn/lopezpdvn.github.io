@@ -13,16 +13,26 @@ permalink: /philanthropy/
 a philosophy and social movement which applies evidence and reason to
 determining the most effective ways to improve the world.
 
-## Donations
+## Donations and organizations
 
 In 2015 I have financially supported the following organizations:
 
 - [Machine Intelligence Research Institute](https://intelligence.org "Machine Intelligence Research Institute")
-- [SENS Research Foundation](http://sens.org "SENS Research Foundation").
+- [SENS Research Foundation](http://sens.org "SENS Research Foundation")
+
+[GiveWell][] is my chosen charity at [Amazon Smile][].
+
+I endorse the following organizations:
+
+- [The Brain Preservation Foundation](http://www.brainpreservation.org "The Brain Preservation Foundation")
+- [Animal Charity Evaluators](http://www.animalcharityevaluators.org "Animal Chartity Evaluators")
 
 For other effective charities to support please see [Top
-Charities](http://www.givewell.org/charities/top-charities "Top Charities @ GiveWell")
-at [GiveWell](http://www.givewell.org "GiveWell").
+Charities](http://www.givewell.org/charities/top-charities "Top Charities @
+GiveWell") at [GiveWell][].
+
+[GiveWell]: http://www.givewell.org "GiveWell"
+[Amazon Smile]: https://smile.amazon.com "Amazon Smile"
 
 ## Volunteer Computing
 

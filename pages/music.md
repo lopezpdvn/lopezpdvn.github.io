@@ -5,12 +5,12 @@ permalink: /music/
 ---
 
 Music is one of my main interests. At heart I'm kind of a rhythm guy, so I tend
-to listen more to metal (progressive, tech, death, etc), EDM and some jazz too.
-I also enjoy ambient and film music among other genres.
+to listen more to metal (progressive, tech, death, etc), EDM and some
+jazz/fusion too.  I also enjoy ambient and film music among other genres.
 
 Most of my involvement in music has been passive, meaning listening to music
 and thinking about it. But I also play a few instruments, mostly bass and some
-guitar too. I was a member of the power metal band
+guitar too. I was a member of the power/heavy metal band
 [HeavenForce](https://www.facebook.com/pages/HeavenForce/112496182123196) and I
 recorded the bass guitar for their release *In The Gates of Space*.
 
