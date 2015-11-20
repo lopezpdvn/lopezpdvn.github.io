@@ -17,7 +17,7 @@ My professional interests are software development, web/HTTP, C#, Javascript,
 My personal interests are software, rationality, philanthropy, music, medicine,
 biotech and veganism.
 
-{% include buttons/email.html %}{% include buttons/github.html %}{% include buttons/gist.html %}{% include buttons/linkedin.html %}{% include buttons/twitter.html %}{% include buttons/rss.html %}{% include buttons/youtube.html %}{% include buttons/bitcoin.html %}{% include buttons/fah.html %}{% include buttons/openpgp.html %}{% include buttons/facebook.html %}
+{% include network_buttons.html %}
 
 ## About the website ##################################################
 
