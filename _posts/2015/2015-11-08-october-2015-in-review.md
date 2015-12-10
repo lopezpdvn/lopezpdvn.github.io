@@ -17,28 +17,34 @@ notice from the contents of this post, October was kind of a slow month.
 * TOC
 {:toc}
 
-## Fun with JavaScript
+## Fun with JavaScript #################################################
+
+*Added Dec 10, 2015: A previous version of this section mistakenly reported the
+creation of the [Data structures and algorithms in JavaScript][] project when
+in fact at that time such project had not been published yet.*
 
 In order to practice software engineering skills and Node.js application
-design, and also just because it's fun, I created the [Data Structures and
-Algorithms in JavaScript][dsalgjs] project. Its purpose is to implement common
-and custom versions of data structures and algorithms in JavaScript and other
-related languages like TypeScript.  It is a Visual Studio solution using the
-plugin [Node.js Tools for Visual Studio][], and it consists of 2 projects: one
-for the main source code and the other for unit testing with [Mocha][]. 
+design, and also just because it's fun, I created the [Software engineering
+problems in JavaScript][swprobsjs] project. Its purpose is to implement
+solutions to software engineering problems and puzzles in JavaScript and other
+related languages like TypeScript.  It is a Visual Studio solution that uses
+the plugin [Node.js Tools for Visual Studio][], and it consists of 2 projects:
+one for coding the main types and the other for (unit-)testing them with
+[Mocha][].
 
-The project is complementary to [Data Structures and Algorithms in
-C#][dsalgcsharp], depending on the problem at hand I will decide whether to
+The project is complementary to [Software engineering problems in
+C#][swprobscsharp], depending on the problem at hand I will decide whether to
 leverage the dynamic nature of JavaScript or the more static features of C#.
 Following the same rationale, in the near future I expect to create another
-JavaScript/TypeScript project analogous to [Software Engineering Problems in
-C#][swprobscsharp].
+JavaScript/TypeScript project analogous to [Data structures and algorithms in
+C#][dsalgcsharp].
 
 [Node.js Tools for Visual Studio]: https://www.visualstudio.com/features/node-js-vs
 [Mocha]: https://mochajs.org/
 [dsalgcsharp]: https://github.com/{{ site.github_username }}/DataStructuresAlgorithmsCSharp
-[dsalgjs]: https://github.com/{{ site.github_username }}/SoftwareEngineeringProblemsJavaScript
+[swprobsjs]: https://github.com/{{ site.github_username }}/software-engineering-problems-javascript
 [swprobscsharp]: https://github.com/{{ site.github_username }}/SoftwareEngineeringProblemsCSharp
+[Data structures and algorithms in JavaScript]: {{ github_prefix }}/data-structures-algorithms-javascript "Data structures and algorithms in JavaScript"
 
 ## Public code repositories activity ###################################
 

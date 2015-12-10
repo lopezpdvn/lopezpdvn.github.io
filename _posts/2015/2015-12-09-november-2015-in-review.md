@@ -16,7 +16,7 @@ This is the *November 2015 in review* post. The previous monthly review post is
 * TOC
 {:toc}
 
-## Fun with JavaScript
+## Fun with JavaScript #################################################
 
 ([^1])In order to practice software engineering skills and Node.js application
 design, and also just because it's fun, I created the [Data Structures and
@@ -24,7 +24,7 @@ Algorithms in JavaScript][] project. Its purpose is to implement common and
 custom versions of data structures and algorithms in JavaScript and other
 related languages like TypeScript.  It is a Visual Studio solution that uses
 the plugin [Node.js Tools for Visual Studio][], and it consists of 2 projects:
-one for developing the main types and the other for (unit-)testing them with
+one for coding the main types and the other for (unit-)testing them with
 [Mocha][].
 
 The project is complementary to [Data Structures and Algorithms in C#][],
@@ -42,8 +42,9 @@ nature of JavaScript or the more static features of C#.
 Progress on projects:
 
 - [Data structures and algorithms in C#][]: [*14 commits*]
-  - Leveraged [xUnit][] API to share context between test methods and classes
   - Tested graph traversal and queue & stack implementations
+  - Leveraged [xUnit][] API to share more context between test methods and
+    classes
 - [Software engineering problems in JavaScript][]: [*9 commits*] Simple tests
   of JavaScript object oriented features, see [above](#fun-with-javascript)
 - [Data structures and algorithms in JavaScript][]: [*4 commits*] Extended the
