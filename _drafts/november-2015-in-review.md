@@ -10,7 +10,7 @@ permalink: /november-2015-in-review/
 excerpt: November 2015 personal review, summary of activities, misc notes...
 ---
 
-This is the November 2015 in review post. The previous monthly review post is
+This is the *November 2015 in review* post. The previous monthly review post is
 [here][oct-review].  The contents are:
 
 * TOC
@@ -20,11 +20,12 @@ This is the November 2015 in review post. The previous monthly review post is
 
 ([^1])In order to practice software engineering skills and Node.js application
 design, and also just because it's fun, I created the [Data Structures and
-Algorithms in JavaScript][] project. Its purpose is to implement common
-and custom versions of data structures and algorithms in JavaScript and other
-related languages like TypeScript.  It is a Visual Studio solution using the
-plugin [Node.js Tools for Visual Studio][], and it consists of 2 projects: one
-for the main source code and the other for unit testing with [Mocha][].
+Algorithms in JavaScript][] project. Its purpose is to implement common and
+custom versions of data structures and algorithms in JavaScript and other
+related languages like TypeScript.  It is a Visual Studio solution that uses
+the plugin [Node.js Tools for Visual Studio][], and it consists of 2 projects:
+one for developing the main types and the other for (unit-)testing them with
+[Mocha][].
 
 The project is complementary to [Data Structures and Algorithms in C#][],
 depending on the problem at hand I will decide whether to leverage the dynamic
@@ -75,7 +76,7 @@ Progress on projects:
 [Folding@Home during November][fah-stats] I scored 28,114 points, completed 53
 work units and ranked 47th of all the members of [The Longevity Meme team][],
 overtaking fellow folder [BrentErskine][].  A graph of total daily production
-history during November can be found [here][fah-nov-graph]. Also during this
+history during November can be found [here][fah-nov-graph]. Also, during this
 month I reached 1 million points total.
 
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
@@ -84,7 +85,7 @@ month I reached 1 million points total.
 [BrentErskine]: http://folding.extremeoverclocking.com/user_overtake.php?s=&u=153003 "BrentErskine Overtakes and Conquests"
 
 I made a small donation to the [SENS Research Foundation][] to help with their
-[end of year fundraiser][fundraiser]. Currently the numbers look good and it
+[end of year fundraiser][fundraiser]. Currently, the numbers look good and it
 seems likely they will reach the goal. **Please [donate][]**!
 
 [donate]: http://sens.org/donate "Donate | SENS Research Foundation"
