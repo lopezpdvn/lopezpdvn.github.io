@@ -12,10 +12,30 @@ excerpt: November 2015 personal review, summary of activities, misc notes...
 
 This is the November 2015 in review post. The previous monthly review post is
 [here]({% post_url 2015/2015-11-08-october-2015-in-review %}).  The contents
-are: 
+are:
 
 * TOC
 {:toc}
+
+## Fun with JavaScript
+
+In order to practice software engineering skills and Node.js application
+design, and also just because it's fun, I created the [Data Structures and
+Algorithms in JavaScript][dsalgjs] project. Its purpose is to implement common
+and custom versions of data structures and algorithms in JavaScript and other
+related languages like TypeScript.  It is a Visual Studio solution using the
+plugin [Node.js Tools for Visual Studio][], and it consists of 2 projects: one
+for the main source code and the other for unit testing with [Mocha][].
+
+The project is complementary to [Data Structures and Algorithms in
+C#][dsalgcsharp], depending on the problem at hand I will decide whether to
+leverage the dynamic nature of JavaScript or the more static features of C#.
+
+[Node.js Tools for Visual Studio]: https://www.visualstudio.com/features/node-js-vs
+[Mocha]: https://mochajs.org/
+[dsalgcsharp]: https://github.com/{{ site.github_username }}/DataStructuresAlgorithmsCSharp
+[dsalgjs]: https://github.com/{{ site.github_username }}/data-structures-algorithms-javascript
+[swprobscsharp]: https://github.com/{{ site.github_username }}/SoftwareEngineeringProblemsCSharp
 
 ## Public code repositories activity ###################################
 
@@ -46,7 +66,7 @@ Progress on projects:
 [Data structures algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures algorithms in C#"
 [xUnit]: https://xunit.github.io "xUnit.net"
 
-## Other ###############################################################
+## Philanthropy #######################################################
 
 [Folding@Home during November][fah-stats] I scored 28,114 points, completed 53
 work units and ranked 47th of all the members of [The Longevity Meme team][],
