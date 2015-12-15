@@ -14,8 +14,8 @@ Master's candidate in Information Engineering at [UANL](http://www.uanl.mx
 My professional interests are software development, web/HTTP, C#, Javascript,
 .NET, ASP.NET, Unix/Linux, open source and Python.
 
-My personal interests are software, rationality, philanthropy, music, medicine,
-biotech and veganism.
+My personal interests are software/computers, rationality, philanthropy, music,
+medicine, biotech, philosophy and veganism.
 
 {% include network_buttons.html %}
 
