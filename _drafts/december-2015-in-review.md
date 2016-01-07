@@ -30,11 +30,14 @@ with Mocha.
 
 Progress on projects:
 
-- [Data structures and algorithms in C#][]: [*34 commits*]
-- [Software engineering problems in C#][]: [*3 commits*]
-- [Personal website][]: [*10 commits*]
-- [syspol-js][] [*5 commits*]
-- [nodejsplay][] [*1 commits*]
+- [Data structures and algorithms in C#][]: [*34 commits*] Queues, stacks,
+  priority queues, sorted arrays and linked lists
+- [Software engineering problems in C#][]: [*3 commits*] Simple object oriented
+  programming concepts
+- [Personal website][]: [*10 commits*] General maintenance and miscellaneous
+  content
+- [syspol-js][] [*5 commits*] Check directory read and write permissions
+- [nodejsplay][] [*1 commits*] Project now references syspol-js API
 
 53 commits total.
 
