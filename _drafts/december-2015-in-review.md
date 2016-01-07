@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "December 2015 in review"
-date:   Tue Jan  5 18:42:45 CST 2016
+date:   Wed Jan  6 15:48:52 CST 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
@@ -45,9 +45,23 @@ work units and ranked 47th out of all the members of [The Longevity Meme
 team][].  My total score is 1,098,758 overall.  A graph of total daily
 production history during december can be found [here][fah-dec-graph].
 
+While trying to make a donation to the [Brain Preservation Foundation][] I ran
+into some problems that apparently prevented the donation from being accepted,
+at least temporarily. Donations to the Brain Preservation Foundation are
+processed by [JustGive][], a "nonprofit organization whose mission is to
+increase charitable giving by connecting people with the charities and causes
+they care most about.".
+
+Unfortunately, it seems that JustGive's website doesn't allow international
+donors to input their billing addresses to exactly match their bank records. I
+will follow up on this situation with the Brain Preservation Foundation and
+JustGive.
+
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
 [fah-dec-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_december_2015.png
+[Brain Preservation Foundation]: http://www.brainpreservation.org "The Brain Preservation Foundation"
+[JustGive]: https://www.justgive.org "JustGive.org"
 
 <br/>
 
