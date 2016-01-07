@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "December 2015 in review"
-date:   Wed Jan  6 15:48:52 CST 2016
+date:   Thu Jan  7 02:38:54 CST 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
@@ -17,6 +17,14 @@ This is the *December 2015 in review* post. The previous monthly review post is
 {:toc}
 
 [nov-review]: {% post_url 2015/2015-12-09-november-2015-in-review %}
+
+## syspol-js
+
+The [syspol-js][] project is a Node.js library that helps system administrators
+to enforce and implement [syspol][] policies.  It is a Visual Studio solution
+that uses the plugin Node.js Tools for Visual Studio, and it consists of 2
+projects: one for coding the API types and the other for (unit-)testing them
+with Mocha.
 
 ## Public code repositories activity ###################################
 
@@ -37,6 +45,7 @@ Progress on projects:
 [Data structures and algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures algorithms in C#"
 [Software engineering problems in C#]: {{ github_prefix }}/SoftwareEngineeringProblemsCSharp "Software engineering problems in C#"
 [syspol-js]: {{ github_prefix }}/syspol-js "syspol-js"
+[syspol]: {{ github_prefix }}/syspol "syspol"
 
 ## Philanthropy #######################################################
 
