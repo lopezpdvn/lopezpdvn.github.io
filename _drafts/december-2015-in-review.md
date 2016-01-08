@@ -41,7 +41,7 @@ Progress on projects:
 - [Personal website][]: [*10 commits*] General maintenance and miscellaneous
   content
 - [syspol-js][] [*5 commits*] Check directory read and write permissions
-- [Software engineering problems in C#][]: [*3 commits*] Simple object oriented
+- [Software engineering problems in C#][]: [*3 commits*] Simple object-oriented
   programming concepts
 - [nodejsplay][] [*1 commits*] Project now references syspol-js API
 
@@ -58,13 +58,13 @@ Progress on projects:
 
 ## Philanthropy #######################################################
 
-[Folding@Home during december][fah-stats] I scored 30,021 points, completed 57
+[Folding@Home during December][fah-stats] I scored 30,021 points, completed 57
 work units and ranked 47th out of all the members of [The Longevity Meme
 team][].  My total score is 1,100,891 at the time of this writing.  A graph of
-total daily production history during december can be found
+total daily production history during December can be found
 [here][fah-dec-graph].
 
-While trying to make a donation to the [Brain Preservation Foundation][] I ran
+While trying to make a donation to the [Brain Preservation Foundation][], I ran
 into some problems that apparently prevented the donation from being accepted,
 at least temporarily. Donations to the Brain Preservation Foundation are
 processed by [JustGive][], a "nonprofit organization whose mission is to
@@ -84,8 +84,10 @@ JustGive.
 
 ## Other ###############################################################
 
-I spent some time converting and compressing some family videos from VHS/analog
-format to digital formats.
+- I spent some time converting and compressing some family videos from
+  VHS/analog format to digital formats.
+
+- My personal website got 511 views.
 
 <br/>
 
