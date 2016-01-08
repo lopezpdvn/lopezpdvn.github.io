@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "December 2015 in review"
-date: Thu Jan  7 22:44:43 CST 2016
+date: Fri Jan  8 00:04:09 CST 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
