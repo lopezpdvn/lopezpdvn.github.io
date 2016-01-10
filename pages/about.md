@@ -11,11 +11,11 @@ Master's candidate in Information Engineering at [UANL](http://www.uanl.mx
 "UANL"). I live near Monterrey, México.
 [[photo]({{ site.baseurl }}/{{ site.images_dir }}/pedro_ivan_lopez_2015_01.jpg "Photo")]
 
-My professional interests are software development, web/HTTP, C#, Javascript,
-.NET, ASP.NET, Unix/Linux, open source and Python.
+My professional interests are software development, C#, Javascript, .NET,
+web/HTTP, ASP.NET, Node.js, Python, Unix/Linux and open source.
 
 My personal interests are software/computers, rationality, philanthropy, music,
-medicine, biotech, philosophy and veganism.
+medicine, biotech, philosophy and veganism/reducetarianism.
 
 {% include network_buttons.html %}
 
