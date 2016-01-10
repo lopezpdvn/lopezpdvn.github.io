@@ -9,6 +9,7 @@ permalink: /writings/
 All my writings. See also [projects]({{ site.baseurl }}/projects) and
 [blog]({{ site.baseurl }}/blog).
 
+- [December 2015 in review]({% post_url 2016/2016-01-08-december-2015-in-review %}). *December 2015 personal review, summary of activities, misc notes...* (8 Jan 2015)
 - [November 2015 in review]({% post_url 2015/2015-12-09-november-2015-in-review %}). *November 2015 personal review, summary of activities, misc notes...* (9 Dec 2015)
 - [October 2015 in review]({% post_url 2015/2015-11-08-october-2015-in-review %}). *October 2015 personal review, summary of activities, misc notes...* (8 Nov 2015)
 - [September 2015 in review]({% post_url 2015/2015-10-07-september-2015-in-review %}). *September 2015 personal review, summary of activities, misc notes...* (7 Oct 2015)
