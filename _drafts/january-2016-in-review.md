@@ -1,23 +1,22 @@
 ---
 layout: post
-title: "January 2015 in review"
-date: Wed Feb  3 23:19:28 CST 2016
+title: "January 2016 in review"
+date: Thu Feb  4 16:34:02 CST 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
-comments: true
+comments: false
 permalink: /january-2016-in-review/
-excerpt: January 2015 personal review, summary of activities, misc notes...
+excerpt: January 2016 personal review, summary of activities, misc notes...
 ---
 
-This is the *January 2015 in review* post. The previous monthly review post is
-[here][nov-review].  This month was kind of slow, which usually is the case
-because of the holiday season.  The contents are:
+This is the *January 2016 in review* post. The previous monthly review post is
+[here][dec-review].  The contents are:
 
 * TOC
 {:toc}
 
-[nov-review]: {% post_url 2015/2015-12-09-november-2015-in-review %}
+[dec-review]: {% post_url /2016/2016-01-08-december-2015-in-review %}
 
 ## Public code repositories activity ###################################
 
@@ -44,7 +43,7 @@ total daily production history during January can be found
 
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
-[fah-dec-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_december_2015.png
+[fah-dec-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_december_2016.png
 [Brain Preservation Foundation]: http://www.brainpreservation.org "The Brain Preservation Foundation"
 [JustGive]: https://www.justgive.org "JustGive.org"
 
