@@ -22,7 +22,21 @@ This is the *January 2016 in review* post. The previous monthly review post is
 
 Progress on projects:
 
-X commits total.
+- [syspol-js][] [*1 commits*] Updated function to check for a directory's
+  read/write permissions.
+- [Data structures and algorithms in C#][]: [*41 commits*]
+  - Miscellaneous functions with both recursive and iterative implementations
+  - Implemented inversion of control through dependency injection in all graph
+    & tree iterators
+  - Reorganized namespaces
+  - Made all graph & tree traversal methods static
+  - Implemented merge sort
+  - Shared context between BinaryTree test methods and classes leveraging xUnit
+    API.
+- [Personal website][]: [*10 commits*] General maintenance and miscellaneous
+  content
+
+52 commits total.
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
