@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "January 2016 in review"
-date: Fri Feb  5 18:59:25 CST 2016
+date: Tue Feb  9 00:42:46 CST 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
-comments: false
+comments: true
 permalink: /january-2016-in-review/
 excerpt: January 2016 personal review, summary of activities, misc notes...
 ---
@@ -45,7 +45,7 @@ Progress on projects:
 [Data structures and algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures algorithms in C#"
 [syspol-js]: {{ github_prefix }}/syspol-js "syspol-js"
 
-## Philanthropy #######################################################
+## Folding@Home #######################################################
 
 [Folding@Home during January][fah-stats] I scored 18,807 points, completed 36
 work units and ranked 47th out of all the members of [The Longevity Meme
