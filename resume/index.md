@@ -34,6 +34,13 @@ Software Development Engineer interested in web and large scale systems
 
 ## Experience
 
+### Self-employment/Freelancing
+
+*Monterrey, Nuevo León, Mexico*. 2015-2016.
+
+Occasionally coached undergrad students on computer science and software
+engineering topics.
+
 ### Infosys Ltd
 
 *Monterrey, Nuevo León, Mexico*. Systems Engineer, January 2013 to February
@@ -88,8 +95,8 @@ to February 2012
 *Monterrey, Nuevo León, Mexico*.  Laboratory Assistant (internship), February
 2012 to August 2012
 
-- Supported students with Python, MATLAB and LabVIEW programming and
-  electronics
+- Supported students in designing and troubleshooting electronic circuits and
+  programming in Python, MATLAB and LabVIEW
 
 ## Computer Skills
 
@@ -112,12 +119,17 @@ to February 2012
 
 ## Other projects
 
-- [ASPNET5CO](http://pedroivanlopez.com/aspnet5co): Advocacy and Community.
+- [ASPNET5CO]({{ site.baseurl }}/aspnet5co): Advocacy and Community.
   Efforts to advocate the ASP.NET 5 framework.
 
-- [mazerob](http://pedroivanlopez.com/mazerob): Bluetooth-remote-control robot
+- [mazerob]({{ site.baseurl }}/mazerob): Bluetooth-remote-control robot
   implemented with Java Virtual Machines on a PC and a Lego NXT Brick.
 
-*[Other open source projects](http://pedroivanlopez.com/projects)*
+- [printer73x]({{ site.baseurl }}/printer73x): A computer numerical control
+  system for printing binary images.
 
+- [cerca]({{ site.baseurl }}/cerca): A distance measurement system running on a
+  personal computer and a 8-bit microcontroller.
+
+<br/>
 **[Short PDF version](../resume.pdf)**
