@@ -1,0 +1,21 @@
+{
+  "name": "Pedro-Ivan-Lopez's-website",
+  "version": "1.1.0",
+  "description": "Pedro Ivan Lopez's website",
+  "homepage": "http://pedroivanlopez.com",
+  "license": "CC-BY-NC-ND-4.0",
+  "author": {
+    "name": "Pedro Ivan Lopez",
+    "email": "m@pedroivanlopez.com",
+    "url": "http://pedroivanlopez.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lopezpdvn/lopezpdvn.github.io"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "shelljs": "^0.6.0",
+    "gulp": "latest"
+  }
+}

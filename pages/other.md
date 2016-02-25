@@ -19,6 +19,7 @@ permalink: /other/
 - [Anonymous feedback form]({{ site.anonymous_feedback_form }}).  Anonymously
   tell me what you think about me.
 
+- [Frequently Asked Questions]({{ site.baseurl }}/faq).
+
 - [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
 
-- [Frequently Asked Questions]({{ site.baseurl }}/faq).
