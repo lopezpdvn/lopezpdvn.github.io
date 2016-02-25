@@ -8,10 +8,17 @@ var syspol = require('syspol');
 var pkgJSON = require('./package.json');
 var logger = new syspol.util.Logger(pkgJSON.name);
 
-gulp.task('default', function() {
-    logger.log('From default function');
-});
+function help() {
+    var tasks = ['help', 'publish'];
+    var msg = 'Tasks:\n' + tasks.join('\n');
+    console.log(msg);
+}
 
-gulp.task('h', function() {
-    console.log('From help function');
+gulp.task('default', help);
+gulp.task('h', help);
+gulp.task('help', help);
+
+gulp.task('publish', function() {
+    var git = sh.exec('git push origin master month-in-review');
+    logger.log('Git exit code: ' + git.code);
 });
