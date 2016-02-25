@@ -13,7 +13,6 @@
     "type": "git",
     "url": "https://github.com/lopezpdvn/lopezpdvn.github.io"
   },
-  "dependencies": {},
   "devDependencies": {
     "shelljs": "^0.6.0",
     "gulp": "latest"
