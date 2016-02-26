@@ -22,3 +22,8 @@ gulp.task('publish', function() {
     var git = sh.exec('git push origin master month-in-review');
     logger.log('Git exit code: ' + git.code);
 });
+
+gulp.task('servelocal', function() {
+    var serverCmd = sh.exec('./bin/servelocal');
+    logger.log('Script exit code: ' + git.code);
+});
