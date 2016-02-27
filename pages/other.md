@@ -21,5 +21,6 @@ permalink: /other/
 
 - [Frequently Asked Questions]({{ site.baseurl }}/faq).
 
-- [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
+- [Favorite quotes]({{ site.baseurl }}/quotes).
 
+- [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
