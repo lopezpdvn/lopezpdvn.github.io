@@ -26,3 +26,9 @@ permalink: /quotes/
   nothing but blind, pitiless indifference.
   
   --Richard Dawkins, 1995, "River Out of Eden," pp. 131-33
+
+- Hope for the best and prepare for the worst.
+
+- Money is the unit of caring.
+
+  --Eliezer Yudkowsky

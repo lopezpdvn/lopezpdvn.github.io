@@ -9,7 +9,7 @@ var pkgJSON = require('./package.json');
 var logger = new syspol.util.Logger(pkgJSON.name);
 
 function help() {
-    var tasks = ['help', 'publish'];
+    var tasks = ['help', 'servelocal', 'publish'];
     var msg = 'Tasks:\n' + tasks.join('\n');
     console.log(msg);
 }
