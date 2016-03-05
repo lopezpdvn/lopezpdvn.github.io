@@ -29,3 +29,5 @@ This site is created with [Jekyll](http://jekyllrb.com) and hosted at
 commentaries, broken links reports, corrections, and so on to
 [{{ site.email }}](mailto:{{ site.email }}) .  {{ site.statement_org_ideas }}
 This site has been active since november 2011 and is permanently under construction.
+
+![qr code]({{ site.baseurl }}/{{ site.images_dir }}/qrcode-small.png).
