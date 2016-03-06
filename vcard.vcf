@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Lopez;Pedro;Ivan;;
+FN:Pedro Ivan Lopez
+EMAIL;WORK:m@pedroivanlopez.com
+CATEGORIES:software engineering,software development,programming,web development
+KEY;PGP:http://pedroivanlopez.com/openpgp-key.txt
+LOGO;PNG:http://pedroivanlopez.com/images/glider.png
+NOTE:Software engineer interested in web and service oriented systems
+PHOTO;JPEG:http://pedroivanlopez.com/images/pedro_ivan_lopez_2015_01.jpg
+PROFILE:VCARD
+REV:20160305T181411Z
+SORT-STRING:Lopez
+SOURCE:http://pedroivanlopez.com/vcard.vcf
+TITLE:Software Engineer
+TZ:-0600
+URL:http://pedroivanlopez.com
+END:VCARD
