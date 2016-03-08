@@ -22,19 +22,38 @@ This is the *February 2016 in review* post. The previous monthly review post is
 
 Progress on projects:
 
-- [Data structures and algorithms in C#][]:
-- [syspol-js][]
-- [Personal website][]: [**] General maintenance and miscellaneous
-  content
+- [syspol-js][]. [*47 commits*]:
+  - New types:
+    - `app.App`
+    - `util.Logger`
+    - `fs.robocopy`
+    - `fs.isReadable`
+    - `fs.fileLines2Array`
+  - Started migrating code to ES6, using Babel.
+  - Reorganized code to use 1 Visual Studio project and 1 solution (see [npm
+    issue 2974][]).
+  - Using gulp support.
+- [Personal website][]. [*21 commits*]
+  - Using gulp instead of GNU Make.
+  - General maintenance and miscellaneous content
+- [dotfiles][]. [*3 commits*]: Updated git and added Pulseaudio config.
+- [Data structures and algorithms in C#][]. [*2 commits*] Minor edits.
+- [syspol][]. [*1 commits*] Updated terminology for application logging and
+  locking.
+- [Software engineering problems in JavaScript][]. [*1 commit*] Reorganized
+  code to use 1 Visual Studio project and 1 solution (see [npm issue 2974][]).
 
-52 commits total.
+**75 commits total**.
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
-[nodejsplay]: {{ github_prefix }}/nodejsplay "Node.js Play"
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [Data structures and algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures algorithms in C#"
 [syspol-js]: {{ github_prefix }}/syspol-js "syspol-js"
+[syspol]: {{ github_prefix }}/syspol "syspol - System Policy"
+[Software engineering problems in JavaScript]: {{ github_prefix }}/software-engineering-problems-javascript "Software engineering problems in JavaScript"
+[npm issue 2974]: https://github.com/npm/npm/issues/2974 "Allow subdirectories within git repos in npm install #2974"
+[dotfiles]: {{ github_prefix }}/dotfiles "dotfiles"
 
 ## Folding@Home #######################################################
 
