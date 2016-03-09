@@ -22,17 +22,16 @@ This is the *February 2016 in review* post. The previous monthly review post is
 
 Progress on projects:
 
+{% capture syspoljs %}https://github.com/{{ site.github_username }}/syspol-js/blob/b1e7bb398827ef204288d07c6c6dcbc39ea26448{% endcapture %}
+
 - [syspol-js][]. [*47 commits*]:
   - New types:
-    - `app.App`
-    - `util.Logger`
-    - `fs.robocopy`
-    - `fs.isReadable`
-    - `fs.fileLines2Array`
-  - Started migrating code to ES6, using Babel.
+    - [`app.App`]({{ syspoljs }}/src/app.js#L13)
+    - [`util.Logger`]({{ syspoljs }}/src/util.js#L17)
+    - [`fs.robocopy`]({{ syspoljs }}/src/fs.js#L10)
   - Reorganized code to use 1 Visual Studio project and 1 solution (see [npm
     issue 2974][]).
-  - Using gulp support.
+  - Added gulp support.
 - [Personal website][]. [*21 commits*]
   - Using gulp instead of GNU Make.
   - General maintenance and miscellaneous content
