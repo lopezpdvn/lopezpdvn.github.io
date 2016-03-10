@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "February 2016 in review"
-date: Mon Mar  7 21:33:06 CST 2016
+date: Wed Mar  9 20:50:38 CST 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
@@ -71,7 +71,7 @@ total daily production history during february can be found
 - I spent some time converting and compressing some family videos from
   VHS/analog format to digital formats.
 
-- My personal website got 175 views.
+- My personal website got 245 views.
 
 <br/>
 
