@@ -32,14 +32,14 @@ Progress on projects:
   - Reorganized code to use 1 Visual Studio project and 1 solution (see [npm
     issue 2974][]).
   - Added gulp support.
-- [Personal website][]. [*21 commits*]
+- [Personal website][]. [*21 commits*]:
   - Using gulp instead of GNU Make.
   - General maintenance and miscellaneous content
 - [dotfiles][]. [*3 commits*]: Updated git and added Pulseaudio config.
-- [Data structures and algorithms in C#][]. [*2 commits*] Minor edits.
-- [syspol][]. [*1 commits*] Updated terminology for application logging and
+- [Data structures and algorithms in C#][]. [*2 commits*]: Minor edits.
+- [syspol][]. [*1 commits*]: Updated terminology for application logging and
   locking.
-- [Software engineering problems in JavaScript][]. [*1 commit*] Reorganized
+- [Software engineering problems in JavaScript][]. [*1 commit*]: Reorganized
   code to use 1 Visual Studio project and 1 solution (see [npm issue 2974][]).
 
 **75 commits total**.
@@ -56,15 +56,15 @@ Progress on projects:
 
 ## Folding@Home #######################################################
 
-[Folding@Home during february][fah-stats] I scored 18,807 points, completed 36
+[Folding@Home during february][fah-stats] I scored 23,210 points, completed 46
 work units and ranked 47th out of all the members of [The Longevity Meme
-team][].  My total score is 1,115,324 at the time of this writing.  A graph of
+team][].  My total score is 1,143,803 at the time of this writing.  A graph of
 total daily production history during february can be found
-[here][fah-jan-graph].
+[here][fah-feb-graph].
 
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
-[fah-jan-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_february_2016.png
+[fah-feb-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_february_2016.png
 
 ## Other ###############################################################
 
