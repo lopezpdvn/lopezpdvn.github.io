@@ -1,3 +1,8 @@
+- source: null
+  attribution: null
+  quote: Hope for the best and prepare for the worst.
+  tags: []
+
 - source: The Rights of Man, 1791
   attribution: Thomas Paine
   quote: My country is the world, and my religion is to do good.
@@ -24,12 +29,7 @@
       indifference.
   tags: []
 
-- source: null
-  attribution: null
-  quote: Hope for the best and prepare for the worst.
-  tags: []
-
-- source: null
+- source: '[Money: The Unit of Caring](http://lesswrong.com/lw/65/money_the_unit_of_caring)'
   attribution: Eliezer Yudkowsky
   quote: Money is the unit of caring.
   tags: []
@@ -38,6 +38,18 @@
   attribution: Christopher Hitchens (Hitchen's razor)
   quote: |
       What can be asserted without evidence can be dismissed without evidence.
+  tags: []
+
+- source: '[Progress and its sustainability](http://www-formal.stanford.edu/jmc/progress/index.html)'
+  attribution: John McCarthy
+  quote: |
+      He who refuses to do arithmetic is doomed to talk nonsense.
+  tags: []
+
+- source: null
+  attribution: Attributed to Alan Kay
+  quote: |
+      The best way to predict the future is to invent it.
   tags: []
 
 - source: null
