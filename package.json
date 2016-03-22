@@ -13,8 +13,12 @@
     "type": "git",
     "url": "https://github.com/lopezpdvn/lopezpdvn.github.io"
   },
+  "scripts": {
+    "push": "git push origin master month-in-review",
+    "servelocal": "./bin/servelocal"
+  },
   "devDependencies": {
-    "shelljs": "^0.6.0",
+    "shelljs": "latest",
     "gulp": "latest"
   }
 }
