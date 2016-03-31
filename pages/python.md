@@ -1,19 +1,20 @@
 ---
 layout: page
-title: Python
+title: Notes on Python
 permalink: /python/
+comments: true
 ---
 
 ## Development HOWTO ##################################################
 
 ## Pip
 
-```ShellSession
+{% highlight bash %}
 $ pip install --install-option="--user" {package}
 $ sudo pip-python install --install-option="--prefix=/usr/local" {package}
-```
+{% endhighlight %}
 
-```ShellSession
+{% highlight bash %}
 cd $PROJ_REPO_ROOT
 virtualenv -p $PYTHON_EXE .
-```
+{% endhighlight %}

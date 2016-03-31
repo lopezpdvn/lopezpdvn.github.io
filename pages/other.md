@@ -23,4 +23,6 @@ permalink: /other/
 
 - [Favorite quotes]({{ site.baseurl }}/quotes).
 
+- [Python notes]({{ site.baseurl }}/python).
+
 - [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
