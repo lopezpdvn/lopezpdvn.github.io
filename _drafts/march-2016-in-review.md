@@ -79,7 +79,7 @@ total daily production history during March can be found [here][fah-mar-graph].
 - I spent some time converting and compressing some family videos from
   VHS/analog format to digital formats.
 
-- My personal website got 245 views.
+- My personal website got 197 views.
 
 <br/>
 
