@@ -65,15 +65,14 @@ Progress on projects:
 
 ## Folding@Home #######################################################
 
-[Folding@Home during march][fah-stats] I scored 23,210 points, completed 46
+[Folding@Home during March][fah-stats] I scored 18,208 points, completed 36
 work units and ranked 47th out of all the members of [The Longevity Meme
-team][].  My total score is 1,143,803 at the time of this writing.  A graph of
-total daily production history during march can be found
-[here][fah-feb-graph].
+team][].  My total score is 1,153,827 at the time of this writing.  A graph of
+total daily production history during March can be found [here][fah-mar-graph].
 
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
-[fah-feb-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_march_2016.png
+[fah-mar-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_march_2016.png
 
 ## Other ###############################################################
 
