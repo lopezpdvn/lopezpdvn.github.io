@@ -82,6 +82,12 @@ Test, opening with email client after sending it (as root).
 echo 'Test email body' | mail -s 'Test email subject' $(whoami)@localhost
 {% endhighlight %}
 
+## Audio playback
+
+{% highlight bash %}
+$ sudo dnf -y install quodlibet gstreamer1-plugins-ugly
+{% endhighlight %}
+
 ## References
 
 - <https://ask.fedoraproject.org/en/question/81052/local-user-mail/>
