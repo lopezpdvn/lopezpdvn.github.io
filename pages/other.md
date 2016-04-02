@@ -14,6 +14,12 @@ permalink: /other/
 
 - [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): The latest stuff.
 
+- Tech notes:
+
+  - [Python]({{ site.baseurl }}/python)
+
+  - [Rsync]({{ site.baseurl }}/rsync)
+
 - [Music]({{ site.baseurl }}/music "Music"): I like music too.
 
 - [Anonymous feedback form]({{ site.anonymous_feedback_form }}).  Anonymously
@@ -22,7 +28,5 @@ permalink: /other/
 - [Frequently Asked Questions]({{ site.baseurl }}/faq).
 
 - [Favorite quotes]({{ site.baseurl }}/quotes).
-
-- [Python notes]({{ site.baseurl }}/python).
 
 - [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
