@@ -82,10 +82,24 @@ Test, opening with email client after sending it (as root).
 echo 'Test email body' | mail -s 'Test email subject' $(whoami)@localhost
 {% endhighlight %}
 
-## Audio playback
+## Media
+
+### Image and photos
+
+{% highlight bash %}
+$ sudo dnf -y install digikam gimp geeqie ristretto perl-Image-ExifTool
+{% endhighlight %}
+
+### Audio playback
 
 {% highlight bash %}
 $ sudo dnf -y install quodlibet gstreamer1-plugins-ugly
+{% endhighlight %}
+
+## Other software
+
+{% highlight bash %}
+$ sudo dnf -y install libreoffice-calc libreoffice-writer libreoffice-impress
 {% endhighlight %}
 
 ## References
