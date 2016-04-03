@@ -29,7 +29,7 @@ Software Development Engineer interested in web and large scale systems
 - Master of Information Engineering in Computer Science, 2015, Autonomous
   University of Nuevo León.  Overall Grade 94.5/100.0
 
-- Bachelor of Mechatronics Engineering, 2012, Autonomous University of Nuevo
+- Bachelor of Mechatronic Engineering, 2012, Autonomous University of Nuevo
   León, graduated with honors, Overall Grade 95.9/100.0
 
 ## Experience
