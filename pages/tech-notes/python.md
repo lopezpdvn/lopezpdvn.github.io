@@ -10,11 +10,15 @@ comments: true
 ## Pip
 
 {% highlight bash %}
+$ pip install --user <username>
+{% endhighlight %}
+
+{% highlight bash %}
 $ pip install --install-option="--user" {package}
 $ sudo pip-python install --install-option="--prefix=/usr/local" {package}
 {% endhighlight %}
 
 {% highlight bash %}
-cd $PROJ_REPO_ROOT
-virtualenv -p $PYTHON_EXE .
+$ cd $PROJ_REPO_ROOT
+$ virtualenv -p $PYTHON_EXE .
 {% endhighlight %}
