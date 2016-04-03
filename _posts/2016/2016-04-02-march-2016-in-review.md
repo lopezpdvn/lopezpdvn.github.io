@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "March 2016 in review"
-date: Fri Apr  1 22:24:50 CST 2016
+date: Sat Apr  2 17:59:02 CST 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
-comments: false
+comments: true
 permalink: /march-2016-in-review/
 excerpt: March 2016 personal review, summary of activities, misc notes...
 ---
