@@ -5,18 +5,22 @@ permalink: /python/
 comments: true
 ---
 
-## Development HOWTO ##################################################
+## pip
 
-## Pip
-
-{% highlight bash %}
-$ pip install --user <username>
-{% endhighlight %}
+Install packages per user
 
 {% highlight bash %}
-$ pip install --install-option="--user" {package}
-$ sudo pip-python install --install-option="--prefix=/usr/local" {package}
+$ pip install --user <username> <package>
 {% endhighlight %}
+
+In previous versions of pip you had to use
+
+{% highlight bash %}
+$ pip install --install-option="--user" <package>
+$ sudo pip-python install --install-option="--prefix=/usr/local" <package>
+{% endhighlight %}
+
+## virtualenv
 
 {% highlight bash %}
 $ cd $PROJ_REPO_ROOT
