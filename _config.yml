@@ -2,6 +2,7 @@
 title: Pedro Ivan Lopez
 author: Pedro Ivan Lopez
 email: m@pedroivanlopez.com
+openpgp_fingerprint: '7E7B 148F FA0F 101A 2506 D3AD C1FB 65BC 220B 9160'
 description: > # this means to ignore newlines until "baseurl:"
   Pedro Ivan Lopez's website.
 baseurl: "" # the subpath of your site, e.g. /blog/
