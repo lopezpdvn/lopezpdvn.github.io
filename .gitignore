@@ -6,3 +6,4 @@ _site
 /bin
 /tmp
 /node_modules
+/npm-debug.log

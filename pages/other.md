@@ -14,6 +14,9 @@ permalink: /other/
 
 - [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): The latest stuff.
 
+- [Connect]({{ site.baseurl }}/connect) and
+  [contact info]({{ site.baseurl }}/contact)
+
 - Tech notes:
 
   - [Python]({{ site.baseurl }}/python)

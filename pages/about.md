@@ -20,7 +20,7 @@ medicine, biotech, philanthropy, philosophy and veganism/reducetarianism.
 For other personal stuff, see the
 [Frequently Asked Questions]({{ site.baseurl }}/faq).
 
-GPG fingerprint: `{{ site.openpgp_fingerprint }}`
+PGP fingerprint: `{{ site.openpgp_fingerprint }}`
 
 {% include network_buttons.html %}
 
