@@ -11,7 +11,7 @@ permalink: /quotes/
 - {{ entry.quote }}
 
   {% if entry.attribution or entry.source %}
-  --{% if entry.attribution %}{{ entry.attribution }}{% endif %}. {% if entry.source %}{{ entry.source }}.{% endif %}
+  --{% if entry.attribution %}{{ entry.attribution }}{% endif %}. {% if entry.source %}{{ entry.source }}{% endif %}
   {% endif %}
 
 {% endfor %}

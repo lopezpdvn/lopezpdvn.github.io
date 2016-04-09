@@ -8,14 +8,14 @@
   quote: My country is the world, and my religion is to do good.
   tags: []
 
-- source: 1789
+- source: 1789.
   attribution: Jeremy Bentham
   quote: |
       The question (determining whether animals deserve ethical consideration)
       is not 'Can they reason?' nor 'Can they talk?' but 'Can they suffer?'
   tags: []
 
-- source: 1995, "River Out of Eden," pp. 131-33
+- source: 1995, "River Out of Eden," pp. 131-33.
   attribution: Richard Dawkins
   quote: |
       The total amount of suffering per year in the natural world is beyond all
@@ -29,18 +29,18 @@
       indifference.
   tags: []
 
-- source: '[Money: The Unit of Caring](http://lesswrong.com/lw/65/money_the_unit_of_caring)'
+- source: '[Money: The Unit of Caring](http://lesswrong.com/lw/65/money_the_unit_of_caring).'
   attribution: Eliezer Yudkowsky
   quote: Money is the unit of caring.
   tags: []
 
-- source: 2003
+- source: 2003.
   attribution: Christopher Hitchens (Hitchen's razor)
   quote: |
       What can be asserted without evidence can be dismissed without evidence.
   tags: []
 
-- source: '[Progress and its sustainability](http://www-formal.stanford.edu/jmc/progress/index.html)'
+- source: '[Progress and its sustainability](http://www-formal.stanford.edu/jmc/progress/index.html).'
   attribution: John McCarthy
   quote: |
       He who refuses to do arithmetic is doomed to talk nonsense.
@@ -59,28 +59,28 @@
       play then you can't win.
   tags: []
 
-- source: Game of Thrones
+- source: Game of Thrones.
   attribution: Syrio Forel
   quote: |
       There is only one god, and His name is Death. And there is only one
       thing we say to Death: 'Not today'.
   tags: []
 
-- source: '[Memorable Quotes](http://www.softpanorama.org/Skeptics/Quotes/george_carlin.shtml)'
+- source: '[Memorable Quotes](http://www.softpanorama.org/Skeptics/Quotes/george_carlin.shtml).'
   attribution: George Carlin
   quote: |
       I wanna live. I don't wanna die. That's the whole meaning of life: Not
       dying! I figured that shit out by myself in the third grade.
   tags: []
 
-- source: '[Mark Harris, "The Threat From Within," Vegetarian Times, February 1995, at 70 (quoting Henry Spira)](https://books.google.com.mx/books?id=iggAAAAAMBAJ&pg=PA6&lpg=PA6&dq=Mark+Harris+"The+Threat+From+Within"&source=bl&ots=H1qQV2TQfd&sig=WqEILV_4KdV14D53vuu6zf2fF4s&hl=en&sa=X&ved=0ahUKEwj1z_jVrbnKAhXBLSYKHeEOANkQ6AEIGjAA#v=onepage&q=henry spira&f=false)'
+- source: '[Mark Harris, "The Threat From Within," Vegetarian Times, February 1995, at 70 (quoting Henry Spira)](https://books.google.com.mx/books?id=iggAAAAAMBAJ&pg=PA6&lpg=PA6&dq=Mark+Harris+"The+Threat+From+Within"&source=bl&ots=H1qQV2TQfd&sig=WqEILV_4KdV14D53vuu6zf2fF4s&hl=en&sa=X&ved=0ahUKEwj1z_jVrbnKAhXBLSYKHeEOANkQ6AEIGjAA#v=onepage&q=henry spira&f=false).'
   attribution: Henry Spira
   quote: |
       If you push for all or nothing, what you get is nothing.
   tags: []
 
 - source: |
-      The Varieties of Scientific Experience: A Personal View of the Search for God (2006)
+      The Varieties of Scientific Experience: A Personal View of the Search for God (2006).
   attribution: Carl Sagan
   quote: Extinction is the rule, survival is the exception.
   tags: []
@@ -99,3 +99,20 @@
   attribution: Wentworth Miller
   quote: You only cry for help if you believe there's help to cry for.
   tags: []
+
+- source: null
+  attribution: Bob Ross
+  quote: We don't make mistakes, we have happy accidents.
+  tags: []
+
+- source: '[Crypto-Gram](https://www.schneier.com/crypto-gram/archives/1999/0915.html). September 15, 1999.'
+  attribution: Bruce Schneier
+  quote: |
+      As a cryptography and computer security expert, I have never understood
+      the current fuss about the open source software movement. In the
+      cryptography world, we consider open source necessary for good security;
+      we have for decades. Public security is always more secure than
+      proprietary security. It's true for cryptographic algorithms, security
+      protocols, and security source code. For us, open source isn't just a
+      business model; it's smart engineering practice.
+  tags: [open_source]
