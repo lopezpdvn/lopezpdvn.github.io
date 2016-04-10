@@ -13,6 +13,8 @@ $ src=/some/dir0
 $ dst=/other/dir1
 {% endhighlight %}
 
+## Mirroring
+
 Mirror dirs. Recursively, symlinks as symlinks, preserve permissions and times.
 
 {% highlight bash %}
@@ -27,6 +29,8 @@ $ rsync -aHnvz $src/ $dst
 
 The option `-H` is specially important when mirroring a directory of
 `rsnapshot` snapshots.
+
+## Unrooted Android file system
 
 When at least of the source or destination is a unrooted Android sytem and the
 copying is done over SSH, copy only the file contents. For example:

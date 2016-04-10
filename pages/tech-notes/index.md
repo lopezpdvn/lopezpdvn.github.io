@@ -8,6 +8,8 @@ Technical notes
 
 - [Python]({{ site.baseurl }}/python)
 
-- [Rsync]({{ site.baseurl }}/rsync)
+- [rsync]({{ site.baseurl }}/rsync)
 
-- [Rsnapshot]({{ site.baseurl }}/rsnapshot)
+- [rsnapshot]({{ site.baseurl }}/rsnapshot)
+
+- [dd]({{ site.baseurl }}/dd)
