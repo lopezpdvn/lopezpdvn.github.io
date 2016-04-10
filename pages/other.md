@@ -17,11 +17,7 @@ permalink: /other/
 - [Connect]({{ site.baseurl }}/connect) and
   [contact info]({{ site.baseurl }}/contact)
 
-- Tech notes:
-
-  - [Python]({{ site.baseurl }}/python)
-
-  - [Rsync]({{ site.baseurl }}/rsync)
+- [Tech notes]({{ site.baseurl }}/tech-notes): Technical notes
 
 - [Music]({{ site.baseurl }}/music "Music"): I like music too.
 
