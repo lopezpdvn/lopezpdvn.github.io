@@ -14,4 +14,6 @@ Technical notes
 
 - [dd]({{ site.baseurl }}/dd)
 
+- [S.M.A.R.T.]({{ site.baseurl }}/smart)
+
 - [digiKam]({{ site.baseurl }}/digikam)
