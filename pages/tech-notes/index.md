@@ -13,3 +13,5 @@ Technical notes
 - [rsnapshot]({{ site.baseurl }}/rsnapshot)
 
 - [dd]({{ site.baseurl }}/dd)
+
+- [digiKam]({{ site.baseurl }}/digikam)
