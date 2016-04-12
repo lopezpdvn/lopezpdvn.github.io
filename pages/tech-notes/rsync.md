@@ -6,6 +6,9 @@ comments: true
 tags: [rsync, file_system, synchronization]
 ---
 
+* TOC
+{:toc}
+
 All command include dry-run switch `-n`.
 
 {% highlight bash %}
@@ -66,3 +69,41 @@ And execute like this
 {% highlight bash %}
 $ rsync -anrvz --include-from=$include_file --exclude='*' $src/ $dst
 {% endhighlight %}
+
+Add the deletion options as needed.
+
+## Selective mirror with excluded directories
+
+Suppose you want to mirror only the following directories from `$src` to
+`$dst`.
+
+- `AAA/BBB`
+- `AAA/CCC`
+- `AAA/DDD/EEE`
+- `FFF/GGG/HHH`
+
+Inside the hierarchy of these directories, there might exist some directory
+names that rsync should exclude, for example, you might want to exclude any
+directory named *excludestr*
+
+- `AAA/BBB/excludestr`
+- `AAA/CCC/AAA/excludestr`
+- `AAA/DDD/EEE/DDD/DDD/excludestr`
+- `FFF/GGG/HHH/excludestr`
+
+In this case, it is better to execute as many rsync processes as necessary
+instead of just once. In this example execute rsync 4 times and exclude
+directories named *excludestr*. Write to file `exclude_file=<path to exclude
+rules file>` the exclude rules:
+
+    excludestr/
+
+Then execute rsync as many times as needed, for instance
+
+{% highlight bash %}
+$ srcdir=$src/AAA/BBB
+$ dstdir=$dst/AAA/BBB
+$ rsync -anrvz --exclude-from=$exclude_file $srcdir/ $dstdir
+{% endhighlight %}
+
+You may add delete options.
