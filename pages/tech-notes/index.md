@@ -16,4 +16,6 @@ Technical notes
 
 - [S.M.A.R.T.]({{ site.baseurl }}/smart)
 
+- [sudo]({{ site.baseurl }}/sudo)
+
 - [digiKam]({{ site.baseurl }}/digikam)
