@@ -38,6 +38,13 @@ $ n=15
 $ watch --interval $n sudo dd if=$devPath of=/dev/null count=1
 {% endhighlight %}
 
+After test is done view results via either
+
+{% highlight bash %}
+$ sudo smartctl -a $devPath
+$ sudo smartctl -l selftest $devPath
+{% endhighlight %}
+
 ## Misc
 
 - Fedora packages: `smartmontools` & `gsmartcontrol`.
