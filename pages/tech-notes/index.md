@@ -18,4 +18,6 @@ Technical notes
 
 - [sudo]({{ site.baseurl }}/sudo)
 
+- [Windows OS]({{ site.baseurl }}/windows)
+
 - [digiKam]({{ site.baseurl }}/digikam)
