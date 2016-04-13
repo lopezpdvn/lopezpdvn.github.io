@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "April 2016 in review"
-date: Sat Apr  2 18:05:29 CST 2016
+date: Wed Apr 13 00:19:51 CDT 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
@@ -24,6 +24,24 @@ Progress on projects:
 
 {% capture syspoljs %}https://github.com/{{ site.github_username }}/syspol-js/blob/9723c1cc0a723d87bc3a2c2e3aaaeab73561be48{% endcapture %}
 
+- [pysweng: Software engineering problems in Python][]. [*X commit*]:
+  - Added unit tests using `unittest` standard module
+- [dotfiles][]. [*X commit*]: mksh RC file sources user commands
+- [Personal website][]. [*X commits*]:
+  - Added page [Tech notes]({{ site.baseurl }}/tech-notes), including notes on
+    [Python]({{ site.baseurl }}/python),
+    [rsync]({{ site.baseurl }}/rsync),
+    [rsnapshot]({{ site.baseurl }}/rsnapshot),
+    [dd]({{ site.baseurl }}/dd),
+    [S.M.A.R.T.]({{ site.baseurl }}/smart),
+    [sudo ]({{ site.baseurl }}/sudo) &
+    [digiKam]({{ site.baseurl }}/digikam)
+  - Added page [Contact]({{ site.baseurl }}/contact)
+  - Updated [OpenPGP info]({{ site.baseurl }}/contact)
+  - General maintenance and miscellaneous content
+
+---
+
 - [Software engineering problems in JavaScript][]. [*19 commits*]:
   - Writing source in ECMAScript 6 and transpiling to ES5 with Babel
   - Updated project structure
@@ -41,13 +59,6 @@ Progress on projects:
     issue 2974][]).
   - Using npm scripts
   - Using generators and other ECMAScript 6 features.
-- [Personal website][]. [*35 commits*]:
-  - Added section [FAQ]({{ site.baseurl }}/faq), [Favorite quotes]({{
-    site.baseurl }}/quotes) and [vCard]({{ site.baseurl }}/vcard)
-  - General maintenance and miscellaneous content
-  - Created npm project/package
-- [dotfiles][]. [*1 commit*]: Unison ignores Node.js package dir and Git
-  repository dir.
 - [pysweng: Software engineering problems in Python][]. [*1 commit*]: Created
   public repository.
 

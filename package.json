@@ -14,7 +14,7 @@
     "url": "https://github.com/lopezpdvn/lopezpdvn.github.io"
   },
   "scripts": {
-    "push": "git push origin master month-in-review",
+    "push": "git push origin master",
     "servelocal": "./bin/servelocal"
   },
   "devDependencies": {
