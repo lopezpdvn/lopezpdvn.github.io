@@ -28,7 +28,7 @@ Monitor progress
 
 {% highlight bash %}
 $ status_str='self-test execution status'
-$ sudo smartctl -a $devPath  | grep -i $status_str -A 1
+$ sudo smartctl -a $devPath  | grep -i "$status_str" -A 1
 {% endhighlight %}
 
 Read from disk every *n* seconds to keep it from going to standby

@@ -6,6 +6,9 @@ comments: true
 tags: [dd, file_system]
 ---
 
+* TOC
+{:toc}
+
 ## Monitoring/logging progress
 
 While converting/copying big files, log progress by sending `USR1` signal to

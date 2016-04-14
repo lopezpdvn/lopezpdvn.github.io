@@ -6,6 +6,9 @@ comments: true
 tags: [media, images]
 ---
 
+* TOC
+{:toc}
+
 ## Change path to collections on removable media
 
 If you change the path to a collection on removable media digiKam does not tell

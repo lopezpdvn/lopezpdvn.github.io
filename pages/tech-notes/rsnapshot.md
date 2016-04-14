@@ -6,6 +6,9 @@ comments: true
 tags: [rsnapshot, file_system, synchronization, backup]
 ---
 
+* TOC
+{:toc}
+
 Test configuration file
 
 {% highlight bash %}

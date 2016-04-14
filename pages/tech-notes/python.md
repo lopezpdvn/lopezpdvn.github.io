@@ -5,6 +5,9 @@ permalink: /python/
 comments: true
 ---
 
+* TOC
+{:toc}
+
 ## pip
 
 Install packages per user
