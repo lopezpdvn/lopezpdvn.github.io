@@ -3,7 +3,7 @@ layout: page
 title: Notes on S.M.A.R.T.
 permalink: /smart/
 comments: true
-tags: [smart, file_system]
+tags: [smart, file_system, ntfs]
 ---
 
 * TOC
@@ -54,8 +54,13 @@ $ sudo smartctl -l selftest $devPath
 - Not all USB devices supported, see [Smartmontools USB Device
   Support](https://www.smartmontools.org/wiki/Supported_USB-Devices).
 
+- If the partition is NTFS the problem might be with partition itself not with
+  the disk. Check the disk on Windows with `chkdsk`, see references for links.
+
 ## References
 
 - <https://wiki.archlinux.org/index.php/S.M.A.R.T.>
 - <https://www.smartmontools.org/wiki/Supported_USB-Devices>
 - <http://superuser.com/questions/766943/smart-test-never-finishes>
+- <https://technet.microsoft.com/es-mx/library/cc730714%28v=ws.10%29.aspx>
+- <http://ss64.com/nt/chkdsk.html>
