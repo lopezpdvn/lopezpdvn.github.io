@@ -34,11 +34,33 @@ Progress on projects:
     [rsnapshot]({{ site.baseurl }}/rsnapshot),
     [dd]({{ site.baseurl }}/dd),
     [S.M.A.R.T.]({{ site.baseurl }}/smart),
-    [sudo ]({{ site.baseurl }}/sudo) &
-    [digiKam]({{ site.baseurl }}/digikam)
+    [sudo]({{ site.baseurl }}/sudo),
+    [Windows OS]({{ site.baseurl }}/windows),
+    [digiKam]({{ site.baseurl }}/digikam) &
+    [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8).
   - Added page [Contact]({{ site.baseurl }}/contact)
   - Updated [OpenPGP info]({{ site.baseurl }}/contact)
   - General maintenance and miscellaneous content
+
+**TODO commits total**.
+
+## Other ###############################################################
+
+- I spent some time converting and compressing some family videos from
+  VHS/analog format to digital formats.
+
+- My personal website got TODO views.
+
+## Folding@Home #######################################################
+
+[Folding@Home during April][fah-stats] I scored TODO points, completed XX work
+units and ranked TODO out of all the members of [The Longevity Meme team][].
+My total score is TODO at the time of this writing.  A graph of total daily
+production history during April can be found [here][fah-apr-graph].
+
+[fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
+[The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
+[fah-apr-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/TODO.png
 
 ---
 
@@ -59,10 +81,6 @@ Progress on projects:
     issue 2974][]).
   - Using npm scripts
   - Using generators and other ECMAScript 6 features.
-- [pysweng: Software engineering problems in Python][]. [*1 commit*]: Created
-  public repository.
-
-**TODO commits total**.
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
@@ -74,23 +92,6 @@ Progress on projects:
 [Data structures and algorithms in JavaScript]: {{ github_prefix }}/data-structures-algorithms-javascript "Data structures and algorithms in JavaScript"
 [pysweng: Software engineering problems in Python]: {{ github_prefix }}/pysweng "pysweng: Software engineering problems in Python"
 
-## Folding@Home #######################################################
-
-[Folding@Home during April][fah-stats] I scored 18,208 points, completed 36
-work units and ranked 47th out of all the members of [The Longevity Meme
-team][].  My total score is 1,153,827 at the time of this writing.  A graph of
-total daily production history during April can be found [here][fah-mar-graph].
-
-[fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
-[The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
-[fah-mar-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_april_2016.png
-
-## Other ###############################################################
-
-- I spent some time converting and compressing some family videos from
-  VHS/analog format to digital formats.
-
-- My personal website got TODO views.
 
 <br/>
 
