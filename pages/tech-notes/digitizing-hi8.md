@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Digitizing Hi8 tapes
+title: Digitizing Hi8 cassettes
 permalink: /digitizing-hi8/
 comments: true
 tags: [video, audio, ffmpeg]
@@ -9,9 +9,15 @@ tags: [video, audio, ffmpeg]
 * TOC
 {:toc}
 
-Using a CCD-TRV118 (NTSC) for cassette playback, a [Diamond
-VC500](http://www.amazon.com/Diamond-VC500-Touch-Capture-Device/dp/B000VM60I8)
-for A/D conversion and EZ Grabber program on Windows 7.
+Using
+
+- For playback, a CCD-TRV118 (NTSC)
+- For A/D conversion
+  - [Diamond VC500](http://www.amazon.com/Diamond-VC500-Touch-Capture-Device/dp/B000VM60I8)
+  - EZ Grabber software on Windows 7
+- For compression, ffmpeg on Linux
+
+## A/D conversion
 
 To optimize quality, convert to raw video using the following EZ Grabber settings
 
@@ -21,6 +27,9 @@ To optimize quality, convert to raw video using the following EZ Grabber setting
   - Picture adjustment: All 127
 - Record:
   - Record format: AVI
+
+The older the cassettes, the shorter the conversion interval needed to avoid
+synchronization problems. Intervals between 10 and 30 minutes worked OK.
 
 Result is raw video:
 
@@ -36,8 +45,12 @@ At least one output file must be specified
 {% endhighlight %}
 
 Only one audio channel actually contains audio, the other channel is empty.
-Compress video and bundle in a Matroska container with uncompressed audio,
-mapping the audio left channel to a single mono channel.
+
+## Compression
+
+Compress video and pack in a Matroska container with uncompressed audio,
+mapping the audio left channel to a single mono channel.  Using H.264 because
+of its good quality, size and compatibility.
 
 {% highlight bash %}
 $ ffmpeg -i raw-video.avi -c:v libx264 -preset slow -crf 17 -c:a pcm_s16le -map_channel 0.0.0 video.mkv
@@ -60,13 +73,6 @@ Input #0, matroska,webm, from 'vido.mkv':
       ENCODER         : Lavc56.1.100 pcm_s16le
  At least one output file must be specified
 {% endhighlight %}
-
-## Notes
-
-- The older the cassettes, the shorter the conversion interval needed to avoid
-  synchronization problems. Intervals between 10 and 30 minutes worked OK.
-
-- Used H.264 because of its good quality, size and compatibility.
 
 ## References
 

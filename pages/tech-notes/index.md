@@ -21,3 +21,5 @@ Technical notes
 - [Windows OS]({{ site.baseurl }}/windows)
 
 - [digiKam]({{ site.baseurl }}/digikam)
+
+- [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8)
