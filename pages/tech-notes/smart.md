@@ -57,6 +57,18 @@ $ sudo smartctl -l selftest $devPath
 - If the partition is NTFS the problem might be with partition itself not with
   the disk. Check the disk on Windows with `chkdsk`, see references for links.
 
+- It looks like S.M.A.R.T. diagnostic data is not as useful as initially
+  thought, the following is quoted from [Failure Trends in a Large Disk Drive
+  Population](https://www.usenix.org/legacy/events/fast07/tech/full_papers/pinheiro/pinheiro.pdf)
+
+  > ...we find that failure prediction models based on SMART parameters alone
+  > are likely to be severely limited in their prediction accuracy, given that
+  > a large fraction of our failed drives have shown no SMART error signals
+  > whatsoever. This result suggests that SMART models are more useful in
+  > predicting trends for large aggregate populations than for individual
+  > components. It also suggests that powerful predictive models need to make
+  > use of signals beyond those provided by SMART.
+
 ## References
 
 - <https://wiki.archlinux.org/index.php/S.M.A.R.T.>
