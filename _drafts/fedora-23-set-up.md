@@ -96,6 +96,14 @@ $ sudo dnf -y install digikam gimp geeqie ristretto perl-Image-ExifTool
 $ sudo dnf -y install quodlibet gstreamer1-plugins-ugly
 {% endhighlight %}
 
+## Jekyll
+
+{% highlight bash %}
+$ sudo dnf -y install ruby-devel redhat-rpm-config
+$ sudo dnf -y groupinstall "C Development Tools and Libraries"
+$ gem install jekyll
+{% endhighlight %}
+
 ## Other software
 
 {% highlight bash %}
