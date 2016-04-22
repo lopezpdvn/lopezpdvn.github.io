@@ -56,6 +56,17 @@ $ sudo smartctl -l selftest $devPath
 
 - If the partition is NTFS the problem might be with partition itself not with
   the disk. Check the disk on Windows with `chkdsk`, see references for links.
+  You may see a message like ths on Linux:
+
+      ntfs_attr_pread_i: ntfs_pread failed: Input/output error
+      Failed to read NTFS $Bitmap: Input/output error
+      NTFS is either inconsistent, or there is a hardware fault, or it's a
+      SoftRAID/FakeRAID hardware. In the first case run chkdsk /f on Windows
+      then reboot into Windows twice. The usage of the /f parameter is very
+      important! If the device is a SoftRAID/FakeRAID then first activate
+      it and mount a different device under the /dev/mapper/ directory, (e.g.
+      /dev/mapper/nvidia_eahaabcc1). Please see the 'dmraid' documentation
+      for more details.
 
 - It looks like S.M.A.R.T. diagnostic data is not as useful as initially
   thought, the following is quoted from [Failure Trends in a Large Disk Drive
