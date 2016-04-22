@@ -9,6 +9,22 @@ tags: [keepass, security]
 * TOC
 {:toc}
 
+## Manual installation on Fedora
+
+Install dependencies
+
+{% highlight bash %}
+sudo dnf install giflib libgdiplus-devel libxdo mono-core mono-data mono-data-sqlite mono-extras mono-mvc mono-wcf mono-web mono-winforms xdotool xsel
+{% endhighlight %}
+
+Then download ZIP from website. Use a launcher script:
+
+{% highlight bash %}
+#!/bin/sh
+
+exec /path/to/mono /path/to/KeePass.exe
+{% endhighlight %}
+
 ## KeePass/Mono prepends Unicode BOM to clipboard contents
 
 When copying from KeePass and pasting to terminals, if it suddenly looks like
