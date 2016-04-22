@@ -23,3 +23,9 @@ Technical notes
 - [digiKam]({{ site.baseurl }}/digikam)
 
 - [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8)
+
+- [ffmpeg]({{ site.baseurl }}/ffmpeg)
+
+- [KeePass]({{ site.baseurl }}/keepass)
+
+- [Node.js]({{ site.baseurl }}/nodejs)
