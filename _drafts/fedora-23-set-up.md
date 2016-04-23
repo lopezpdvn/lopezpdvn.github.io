@@ -12,6 +12,39 @@ permalink: /fedora-23-post-installation/
 * TOC
 {:toc}
 
+## Install
+
+## Configure sudo
+
+Remember to use `visudo` instead of directly editing the *sudoers* files.
+
+{% highlight bash %}
+# visudo
+{% endhighlight %}
+
+Verify
+
+{% highlight bash %}
+$ sudo -l
+{% endhighlight %}
+
+## Update system
+
+Clean *dnf* cache, upgrade system and reboot
+
+{% highlight bash %}
+$ sudo dnf -y clean all ; sudo dnf -y upgrade
+$ sudo systemctl reboot
+{% endhighlight %}
+
+## Install RPM Fusion
+
+Install [RPM Fusion](http://rpmfusion.org).
+
+{% highlight bash %}
+sudo dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+{% endhighlight %}
+
 ## Local email with postfix
 
 Install postfix
@@ -90,10 +123,16 @@ echo 'Test email body' | mail -s 'Test email subject' $(whoami)@localhost
 $ sudo dnf -y install digikam gimp geeqie ristretto perl-Image-ExifTool
 {% endhighlight %}
 
-### Audio playback
+### Audio/video playback
 
 {% highlight bash %}
-$ sudo dnf -y install quodlibet gstreamer1-plugins-ugly
+$ sudo dnf -y install quodlibet gstreamer1-plugins-ugly mplayer vlc
+{% endhighlight %}
+
+### Audio/video processing
+
+{% highlight bash %}
+$ sudo dnf -y install ffmpeg
 {% endhighlight %}
 
 ## Jekyll
@@ -113,7 +152,6 @@ $ sudo dnf -y install libreoffice-calc libreoffice-writer libreoffice-impress
 ## References
 
 - <https://ask.fedoraproject.org/en/question/81052/local-user-mail/>
-
 
 <br/>
 
