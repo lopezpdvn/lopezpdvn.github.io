@@ -115,6 +115,37 @@ Test, opening with email client after sending it (as root).
 echo 'Test email body' | mail -s 'Test email subject' $(whoami)@localhost
 {% endhighlight %}
 
+## systemd targets
+
+*systemd*'s targets serve similar purposes as traditional SysV runlevels.
+
+List targets
+
+{% highlight bash %}
+$ systemctl list-units --type=target
+{% endhighlight %}
+
+[This table](https://wiki.archlinux.org/index.php/systemd#Targets_table)
+roughly maps *systemd* targets to SysV runlevels. SysV runlevel 3 ~=
+`multiuser.target` and SysV runlevel 5 ~= `graphical.target`.
+
+The default target is `graphical.target`, so the machine boots into a
+multi-user graphical system.
+
+{% highlight bash %}
+$ file /etc/systemd/system/default.target
+/etc/systemd/system/default.target: symbolic link to /lib/systemd/system/graphical.target
+{% endhighlight %}
+
+For example, to make the machine boot into a non-graphical multi-user system,
+run below command and reboot
+
+{% highlight bash %}
+$ sudo systemctl set-default multi-user.target
+Removed symlink /etc/systemd/system/default.target.
+Created symlink from /etc/systemd/system/default.target to /usr/lib/systemd/system/multi-user.target.
+{% endhighlight %}
+
 ## Media
 
 ### Image and photos
@@ -152,6 +183,7 @@ $ sudo dnf -y install libreoffice-calc libreoffice-writer libreoffice-impress
 ## References
 
 - <https://ask.fedoraproject.org/en/question/81052/local-user-mail/>
+- <https://wiki.archlinux.org/index.php/systemd>
 
 <br/>
 
