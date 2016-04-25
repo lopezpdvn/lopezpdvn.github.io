@@ -45,12 +45,12 @@ Install [RPM Fusion](http://rpmfusion.org).
 sudo dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 {% endhighlight %}
 
-## Local email with postfix
+## Local email with *postfix* and *mailx*
 
-Install postfix
+Install *postfix* and *mailx*
 
 {% highlight bash %}
-$ sudo dnf -y install postfix
+$ sudo dnf -y install postfix mailx
 {% endhighlight %}
 
 Edit `/etc/postfix/main.cf`:
@@ -113,6 +113,15 @@ Test, opening with email client after sending it (as root).
 
 {% highlight bash %}
 echo 'Test email body' | mail -s 'Test email subject' $(whoami)@localhost
+{% endhighlight %}
+
+### Mail from cron jobs
+
+After setting up local email in your system, restart the cron service so jobs
+start sending email notifications if they're configured to do so
+
+{% highlight bash %}
+$ sudo systemctl restart crond.service
 {% endhighlight %}
 
 ## systemd targets
