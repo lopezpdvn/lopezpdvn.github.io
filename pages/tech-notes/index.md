@@ -24,6 +24,8 @@ Technical notes
 
 - [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8)
 
+- [Digitizing VHS cassettes]({{ site.baseurl }}/digitizing-vhs-cassettes)
+
 - [ffmpeg]({{ site.baseurl }}/ffmpeg)
 
 - [KeePass]({{ site.baseurl }}/keepass)

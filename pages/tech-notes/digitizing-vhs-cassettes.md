@@ -1,0 +1,64 @@
+---
+layout: page
+title: Digitizing VHS cassettes
+permalink: /digitizing-vhs-cassettes/
+comments: true
+tags: [video, audio, ffmpeg]
+---
+
+* TOC
+{:toc}
+
+Using
+
+- For playback, a SAMSUNG SV-J160UM
+- For A/D conversion
+  - [Diamond VC500](http://www.amazon.com/Diamond-VC500-Touch-Capture-Device/dp/B000VM60I8)
+  - EZ Grabber software on Windows 7
+- For compression, ffmpeg on Linux
+
+## A/D conversion
+
+To optimize quality, convert to raw video using the following EZ Grabber settings
+
+- Video:
+  - Video format: NTSC\_M
+  - Video source = Composite
+  - Picture adjustment: All 127
+- Record:
+  - Record format: AVI
+
+Result is raw video:
+
+{% highlight bash %}
+$ ffmpeg -i raw-video.avi
+Guessed Channel Layout for  Input Stream #0.0 : stereo
+Input #0, avi, from 'raw-video.avi':
+  Duration: 00:15:47.85, start: 0.000000, bitrate: 167435 kb/s
+    Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, 2 channels, s16, 1536 kb/s
+    Stream #0:1: Video: rawvideo (UYVY / 0x59565955), uyvy422, 720x480, 165669 kb/s, 29.96 fps, 29.96 tbr, 29.96 tbn, 29.96 tbc
+{% endhighlight %}
+
+<!--
+
+## Compression
+
+Compress video and pack in a Matroska container with uncompressed audio,
+mapping the audio left channel to a single mono channel.  Using H.264 because
+of its good quality, size and compatibility.
+
+{% highlight bash %}
+$ ffmpeg -i raw-video.avi -c:v libx264 -preset slow -crf 17 -c:a pcm_s16le video.mkv
+{% endhighlight %}
+
+Result:
+
+{% highlight bash %}
+$ ffmpeg -i video.mkv
+{% endhighlight %}
+
+## References
+
+- <https://trac.ffmpeg.org/wiki/AudioChannelManipulation>
+
+-->
