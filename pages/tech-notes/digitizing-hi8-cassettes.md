@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Digitizing Hi8 cassettes
-permalink: /digitizing-hi8/
+permalink: /digitizing-hi8-cassettes/
 comments: true
 tags: [video, audio, ffmpeg]
 ---
@@ -59,7 +59,7 @@ $ ffmpeg -i raw-video.avi -c:v libx264 -preset slow -crf 17 -c:a pcm_s16le -map_
 Result:
 
 {% highlight bash %}
-$ ffmpeg -i video.mkv 
+$ ffmpeg -i video.mkv
 Guessed Channel Layout for  Input Stream #0.1 : mono
 Input #0, matroska,webm, from 'vido.mkv':
   Metadata:

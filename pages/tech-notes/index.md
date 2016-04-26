@@ -22,7 +22,7 @@ Technical notes
 
 - [digiKam]({{ site.baseurl }}/digikam)
 
-- [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8)
+- [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8-cassettes)
 
 - [Digitizing VHS cassettes]({{ site.baseurl }}/digitizing-vhs-cassettes)
 
