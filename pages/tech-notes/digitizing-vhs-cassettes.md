@@ -28,16 +28,24 @@ To optimize quality, convert to raw video using the following EZ Grabber setting
 - Record:
   - Record format: AVI
 
+The older the cassettes, the shorter the conversion interval needed to avoid
+synchronization problems. Intervals between 10 and 30 minutes worked OK.
+
 Result is raw video:
 
 {% highlight bash %}
+$ file raw-video.avi
+raw-video.avi: RIFF (little-endian) data, AVI, 720 x 480, ~30 fps,
 $ ffmpeg -i raw-video.avi
 Guessed Channel Layout for  Input Stream #0.0 : stereo
 Input #0, avi, from 'raw-video.avi':
   Duration: 00:15:47.85, start: 0.000000, bitrate: 167435 kb/s
     Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, 2 channels, s16, 1536 kb/s
     Stream #0:1: Video: rawvideo (UYVY / 0x59565955), uyvy422, 720x480, 165669 kb/s, 29.96 fps, 29.96 tbr, 29.96 tbn, 29.96 tbc
+At least one output file must be specified
 {% endhighlight %}
+
+Both audio channels contain sound.
 
 <!--
 
