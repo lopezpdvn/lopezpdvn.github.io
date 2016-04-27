@@ -15,6 +15,10 @@ tags: [video, audio, ffmpeg]
 
 - Use MP4 if using audio compression, otherwise use Matroska.
 
+- When dealing with raw audio (PCM) specify the format with the `-f` option
+  ([for example]({{ site.baseurl }}/digitizing-hi8-cassettes/#audio)).
+
 ## References
 
 - <https://trac.ffmpeg.org/wiki/AudioChannelManipulation>
+- <https://trac.ffmpeg.org/wiki/audio%20types>

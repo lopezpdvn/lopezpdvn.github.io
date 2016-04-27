@@ -74,6 +74,65 @@ Input #0, matroska,webm, from 'vido.mkv':
  At least one output file must be specified
 {% endhighlight %}
 
+## Audio
+
+To extract the raw audio from the Matroska container without encoding
+
+{% highlight bash %}
+$ ffmpeg -i video.mkv -f s16le -acodec pcm_s16le video_audio.raw
+{% endhighlight %}
+
+Note that the arguments to `f` and `acodec` options match the description of
+the audio stream (#0.1) in the output of `ffmpeg -i video.mkv`. The extracted
+audio is literally raw:
+
+{% highlight bash %}
+$ file video_audio.raw
+video_audio.raw: data
+{% endhighlight %}
+
+Neither *ffmpeg* nor *vlc* know how to deal with such file without the user
+providing some help. *ffmpeg* thinks it's video data
+
+{% highlight bash %}
+$ ffmpeg -i video_audio.raw
+[image2 @ 0x1de86a0] Format image2 detected only with low score of 5, misdetection possible!
+[rawvideo @ 0x1de9ac0] Invalid pixel format.
+[image2 @ 0x1de86a0] Failed to open codec in av_find_stream_info
+[rawvideo @ 0x1de9ac0] Invalid pixel format.
+[image2 @ 0x1de86a0] Could not find codec parameters for stream 0 (Video: rawvideo, none): unspecified size
+Consider increasing the value for the 'analyzeduration' and 'probesize' options
+video_audio.raw: could not find codec parameters
+Input #0, image2, from 'video_audio.raw':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: N/A
+    Stream #0:0: Video: rawvideo, none, 25 tbr, 25 tbn, 25 tbc
+At least one output file must be specified
+{% endhighlight %}
+
+*vlc* will just show you an error. Providing a little guidance works, for
+example below options will result in *vlc* correctly playing the file
+
+{% highlight bash %}
+$ vlc --demux=rawaud --rawaud-samplerate 44100 --rawaud-channels 1 video_audio.raw &
+{% endhighlight %}
+
+Specify the input format to *ffmpeg* like this
+
+{% highlight bash %}
+$ ffmpeg -f s16le -i video_audio.raw
+[s16le @ 0x7166a0] Estimating duration from bitrate, this may be inaccurate
+Guessed Channel Layout for  Input Stream #0.0 : mono
+Input #0, s16le, from 'video_audio.raw':
+  Duration: 00:11:37.56, bitrate: 705 kb/s
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, 1 channels, s16, 705 kb/s
+At least one output file must be specified
+{% endhighlight %}
+
+Note that the description of the stream matches the output of `ffmpeg -i
+video.mkv` in the previous section.  The duration is different because it's
+actually a different video than the previous section.
+
 ## References
 
 - <https://trac.ffmpeg.org/wiki/AudioChannelManipulation>
+- <https://trac.ffmpeg.org/wiki/audio%20types>
