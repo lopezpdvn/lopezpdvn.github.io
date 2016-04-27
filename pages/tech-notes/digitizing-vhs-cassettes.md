@@ -47,13 +47,10 @@ At least one output file must be specified
 
 Both audio channels contain sound.
 
-<!--
-
 ## Compression
 
-Compress video and pack in a Matroska container with uncompressed audio,
-mapping the audio left channel to a single mono channel.  Using H.264 because
-of its good quality, size and compatibility.
+Compress video and pack in a Matroska container with uncompressed/raw audio.
+Use H.264 because of its good quality, size and compatibility.
 
 {% highlight bash %}
 $ ffmpeg -i raw-video.avi -c:v libx264 -preset slow -crf 17 -c:a pcm_s16le video.mkv
@@ -62,11 +59,26 @@ $ ffmpeg -i raw-video.avi -c:v libx264 -preset slow -crf 17 -c:a pcm_s16le video
 Result:
 
 {% highlight bash %}
+$ file video.mkv
+video.mkv: Matroska data
 $ ffmpeg -i video.mkv
+Guessed Channel Layout for  Input Stream #0.1 : stereo
+Input #0, matroska,webm, from 'video.mkv':
+  Metadata:
+    ENCODER         : Lavf56.40.101
+  Duration: 00:15:47.89, start: 0.000000, bitrate: 12574 kb/s
+    Stream #0:0: Video: h264 (High 4:2:2), yuv422p, 720x480, SAR 1:1 DAR 3:2, 29.96 fps, 29.96 tbr, 1k tbn, 59.92 tbc (default)
+    Metadata:
+      ENCODER         : Lavc56.60.100 libx264
+      DURATION        : 00:15:47.846000000
+    Stream #0:1: Audio: pcm_s16le, 48000 Hz, 2 channels, s16, 1536 kb/s (default)
+    Metadata:
+      ENCODER         : Lavc56.60.100 pcm_s16le
+      DURATION        : 00:15:47.890000000
+At least one output file must be specified
 {% endhighlight %}
 
 ## References
 
 - <https://trac.ffmpeg.org/wiki/AudioChannelManipulation>
-
--->
+- [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8-cassettes)
