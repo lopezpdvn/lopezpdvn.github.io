@@ -20,9 +20,13 @@ In 2015 I have financially supported the following organizations:
 - [Machine Intelligence Research Institute](https://intelligence.org "Machine Intelligence Research Institute")
 - [SENS Research Foundation](http://sens.org "SENS Research Foundation")
 
+In 2016 I have financially supported the following organizations:
+
+- [Against Malaria Foundation](https://www.againstmalaria.com "Against Malaria Foundation")
+
 [GiveWell][] is my chosen charity at [Amazon Smile][].
 
-I endorse the following organizations:
+Additionally, I endorse the following organizations:
 
 - [The Brain Preservation Foundation](http://www.brainpreservation.org "The Brain Preservation Foundation")
 - [Animal Charity Evaluators](http://www.animalcharityevaluators.org "Animal Chartity Evaluators")
