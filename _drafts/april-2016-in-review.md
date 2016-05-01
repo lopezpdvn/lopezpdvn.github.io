@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "April 2016 in review"
-date: Wed Apr 13 00:19:51 CDT 2016
+date: Sat Apr 30 17:14:54 CDT 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
@@ -18,6 +18,29 @@ This is the *April 2016 in review* post. The previous monthly review post is
 
 [mar-review]: {% post_url 2016/2016-04-02-march-2016-in-review %}
 
+## Technical notes
+
+Previously I used to keep technical notes as gists. Now I am writing them on my
+main website, which makes it easier to manage and find them. Ideally, I should
+publish them as blog posts, but I don't have enough time to write them up
+properly. Instead, I'm writing them in a somewhat crude way.
+
+The index is [here]({{ site.baseurl }}/tech-notes "Tech notes"), and as of now
+there are notes on the following topics:
+[Python]({{ site.baseurl }}/python),
+[rsync]({{ site.baseurl }}/rsync),
+[rsnapshot]({{ site.baseurl }}/rsnapshot),
+[dd]({{ site.baseurl }}/dd),
+[S.M.A.R.T.]({{ site.baseurl }}/smart),
+[sudo]({{ site.baseurl }}/sudo),
+[Windows OS]({{ site.baseurl }}/windows),
+[digiKam]({{ site.baseurl }}/digikam),
+[Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8-cassettes),
+[Digitizing VHS cassettes]({{ site.baseurl }}/digitizing-vhs-cassettes),
+[ffmpeg]({{ site.baseurl }}/ffmpeg),
+[KeePass]({{ site.baseurl }}/keepass) and
+[Node.js]({{ site.baseurl }}/nodejs).
+
 ## Public code repositories activity ###################################
 
 Progress on projects:
@@ -26,18 +49,12 @@ Progress on projects:
 
 - [pysweng: Software engineering problems in Python][]. [*X commit*]:
   - Added unit tests using `unittest` standard module
-- [dotfiles][]. [*X commit*]: mksh RC file sources user commands
+- [dotfiles][]. [*X commit*]:
+  - mksh RC and profile file sources user defined environment
+  - xbindkeys configuration file for controlling quodlibet
 - [Personal website][]. [*X commits*]:
-  - Added page [Tech notes]({{ site.baseurl }}/tech-notes), including notes on
-    [Python]({{ site.baseurl }}/python),
-    [rsync]({{ site.baseurl }}/rsync),
-    [rsnapshot]({{ site.baseurl }}/rsnapshot),
-    [dd]({{ site.baseurl }}/dd),
-    [S.M.A.R.T.]({{ site.baseurl }}/smart),
-    [sudo]({{ site.baseurl }}/sudo),
-    [Windows OS]({{ site.baseurl }}/windows),
-    [digiKam]({{ site.baseurl }}/digikam) &
-    [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8).
+  - Added page [Tech notes]({{ site.baseurl }}/tech-notes), see section
+    [Technical notes](#technical-notes "Technical notes")
   - Added page [Contact]({{ site.baseurl }}/contact)
   - Updated [OpenPGP info]({{ site.baseurl }}/contact)
   - General maintenance and miscellaneous content
