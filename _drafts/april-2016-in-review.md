@@ -63,21 +63,24 @@ Progress on projects:
 
 ## Other ###############################################################
 
-- I spent some time converting and compressing some family videos from
-  VHS/analog format to digital formats.
+- I spent time digitizing some family videos from VHS and Hi8 formats.
 
 - My personal website got TODO views.
 
 ## Folding@Home #######################################################
 
-[Folding@Home during April][fah-stats] I scored TODO points, completed XX work
-units and ranked TODO out of all the members of [The Longevity Meme team][].
-My total score is TODO at the time of this writing.  A graph of total daily
-production history during April can be found [here][fah-apr-graph].
+[Folding@Home during April][fah-stats] I scored 4,306 points, completed 10 work
+units and ranked 46th out of all the members of [The Longevity Meme team][],
+overtaking fellow folder
+*[www.imminst.org](http://folding.extremeoverclocking.com/user_overtake.php?s=&u=444006)*[^1].
+My total score is 1,158,133 at the time of this writing.  A graph of total
+daily production history during April can be found [here][fah-apr-graph].
 
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
-[fah-apr-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/TODO.png
+[fah-apr-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_april_2016.png
+
+[^1]: www.imminst.org == [LongeCity](http://www.longecity.org "Advocacy & Research for Unlimited Lifespans")
 
 ---
 
