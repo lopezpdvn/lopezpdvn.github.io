@@ -31,3 +31,5 @@ Technical notes
 - [KeePass]({{ site.baseurl }}/keepass)
 
 - [Node.js]({{ site.baseurl }}/nodejs)
+
+- [git]({{ site.baseurl }}/git)
