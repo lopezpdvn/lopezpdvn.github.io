@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "April 2016 in review"
-date: Sat Apr 30 17:14:54 CDT 2016
+date: Sun May  1 22:56:30 CDT 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
@@ -18,7 +18,7 @@ This is the *April 2016 in review* post. The previous monthly review post is
 
 [mar-review]: {% post_url 2016/2016-04-02-march-2016-in-review %}
 
-## Technical notes
+## Technical notes ####################################################
 
 Previously I used to keep technical notes as gists. Now I am writing them on my
 main website, which makes it easier to manage and find them. Ideally, I should
@@ -47,25 +47,31 @@ Progress on projects:
 
 {% capture syspoljs %}https://github.com/{{ site.github_username }}/syspol-js/blob/9723c1cc0a723d87bc3a2c2e3aaaeab73561be48{% endcapture %}
 
-- [pysweng: Software engineering problems in Python][]. [*X commit*]:
-  - Added unit tests using `unittest` standard module
-- [dotfiles][]. [*X commit*]:
-  - mksh RC and profile file sources user defined environment
-  - xbindkeys configuration file for controlling quodlibet
-- [Personal website][]. [*X commits*]:
+- [Personal website][]. [*65 commits*]:
   - Added page [Tech notes]({{ site.baseurl }}/tech-notes), see section
     [Technical notes](#technical-notes "Technical notes")
   - Added page [Contact]({{ site.baseurl }}/contact)
   - Updated [OpenPGP info]({{ site.baseurl }}/contact)
   - General maintenance and miscellaneous content
+- [pysweng: Software engineering problems in Python][]. [*6 commit*]:
+  - Added unit tests using `unittest` standard module
+- [dotfiles][]. [*3 commit*]:
+  - mksh RC and profile file sources user defined environment
+  - xbindkeys configuration file for controlling quodlibet
 
-**TODO commits total**.
+{% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
+
+[Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
+[dotfiles]: {{ github_prefix }}/dotfiles "dotfiles"
+[pysweng: Software engineering problems in Python]: {{ github_prefix }}/pysweng "pysweng: Software engineering problems in Python"
+
+**74 commits total**.
 
 ## Other ###############################################################
 
 - I spent time digitizing some family videos from VHS and Hi8 formats.
 
-- My personal website got TODO views.
+- My personal website got 389 views.
 
 ## Folding@Home #######################################################
 
@@ -81,37 +87,6 @@ daily production history during April can be found [here][fah-apr-graph].
 [fah-apr-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_april_2016.png
 
 [^1]: www.imminst.org == [LongeCity](http://www.longecity.org "Advocacy & Research for Unlimited Lifespans")
-
----
-
-- [Software engineering problems in JavaScript][]. [*19 commits*]:
-  - Writing source in ECMAScript 6 and transpiling to ES5 with Babel
-  - Updated project structure
-  - Using npm scripts
-  - Exploring OOP techniques: instantiation, cloning & inheritance
-- [syspol-js][]. [*16 commits*]:
-  - New types:
-    - [`fs.fileLines2Array`]({{ syspoljs }}/src/lib/fs.js#L81)
-    - [`util.callThrows`]({{ syspoljs }}/src/lib/util.js#L126)
-    - [`fs.isReadable`]({{ syspoljs }}/src/lib/fs.js#L90)
-  - Writing source in ECMAScript 6 and using Babel to transpile to ES5
-  - Using npm scripts
-- [Data structures and algorithms in JavaScript][]. [*10 commits*]:
-  - Reorganized code to use 1 Visual Studio project and 1 solution (see [npm
-    issue 2974][]).
-  - Using npm scripts
-  - Using generators and other ECMAScript 6 features.
-
-{% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
-
-[Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
-[syspol-js]: {{ github_prefix }}/syspol-js "syspol-js"
-[Software engineering problems in JavaScript]: {{ github_prefix }}/software-engineering-problems-javascript "Software engineering problems in JavaScript"
-[npm issue 2974]: https://github.com/npm/npm/issues/2974 "Allow subdirectories within git repos in npm install #2974"
-[dotfiles]: {{ github_prefix }}/dotfiles "dotfiles"
-[Data structures and algorithms in JavaScript]: {{ github_prefix }}/data-structures-algorithms-javascript "Data structures and algorithms in JavaScript"
-[pysweng: Software engineering problems in Python]: {{ github_prefix }}/pysweng "pysweng: Software engineering problems in Python"
-
 
 <br/>
 
