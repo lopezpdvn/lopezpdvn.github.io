@@ -20,10 +20,10 @@ This is the *April 2016 in review* post. The previous monthly review post is
 
 ## Technical notes ####################################################
 
-Previously I used to keep technical notes as gists. Now I am writing them on my
-main website, which makes it easier to manage and find them. Ideally, I should
-publish them as blog posts, but I don't have enough time to write them up
-properly. Instead, I'm writing them in a somewhat crude way.
+Previously I used to keep technical notes as [gists][]. Now I am writing them
+on my main website, which makes it easier to manage and find them. Ideally, I
+should publish them as blog posts, but I don't have enough time to write them
+up properly. Instead, I'm writing them in a somewhat crude way.
 
 The index is [here]({{ site.baseurl }}/tech-notes "Tech notes"), and as of now
 there are notes on the following topics:
@@ -41,17 +41,18 @@ there are notes on the following topics:
 [KeePass]({{ site.baseurl }}/keepass) and
 [Node.js]({{ site.baseurl }}/nodejs).
 
+[gists]: https://gist.github.com/{{ site.github_username }} "{{ site.github_username }}'s gists"
+
 ## Public code repositories activity ###################################
 
 Progress on projects:
-
-{% capture syspoljs %}https://github.com/{{ site.github_username }}/syspol-js/blob/9723c1cc0a723d87bc3a2c2e3aaaeab73561be48{% endcapture %}
 
 - [Personal website][]. [*65 commits*]:
   - Added page [Tech notes]({{ site.baseurl }}/tech-notes), see section
     [Technical notes](#technical-notes "Technical notes")
   - Added page [Contact]({{ site.baseurl }}/contact)
   - Updated [OpenPGP info]({{ site.baseurl }}/contact)
+  - Worked on a blog post draft [Fedora 23 set up][]
   - General maintenance and miscellaneous content
 - [pysweng: Software engineering problems in Python][]. [*6 commit*]:
   - Added unit tests using `unittest` standard module
@@ -61,6 +62,7 @@ Progress on projects:
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
+[Fedora 23 set up]: {{ github_prefix }}/lopezpdvn.github.io/blob/master/_drafts/fedora-23-set-up.md
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [dotfiles]: {{ github_prefix }}/dotfiles "dotfiles"
 [pysweng: Software engineering problems in Python]: {{ github_prefix }}/pysweng "pysweng: Software engineering problems in Python"
