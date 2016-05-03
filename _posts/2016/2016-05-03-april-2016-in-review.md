@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "April 2016 in review"
-date: Sun May  1 22:56:30 CDT 2016
+date: Tue May  3 14:17:39 CDT 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
@@ -54,9 +54,9 @@ Progress on projects:
   - Updated [OpenPGP info]({{ site.baseurl }}/contact)
   - Worked on a blog post draft [Fedora 23 set up][]
   - General maintenance and miscellaneous content
-- [pysweng: Software engineering problems in Python][]. [*6 commit*]:
+- [pysweng: Software engineering problems in Python][]. [*6 commits*]:
   - Added unit tests using `unittest` standard module
-- [dotfiles][]. [*3 commit*]:
+- [dotfiles][]. [*3 commits*]:
   - mksh RC and profile file sources user defined environment
   - xbindkeys configuration file for controlling quodlibet
 
