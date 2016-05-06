@@ -6,8 +6,9 @@ permalink: /writings/
 
 {% capture docsrc %}{{ site.baseurl }}{{ page.permalink }}procesamiento-senales-laboratorio{% endcapture %}
 
-All my writings. See also [projects]({{ site.baseurl }}/projects) and
-[blog]({{ site.baseurl }}/blog).
+All my writings. See also [projects]({{ site.baseurl }}/projects "Projects")
+and [blog]({{ site.baseurl }}/blog "Blog") and
+[tech notes]({{ site.baseurl }}/tech-notes "Tech notes")
 
 - [April 2016 in review]({% post_url 2016/2016-05-03-april-2016-in-review %}) *April 2016 personal review, summary of activities, misc notes...* (3 May 2016)
 - [March 2016 in review]({% post_url 2016/2016-04-02-march-2016-in-review %}) *March 2016 personal review, summary of activities, misc notes...* (2 Apr 2016)

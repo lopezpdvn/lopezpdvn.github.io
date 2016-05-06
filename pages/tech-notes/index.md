@@ -33,3 +33,5 @@ Technical notes
 - [Node.js]({{ site.baseurl }}/nodejs)
 
 - [git]({{ site.baseurl }}/git)
+
+- [gpg]({{ site.baseurl }}/gpg)
