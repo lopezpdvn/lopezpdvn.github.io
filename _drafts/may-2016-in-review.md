@@ -26,12 +26,14 @@ Progress on projects:
 
 - [Personal website][]. [*TODO commits*]:
   - Worked on a blog post draft [Fedora 23 set up][]
+  - Worked on a blog post draft [Windows 10 set up][]
   - General maintenance and miscellaneous content
 - [dotfiles][]. [*TODO commits*]:
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
 [Fedora 23 set up]: {{ github_prefix }}/lopezpdvn.github.io/blob/master/_drafts/fedora-23-set-up.md
+[Windows 10 set up]: {{ github_prefix }}/lopezpdvn.github.io/blob/master/_drafts/windows-10-set-up.md
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [dotfiles]: {{ github_prefix }}/dotfiles "dotfiles"
 [pysweng: Software engineering problems in Python]: {{ github_prefix }}/pysweng "pysweng: Software engineering problems in Python"
