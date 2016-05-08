@@ -13,7 +13,7 @@ comments: true
 Install packages per user
 
 {% highlight bash %}
-$ pip install --user <username> <package>
+$ pip install --user <package>
 {% endhighlight %}
 
 In previous versions of pip you had to use
