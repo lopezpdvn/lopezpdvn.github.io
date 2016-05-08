@@ -55,6 +55,26 @@ settings* at the bottom of page. In the displayed window, check the box *On
 resume, display logon screen* and enter how many minutes to wait to
 automatically lock the screen. You don't have to select a screen saver.
 
+## Set system power settings
+
+A few recommended power settings.
+
+Press `Meta`+`E` to open *File Explorer*, and go to *Control Panel\Hardware and
+Sound\Power Options\System Settings*. Click on *Change settings that are
+currently unavailable*
+
+Do nothing when the power button is pressed and when the lid is closed. Select
+*Require a password (recommended)* in section *Password protection on wakeup*.
+In section *Shutdown settings* uncheck *Turn on fast startup* and check
+*Sleep*, *Hibernate* and *Lock*.
+
+Customize the default power plans or create a new one if needed. Make sure that
+the power plan you use has the following options selected (click on
+corresponding *Change plan settings* and then *Change advanced power
+settings*):
+
+- Require a password on wakeup: yes on both battery and plugged in.
+
 ## References
 
 - *Windows 10: The Missing Manual*. David Pogue. O'Reilly Media, Inc. September
