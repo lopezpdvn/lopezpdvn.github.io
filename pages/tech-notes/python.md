@@ -38,4 +38,12 @@ $ cd $PROJ_REPO_ROOT
 $ virtualenv -p $PYTHON_EXE .
 {% endhighlight %}
 
+## JSON
+
+Python interpreter JSON command line tool
+
+{% highlight bash %}
+$ python -m json.tool <path to json file>
+{% endhighlight %}
+
 [pysweng]: https://github.com/{{ site.github_username }}/pysweng "Software Engineering Problems with Python"
