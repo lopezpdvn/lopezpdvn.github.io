@@ -75,6 +75,22 @@ settings*):
 
 - Require a password on wakeup: yes on both battery and plugged in.
 
+## Network connection
+
+When connecting to a network for the first time, select *No* when asked *Do you
+want to allow your PC to be discoverable by other PCs and devices on this
+network?*
+
+## Configure Windows Update
+
+*Settings* -> *Update and Security*. Click on *Advanced Options*. Select
+*Notify to schedule restart*.
+
+Then click on *Choose how updates are delivered* and turn off *Updates from
+more than one place*.
+
+Connect to the internet to let Windows update itself.
+
 ## References
 
 - *Windows 10: The Missing Manual*. David Pogue. O'Reilly Media, Inc. September
