@@ -35,3 +35,5 @@ Technical notes
 - [git]({{ site.baseurl }}/git)
 
 - [gpg]({{ site.baseurl }}/gpg)
+
+- [X Window System]({{ site.baseurl }}/x)
