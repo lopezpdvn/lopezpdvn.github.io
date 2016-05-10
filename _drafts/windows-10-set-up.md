@@ -12,6 +12,8 @@ permalink: /windows-10-set-up/
 * TOC
 {:toc}
 
+My Windows 10 set up for a laptop.
+
 ## Reset system
 
 This is a factory reset, all files will go.
@@ -90,6 +92,82 @@ Then click on *Choose how updates are delivered* and turn off *Updates from
 more than one place*.
 
 Connect to the internet to let Windows update itself.
+
+## Analyze and optimize local partitions
+
+Go to *Control Panel\All Control Panel Items\Administrative Tools* in *File
+Explorer*. Double click on *Defragment and optimize drives*. For each main
+partition, select it and click on *Analyze* and *Optimize*. This can take a
+while.
+
+## Rename PC
+
+*System* -> *About* -> *Rename PC*.
+
+## Privacy
+
+*Settings* -> *Privacy*.
+
+### General
+
+- *Let apps user my advertising ID for experiences across app*: off.
+- *Turn on SmartScreen Filter...*: on.
+- *Send Microsoft info about how I write to help us improve typing and writing
+  in the future* = off.
+- *Let website provide locally relevant content by accessing my language list*: off.
+
+### Location
+
+Off.
+
+### Account info
+
+*Let apps access my name, picture and other account info*: off.
+
+### Contacts
+
+No app allowed to access contacts.
+
+### Calendar
+
+*Let apps access my calendar*: off.
+
+### Call History
+
+*Let apps access my call history*: off.
+
+### Email
+
+*Let apps access and send email*: off.
+
+### Messaging
+
+*Let apps read or send messages (text or MMS)*: off.
+
+### Radios
+
+*Let apps control radios*: off.
+
+### Other devices
+
+*Let your apps automatically share and sync info with wireless devices that
+don't explicitly pair with your PC, tablet, or phone*: off.
+
+### Feedback & diagnostics
+
+- *Windows should ask for my feedback*: never
+- *Send your device data to Microsoft*: Basic.
+
+## Misc
+
+- Add desktop with `Meta`+`Ctrl`+`D`.
+- Move to next desktop with `Meta`+`Ctrl`+`Right-Arrow`.
+- *System* -> *Notifications & actions* -> *Hide notifications while
+  presenting* = on.
+- *System* -> *Devices* -> *AutoPlay*. Set it off and choose *Take no action*
+  for all AutoPlay defaults.
+- *System* -> *Devices* -> *USB*. *Notify me if there are issues connecting to
+  USB devices* = on.
 
 ## References
 
