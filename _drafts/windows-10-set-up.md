@@ -14,6 +14,8 @@ permalink: /windows-10-set-up/
 
 My Windows 10 set up for a laptop.
 
+TODO: continue Control Panel at HomeGroup
+
 ## Reset system
 
 This is a factory reset, all files will go.
@@ -92,6 +94,24 @@ Then click on *Choose how updates are delivered* and turn off *Updates from
 more than one place*.
 
 Connect to the internet to let Windows update itself.
+
+## Update & Security
+
+### Windows Defender
+
+*Settings* -> *Windows Defender*
+
+- *Get better, faster protection by sending Microsoft info about potential
+  security problems Windows Defender finds*: off.
+
+- *Help us make Windows Defender better by sending Microsoft samples so we can
+  improve our anti-virus and malware measures...*: off.
+
+Add exclusions as necessary.
+
+### For developers
+
+Select *Windows Store app. Only install apps from the Windows Store*.
 
 ## Analyze and optimize local partitions
 
