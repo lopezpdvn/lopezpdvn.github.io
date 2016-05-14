@@ -14,8 +14,6 @@ permalink: /windows-10-set-up/
 
 My Windows 10 set up for a laptop.
 
-TODO: continue Control Panel at HomeGroup
-
 ## Reset system
 
 This is a factory reset, all files will go.
@@ -85,6 +83,19 @@ When connecting to a network for the first time, select *No* when asked *Do you
 want to allow your PC to be discoverable by other PCs and devices on this
 network?*
 
+In *Control Panel\All Control Panel Items\Network and Sharing Center\Advanced
+sharing settings*. Display profile *Guest or Public* and select *Turn off
+network discovery* and *Turn off file and printer sharing*.
+
+Display *All Networks* and select *Turn off Public folder sharing*, *Use
+128-bit encryption* and *Turn on password protected sharing*.
+
+## Disable remote assistance
+
+Go to *Control Panel\All Control Panel Items\System* and click on *Advanced
+system settings*. Go to tab *Remote* and uncheck *Allow Remote Assistance
+connections to this computer*.
+
 ## Configure Windows Update
 
 *Settings* -> *Update and Security*. Click on *Advanced Options*. Select
@@ -112,6 +123,26 @@ Add exclusions as necessary.
 ### For developers
 
 Select *Windows Store app. Only install apps from the Windows Store*.
+
+## Security and Maintenance
+
+*Control Panel\All Control Panel Items\Security and Maintenance*. Click on
+*Change Security and Maintenance settings* and check all the boxes in section
+*Turn messages on or off*. Then click OK to return to previous window.
+
+In section *Security* -> *User Account Control*, click on *Change settings* to
+show the window *User Account Control Settings*. Select *Always notify*,
+maximum notification level. Click OK.
+
+Then in section *Windows SmartScreen*, click on *Change settings* to show
+window *Windows SmartScreen*. Select option *Get administrator approval before
+running an unrecognized app from the Internet*.
+
+## Windows Firewall
+
+Go to *Control Panel\All Control Panel Items\Windows Firewall\Customize
+Settings*. For both private and public network settings, select *Turn on
+Windows Firewall* and check *Notify me when Windows Firewall blocks a new app*.
 
 ## Analyze and optimize local partitions
 
@@ -178,6 +209,16 @@ don't explicitly pair with your PC, tablet, or phone*: off.
 - *Windows should ask for my feedback*: never
 - *Send your device data to Microsoft*: Basic.
 
+## Language
+
+*Control Panel\All Control Panel Items\Language\Advanced Settings*.
+
+In *Personalization data* select *Don't use automatic learning and delete all
+previously collected data*
+
+In *Language for web content* check *Don't let websites access my language
+list...*.
+
 ## Misc
 
 - Add desktop with `Meta`+`Ctrl`+`D`.
@@ -188,6 +229,10 @@ don't explicitly pair with your PC, tablet, or phone*: off.
   for all AutoPlay defaults.
 - *System* -> *Devices* -> *USB*. *Notify me if there are issues connecting to
   USB devices* = on.
+
+## After initial configuration
+
+After the initial configuration is a good to create a restore point.
 
 ## References
 
