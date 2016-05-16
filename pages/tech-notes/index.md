@@ -37,3 +37,5 @@ Technical notes
 - [gpg]({{ site.baseurl }}/gpg)
 
 - [X Window System]({{ site.baseurl }}/x)
+
+- [OpenSSH server on Windows 10 with Cygwin]({{ site.baseurl }}/openssh-server-cygwin-windows-10)

@@ -3,7 +3,7 @@ layout: page
 title: Cygwin
 permalink: /cygwin/
 comments: true
-tags: [windows, linux, unix]
+tags: [windows, linux, unix, cygwin]
 ---
 
 * TOC
