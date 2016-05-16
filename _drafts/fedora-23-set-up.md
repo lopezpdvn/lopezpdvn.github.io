@@ -14,7 +14,7 @@ permalink: /fedora-23-post-installation/
 
 ## Install
 
-## Configure sudo
+## Configure users, groups and sudo
 
 Remember to use `visudo` instead of directly editing the *sudoers* files.
 
@@ -27,6 +27,9 @@ Verify
 {% highlight bash %}
 $ sudo -l
 {% endhighlight %}
+
+Use `groupadd` to add groups.  Use `useradd` to add users. Use `passwd` to
+unlock users by setting their account passwords.
 
 ## Update system
 
