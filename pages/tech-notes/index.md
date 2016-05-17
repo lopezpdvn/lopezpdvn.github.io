@@ -38,4 +38,4 @@ Technical notes
 
 - [X Window System]({{ site.baseurl }}/x)
 
-- [OpenSSH server on Windows 10 with Cygwin]({{ site.baseurl }}/openssh-server-cygwin-windows-10)
+- [OpenSSH server on Windows with Cygwin]({{ site.baseurl }}/openssh-server-cygwin-windows)
