@@ -219,6 +219,13 @@ previously collected data*
 In *Language for web content* check *Don't let websites access my language
 list...*.
 
+## Enable ping
+
+Open *Windows Firewall with Advanced Security*. In left column click on
+*Inbound Rules*. Order the rules by name and look for a set of rules whose name
+start with the string *File and Printer Sharing (Echo Request -*. Select the
+rule(s) applicable to your need case and enabled them without modification.
+
 ## Misc
 
 - Add desktop with `Meta`+`Ctrl`+`D`.
