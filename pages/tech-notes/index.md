@@ -38,6 +38,8 @@ Technical notes
 
 - [X Window System]({{ site.baseurl }}/x)
 
+- [Cygwin]({{ site.baseurl }}/cygwin)
+
 - [OpenSSH server on Windows with Cygwin]({{ site.baseurl }}/openssh-server-cygwin-windows)
 
 - [Install Folding@home FAHClient on Linux as a systemd service unit]({{ site.baseurl }}/install-fahclient-linux-systemd-service-unit)
