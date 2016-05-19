@@ -183,7 +183,7 @@ $ sudo dnf -y install ffmpeg
 {% highlight bash %}
 $ sudo dnf -y install ruby-devel redhat-rpm-config
 $ sudo dnf -y groupinstall "C Development Tools and Libraries"
-$ gem install jekyll
+$ gem install jekyll 'jekyll-gist'
 {% endhighlight %}
 
 ## Other software

@@ -33,6 +33,9 @@ markdown: kramdown
 
 highlight: pygments
 
+gems:
+  - jekyll-gist
+
 defaults:
   -
     scope:
