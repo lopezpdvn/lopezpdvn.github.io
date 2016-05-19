@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "May 2016 in review"
-date: Fri May  6 14:36:45 CDT 2016
+date: Sat May 14 17:29:13 CDT 2016
 lang: en
 categories: en
 tags: [en, month-in-review]
@@ -28,15 +28,15 @@ Progress on projects:
   - Worked on a blog post draft [Fedora 23 set up][]
   - Worked on a blog post draft [Windows 10 set up][]
   - General maintenance and miscellaneous content
-- [dotfiles][]. [*TODO commits*]:
+- [Data structures and algorithms in C#][]: [*TODO commits*]
+  - Updated to SDK `1.0.0-rc1-update1`, no longer targeting .NET Core
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
 [Fedora 23 set up]: {{ github_prefix }}/lopezpdvn.github.io/blob/master/_drafts/fedora-23-set-up.md
 [Windows 10 set up]: {{ github_prefix }}/lopezpdvn.github.io/blob/master/_drafts/windows-10-set-up.md
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
-[dotfiles]: {{ github_prefix }}/dotfiles "dotfiles"
-[pysweng: Software engineering problems in Python]: {{ github_prefix }}/pysweng "pysweng: Software engineering problems in Python"
+[Data structures and algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures and algorithms in C#"
 
 **TODO commits total**.
 
