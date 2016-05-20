@@ -43,3 +43,5 @@ Technical notes
 - [OpenSSH server on Windows with Cygwin]({{ site.baseurl }}/openssh-server-cygwin-windows)
 
 - [Install Folding@home FAHClient on Linux as a systemd service unit]({{ site.baseurl }}/install-fahclient-linux-systemd-service-unit)
+
+- [VNC]({{ site.baseurl }}/vnc "VNC")
