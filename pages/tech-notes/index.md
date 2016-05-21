@@ -47,3 +47,5 @@ Technical notes
 - [VNC]({{ site.baseurl }}/vnc "VNC")
 
 - [Xfce]({{ site.baseurl }}/xfce "Xfce")
+
+- [Markdown]({{ site.baseurl }}/markdown "Markdown")

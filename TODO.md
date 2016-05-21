@@ -1,6 +1,6 @@
 # TODO #################################################################
 
-- Move [gists][] to either [tech-notes][] or [dotfiles][]
+- Move [gists][] to either [tech notes][] or [dotfiles][]
 
 - Create a Jekyll layout for [tech notes][].
 
