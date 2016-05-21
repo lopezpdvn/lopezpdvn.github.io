@@ -45,3 +45,5 @@ Technical notes
 - [Install Folding@home FAHClient on Linux as a systemd service unit]({{ site.baseurl }}/install-fahclient-linux-systemd-service-unit)
 
 - [VNC]({{ site.baseurl }}/vnc "VNC")
+
+- [Xfce]({{ site.baseurl }}/xfce "Xfce")
