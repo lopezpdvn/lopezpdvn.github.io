@@ -3,7 +3,11 @@ layout: page
 title: Notes on Python
 permalink: /python/
 comments: true
+tags: [python, programming]
+last_updated: 2016-05-21
 ---
+
+*Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}
@@ -31,6 +35,8 @@ $ pip install --user git+https://github.com/lopezpdvn/pysweng@dev#egg=pysweng
 $ pip install --user --upgrade git+https://github.com/lopezpdvn/pysweng@dev#egg=pysweng
 {% endhighlight %}
 
+[pysweng]: https://github.com/{{ site.github_username }}/pysweng "Software Engineering Problems with Python"
+
 ## virtualenv
 
 {% highlight bash %}
@@ -46,4 +52,8 @@ Python interpreter JSON command line tool
 $ python -m json.tool <path to json file>
 {% endhighlight %}
 
-[pysweng]: https://github.com/{{ site.github_username }}/pysweng "Software Engineering Problems with Python"
+## Templates
+
+Short script template
+
+{% gist lopezpdvn/9a89dad82db384021c5e python-short-template.py %}
