@@ -3,8 +3,11 @@ layout: page
 title: Notes on digiKam
 permalink: /digikam/
 comments: true
+last_updated: 2016-05-22
 tags: [media, images]
 ---
+
+*Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}
@@ -28,6 +31,21 @@ to reflect the new path of the root of your collection.  You can get the
 UUID of the disk by browsing `/dev/disks/by-uuid`
 
 Then save the changes and start digiKam.
+
+## Importing database to a new digiKam installation
+
+Start *digiKam*, the first-time-run wizard/assistant starts. Click *Next*.
+
+Input the path to the main directory where you store images. In the second text
+box, input the path to the directory where the file `digikam.db` lives, not the
+path to the file itself. In other words, input the *basename* of the absolute
+path to the `digikam.db` file. Click *Next*
+
+Configure the rest of the settings as needed. See
+*[Change path to collections on removable media][]* if the paths of the
+collections were modified.
+
+[Change path to collections on removable media]: #change-path-to-collections-on-removable-media
 
 ---
 <br/>
