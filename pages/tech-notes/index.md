@@ -6,7 +6,7 @@ permalink: /tech-notes/
 
 Technical notes
 
-- [Python]({{ site.baseurl }}/python)
+- [Python]({{ site.baseurl }}/python "Python programming language/environment")
 
 - [rsync]({{ site.baseurl }}/rsync)
 

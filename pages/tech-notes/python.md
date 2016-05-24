@@ -54,6 +54,8 @@ $ python -m json.tool <path to json file>
 
 ## Templates
 
+### Short script
+
 Short script template
 
 {% gist lopezpdvn/9a89dad82db384021c5e python-short-template.py %}

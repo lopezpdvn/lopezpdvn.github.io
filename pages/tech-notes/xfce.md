@@ -17,7 +17,7 @@ last_updated: 2016-05-21
 
 Documented as gist since the configuration is customized graphically instead of
 configuration files (otherwise it would go into
-[dotfiles](https://github.com/lopezpdvn/dotfiles).
+[dotfiles](https://github.com/lopezpdvn/dotfiles)).
 
 ### Appearance
 
