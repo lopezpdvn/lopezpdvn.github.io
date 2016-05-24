@@ -43,6 +43,15 @@ $ dst=<hostname>:/path/in/android/filesytem
 $ rsync -rnvz $src/ $dst
 {% endhighlight %}
 
+## Resume transfer
+
+The first time you run rsync to copy/transfer files, be sure to use the option
+`--append`. That way rsync won't delete any partial files if the transfer is
+interrupted. Later you can resume the transfer running the same command as the
+first time, and so on.
+
+If big files are involved, the option `--progress` is handy too.
+
 ## Selective mirror
 
 Suppose you want to mirror only the following directories from `$src` to
