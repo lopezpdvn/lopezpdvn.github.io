@@ -17,7 +17,15 @@ Follow instructions at
 Password length on server should be maximum 8 characters. Further characters
 are ignored.
 
-Use display numbers starting from 1 (1, 2, 3, ...).
+Use display numbers starting from 1 without skipping (1, 2, 3, ...).
+
+{% highlight bash %}
+$ sudo systemctl start vncserver-<userA>@:1.service
+$ # sudo systemctl start vncserver-<userA>@:3.service <--- This would fail
+$ sudo systemctl start vncserver-<userB>@:2.service
+$ sudo systemctl start vncserver-<userC>@:3.service
+...
+{% endhighlight %}
 
 To prevent unencrypted connections, add the arguments `-localhost` and
 `-nolisten tcp` to the *ExecStart* line in `systemd` unit
