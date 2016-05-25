@@ -51,3 +51,5 @@ Technical notes
 - [Markdown]({{ site.baseurl }}/markdown "Markdown")
 
 - [wkhtmltopdf]({{ site.baseurl }}/wkhtmltopdf "wkhtmltopdf")
+
+- [HTML]({{ site.baseurl }}/html "HTML")
