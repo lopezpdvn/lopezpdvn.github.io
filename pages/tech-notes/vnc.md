@@ -4,7 +4,10 @@ title: VNC
 permalink: /vnc/
 comments: true
 tags: [sysadmin, system_administration, vnc, ssh]
+last_updated: 2016-05-25
 ---
+
+*Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}

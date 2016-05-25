@@ -49,3 +49,5 @@ Technical notes
 - [Xfce]({{ site.baseurl }}/xfce "Xfce")
 
 - [Markdown]({{ site.baseurl }}/markdown "Markdown")
+
+- [wkhtmltopdf]({{ site.baseurl }}/wkhtmltopdf "wkhtmltopdf")
