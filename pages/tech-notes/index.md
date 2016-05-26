@@ -4,7 +4,15 @@ title: Tech notes
 permalink: /tech-notes/
 ---
 
-Technical notes
+Technical notes. Ideally, I should publish these as [blog][] posts, but I don't
+have enough time to write them up properly. Instead, I'm writing them in a
+somewhat crude way and sometimes with very specific use needs. *Document all
+the things!*.
+
+See also
+[misc notes](https://gist.github.com/{{ site.github_username }}/764defc7553969ab24fe "Misc notes")
+
+[blog]: {{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"
 
 - [Python]({{ site.baseurl }}/python "Python programming language/environment")
 
