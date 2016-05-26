@@ -9,6 +9,10 @@ tags: [video, audio, ffmpeg]
 * TOC
 {:toc}
 
+`ffmpeg` and `quodlibet`/`operon`
+
+{% gist lopezpdvn/f83112e070e3c9e791e170059a41cd7c ffmpeg_quodlibet_operon.sh %}
+
 ## Misc
 
 - Use H.264 because of its good quality, size and compatibility.
@@ -17,6 +21,9 @@ tags: [video, audio, ffmpeg]
 
 - When dealing with raw audio (PCM) specify the format with the `-f` option
   ([for example]({{ site.baseurl }}/digitizing-hi8-cassettes/#audio)).
+
+- Don't try to map audio channels without re-encoding
+  ([info](http://comments.gmane.org/gmane.comp.video.ffmpeg.user/53517)).
 
 ## References
 
