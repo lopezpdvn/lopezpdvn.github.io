@@ -61,3 +61,5 @@ See also
 - [wkhtmltopdf]({{ site.baseurl }}/wkhtmltopdf "wkhtmltopdf")
 
 - [HTML]({{ site.baseurl }}/html "HTML")
+
+- [Fedora 23 set up]({{ site.baseurl }}/fedora-23-set-up "Fedora 23 set up")

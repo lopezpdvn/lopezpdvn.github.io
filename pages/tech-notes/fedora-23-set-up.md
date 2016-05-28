@@ -1,13 +1,16 @@
 ---
 layout: post
 title: "Fedora 23 set up"
-date: Thu Mar 31 13:38:29 CST 2016
 lang: en
 categories: en
 tags: [en, linux, tech]
-comments: false
-permalink: /fedora-23-post-installation/
+comments: true
+first_published: 2016-03-31
+last_updated: 2016-05-27
+permalink: /fedora-23-set-up/
 ---
+
+*First published: {{ page.first_published }}. Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}
