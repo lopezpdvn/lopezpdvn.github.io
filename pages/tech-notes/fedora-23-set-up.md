@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: page
 title: "Fedora 23 set up"
 lang: en
 categories: en
-tags: [en, linux, tech]
+tags: [en, linux, tech, operating_system]
 comments: true
 first_published: 2016-03-31
 last_updated: 2016-05-27

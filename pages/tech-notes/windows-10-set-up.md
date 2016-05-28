@@ -1,13 +1,16 @@
 ---
-layout: post
+layout: page
 title: "Windows 10 set up"
-date: Fri May  6 23:32:46 CDT 2016
 lang: en
 categories: en
 tags: [en, windows, operating_system, tech]
-comments: false
+comments: true
+first_published: 2016-05-07
+last_updated: 2016-05-28
 permalink: /windows-10-set-up/
 ---
+
+*First published: {{ page.first_published }}. Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}

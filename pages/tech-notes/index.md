@@ -63,3 +63,5 @@ See also
 - [HTML]({{ site.baseurl }}/html "HTML")
 
 - [Fedora 23 set up]({{ site.baseurl }}/fedora-23-set-up "Fedora 23 set up")
+
+- [Windows 10 set up]({{ site.baseurl }}/windows-10-set-up "Windows 10 set up")
