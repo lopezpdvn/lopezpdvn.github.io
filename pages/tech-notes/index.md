@@ -16,7 +16,7 @@ See also
 
 - [Python]({{ site.baseurl }}/python "Python programming language/environment")
 
-- [rsync]({{ site.baseurl }}/rsync)
+- [rsync]({{ site.baseurl }}/rsync "rsync")
 
 - [rsnapshot]({{ site.baseurl }}/rsnapshot)
 
@@ -28,13 +28,13 @@ See also
 
 - [Windows OS]({{ site.baseurl }}/windows)
 
-- [digiKam]({{ site.baseurl }}/digikam)
+- [digiKam]({{ site.baseurl }}/digikam "digiKam")
 
 - [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8-cassettes)
 
 - [Digitizing VHS cassettes]({{ site.baseurl }}/digitizing-vhs-cassettes)
 
-- [ffmpeg]({{ site.baseurl }}/ffmpeg)
+- [ffmpeg]({{ site.baseurl }}/ffmpeg "ffmpeg")
 
 - [KeePass]({{ site.baseurl }}/keepass)
 

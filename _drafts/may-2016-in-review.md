@@ -25,8 +25,6 @@ This is the *May 2016 in review* post. The previous monthly review post is
 Progress on projects:
 
 - [Personal website][]. [*TODO commits*]:
-  - Worked on a blog post draft [Fedora 23 set up][]
-  - Worked on a blog post draft [Windows 10 set up][]
   - General maintenance and miscellaneous content
   - Updated/added [tech notes][] on
       - [gpg][]
@@ -37,8 +35,17 @@ Progress on projects:
       - [Xfce][]
       - [Markdown][]
       - [Python][]
+      - [wkhtmltopdf][]
+      - [HTML][]
+      - [ffmpeg][]
+      - [rsync][]
+      - [digiKam][]
+      - [Fedora 23 set up][] (previously was a blog post draft)
+      - [Windows 10 set up][] (previously was a blog post draft)
 - [Data structures and algorithms in C#][]: [*TODO commits*]
   - Updated to SDK `1.0.0-rc1-update1`, no longer targeting .NET Core
+- [dotfiles][]: [*TODO commits*]
+  - Added `screen` rc/configuration file.
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
@@ -55,6 +62,14 @@ Progress on projects:
 [Xfce]: {{ site.baseurl }}/xfce "Xfce"
 [Markdown]: {{ site.baseurl }}/markdown "Markdown"
 [Python]: {{ site.baseurl }}/python "Python"
+[dotfiles]: {{ github_prefix }}/dotfiles "dotfiles"
+[wkhtmltopdf]: {{ site.baseurl }}/wkhtmltopdf "wkhtmltopdf"
+[HTML]: {{ site.baseurl }}/html "HTML"
+[Fedora 23 set up]: {{ site.baseurl }}/fedora-23-set-up "Fedora 23 set up"
+[Windows 10 set up]: {{ site.baseurl }}/windows-10-set-up "Windows 10 set up"
+[ffmpeg]: {{ site.baseurl }}/ffmpeg "ffmpeg"
+[rsync]: {{ site.baseurl }}/rsync "rsync"
+[digiKam]: {{ site.baseurl }}/digikam "digiKam"
 
 **TODO commits total**.
 
