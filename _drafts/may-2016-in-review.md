@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "May 2016 in review"
-date: Sat May 14 17:29:13 CDT 2016
+date: Wed Jun  1 14:49:02 CDT 2016
 lang: en
 categories: en
-tags: [en, month-in-review]
+tags: [en, month-in-review, tech_notes]
 comments: true
 permalink: /may-2016-in-review/
 excerpt: May 2016 personal review, summary of activities, misc notes...
@@ -18,13 +18,11 @@ This is the *May 2016 in review* post. The previous monthly review post is
 
 [apr-review]: {% post_url 2016/2016-05-03-april-2016-in-review %}
 
----
-
 ## Public code repositories activity ###################################
 
 Progress on projects:
 
-- [Personal website][]. [*TODO commits*]:
+- [Personal website][]. [*47 commits*]:
   - General maintenance and miscellaneous content
   - Updated/added [tech notes][] on
       - [gpg][]
@@ -42,10 +40,13 @@ Progress on projects:
       - [digiKam][]
       - [Fedora 23 set up][] (previously was a blog post draft)
       - [Windows 10 set up][] (previously was a blog post draft)
-- [Data structures and algorithms in C#][]: [*TODO commits*]
+      - [sudo][]
+- [Data structures and algorithms in C#][]: [*1 commit*]
   - Updated to SDK `1.0.0-rc1-update1`, no longer targeting .NET Core
-- [dotfiles][]: [*TODO commits*]
+- [dotfiles][]: [*1 commit*]
   - Added `screen` rc/configuration file.
+
+**49 commits total**.
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
@@ -70,8 +71,7 @@ Progress on projects:
 [ffmpeg]: {{ site.baseurl }}/ffmpeg "ffmpeg"
 [rsync]: {{ site.baseurl }}/rsync "rsync"
 [digiKam]: {{ site.baseurl }}/digikam "digiKam"
-
-**TODO commits total**.
+[sudo]: {{ site.baseurl }}/sudo "sudo"
 
 ## Philanthropy #######################################################
 
@@ -83,10 +83,10 @@ ended on April 25, which is [World Malaria
 Day](https://en.wikipedia.org/wiki/World_Malaria_Day "World Malaria Day at
 Wikipedia")
 
-[Folding@Home during May][fah-stats] I scored TODO points, completed TODO work
+[Folding@Home during May][fah-stats] I scored 15,579 points, completed 16 work
 units and ranked 46th out of all the members of [The Longevity Meme team][].
-My total score is TODO at the time of this writing.  A graph of total daily
-production history during May can be found [here][fah-apr-graph].
+My total score is 1,174,479 at the time of this writing.  A graph of total
+daily production history during May can be found [here][fah-apr-graph].
 
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
@@ -98,7 +98,7 @@ production history during May can be found [here][fah-apr-graph].
 
 - I spent time digitizing some family videos from VHS and Hi8 formats.
 
-- My personal website got TODO views.
+- My personal website got 389 views.
 
 <br/>
 

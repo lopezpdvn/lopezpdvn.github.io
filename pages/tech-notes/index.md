@@ -24,7 +24,7 @@ See also
 
 - [S.M.A.R.T.]({{ site.baseurl }}/smart)
 
-- [sudo]({{ site.baseurl }}/sudo)
+- [sudo]({{ site.baseurl }}/sudo "sudo")
 
 - [Windows OS]({{ site.baseurl }}/windows)
 
