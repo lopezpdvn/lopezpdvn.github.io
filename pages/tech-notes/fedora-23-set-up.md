@@ -3,10 +3,10 @@ layout: page
 title: "Fedora 23 set up"
 lang: en
 categories: en
-tags: [en, linux, tech, operating_system]
+tags: [en, linux, tech, operating_system, firewall, security]
 comments: true
 first_published: 2016-03-31
-last_updated: 2016-05-27
+last_updated: 2016-06-02
 permalink: /fedora-23-set-up/
 ---
 
@@ -50,6 +50,17 @@ Install [RPM Fusion](http://rpmfusion.org).
 {% highlight bash %}
 sudo dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 {% endhighlight %}
+
+## Firewall configuration
+
+I configure services but keep them globally disabled, and then selectively
+enable them with *rich rules*. When editing the rich rules, using a MAC address
+as *source* doesn't work when the source has its MAC address spoofed. I haven't
+tested with the source with real hardware MAC address. Using a IP in *source*
+works OK.
+
+When editing rich rules, using as source the IP of the default gateway doesn't
+work.
 
 ## Local email with *postfix* and *mailx*
 
