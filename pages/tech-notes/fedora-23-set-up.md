@@ -59,9 +59,6 @@ as *source* doesn't work when the source has its MAC address spoofed. I haven't
 tested with the source with real hardware MAC address. Using a IP in *source*
 works OK.
 
-When editing rich rules, using as source the IP of the default gateway doesn't
-work.
-
 ## Local email with *postfix* and *mailx*
 
 Install *postfix* and *mailx*
