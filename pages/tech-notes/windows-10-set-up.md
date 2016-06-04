@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: "Windows 10 set up"
 lang: en
 categories: en
@@ -9,8 +9,6 @@ first_published: 2016-05-07
 last_updated: 2016-05-28
 permalink: /windows-10-set-up/
 ---
-
-*First published: {{ page.first_published }}. Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}

@@ -1,13 +1,12 @@
 ---
-layout: page
+layout: tech-note
 title: Notes on digiKam
 permalink: /digikam/
 comments: true
+first_published: 2016-04-11
 last_updated: 2016-05-22
 tags: [media, images]
 ---
-
-*Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}

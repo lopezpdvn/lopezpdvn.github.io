@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: HTML
 permalink: /html/
 comments: true
@@ -7,8 +7,6 @@ tags: [html, web, xhtml, html5]
 first_published: 2016-05-25
 last_updated: 2016-05-25
 ---
-
-*First published: {{ page.first_published }}. Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}

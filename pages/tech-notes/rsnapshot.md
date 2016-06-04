@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: Notes on rsnapshot
 permalink: /rsnapshot/
 comments: true

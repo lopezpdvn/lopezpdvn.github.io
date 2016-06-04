@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: Digitizing Hi8 cassettes
 permalink: /digitizing-hi8-cassettes/
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: Notes on X Window System
 permalink: /x/
 comments: true

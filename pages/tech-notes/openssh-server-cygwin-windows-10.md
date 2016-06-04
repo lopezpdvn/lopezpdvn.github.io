@@ -1,16 +1,15 @@
 ---
-layout: page
+layout: tech-note
 title: OpenSSH server on Windows with Cygwin
 permalink: /openssh-server-cygwin-windows/
 comments: true
-date: May 12 2016
+first_published: May 12 2016
+last_updated: May 17, 2016
 tags: [windows, unix, cygwin, ssh, openssh, security]
 ---
 
 * TOC
 {:toc}
-
-{{ page.date }}
 
 OpenSSH server with privilege separation and public key authentication. Tested
 on Windows 10 only.

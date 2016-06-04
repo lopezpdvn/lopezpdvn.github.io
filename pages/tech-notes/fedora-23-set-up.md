@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: "Fedora 23 set up"
 lang: en
 categories: en

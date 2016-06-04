@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: Install Folding@home FAHClient on Linux as a systemd service unit
 permalink: /install-fahclient-linux-systemd-service-unit/
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: Xfce
 permalink: /xfce/
 comments: true
@@ -7,8 +7,6 @@ tags: [x, xfce, linux]
 first_published: 2016-05-21
 last_updated: 2016-05-21
 ---
-
-*First published: {{ page.first_published }}. Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}

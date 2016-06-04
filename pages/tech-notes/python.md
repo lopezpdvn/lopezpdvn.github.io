@@ -1,13 +1,12 @@
 ---
-layout: page
+layout: tech-note
 title: Notes on Python
 permalink: /python/
 comments: true
 tags: [python, programming]
-last_updated: 2016-05-21
+first_published: Apr 2, 2016
+last_updated: 2016-05-23
 ---
-
-*Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}

@@ -1,13 +1,12 @@
 ---
-layout: page
+layout: tech-note
 title: VNC
 permalink: /vnc/
 comments: true
 tags: [sysadmin, system_administration, vnc, ssh]
+first_published: 2016-05-20
 last_updated: 2016-05-25
 ---
-
-*Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}

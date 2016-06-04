@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: Digitizing VHS cassettes
 permalink: /digitizing-vhs-cassettes/
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: Notes on rsync
 permalink: /rsync/
 comments: true

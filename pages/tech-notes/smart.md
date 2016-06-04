@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: Notes on S.M.A.R.T.
 permalink: /smart/
 comments: true

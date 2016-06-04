@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tech-note
 title: Notes on sudo
 permalink: /sudo/
 comments: true
@@ -7,8 +7,6 @@ tags: [security, sudo]
 first_published: 2016-04-11
 last_updated: 2016-05-29
 ---
-
-*First published: {{ page.first_published }}. Last updated: {{ page.last_updated }}*
 
 * TOC
 {:toc}
