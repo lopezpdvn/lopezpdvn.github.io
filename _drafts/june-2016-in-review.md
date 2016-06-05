@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "June 2016 in review"
-date: Sun Jun  5 19:56:32 CDT 2016
+date: Sun Jun  5 16:42:26 CDT 2016
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -26,6 +26,7 @@ Progress on projects:
   - General maintenance and miscellaneous content
   - Updated/added [tech notes][] on
     - [Fedora 23 set up][] (previously was a blog post draft)
+    - [GitHub][]
 
 **TODO commits total**.
 
@@ -53,6 +54,7 @@ Progress on projects:
 [rsync]: {{ site.baseurl }}/rsync "rsync"
 [digiKam]: {{ site.baseurl }}/digikam "digiKam"
 [sudo]: {{ site.baseurl }}/sudo "sudo"
+[GitHub]: {{ site.baseurl }}/github-tech-notes "GitHub"
 
 ## Philanthropy #######################################################
 
