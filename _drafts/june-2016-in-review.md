@@ -25,6 +25,7 @@ Progress on projects:
 - [Personal website][]. [*TODO commits*]:
   - General maintenance and miscellaneous content
   - Updated/added [tech notes][] on
+    - [Fedora 23 set up][] (previously was a blog post draft)
 
 **TODO commits total**.
 
