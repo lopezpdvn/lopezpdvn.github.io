@@ -58,6 +58,9 @@ Progress on projects:
 
 ## Philanthropy #######################################################
 
+I made a small donation to the [International Longevity Alliance][] to help
+with their crowdfunding campaign for the [Major Mouse Testing Program][]. TODO.
+
 [Folding@Home during June][fah-stats] I scored TODO points, completed TODO work
 units and ranked TODO out of all the members of [The Longevity Meme team][].
 My total score is TODO at the time of this writing.  A graph of total
@@ -66,6 +69,8 @@ daily production history during June can be found [here][fah-jun-graph].
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
 [fah-jun-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_june_2016.png
+[International Longevity Alliance]: http://www.longevityalliance.org "International Longevity Alliance"
+[Major Mouse Testing Program]: http://majormouse.org "Major Mouse Testing Program"
 
 ## Other ###############################################################
 

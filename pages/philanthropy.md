@@ -23,6 +23,8 @@ In 2015 I have financially supported the following organizations:
 In 2016 I have financially supported the following organizations:
 
 - [Against Malaria Foundation](https://www.againstmalaria.com "Against Malaria Foundation")
+- [International Longevity Alliance](http://www.longevityalliance.org "International Longevity Alliance"), specifically the
+  [Major Mouse Testing Program](http://majormouse.org "Major Mouse Testing Program")
 
 [GiveWell][] is my chosen charity at [Amazon Smile][].
 
