@@ -7,6 +7,9 @@ permalink: /philanthropy/
 * TOC
 {:toc}
 
+See also [this FAQ]({{ site.baseurl }}/faq/#why-are-you-public-about-your-giving
+"Why are you public about your giving?").
+
 ## Effective Altruism
 
 [Effective altruism](http://www.effectivealtruism.org "Effective Altruism") is
