@@ -27,6 +27,8 @@ Progress on projects:
   - Updated/added [tech notes][] on
     - [Fedora 23 set up][] (previously was a blog post draft)
     - [GitHub][]
+    - [Markdown][]
+    - [Chrome][]
 
 **TODO commits total**.
 
@@ -55,6 +57,7 @@ Progress on projects:
 [digiKam]: {{ site.baseurl }}/digikam "digiKam"
 [sudo]: {{ site.baseurl }}/sudo "sudo"
 [GitHub]: {{ site.baseurl }}/github-tech-notes "GitHub"
+[Chrome]: {{ site.baseurl }}/chrome "Google Chrome"
 
 ## Philanthropy #######################################################
 

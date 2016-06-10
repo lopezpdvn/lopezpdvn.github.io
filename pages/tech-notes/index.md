@@ -67,3 +67,5 @@ See also
 - [Windows 10 set up]({{ site.baseurl }}/windows-10-set-up "Windows 10 set up")
 
 - [GitHub]({{ site.baseurl }}/github-tech-notes "GitHub")
+
+- [Chrome]({{ site.baseurl }}/chrome "Google Chrome")
