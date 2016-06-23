@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "June 2016 in review"
-date: Sun Jun  5 16:42:26 CDT 2016
+date: Thu Jun 23 00:12:54 CDT 2016
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -10,6 +10,8 @@ permalink: /june-2016-in-review/
 excerpt: June 2016 personal review, summary of activities, misc notes...
 ---
 
+{% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
+
 This is the *June 2016 in review* post. The previous monthly review post is
 [here][may-review].  The contents are:
 
@@ -17,6 +19,20 @@ This is the *June 2016 in review* post. The previous monthly review post is
 {:toc}
 
 [may-review]: {% post_url 2016/2016-06-03-may-2016-in-review %}
+
+## pysyspol ############################################################
+
+I started the [pysyspol][] project, a Python package that helps system
+administrators to enforce and implement [syspol][] policies. It runs on CPython
+only.
+
+Other Python packages that help to implement and enforce private policies can
+depend on pysyspol. Just as with the policies themselves, if publishing code
+related to a particular policy doesn't create serious security risks, consider
+sharing it by integrating it into pysyspol.
+
+[syspol]: {{ github_prefix }}/syspol "syspol"
+[pysyspol]: {{ github_prefix }}/pysyspol "pysyspol"
 
 ## Public code repositories activity ###################################
 
@@ -29,10 +45,12 @@ Progress on projects:
     - [GitHub][]
     - [Markdown][]
     - [Chrome][]
+- [pysyspol][]. [*TODO commits*]. See section [pysyspol](#pysyspol). Modules
+  `fs`, `process` and `util`.
+- [dotfiles][].[*TODO commits*]. VIM and xbindkeys configuration.
+- [pysweng][].[*TODO commits*].
 
 **TODO commits total**.
-
-{% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
 [Fedora 23 set up]: {{ github_prefix }}/lopezpdvn.github.io/blob/master/_drafts/fedora-23-set-up.md
 [Windows 10 set up]: {{ github_prefix }}/lopezpdvn.github.io/blob/master/_drafts/windows-10-set-up.md
@@ -58,6 +76,7 @@ Progress on projects:
 [sudo]: {{ site.baseurl }}/sudo "sudo"
 [GitHub]: {{ site.baseurl }}/github-tech-notes "GitHub"
 [Chrome]: {{ site.baseurl }}/chrome "Google Chrome"
+[pysweng]: {{ github_prefix }}/pysweng "Software engineering problems in Python"
 
 ## Philanthropy #######################################################
 
