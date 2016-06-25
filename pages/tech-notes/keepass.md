@@ -4,6 +4,10 @@ title: Notes on KeePass
 permalink: /keepass/
 comments: true
 tags: [keepass, security]
+keywords: [tech]
+comments: true
+first_published: 2016-04-22
+last_updated: 2016-06-25
 ---
 
 * TOC
@@ -40,3 +44,6 @@ To fix, set `LC_CTYPE=C` in the script that launches KeePass:
 export LC_CTYPE=C
 exec /path/to/mono /path/to/KeePass.exe
 {% endhighlight %}
+
+This issue happens with versions 2.33 & 2.34 in Fedora 23 32-bit, but it
+doesn't happen in Fedora 23 64-bit.
