@@ -45,9 +45,11 @@ Progress on projects:
     - [GitHub][]
     - [Markdown][]
     - [Chrome][]
+    - [Firefox][]
 - [pysyspol][]. [*TODO commits*]. See section [pysyspol](#pysyspol). Modules
   `fs`, `process` and `util`.
-- [dotfiles][].[*TODO commits*]. VIM and xbindkeys configuration.
+- [dotfiles][].[*TODO commits*]. Configuration for VIM, xbindkeys, unison, mksh
+  and Python.
 - [pysweng][].[*TODO commits*].
 
 **TODO commits total**.
@@ -76,6 +78,7 @@ Progress on projects:
 [sudo]: {{ site.baseurl }}/sudo "sudo"
 [GitHub]: {{ site.baseurl }}/github-tech-notes "GitHub"
 [Chrome]: {{ site.baseurl }}/chrome "Google Chrome"
+[Firefox]: {{ site.baseurl }}/firefox "Mozilla Firefox"
 [pysweng]: {{ github_prefix }}/pysweng "Software engineering problems in Python"
 
 ## Philanthropy #######################################################
