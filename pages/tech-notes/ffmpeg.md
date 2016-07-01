@@ -4,6 +4,8 @@ title: Notes on ffmpeg
 permalink: /ffmpeg/
 comments: true
 tags: [video, audio, ffmpeg]
+first_published: 2016-04-17
+last_updated: 2016-06-30
 ---
 
 * TOC
@@ -12,6 +14,12 @@ tags: [video, audio, ffmpeg]
 `ffmpeg` and `quodlibet`/`operon`
 
 {% gist lopezpdvn/f83112e070e3c9e791e170059a41cd7c ffmpeg_quodlibet_operon.sh %}
+
+Compress raw video into Matroska container, see
+[Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8-cassettes) &
+[Digitizing VHS cassettes]({{ site.baseurl }}/digitizing-vhs-cassettes).
+
+{% gist lopezpdvn/bbbf72e2ccc33c0e35b130eba0108e59 compress_raw_video.sh %}
 
 ## Misc
 

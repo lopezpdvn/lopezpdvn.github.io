@@ -4,6 +4,8 @@ title: Digitizing Hi8 cassettes
 permalink: /digitizing-hi8-cassettes/
 comments: true
 tags: [video, audio, ffmpeg]
+first_published: 2016-04-16
+last_updated: 2016-06-30
 ---
 
 * TOC
@@ -73,6 +75,14 @@ Input #0, matroska,webm, from 'vido.mkv':
       ENCODER         : Lavc56.1.100 pcm_s16le
  At least one output file must be specified
 {% endhighlight %}
+
+### Script
+
+Compress raw video into Matroska container, see
+[ffmpeg]({{ site.baseurl }}/ffmpeg "ffmpeg") &
+[Digitizing VHS cassettes]({{ site.baseurl }}/digitizing-vhs-cassettes).
+
+{% gist lopezpdvn/bbbf72e2ccc33c0e35b130eba0108e59 compress_raw_video.sh %}
 
 ## Audio
 

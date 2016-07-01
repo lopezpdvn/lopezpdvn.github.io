@@ -4,6 +4,8 @@ title: Digitizing VHS cassettes
 permalink: /digitizing-vhs-cassettes/
 comments: true
 tags: [video, audio, ffmpeg]
+first_published: 2016-04-26
+last_updated: 2016-06-30
 ---
 
 * TOC
@@ -137,6 +139,14 @@ Input #0, matroska,webm, from 'video.mkv':
       DURATION        : 00:15:47.890000000
 At least one output file must be specified
 {% endhighlight %}
+
+### Script
+
+Compress raw video into Matroska container, see
+[ffmpeg]({{ site.baseurl }}/ffmpeg "ffmpeg") &
+[Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8-cassettes).
+
+{% gist lopezpdvn/bbbf72e2ccc33c0e35b130eba0108e59 compress_raw_video.sh %}
 
 ## Audio
 
