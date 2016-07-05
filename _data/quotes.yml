@@ -228,3 +228,26 @@
       can't tell you. I know numbers are beautiful. If they aren't beautiful,
       nothing is.
   keywords: [mathematics, beauty]
+
+- source: null
+  attribution: Antoine de Saint Exupéry
+  quote: He who would travel happily must travel light.
+  keywords: [travel, mental_health]
+
+- source: |
+    Lecture on "Electrical Units of Measurement" (3 May 1883), published in
+    Popular Lectures Vol. I, p. 73.
+  attribution: William Thomson (Lord Kelvin)
+  quote: |
+      I often say that when you can measure what you are speaking about, and
+      express it in numbers, you know something about it; but when you cannot
+      measure it, when you cannot express it in numbers, your knowledge is of a
+      meagre and unsatisfactory kind; it may be the beginning of knowledge, but
+      you have scarcely, in your thoughts, advanced to the stage of science,
+      whatever the matter may be.
+  keywords: [measuring, arithmetic, knowledge, science]
+
+- source: null
+  attribution: Louis Pasteur
+  quote: Chance favors the prepared mind.
+  keywords: []
