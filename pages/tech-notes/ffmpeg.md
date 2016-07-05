@@ -5,7 +5,7 @@ permalink: /ffmpeg/
 comments: true
 tags: [video, audio, ffmpeg]
 first_published: 2016-04-17
-last_updated: 2016-06-30
+last_updated: 2016-07-05
 ---
 
 * TOC
@@ -20,6 +20,20 @@ Compress raw video into Matroska container, see
 [Digitizing VHS cassettes]({{ site.baseurl }}/digitizing-vhs-cassettes).
 
 {% gist lopezpdvn/bbbf72e2ccc33c0e35b130eba0108e59 compress_raw_video.sh %}
+
+## Screencast on Linux with PulseAudio
+
+Choose a PulseAudio source device
+
+{% highlight bash %}
+$ pactl list sources
+<...>
+{% endhighlight %}
+
+To perform capture and lossless compression with x264 and Vorbis in one go,
+run:
+
+{% gist lopezpdvn/4521b20f9e91a9975621626749d55418 linux_pulseaudio_x264_lossless_vorbis.sh %}
 
 ## Misc
 
