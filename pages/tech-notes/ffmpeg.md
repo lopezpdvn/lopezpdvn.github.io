@@ -51,3 +51,8 @@ run:
 
 - <https://trac.ffmpeg.org/wiki/AudioChannelManipulation>
 - <https://trac.ffmpeg.org/wiki/audio%20types>
+- <https://wiki.archlinux.org/index.php/FFmpeg>
+- <https://trac.ffmpeg.org/wiki/Encode/H.264>
+- <https://trac.ffmpeg.org/wiki/Capture/Desktop>
+- <https://ffmpeg.org/ffmpeg-devices.html>
+- <http://wiki.oz9aec.net/index.php/High_quality_screen_capture_with_Ffmpeg>
