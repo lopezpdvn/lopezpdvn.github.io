@@ -18,7 +18,7 @@ See also
 - [rsync]({{ site.baseurl }}/rsync "rsync")
 - [rsnapshot]({{ site.baseurl }}/rsnapshot)
 - [dd]({{ site.baseurl }}/dd)
-- [S.M.A.R.T.]({{ site.baseurl }}/smart "S.M.A.R.T."
+- [S.M.A.R.T.]({{ site.baseurl }}/smart "S.M.A.R.T.")
 - [sudo]({{ site.baseurl }}/sudo "sudo")
 - [Windows OS]({{ site.baseurl }}/windows)
 - [digiKam]({{ site.baseurl }}/digikam "digiKam")
