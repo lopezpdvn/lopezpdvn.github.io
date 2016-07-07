@@ -36,6 +36,7 @@ Progress on projects:
   - General maintenance and miscellaneous content
   - Updated/added [tech notes][] on
     - [ffmpeg][]
+    - [S.M.A.R.T.][]
 - [timeman][]. [*TODO commits*]. See section [timeman](#timeman).
 
 **TODO commits total**.
@@ -43,12 +44,13 @@ Progress on projects:
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [tech notes]: {{ site.baseurl }}/tech-notes
 [ffmpeg]: {{ site.baseurl }}/ffmpeg "ffmpeg"
+[S.M.A.R.T.]: {{ site.baseurl }}/smart "S.M.A.R.T."
 
 ## Philanthropy #######################################################
 
 [Folding@Home during July][fah-stats] I scored TODO points, completed TODO work
 units and ranked TODO out of all the members of [The Longevity Meme team][],
-overtaking fellow folder TODO. My total score is 1,216,877 at the time of this
+overtaking fellow folder TODO. My total score is TODO at the time of this
 writing.  A graph of total daily production history during July can be found
 [here][fah-jun-graph].
 

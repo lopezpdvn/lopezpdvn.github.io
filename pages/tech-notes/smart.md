@@ -4,6 +4,8 @@ title: Notes on S.M.A.R.T.
 permalink: /smart/
 comments: true
 tags: [smart, file_system, ntfs]
+first_published: 2016-04-11
+last_updated: 2016-07-06
 ---
 
 * TOC
@@ -13,8 +15,46 @@ tags: [smart, file_system, ntfs]
 
 {% highlight bash %}
 $ devPath=/dev/sdX
+{% endhighlight %}
+
+S.M.A.R.T only info
+
+{% highlight bash %}
 $ sudo smartctl -a $devPath
 {% endhighlight %}
+
+All available info
+
+{% highlight bash %}
+$ sudo smartctl --xall $devPath
+{% endhighlight %}
+
+### Lifetime/age
+
+Useful information to determine lifetime/age in section `SMART Attributes Data
+Structure revision number: X`, atribute with id 9 and name `Power_On_Hours`.
+Value is stored in field `RAW_VALUE` usually in units hours. Simple way to test
+the units is of course to keep the disk rotating (no read/writes needed) and
+check for changes in the attribute 9:
+
+{% highlight bash %}
+$ sudo smartctl --all $devPath | grep Power_On
+{% endhighlight %}
+
+Also, perform a short test with
+
+{% highlight bash %}
+$ sudo smartctl -t short $devPath
+{% endhighlight %}
+
+When done, output all info again and look for section that report overall test
+results, it starts with string `SMART Extended Self-test Log Version:`. The
+field `LifeTime(hours)` will report the lifetime of the disk when the test was
+performed.
+
+Another way is to output all info again, and look for temperature history info.
+Section starts with string `SCT Temperature History Version`. It shows a
+timestamped log of temperature of disk.
 
 ## Test
 
