@@ -35,6 +35,27 @@ run:
 
 {% gist lopezpdvn/4521b20f9e91a9975621626749d55418 linux_pulseaudio_x264_lossless_vorbis.sh %}
 
+### With microphone
+
+Close `pavucontrol` and run below to load loopback module
+
+{% highlight bash %}
+$ pactl load-module module-loopback latency_msec=1
+{% endhighlight %}
+
+Open `pavucontrol` again, and configure using below pictures as guide
+
+{% capture imgtext %}Playback tab{% endcapture %}
+![{{ imgtext }}]({{ site.baseurl }}/{{ site.images_dir }}/2016/screencast_pulseaudio_loopback_00.png "{{ imgtext }}")
+
+{% capture imgtext %}Recording tab{% endcapture %}
+![{{ imgtext }}]({{ site.baseurl }}/{{ site.images_dir }}/2016/screencast_pulseaudio_loopback_01.png "{{ imgtext }}")
+
+{% capture imgtext %}Input Devices tab{% endcapture %}
+![{{ imgtext }}]({{ site.baseurl }}/{{ site.images_dir }}/2016/screencast_pulseaudio_loopback_02.png "{{ imgtext }}")
+
+Then repeat steps [above](#screencast-on-linux-with-pulseaudio).
+
 ## Misc
 
 - Use H.264 because of its good quality, size and compatibility.
@@ -56,3 +77,4 @@ run:
 - <https://trac.ffmpeg.org/wiki/Capture/Desktop>
 - <https://ffmpeg.org/ffmpeg-devices.html>
 - <http://wiki.oz9aec.net/index.php/High_quality_screen_capture_with_Ffmpeg>
+- <https://askubuntu.com/questions/123798/how-to-hear-my-voice-in-speakers-with-a-mic>
