@@ -56,6 +56,38 @@ Open `pavucontrol` again, and configure using below pictures as guide
 
 Then repeat steps [above](#screencast-on-linux-with-pulseaudio).
 
+## Video to GIF
+
+Manually extract portion of video into a video file adding extra stuff like
+effects, subtitles, merges with images, etc.
+
+Resize video to desired size of GIF, using only one coordinate
+
+{% highlight bash %}
+$ ffmpeg -i video_source.mp4 -vf scale=-1:720 video_source_resized.mp4
+{% endhighlight %}
+
+If you get an error about audio encoding, just copy/reencode the same audio
+
+{% highlight bash %}
+$ ffmpeg -i video_source.mp4 -vf scale=-1:720 -c:a copy video_source_resized.mp4
+{% endhighlight %}
+
+File extension `mp4` refers only to container, is not that relevant. Use
+whatever the original video extension is.
+
+Finally, convert to GIF
+
+{% highlight bash %}
+$ ffmpeg -i video_source_resized.mp4 -b 2048k video.gif
+{% endhighlight %}
+
+### Online
+
+- <http://www.video2gif.org/about.html>
+- <https://giphy.com/>
+- <https://imgflip.com/>
+
 ## Misc
 
 - Use H.264 because of its good quality, size and compatibility.
