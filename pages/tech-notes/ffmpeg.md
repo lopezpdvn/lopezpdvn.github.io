@@ -5,7 +5,7 @@ permalink: /ffmpeg/
 comments: true
 tags: [video, audio, ffmpeg]
 first_published: 2016-04-17
-last_updated: 2016-07-05
+last_updated: 2016-07-10
 ---
 
 * TOC
@@ -88,6 +88,34 @@ $ ffmpeg -i video_source_resized.mp4 -b 2048k video.gif
 - <https://giphy.com/>
 - <https://imgflip.com/>
 
+## Trim/cut video to video
+
+{% highlight bash %}
+$ in=/path/to/input/file
+$ out=/path/to/output/file
+{% endhighlight %}
+
+Trim/cut from minute 18:20 to 18:30. Try following commands in descending order
+of preference/priority.
+
+Fast without re-encoding
+
+{% highlight bash %}
+$ ffmpeg -i $in -ss 00:18:20 -c:v copy -c:a copy -to 00:18:30 $out
+{% endhighlight %}
+
+As fast as previous command, more accurate, with re-encoding
+
+{% highlight bash %}
+ffmpeg -ss 00:18:20 -i $in -t 10 $out
+{% endhighlight %}
+
+Slower, CPU-intensive, more accurate, with re-encoding
+
+{% highlight bash %}
+ffmpeg -i $in -ss 00:18:20 -to 00:18:30 $out
+{% endhighlight %}
+
 ## Misc
 
 - Use H.264 because of its good quality, size and compatibility.
@@ -110,3 +138,5 @@ $ ffmpeg -i video_source_resized.mp4 -b 2048k video.gif
 - <https://ffmpeg.org/ffmpeg-devices.html>
 - <http://wiki.oz9aec.net/index.php/High_quality_screen_capture_with_Ffmpeg>
 - <https://askubuntu.com/questions/123798/how-to-hear-my-voice-in-speakers-with-a-mic>
+- <http://blog.superuser.com/2012/02/24/ffmpeg-the-ultimate-video-and-audio-manipulation-tool/>
+- <https://trac.ffmpeg.org/wiki>
