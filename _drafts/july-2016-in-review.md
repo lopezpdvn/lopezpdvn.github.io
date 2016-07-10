@@ -35,8 +35,9 @@ Progress on projects:
 - [Personal website][]. [*TODO commits*]:
   - General maintenance and miscellaneous content
   - Updated/added [tech notes][] on
-    - [ffmpeg][]
-    - [S.M.A.R.T.][]
+    - [ffmpeg][]: screencast on Linux w/ PulseAudio + microphone with format
+      H.264+Vorbis+Matroska, video 2 GIF
+    - [S.M.A.R.T.][]: lifetime/age, short and long tests
 - [timeman][]. [*TODO commits*]. See section [timeman](#timeman).
 
 **TODO commits total**.
