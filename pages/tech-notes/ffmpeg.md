@@ -11,9 +11,13 @@ last_updated: 2016-07-10
 * TOC
 {:toc}
 
+## Transcode audio with metadata
+
 `ffmpeg` and `quodlibet`/`operon`
 
 {% gist lopezpdvn/f83112e070e3c9e791e170059a41cd7c ffmpeg_quodlibet_operon.sh %}
+
+## Encode/compress raw video and audio
 
 Compress raw video into Matroska container, see
 [Digitizing Hi8 cassettes]({{ site.baseurl }}/digitizing-hi8-cassettes) &
@@ -84,8 +88,10 @@ $ ffmpeg -i video_source_resized.mp4 -b 2048k video.gif
 
 ### Online
 
-- <http://www.video2gif.org/about.html>
+- <https://imgur.com/vidgif>. Video must be hosted elsewhere. Creates both
+  video and GIF; to get GIF add `.gif` to the URL.
 - <https://giphy.com/>
+- <http://www.video2gif.org/about.html>
 - <https://imgflip.com/>
 
 ## Trim/cut video to video
@@ -104,17 +110,27 @@ Fast without re-encoding
 $ ffmpeg -i $in -ss 00:18:20 -c:v copy -c:a copy -to 00:18:30 $out
 {% endhighlight %}
 
-As fast as previous command, more accurate, with re-encoding
+About as fast as previous, no re-encoding
 
 {% highlight bash %}
-ffmpeg -ss 00:18:20 -i $in -t 10 $out
+$ ffmpeg -ss 00:18:20 -i $in -c:v copy -c:a copy -t 10 $out
+{% endhighlight %}
+
+Slower, more accurate, with re-encoding
+
+{% highlight bash %}
+$ ffmpeg -ss 00:18:20 -i $in -t 10 $out
 {% endhighlight %}
 
 Slower, CPU-intensive, more accurate, with re-encoding
 
 {% highlight bash %}
-ffmpeg -i $in -ss 00:18:20 -to 00:18:30 $out
+$ ffmpeg -i $in -ss 00:18:20 -to 00:18:30 $out
 {% endhighlight %}
+
+Short Python script
+
+{% gist lopezpdvn/dea4a3301a58335525a9aea7aa1cdb4e ffmpeg_trim_cut_video2video.py %}
 
 ## Misc
 
