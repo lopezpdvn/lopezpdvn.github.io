@@ -4,8 +4,8 @@ title: Notes on Kdenlive
 permalink: /kdenlive/
 comments: true
 keywords: [video, audio, ffmpeg, kdenlive]
-first_published: 2016-07-10
-last_updated: 2016-07-10
+first_published: 2016-07-11
+last_updated: 2016-07-11
 ---
 
 * TOC
