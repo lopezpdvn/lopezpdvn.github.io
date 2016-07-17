@@ -43,3 +43,4 @@ See also
 - [GitHub]({{ site.baseurl }}/github-tech-notes "GitHub")
 - [Chrome]({{ site.baseurl }}/chrome "Google Chrome")
 - [Firefox]({{ site.baseurl }}/firefox "Mozilla Firefox")
+- [ExifTool]({{ site.baseurl }}/exiftool "ExifTool")
