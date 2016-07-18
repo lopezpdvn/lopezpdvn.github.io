@@ -20,21 +20,23 @@ determining the most effective ways to improve the world.
 
 In 2015 I have financially supported the following organizations:
 
-- [Machine Intelligence Research Institute](https://intelligence.org "Machine Intelligence Research Institute")
-- [SENS Research Foundation](http://sens.org "SENS Research Foundation")
+- [Machine Intelligence Research Institute][]
+- [SENS Research Foundation][]
 
 In 2016 I have financially supported the following organizations:
 
-- [Against Malaria Foundation](https://www.againstmalaria.com "Against Malaria Foundation")
-- [International Longevity Alliance](http://www.longevityalliance.org "International Longevity Alliance"), specifically the
-  [Major Mouse Testing Program](http://majormouse.org "Major Mouse Testing Program")
+- [Against Malaria Foundation][]
+- [International Longevity Alliance][], specifically the
+  [Major Mouse Testing Program][]
+- [SENS Research Foundation][], specifically the
+  [OncoSENS Control ALT Delete Cancer][]
 
 [GiveWell][] is my chosen charity at [Amazon Smile][].
 
 Additionally, I endorse the following organizations:
 
-- [The Brain Preservation Foundation](http://www.brainpreservation.org "The Brain Preservation Foundation")
-- [Animal Charity Evaluators](http://www.animalcharityevaluators.org "Animal Chartity Evaluators")
+- [The Brain Preservation Foundation][]
+- [Animal Charity Evaluators][]
 
 For other effective charities to support please see [Top
 Charities](http://www.givewell.org/charities/top-charities "Top Charities @
@@ -42,6 +44,14 @@ GiveWell") at [GiveWell][].
 
 [GiveWell]: http://www.givewell.org "GiveWell"
 [Amazon Smile]: https://smile.amazon.com "Amazon Smile"
+[SENS Research Foundation]: http://sens.org "SENS Research Foundation"
+[Machine Intelligence Research Institute]: https://intelligence.org "Machine Intelligence Research Institute"
+[Against Malaria Foundation]: https://www.againstmalaria.com "Against Malaria Foundation"
+[International Longevity Alliance]: http://www.longevityalliance.org "International Longevity Alliance"
+[Major Mouse Testing Program]: http://majormouse.org "Major Mouse Testing Program"
+[The Brain Preservation Foundation]: http://www.brainpreservation.org "The Brain Preservation Foundation"
+[Animal Charity Evaluators]: http://www.animalcharityevaluators.org "Animal Chartity Evaluators"
+[OncoSENS Control ALT Delete Cancer]: https://www.lifespan.io/campaigns/sens-control-alt-delete-cancer/ "OncoSENS Control ALT Delete Cancer"
 
 ## Volunteer Computing
 
