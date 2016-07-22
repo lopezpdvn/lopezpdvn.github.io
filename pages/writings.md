@@ -4,7 +4,7 @@ title: Writings
 permalink: /writings/
 ---
 
-{% capture docsrc %}{{ site.baseurl }}{{ page.permalink }}procesamiento-senales-laboratorio{% endcapture %}
+{% capture docsrc %}{{ site.baseurl }}/other-writings/procesamiento-senales-laboratorio{% endcapture %}
 
 All my writings. See also [projects]({{ site.baseurl }}/projects "Projects"),
 [blog]({{ site.baseurl }}/blog "Blog") and
