@@ -23,7 +23,7 @@ veganism/[reducetarianism][].
 [reducetarianism]: http://reducetarian.org "Aspire to eat less meat? Then you're a Reducetarian!"
 [philanthropy]: {{ site.baseurl }}/philanthropy "Philanthropy page"
 [music]: {{ site.baseurl }}/music "Music page"
-[TV/films]: {{ site.baseurl }}/faq/#what-are-you-favorite-tvfilm-genres
+[TV/films]: {{ site.baseurl }}/faq/#what-are-your-favorite-tvfilm-genres
 
 For other personal stuff, see the
 [Frequently Asked Questions]({{ site.baseurl }}/faq).
