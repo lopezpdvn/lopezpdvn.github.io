@@ -6,7 +6,6 @@ permalink: /connect/
 
 {% include network_buttons.html %}
 
-[Wikipedia](https://en.wikipedia.org/wiki/User:PedroIvanLopez),
 [Hacker News](https://news.ycombinator.com/user?id=lopezpdvn),
 [Less Wrong](http://lesswrong.com/user/PedroIvanLopez/),
 [Effective Altruism HUB](https://eahub.org/user/pedro-ivan-lopez),
