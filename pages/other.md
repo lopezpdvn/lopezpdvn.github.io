@@ -22,7 +22,7 @@ permalink: /other/
 - [Music]({{ site.baseurl }}/music "Music"): I like music too.
 
 - [Anonymous feedback form]({{ site.anonymous_feedback_form }}).  Anonymously
-  tell me what you think about me.
+  tell me what you think of me.
 
 - [Frequently Asked Questions]({{ site.baseurl }}/faq).
 
