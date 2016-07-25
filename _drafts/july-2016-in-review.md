@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "July 2016 in review"
-date: 2016-07-20
+date: 2016-07-25
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -39,7 +39,9 @@ Progress on projects:
       H.264+Vorbis+Matroska, video 2 GIF
     - [S.M.A.R.T.][]: lifetime/age, short and long tests
     - [ExifTool][]: read/remove all tags, use date/time shift feature
-    - [Kdenlive][]: Installation on Fedora systems
+    - [Kdenlive][]: Installation on Fedora systems and
+      [video](https://www.youtube.com/watch?v=o8QxlBQBEz0) about simple
+      cut/trim
 - [timeman][]. [*TODO commits*]. See section [timeman](#timeman).
   - Simple usage via scripts
 - [dotfiles][]. [*TODO commits*]. Added alias for datetime in
@@ -79,6 +81,9 @@ writing.  A graph of total daily production history during July can be found
 ## Other ###############################################################
 
 - My personal website got TODO views.
+
+- Published a screencast [video](https://www.youtube.com/watch?v=o8QxlBQBEz0)
+  about Kdenlive
 
 <br/>
 
