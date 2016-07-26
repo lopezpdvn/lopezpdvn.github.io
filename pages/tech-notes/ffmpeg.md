@@ -52,8 +52,12 @@ Open `pavucontrol` again, and configure using below pictures as guide
 {% capture imgtext %}Playback tab{% endcapture %}
 ![{{ imgtext }}]({{ site.baseurl }}/{{ site.images_dir }}/2016/screencast_pulseaudio_loopback_00.png "{{ imgtext }}")
 
+Substitute below level to 70%
+
 {% capture imgtext %}Recording tab{% endcapture %}
 ![{{ imgtext }}]({{ site.baseurl }}/{{ site.images_dir }}/2016/screencast_pulseaudio_loopback_01.png "{{ imgtext }}")
+
+Substitute below level *Built-in Audio Analog Stereo* to 70%
 
 {% capture imgtext %}Input Devices tab{% endcapture %}
 ![{{ imgtext }}]({{ site.baseurl }}/{{ site.images_dir }}/2016/screencast_pulseaudio_loopback_02.png "{{ imgtext }}")

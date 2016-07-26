@@ -45,3 +45,4 @@ See also
 - [Firefox]({{ site.baseurl }}/firefox "Mozilla Firefox")
 - [Kdenlive]({{ site.baseurl }}/kdenlive "Kdenlive")
 - [ExifTool]({{ site.baseurl }}/exiftool "ExifTool")
+- [GIMP]({{ site.baseurl }}/gimp "GIMP")
