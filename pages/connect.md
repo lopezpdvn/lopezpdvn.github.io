@@ -6,7 +6,6 @@ permalink: /connect/
 
 {% include network_buttons.html %}
 
-[Effective Altruism HUB](https://eahub.org/user/pedro-ivan-lopez),
 [Effective Altruism Forum](http://effective-altruism.com/user/PedroIvanLopez/),
 [Imgur](https://imgur.com/user/dreilopz),
 [9GAG](http://9gag.com/u/dreilopz),
