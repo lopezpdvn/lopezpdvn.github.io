@@ -25,6 +25,10 @@ Remove all tags
 $ exiftool -a -u -All= $media_file
 {% endhighlight %}
 
+Metadata write POSIX shell script example:
+
+{% gist lopezpdvn/eb9d4c7f1a088b1c4461bab9246c2b01 exiftool_metadata_write.sh %}
+
 ## Date/time shift
 
 See [official docs](http://www.sno.phy.queensu.ca/~phil/exiftool/#shift). You
