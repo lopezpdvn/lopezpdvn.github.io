@@ -40,13 +40,13 @@
   uri: http://pedroivanlopez.com/pedro_ivan_lopez_vcard.vcf
   imgpath: vcard.png
 
-- title: @Google+
+- title: '@Google+'
   network: Google+
   profile: Pedro Ivan Lopez
   uri: https://plus.google.com/111670795346386828992
   imgpath: googleplus.png
 
-- title: @YouTube
+- title: '@YouTube'
   network: YouTube
   profile: dreilopz
   uri: https://www.youtube.com/user/dreilopz
