@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "July 2016 in review"
-date: 2016-07-25
+date: 2016-07-31
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -26,28 +26,32 @@ I started the [timeman][] project, a Python 3 package that provides simple
 types for time management. It is actually a refactored port of an personal old
 Python 2 project I worked on a few years ago.
 
-[timeman]: {{ github_prefix }}/timeman "timeman: Simle time management types"
+[timeman]: {{ github_prefix }}/timeman "timeman: Simple time management types"
 
 ## Public code repositories activity ###################################
 
 Progress on projects:
 
-- [Personal website][]. [*TODO commits*]:
+- [Personal website][]. [*35 commits*]:
   - General maintenance and miscellaneous content
   - Updated/added [tech notes][] on
     - [ffmpeg][]: screencast on Linux w/ PulseAudio + microphone with format
       H.264+Vorbis+Matroska, video 2 GIF
     - [S.M.A.R.T.][]: lifetime/age, short and long tests
-    - [ExifTool][]: read/remove all tags, use date/time shift feature
+    - [ExifTool][]: read/remove all tags, use date/time shift feature, simple
+      script to write metadata
     - [Kdenlive][]: Installation on Fedora systems and
-      [video](https://www.youtube.com/watch?v=o8QxlBQBEz0) about simple
-      cut/trim
-- [timeman][]. [*TODO commits*]. See section [timeman](#timeman).
+      [video](https://www.youtube.com/watch?v=o8QxlBQBEz0) about simple POSIX
+      shell cut/trim
+    - [digiKam][]: Non-simultaneous multiple instances & DB cleanup 
+    - [GIMP][]: Adding backgrounds to images without it, converting images to
+      black and white or grayscale
+- [timeman][]. [*10 commits*]. See section [timeman](#timeman).
   - Simple usage via scripts
-- [dotfiles][]. [*TODO commits*]. Added alias for datetime in
+- [dotfiles][]. [*1 commit*]. Added alias for datetime in
   [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
 
-**TODO commits total**.
+**46 commits total**.
 
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [dotfiles]: {{ github_prefix }}/dotfiles "Misc configuration files and directories"
@@ -56,6 +60,8 @@ Progress on projects:
 [S.M.A.R.T.]: {{ site.baseurl }}/smart "S.M.A.R.T."
 [Kdenlive]: {{ site.baseurl }}/kdenlive "Kdenlive"
 [ExifTool]: {{ site.baseurl }}/exiftool "ExifTool"
+[digiKam]: {{ site.baseurl }}/digikam "digiKam"
+[GIMP]: {{ site.baseurl }}/gimp "GIMP"
 
 ## Philanthropy #######################################################
 
