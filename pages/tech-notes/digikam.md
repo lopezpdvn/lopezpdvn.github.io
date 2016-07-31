@@ -4,8 +4,8 @@ title: Notes on digiKam
 permalink: /digikam/
 comments: true
 first_published: 2016-04-11
-last_updated: 2016-05-22
-tags: [media, images]
+last_updated: 2016-07-31
+keywords: [media, images, digikam, img, metadata, tags]
 ---
 
 * TOC
@@ -45,6 +45,28 @@ Configure the rest of the settings as needed. See
 collections were modified.
 
 [Change path to collections on removable media]: #change-path-to-collections-on-removable-media
+
+## Non-simultaneous multiple instances
+
+Close digiKam and edit digikam configuration file, whose default path is
+`$HOME/.kde/share/config/digikamrc`
+
+    Database Name=/path/to/dir/containing/database/file/
+    Database Name Thumbnails=/path/to/dir/containing/thumbnaildatabase/file/
+
+Note the trailing slashes and the fact that both paths can be the same.
+
+Then start digiKam.
+
+**Note**: Do not use command line option `--database-directory`, it doesn't
+seem to work for this purpose.
+
+## Database cleanup
+
+The program `cleanup_digikamdb` performs cleanup of any/both of the two
+digikam's database files. However, it doesn't seem to remove entries of images
+of removed collections. Such entries may need to be removed directly from the
+database.
 
 ---
 <br/>
