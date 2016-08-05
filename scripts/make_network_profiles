@@ -1,16 +1,16 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding=utf-8
 
 '''Make network profiles
 '''
 
 # Standard library imports.
-from __future__ import division
-from pprint import pprint
 import sys
-import os
 import atexit
+import os
 import gc
+import logging
+from os.path import join, splitext
 
 # Related third party imports.
 import yaml
@@ -22,18 +22,19 @@ import yaml
 # __all__ = ...
 
 # GLOBAL CONSTANT names.  *if main* section at bottom sets global names too.
+# Program name from file name.
+PN = os.path.splitext(sys.argv[0])[0]
+LOGGING_FMT = '[{0}]: %(message)s'.format(PN)
+DATA_DIR = './_data'
+NETWORK_PROFILES_DATA_FP = join(DATA_DIR, 'network_profiles.yml')
 
 def on_exit():
     '''Actions to do on exit.'''
-    print('on_exit', LOGF)
-
     # Invoke the garbage collector.
     gc.collect()
 
-# Program name from file name.
-PN = os.path.splitext(sys.argv[0])[0]
-
-# Log file.
-LOGF = ''.join([PN, '_log', '.txt'])
-
 atexit.register(on_exit)
+logging.basicConfig(format=LOGGING_FMT, level=logging.INFO)
+
+with open(NETWORK_PROFILES_DATA_FP) as f:
+    NETWORK_PROFILES_DATA = yaml.load(f.read())

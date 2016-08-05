@@ -12,3 +12,7 @@ permalink: /connect/
 [Pinterest](https://www.pinterest.com/dreilopz/).
 
 PGP fingerprint: `{{ site.openpgp_fingerprint }}`
+
+<!---
+{% include network_profiles/text/connect.html %}
+-->

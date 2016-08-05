@@ -1,113 +1,114 @@
-- title: m@pedroivanlopez.com
-  network: Email
-  profile: null
-  uri: 'mailto:m@pedroivanlopez.com'
-  imgpath: email.png
+profiles:
+  - title: m@pedroivanlopez.com
+    network: Email
+    profile: null
+    uri: 'mailto:m@pedroivanlopez.com'
+    id: email
 
-- title: lopezpdvn@GitHub
-  network: GitHub
-  profile: lopezpdvn
-  uri: https://github.com/lopezpdvn
-  imgpath: github.png
+  - title: lopezpdvn@GitHub
+    network: GitHub
+    profile: lopezpdvn
+    uri: https://github.com/lopezpdvn
+    id: github
 
-- title: lopezpdvn@gist.github
-  network: Gist@GitHub.com
-  profile: lopezpdvn
-  uri: https://gist.github.com/lopezpdvn
-  imgpath: gist.png
+  - title: lopezpdvn@gist.github
+    network: Gist@GitHub.com
+    profile: lopezpdvn
+    uri: https://gist.github.com/lopezpdvn
+    id: gist
 
-- title: PedroIvanLopez@LinkedIn
-  network: LinkedIn
-  profile: PedroIvanLopez
-  uri: https://www.linkedin.com/in/pedroivanlopez
-  imgpath: linkedin.png
+  - title: PedroIvanLopez@LinkedIn
+    network: LinkedIn
+    profile: PedroIvanLopez
+    uri: https://www.linkedin.com/in/pedroivanlopez
+    id: linkedin
 
-- title: lopezpdvn@Twitter
-  network: LinkedIn
-  profile: lopezpdvn
-  uri: https://twitter.com/lopezpdvn
-  imgpath: twitter.png
+  - title: lopezpdvn@Twitter
+    network: LinkedIn
+    profile: lopezpdvn
+    uri: https://twitter.com/lopezpdvn
+    id: twitter
 
-- title: Posts RSS feed
-  network: Posts RSS feed
-  profile: Pedro Ivan Lopez
-  uri: http://pedroivanlopez.com/feed.xml
-  imgpath: rss.png
+  - title: Posts RSS feed
+    network: Posts RSS feed
+    profile: Pedro Ivan Lopez
+    uri: http://pedroivanlopez.com/feed.xml
+    id: rss
 
-- title: Personal vCard
-  network: vCard
-  profile: Pedro Ivan Lopez
-  uri: http://pedroivanlopez.com/pedro_ivan_lopez_vcard.vcf
-  imgpath: vcard.png
+  - title: Personal vCard
+    network: vCard
+    profile: Pedro Ivan Lopez
+    uri: http://pedroivanlopez.com/pedro_ivan_lopez_vcard.vcf
+    id: vcard
 
-- title: '@Google+'
-  network: Google+
-  profile: Pedro Ivan Lopez
-  uri: https://plus.google.com/111670795346386828992
-  imgpath: googleplus.png
+  - title: '@Google+'
+    network: Google+
+    profile: Pedro Ivan Lopez
+    uri: https://plus.google.com/111670795346386828992
+    id: googleplus
 
-- title: '@YouTube'
-  network: YouTube
-  profile: dreilopz
-  uri: https://www.youtube.com/user/dreilopz
-  imgpath: youtube.png
+  - title: '@YouTube'
+    network: YouTube
+    profile: dreilopz
+    uri: https://www.youtube.com/user/dreilopz
+    id: youtube
 
-- title: 1NspYfQDQFivQk5GA2jzTsN2HaEsPYxdEZ
-  network: BitCoin
-  profile: Pedro Ivan Lopez
-  uri: http://pedroivanlopez.com/bitcoin-main
-  imgpath: bitcoin.png
+  - title: 1NspYfQDQFivQk5GA2jzTsN2HaEsPYxdEZ
+    network: BitCoin
+    profile: Pedro Ivan Lopez
+    uri: http://pedroivanlopez.com/bitcoin-main
+    id: bitcoin
 
-- title: dreilopz@Folding@Home
-  network: Folding@Home
-  profile: dreilopz
-  uri: http://fah-web2.stanford.edu/cgi-bin/main.py?qtype=userpage&username=dreilopz
-  imgpath: fah_icon.png
+  - title: dreilopz@Folding@Home
+    network: Folding@Home
+    profile: dreilopz
+    uri: http://fah-web2.stanford.edu/cgi-bin/main.py?qtype=userpage&username=dreilopz
+    id: fah_icon
 
-- title: OpenPGP 220B9160
-  network: OpenPGP
-  profile: Pedro Ivan Lopez
-  uri: http://pedroivanlopez.com/openpgp-key.txt
-  imgpath: lock.png
+  - title: OpenPGP 220B9160
+    network: OpenPGP
+    profile: Pedro Ivan Lopez
+    uri: http://pedroivanlopez.com/openpgp-key.txt
+    id: lock
 
-- title: dreilopz@Facebook
-  network: Facebook
-  profile: dreilopz
-  uri: https://www.facebook.com/dreilopz
-  imgpath: facebook.png
+  - title: dreilopz@Facebook
+    network: Facebook
+    profile: dreilopz
+    uri: https://www.facebook.com/dreilopz
+    id: facebook
 
-- title: PedroIvanLopez@Reddit
-  network: Reddit
-  profile: PedroIvanLopez
-  uri: https://www.reddit.com/user/PedroIvanLopez
-  imgpath: reddit.png
+  - title: PedroIvanLopez@Reddit
+    network: Reddit
+    profile: PedroIvanLopez
+    uri: https://www.reddit.com/user/PedroIvanLopez
+    id: reddit
 
-- title: lopezpdvn@HackerNews
-  network: Hacker News
-  profile: lopezpdvn
-  uri: https://news.ycombinator.com/user?id=lopezpdvn
-  imgpath: hackernews.png
+  - title: lopezpdvn@HackerNews
+    network: Hacker News
+    profile: lopezpdvn
+    uri: https://news.ycombinator.com/user?id=lopezpdvn
+    id: hackernews
 
-- title: PedroIvanLopez@LessWrong
-  network: Less Wrong
-  profile: PedroIvanLopez
-  uri: http://lesswrong.com/user/PedroIvanLopez
-  imgpath: lesswrong.png
+  - title: PedroIvanLopez@LessWrong
+    network: Less Wrong
+    profile: PedroIvanLopez
+    uri: http://lesswrong.com/user/PedroIvanLopez
+    id: lesswrong
 
-- title: PedroIvanLopez@EffectiveAltruismHUB
-  network: Effective Altruism HUB
-  profile: Pedro Ivan Lopez
-  uri: https://eahub.org/user/pedro-ivan-lopez
-  imgpath: effective-altruism-hub.png
+  - title: PedroIvanLopez@EffectiveAltruismHUB
+    network: Effective Altruism HUB
+    profile: Pedro Ivan Lopez
+    uri: https://eahub.org/user/pedro-ivan-lopez
+    id: effective-altruism-hub
 
-- title: PedroIvanLopez@Wikipedia
-  network: Wikipedia
-  profile: PedroIvanLopez
-  uri: https://en.wikipedia.org/wiki/User:PedroIvanLopez
-  imgpath: wikipedia.png
+  - title: PedroIvanLopez@Wikipedia
+    network: Wikipedia
+    profile: PedroIvanLopez
+    uri: https://en.wikipedia.org/wiki/User:PedroIvanLopez
+    id: wikipedia
 
-- title: dreilopz@Tumblr
-  network: Tumblr
-  profile: dreilopz
-  uri: http://dreilopz.tumblr.com/
-  imgpath: tumblr.png
+  - title: dreilopz@Tumblr
+    network: Tumblr
+    profile: dreilopz
+    uri: http://dreilopz.tumblr.com/
+    id: tumblr
