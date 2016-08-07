@@ -26,7 +26,14 @@ import yaml
 PN = os.path.splitext(sys.argv[0])[0]
 LOGGING_FMT = '[{0}]: %(message)s'.format(PN)
 DATA_DIR = './_data'
-NETWORK_PROFILES_DATA_FP = join(DATA_DIR, 'network_profiles.yml')
+DATA_FP = join(DATA_DIR, 'network_profiles.yml')
+SITE_CFG_FP = './_config.yml'
+NETWORK_INCLUDE_ROOT_FP = './_includes/network_profiles'
+NETWORKS_INCLUDE = {
+        'text': {
+            'all': join(NETWORK_INCLUDE_ROOT_FP, 'text', 'all.html')
+            }
+        }
 
 def on_exit():
     '''Actions to do on exit.'''
@@ -36,5 +43,16 @@ def on_exit():
 atexit.register(on_exit)
 logging.basicConfig(format=LOGGING_FMT, level=logging.INFO)
 
-with open(NETWORK_PROFILES_DATA_FP) as f:
-    NETWORK_PROFILES_DATA = yaml.load(f.read())
+with open(SITE_CFG_FP) as f:
+    SITE_CFG = yaml.safe_load(f.read())
+
+with open(DATA_FP) as f:
+    DATA = yaml.safe_load(f.read())
+    TEXT_TMPL_ENTRY = DATA['text_tmpl_entry']
+
+# all
+entries = ''.join([TEXT_TMPL_ENTRY.format(site_baseurl=SITE_CFG['baseurl'],
+    uri=inetwork['uri'], network=inetwork['network'])
+    for inetwork in DATA['profiles']])
+with open(NETWORKS_INCLUDE['text']['all'], 'w') as f:
+    f.write(DATA['text_tmpl'].format(entries=entries))

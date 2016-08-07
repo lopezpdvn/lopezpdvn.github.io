@@ -13,6 +13,6 @@ permalink: /connect/
 
 PGP fingerprint: `{{ site.openpgp_fingerprint }}`
 
-<!---
-{% include network_profiles/text/connect.html %}
--->
+# Text links
+
+{% include network_profiles/text/all.html %}
