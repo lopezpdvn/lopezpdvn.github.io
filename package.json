@@ -15,8 +15,9 @@
   },
   "scripts": {
     "push": "git push origin master",
-    "servelocal": "./bin/servelocal",
-    "build": "./scripts/make_network_profiles"
+    "servelocal": "npm run build && ./bin/servelocal",
+    "build": "npm run clean && ./scripts/make_network_profiles",
+    "clean": "rm -rvf _site && rm -rvf _includes/network_profiles/buttons/* && rm -rvf _includes/network_profiles/text/*"
   },
   "devDependencies": {
     "shelljs": "latest",
