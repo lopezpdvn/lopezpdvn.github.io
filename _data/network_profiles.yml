@@ -109,6 +109,12 @@ profiles:
     uri: https://eahub.org/user/pedro-ivan-lopez
     id: effective-altruism-hub
 
+  - title: PedroIvanLopez@EffectiveAltruismForum
+    network: Effective Altruism Forum
+    profile: PedroIvanLopez
+    uri: http://effective-altruism.com/user/PedroIvanLopez/
+    id: effective-altruism-forum
+
   - title: PedroIvanLopez@Wikipedia
     network: Wikipedia
     profile: PedroIvanLopez
@@ -120,3 +126,21 @@ profiles:
     profile: dreilopz
     uri: http://dreilopz.tumblr.com/
     id: tumblr
+
+  - title: dreilopz@Pinterest
+    network: Pinterest
+    profile: dreilopz
+    uri: https://www.pinterest.com/dreilopz/
+    id: pinterest
+
+  - title: dreilopz@imgur
+    network: Imgur
+    profile: dreilopz
+    uri: https://imgur.com/user/dreilopz
+    id: imgur
+
+  - title: dreilopz@9GAG
+    network: 9GAG
+    profile: dreilopz
+    uri: http://9gag.com/u/dreilopz
+    id: 9gag
