@@ -10,6 +10,7 @@ import atexit
 import os
 import gc
 import logging
+from os import access, R_OK
 from os.path import join, splitext
 
 # Related third party imports.
@@ -24,7 +25,7 @@ import yaml
 def has_image_button_file(network):
     networkfp = join(ROOTFP, SITE_CFG['images_dir'], 'buttons', network['id'])
     networkfp += '.png'
-    return False
+    return access(networkfp, R_OK)
 
 # GLOBAL CONSTANT names.  *if main* section at bottom sets global names too.
 # Program name from file name.

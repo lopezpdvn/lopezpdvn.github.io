@@ -16,4 +16,4 @@ PGP fingerprint: `{{ site.openpgp_fingerprint }}`
 
 [Social networks]({{ site.baseurl }}/connect):
 
-{% include network_buttons.html %}
+{% include network_profiles/buttons/all.html %}
