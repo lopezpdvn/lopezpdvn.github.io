@@ -1,5 +1,7 @@
 text_tmpl_entry: '<li><a href="{uri}" target="_blank">{network}</a></li>'
 text_tmpl: '<ul>{entries}</ul>'
+buttons_tmpl: '{entries}'
+buttons_tmpl_entry: '<a href="{uri}" target="_blank"> <img class="homebutton" src="{site_baseurl}/{site_images_dir}/buttons/{id}.png" alt="{title}" title="{title}" height="{site_button_img_size}px" width="{site_button_img_size}px" /></a>'
 profiles:
   - title: m@pedroivanlopez.com
     network: Email
