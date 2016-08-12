@@ -1,148 +1,247 @@
-text_tmpl_entry: '<li><a href="{uri}" target="_blank">{network}</a></li>'
-text_tmpl: '<ul>{entries}</ul>'
 buttons_tmpl: '{entries}'
-buttons_tmpl_entry: '<a href="{uri}" target="_blank"> <img class="homebutton" src="{site_baseurl}/{site_images_dir}/buttons/{id}.png" alt="{title}" title="{title}" height="{site_button_img_size}px" width="{site_button_img_size}px" /></a>'
+buttons_tmpl_entry: <a href="{uri}" target="_blank"> <img class="homebutton" src="{site_baseurl}/{site_images_dir}/buttons/{id}.png"
+  alt="{title}" title="{title}" height="{site_button_img_size}px" width="{site_button_img_size}px"
+  /></a>
 profiles:
-  - title: m@pedroivanlopez.com
-    network: Email
-    profile: null
-    uri: 'mailto:m@pedroivanlopez.com'
-    id: email
-
-  - title: lopezpdvn@GitHub
-    network: GitHub
-    profile: lopezpdvn
-    uri: https://github.com/lopezpdvn
-    id: github
-
-  - title: lopezpdvn@gist.github
-    network: Gist@GitHub.com
-    profile: lopezpdvn
-    uri: https://gist.github.com/lopezpdvn
-    id: gist
-
-  - title: PedroIvanLopez@LinkedIn
-    network: LinkedIn
-    profile: PedroIvanLopez
-    uri: https://www.linkedin.com/in/pedroivanlopez
-    id: linkedin
-
-  - title: lopezpdvn@Twitter
-    network: Twitter
-    profile: lopezpdvn
-    uri: https://twitter.com/lopezpdvn
-    id: twitter
-
-  - title: Posts RSS feed
-    network: Posts RSS feed
-    profile: Pedro Ivan Lopez
-    uri: http://pedroivanlopez.com/feed.xml
-    id: rss
-
-  - title: Personal vCard
-    network: vCard
-    profile: Pedro Ivan Lopez
-    uri: http://pedroivanlopez.com/pedro_ivan_lopez_vcard.vcf
-    id: vcard
-
-  - title: '@Google+'
-    network: Google+
-    profile: Pedro Ivan Lopez
-    uri: https://plus.google.com/111670795346386828992
-    id: googleplus
-
-  - title: '@YouTube'
-    network: YouTube
-    profile: dreilopz
-    uri: https://www.youtube.com/user/dreilopz
-    id: youtube
-
-  - title: 1NspYfQDQFivQk5GA2jzTsN2HaEsPYxdEZ
-    network: BitCoin
-    profile: Pedro Ivan Lopez
-    uri: http://pedroivanlopez.com/bitcoin-main
-    id: bitcoin
-
-  - title: dreilopz@Folding@Home
-    network: Folding@Home
-    profile: dreilopz
-    uri: http://fah-web2.stanford.edu/cgi-bin/main.py?qtype=userpage&username=dreilopz
-    id: fah_icon
-
-  - title: OpenPGP 220B9160
-    network: OpenPGP
-    profile: Pedro Ivan Lopez
-    uri: http://pedroivanlopez.com/openpgp-key.txt
-    id: lock
-
-  - title: dreilopz@Facebook
-    network: Facebook
-    profile: dreilopz
-    uri: https://www.facebook.com/dreilopz
-    id: facebook
-
-  - title: PedroIvanLopez@Indiegogo
-    network: Indiegogo
-    profile: Pedro Ivan Lopez
-    uri: https://www.indiegogo.com/individuals/10848981
-    id: indiegogo
-
-  - title: PedroIvanLopez@Reddit
-    network: Reddit
-    profile: PedroIvanLopez
-    uri: https://www.reddit.com/user/PedroIvanLopez
-    id: reddit
-
-  - title: lopezpdvn@HackerNews
-    network: Hacker News
-    profile: lopezpdvn
-    uri: https://news.ycombinator.com/user?id=lopezpdvn
-    id: hackernews
-
-  - title: PedroIvanLopez@LessWrong
-    network: Less Wrong
-    profile: PedroIvanLopez
-    uri: http://lesswrong.com/user/PedroIvanLopez
-    id: lesswrong
-
-  - title: PedroIvanLopez@EffectiveAltruismHUB
-    network: Effective Altruism HUB
-    profile: Pedro Ivan Lopez
-    uri: https://eahub.org/user/pedro-ivan-lopez
-    id: effective-altruism-hub
-
-  - title: PedroIvanLopez@EffectiveAltruismForum
-    network: Effective Altruism Forum
-    profile: PedroIvanLopez
-    uri: http://effective-altruism.com/user/PedroIvanLopez/
-    id: effective-altruism-forum
-
-  - title: PedroIvanLopez@Wikipedia
-    network: Wikipedia
-    profile: PedroIvanLopez
-    uri: https://en.wikipedia.org/wiki/User:PedroIvanLopez
-    id: wikipedia
-
-  - title: dreilopz@Tumblr
-    network: Tumblr
-    profile: dreilopz
-    uri: http://dreilopz.tumblr.com/
-    id: tumblr
-
-  - title: dreilopz@Pinterest
-    network: Pinterest
-    profile: dreilopz
-    uri: https://www.pinterest.com/dreilopz/
-    id: pinterest
-
-  - title: dreilopz@imgur
-    network: Imgur
-    profile: dreilopz
-    uri: https://imgur.com/user/dreilopz
-    id: imgur
-
-  - title: dreilopz@9GAG
-    network: 9GAG
-    profile: dreilopz
-    uri: http://9gag.com/u/dreilopz
-    id: 9gag
+- id: email
+  network: Email
+  profile: null
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: m@pedroivanlopez.com
+  uri: mailto:m@pedroivanlopez.com
+- id: github
+  network: GitHub
+  profile: lopezpdvn
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: lopezpdvn@GitHub
+  uri: https://github.com/lopezpdvn
+- id: gist
+  network: Gist@GitHub.com
+  profile: lopezpdvn
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: lopezpdvn@gist.github
+  uri: https://gist.github.com/lopezpdvn
+- id: linkedin
+  network: LinkedIn
+  profile: PedroIvanLopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@LinkedIn
+  uri: https://www.linkedin.com/in/pedroivanlopez
+- id: twitter
+  network: Twitter
+  profile: lopezpdvn
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: lopezpdvn@Twitter
+  uri: https://twitter.com/lopezpdvn
+- id: rss
+  network: Posts RSS feed
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: Posts RSS feed
+  uri: http://pedroivanlopez.com/feed.xml
+- id: vcard
+  network: vCard
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: Personal vCard
+  uri: http://pedroivanlopez.com/pedro_ivan_lopez_vcard.vcf
+- id: googleplus
+  network: Google+
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: '@Google+'
+  uri: https://plus.google.com/111670795346386828992
+- id: youtube
+  network: YouTube
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: '@YouTube'
+  uri: https://www.youtube.com/user/dreilopz
+- id: bitcoin
+  network: BitCoin
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: 1NspYfQDQFivQk5GA2jzTsN2HaEsPYxdEZ
+  uri: http://pedroivanlopez.com/bitcoin-main
+- id: fah_icon
+  network: Folding@Home
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@Folding@Home
+  uri: http://fah-web2.stanford.edu/cgi-bin/main.py?qtype=userpage&username=dreilopz
+- id: lock
+  network: OpenPGP
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: OpenPGP 220B9160
+  uri: http://pedroivanlopez.com/openpgp-key.txt
+- id: facebook
+  network: Facebook
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@Facebook
+  uri: https://www.facebook.com/dreilopz
+- id: indiegogo
+  network: Indiegogo
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@Indiegogo
+  uri: https://www.indiegogo.com/individuals/10848981
+- id: reddit
+  network: Reddit
+  profile: PedroIvanLopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@Reddit
+  uri: https://www.reddit.com/user/PedroIvanLopez
+- id: hackernews
+  network: Hacker News
+  profile: lopezpdvn
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: lopezpdvn@HackerNews
+  uri: https://news.ycombinator.com/user?id=lopezpdvn
+- id: lesswrong
+  network: Less Wrong
+  profile: PedroIvanLopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@LessWrong
+  uri: http://lesswrong.com/user/PedroIvanLopez
+- id: effective-altruism-hub
+  network: Effective Altruism HUB
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@EffectiveAltruismHUB
+  uri: https://eahub.org/user/pedro-ivan-lopez
+- id: effective-altruism-forum
+  network: Effective Altruism Forum
+  profile: PedroIvanLopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@EffectiveAltruismForum
+  uri: http://effective-altruism.com/user/PedroIvanLopez/
+- id: wikipedia
+  network: Wikipedia
+  profile: PedroIvanLopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@Wikipedia
+  uri: https://en.wikipedia.org/wiki/User:PedroIvanLopez
+- id: tumblr
+  network: Tumblr
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@Tumblr
+  uri: http://dreilopz.tumblr.com/
+- id: pinterest
+  network: Pinterest
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@Pinterest
+  uri: https://www.pinterest.com/dreilopz/
+- id: imgur
+  network: Imgur
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@imgur
+  uri: https://imgur.com/user/dreilopz
+- id: 9gag
+  network: 9GAG
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@9GAG
+  uri: http://9gag.com/u/dreilopz
+text_tmpl: <ul>{entries}</ul>
+text_tmpl_entry: <li><a href="{uri}" target="_blank">{network}</a></li>

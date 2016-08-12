@@ -22,11 +22,6 @@ import yaml
 # Relevant ``__all__`` specification here.
 # __all__ = ...
 
-def has_image_button_file(network):
-    networkfp = join(ROOTFP, SITE_CFG['images_dir'], 'buttons', network['id'])
-    networkfp += '.png'
-    return access(networkfp, R_OK)
-
 # GLOBAL CONSTANT names.  *if main* section at bottom sets global names too.
 # Program name from file name.
 PN = os.path.splitext(sys.argv[0])[0]
@@ -44,6 +39,20 @@ NETWORKS_INCLUDE = {
             }
         }
 ROOTFP = '.'
+DATA = None
+
+def has_image_button_file(network):
+    networkfp = join(ROOTFP, SITE_CFG['images_dir'], 'buttons', network['id'])
+    networkfp += '.png'
+    return access(networkfp, R_OK)
+
+def add_tags(datafp=DATA_FP, data=DATA):
+    tagsfield = ['frontpage', 'about', 'contact', 'connect']
+    for inetwork in DATA['profiles']:
+        inetwork['tags'] = tagsfield.copy()
+
+    with open(DATA_FP, 'w') as f:
+        yaml.dump(DATA, f, default_flow_style=False)
 
 logging.basicConfig(format=LOGGING_FMT, level=logging.INFO)
 
