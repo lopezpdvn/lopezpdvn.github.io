@@ -46,3 +46,5 @@ See also
 - [Kdenlive]({{ site.baseurl }}/kdenlive "Kdenlive")
 - [ExifTool]({{ site.baseurl }}/exiftool "ExifTool")
 - [GIMP]({{ site.baseurl }}/gimp "GIMP")
+- [Audacity]({{ site.baseurl }}/audacity "Audacity")
+- [ImageMagick]({{ site.baseurl }}/imagemagick "ImageMagick")
