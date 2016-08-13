@@ -213,16 +213,6 @@ profiles:
   - connect
   title: dreilopz@Tumblr
   uri: http://dreilopz.tumblr.com/
-- id: pinterest
-  network: Pinterest
-  profile: dreilopz
-  tags:
-  - frontpage
-  - about
-  - contact
-  - connect
-  title: dreilopz@Pinterest
-  uri: https://www.pinterest.com/dreilopz/
 - id: imgur
   network: Imgur
   profile: dreilopz
@@ -233,6 +223,28 @@ profiles:
   - connect
   title: dreilopz@imgur
   uri: https://imgur.com/user/dreilopz
+
+- id: soundcloud
+  network: SoundCloud
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@soundcloud
+  uri: https://soundcloud.com/dreilopz
+
+- id: pinterest
+  network: Pinterest
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@Pinterest
+  uri: https://www.pinterest.com/dreilopz/
 - id: 9gag
   network: 9GAG
   profile: dreilopz
