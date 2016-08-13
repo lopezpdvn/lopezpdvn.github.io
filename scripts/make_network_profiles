@@ -32,10 +32,12 @@ SITE_CFG_FP = './_config.yml'
 NETWORK_INCLUDE_ROOT_FP = './_includes/network_profiles'
 NETWORKS_INCLUDE = {
         'text': {
-            'all': join(NETWORK_INCLUDE_ROOT_FP, 'text', 'all.html')
+            'all': join(NETWORK_INCLUDE_ROOT_FP, 'text', 'all.html'),
+            'frontpage': join(NETWORK_INCLUDE_ROOT_FP, 'text', 'frontpage.html')
             },
         'buttons': {
-            'all': join(NETWORK_INCLUDE_ROOT_FP, 'buttons', 'all.html')
+            'all': join(NETWORK_INCLUDE_ROOT_FP, 'buttons', 'all.html'),
+            'frontpage': join(NETWORK_INCLUDE_ROOT_FP, 'buttons', 'frontpage.html')
             }
         }
 ROOTFP = '.'
@@ -54,6 +56,26 @@ def add_tags(datafp=DATA_FP, data=DATA):
     with open(DATA_FP, 'w') as f:
         yaml.dump(DATA, f, default_flow_style=False)
 
+def build_text_html(entries):
+    text_tmpl_entry = DATA['text_tmpl_entry']
+    return ''.join([text_tmpl_entry.format(
+        site_baseurl=SITE_CFG['baseurl'],
+        uri=inetwork['uri'],
+        network=inetwork['network'])
+        for inetwork in entries])
+
+def build_buttons_html(entries):
+    return ''.join([
+        DATA['buttons_tmpl_entry'].format(site_baseurl=SITE_CFG['baseurl'],
+        uri=inetwork['uri'],
+        network=inetwork['network'],
+        title=inetwork['network'],
+        site_images_dir=SITE_CFG['images_dir'],
+        id=inetwork['id'],
+        site_button_img_size=SITE_CFG['button_img_size'])
+        for inetwork in entries
+        if has_image_button_file(inetwork)])
+
 logging.basicConfig(format=LOGGING_FMT, level=logging.INFO)
 
 with open(SITE_CFG_FP) as f:
@@ -61,25 +83,13 @@ with open(SITE_CFG_FP) as f:
 
 with open(DATA_FP) as f:
     DATA = yaml.safe_load(f.read())
-    TEXT_TMPL_ENTRY = DATA['text_tmpl_entry']
 
 # all
 # text
-entries = ''.join([TEXT_TMPL_ENTRY.format(site_baseurl=SITE_CFG['baseurl'],
-    uri=inetwork['uri'], network=inetwork['network'])
-    for inetwork in DATA['profiles']])
+text = build_text_html(DATA['profiles'])
 with open(NETWORKS_INCLUDE['text']['all'], 'w') as f:
-    f.write(DATA['text_tmpl'].format(entries=entries))
+    f.write(DATA['text_tmpl'].format(entries=text))
 # buttons
-entries = ''.join([
-    DATA['buttons_tmpl_entry'].format(site_baseurl=SITE_CFG['baseurl'],
-    uri=inetwork['uri'],
-    network=inetwork['network'],
-    title=inetwork['network'],
-    site_images_dir=SITE_CFG['images_dir'],
-    id=inetwork['id'],
-    site_button_img_size=SITE_CFG['button_img_size'])
-    for inetwork in DATA['profiles']
-    if has_image_button_file(inetwork)])
+buttons = build_buttons_html(DATA['profiles'])
 with open(NETWORKS_INCLUDE['buttons']['all'], 'w') as f:
-    f.write(DATA['buttons_tmpl'].format(entries=entries))
+    f.write(DATA['buttons_tmpl'].format(entries=buttons))
