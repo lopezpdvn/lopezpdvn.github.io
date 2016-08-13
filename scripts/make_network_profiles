@@ -12,6 +12,7 @@ import gc
 import logging
 from os import access, R_OK
 from os.path import join, splitext
+from pprint import pprint
 
 # Related third party imports.
 import yaml
@@ -30,16 +31,19 @@ DATA_DIR = './_data'
 DATA_FP = join(DATA_DIR, 'network_profiles.yml')
 SITE_CFG_FP = './_config.yml'
 NETWORK_INCLUDE_ROOT_FP = './_includes/network_profiles'
+TAGS = ('frontpage', 'connect', 'contact', 'about')
 NETWORKS_INCLUDE = {
         'text': {
             'all': join(NETWORK_INCLUDE_ROOT_FP, 'text', 'all.html'),
-            'frontpage': join(NETWORK_INCLUDE_ROOT_FP, 'text', 'frontpage.html')
             },
         'buttons': {
             'all': join(NETWORK_INCLUDE_ROOT_FP, 'buttons', 'all.html'),
-            'frontpage': join(NETWORK_INCLUDE_ROOT_FP, 'buttons', 'frontpage.html')
             }
         }
+for tag in TAGS:
+    for netformat in ('text', 'buttons'):
+        NETWORKS_INCLUDE[netformat][tag] = join(NETWORK_INCLUDE_ROOT_FP,
+                netformat, tag+'.html')
 ROOTFP = '.'
 DATA = None
 
@@ -93,3 +97,13 @@ with open(NETWORKS_INCLUDE['text']['all'], 'w') as f:
 buttons = build_buttons_html(DATA['profiles'])
 with open(NETWORKS_INCLUDE['buttons']['all'], 'w') as f:
     f.write(DATA['buttons_tmpl'].format(entries=buttons))
+
+for tag in TAGS:
+    entries = [profile for profile in DATA['profiles']
+            if tag in profile['tags']]
+    text = build_text_html(entries)
+    buttons = build_buttons_html(entries)
+    with open(NETWORKS_INCLUDE['text'][tag], 'w') as f:
+        f.write(DATA['text_tmpl'].format(entries=text))
+    with open(NETWORKS_INCLUDE['buttons'][tag], 'w') as f:
+        f.write(DATA['buttons_tmpl'].format(entries=buttons))
