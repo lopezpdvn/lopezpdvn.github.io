@@ -93,6 +93,18 @@ profiles:
   - connect
   title: '@YouTube'
   uri: https://www.youtube.com/user/dreilopz
+
+- id: openpgp
+  network: OpenPGP
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: OpenPGP 220B9160
+  uri: http://pedroivanlopez.com/openpgp-key.txt
+
 - id: bitcoin
   network: BitCoin
   profile: Pedro Ivan Lopez
@@ -103,7 +115,8 @@ profiles:
   - connect
   title: 1NspYfQDQFivQk5GA2jzTsN2HaEsPYxdEZ
   uri: http://pedroivanlopez.com/bitcoin-main
-- id: fah_icon
+
+- id: fah
   network: Folding@Home
   profile: dreilopz
   tags:
@@ -113,16 +126,7 @@ profiles:
   - connect
   title: dreilopz@Folding@Home
   uri: http://fah-web2.stanford.edu/cgi-bin/main.py?qtype=userpage&username=dreilopz
-- id: lock
-  network: OpenPGP
-  profile: Pedro Ivan Lopez
-  tags:
-  - frontpage
-  - about
-  - contact
-  - connect
-  title: OpenPGP 220B9160
-  uri: http://pedroivanlopez.com/openpgp-key.txt
+
 - id: facebook
   network: Facebook
   profile: dreilopz
@@ -137,7 +141,6 @@ profiles:
   network: Indiegogo
   profile: Pedro Ivan Lopez
   tags:
-  - frontpage
   - about
   - contact
   - connect
@@ -147,32 +150,32 @@ profiles:
   network: Reddit
   profile: PedroIvanLopez
   tags:
-  - frontpage
   - about
   - contact
   - connect
   title: PedroIvanLopez@Reddit
   uri: https://www.reddit.com/user/PedroIvanLopez
+
 - id: hackernews
   network: Hacker News
   profile: lopezpdvn
   tags:
-  - frontpage
   - about
   - contact
   - connect
   title: lopezpdvn@HackerNews
   uri: https://news.ycombinator.com/user?id=lopezpdvn
+
 - id: lesswrong
   network: Less Wrong
   profile: PedroIvanLopez
   tags:
-  - frontpage
   - about
   - contact
   - connect
   title: PedroIvanLopez@LessWrong
   uri: http://lesswrong.com/user/PedroIvanLopez
+
 - id: effective-altruism-hub
   network: Effective Altruism HUB
   profile: Pedro Ivan Lopez
@@ -187,7 +190,6 @@ profiles:
   network: Effective Altruism Forum
   profile: PedroIvanLopez
   tags:
-  - frontpage
   - about
   - contact
   - connect
@@ -197,27 +199,26 @@ profiles:
   network: Wikipedia
   profile: PedroIvanLopez
   tags:
-  - frontpage
   - about
   - contact
   - connect
   title: PedroIvanLopez@Wikipedia
   uri: https://en.wikipedia.org/wiki/User:PedroIvanLopez
+
 - id: tumblr
   network: Tumblr
   profile: dreilopz
   tags:
-  - frontpage
   - about
   - contact
   - connect
   title: dreilopz@Tumblr
   uri: http://dreilopz.tumblr.com/
+
 - id: imgur
   network: Imgur
   profile: dreilopz
   tags:
-  - frontpage
   - about
   - contact
   - connect
@@ -228,7 +229,6 @@ profiles:
   network: SoundCloud
   profile: dreilopz
   tags:
-  - frontpage
   - about
   - contact
   - connect
@@ -239,21 +239,21 @@ profiles:
   network: Pinterest
   profile: dreilopz
   tags:
-  - frontpage
   - about
   - contact
   - connect
   title: dreilopz@Pinterest
   uri: https://www.pinterest.com/dreilopz/
+
 - id: 9gag
   network: 9GAG
   profile: dreilopz
   tags:
-  - frontpage
   - about
   - contact
   - connect
   title: dreilopz@9GAG
   uri: http://9gag.com/u/dreilopz
+
 text_tmpl: <ul>{entries}</ul>
 text_tmpl_entry: <li><a href="{uri}" target="_blank">{network}</a></li>
