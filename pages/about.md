@@ -37,7 +37,7 @@ format") | fingerprint: `{{ site.openpgp_fingerprint }}`
 
 This site is created with [Jekyll](http://jekyllrb.com) and hosted at
 [GitHub Pages](https://pages.github.com). You are encouraged to send general
-commentaries, broken links reports, corrections, and so on to
+comments, broken links reports, corrections, and so on to
 [{{ site.email }}](mailto:{{ site.email }}) .  {{ site.statement_org_ideas }}
 This site has been active since november 2011 and is permanently under construction.
 

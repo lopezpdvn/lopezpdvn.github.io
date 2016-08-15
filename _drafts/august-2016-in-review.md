@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "August 2016 in review"
-date: 2016-08-10
+date: 2016-08-14
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -11,6 +11,7 @@ excerpt: August 2016 personal review, summary of activities, misc notes...
 ---
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
+{% capture gist_prefix %}https://gist.github.com/{{ site.github_username }}{% endcapture %}
 
 This is the *August 2016 in review* post. The previous monthly review post is
 [here][july-review].  The contents are:
@@ -28,8 +29,13 @@ Progress on projects:
   - General maintenance and miscellaneous content
   - Implemented automatic generation of text/image links to social network
     profiles
+  - Added [tech notes][]:
+    - [ImageMagick][]: Short [Python script][] to recursively convert images in
+      a directory
 - [syspol][]: Environment variables for sound alarm files
-- [timeman][]: Script implements syspol sound alarms environment variables
+- [timeman][]: [*TODO commits*]:
+  - Script implements syspol sound alarms environment variables
+  - Added functions for interactive use
 - [pysyspol][]: Added script to randomize units of a paragraph
 
 **TODO commits total**.
@@ -39,6 +45,8 @@ Progress on projects:
 [timeman]: {{ github_prefix }}/timeman "timeman: Simple time management types"
 [pysyspol]: {{ github_prefix }}/pysyspol "syspol on CPython"
 [tech notes]: {{ site.baseurl }}/tech-notes
+[ImageMagick]: {{ site.baseurl }}/imagemagick "ImageMagick"
+[Python script]: {{ gist_prefix }}/37c50a64aec0cbd8b538fc38a786db2a#file-mogrify-recursive-py
 
 ## Philanthropy #######################################################
 
