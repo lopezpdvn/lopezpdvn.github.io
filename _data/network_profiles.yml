@@ -195,6 +195,17 @@ profiles:
   - connect
   title: PedroIvanLopez@EffectiveAltruismForum
   uri: http://effective-altruism.com/user/PedroIvanLopez/
+
+- id: quora
+  network: Quora
+  profile: PedroIvanLopez
+  tags:
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@Quora
+  uri: https://www.quora.com/profile/Pedro-Ivan-Lopez
+
 - id: wikipedia
   network: Wikipedia
   profile: PedroIvanLopez

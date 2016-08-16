@@ -18,7 +18,7 @@ web/HTTP, ASP.NET, Node.js, Python, Unix/Linux and open source.
 
 My personal interests are software/computers, rationality, [TV/films][],
 [music][], English, medicine, biotech, [philanthropy][], philosophy and
-veganism/[reducetarianism][].
+[reducetarianism][].
 
 [reducetarianism]: http://reducetarian.org "Aspire to eat less meat? Then you're a Reducetarian!"
 [philanthropy]: {{ site.baseurl }}/philanthropy "Philanthropy page"
