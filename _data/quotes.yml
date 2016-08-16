@@ -1,19 +1,19 @@
 - source: null
   attribution: null
   quote: Hope for the best and prepare for the worst.
-  tags: []
+  keywords: []
 
 - source: The Rights of Man, 1791
   attribution: Thomas Paine
   quote: My country is the world, and my religion is to do good.
-  tags: []
+  keywords: []
 
 - source: 1789.
   attribution: Jeremy Bentham
   quote: |
       The question (determining whether animals deserve ethical consideration)
       is not 'Can they reason?' nor 'Can they talk?' but 'Can they suffer?'
-  tags: []
+  keywords: []
 
 - source: 1995, "River Out of Eden," pp. 131-33.
   attribution: Richard Dawkins
@@ -27,83 +27,89 @@
       precisely the properties we should expect if there is, at bottom, no
       design, no purpose, no evil and no good, nothing but blind, pitiless
       indifference.
-  tags: []
+  keywords: []
 
 - source: '[Money: The Unit of Caring](http://lesswrong.com/lw/65/money_the_unit_of_caring).'
   attribution: Eliezer Yudkowsky
   quote: Money is the unit of caring.
-  tags: []
+  keywords: []
 
 - source: 2003.
   attribution: Christopher Hitchens (Hitchen's razor)
   quote: |
       What can be asserted without evidence can be dismissed without evidence.
-  tags: []
+  keywords: []
 
 - source: '[Progress and its sustainability](http://www-formal.stanford.edu/jmc/progress/index.html).'
   attribution: John McCarthy
   quote: |
       He who refuses to do arithmetic is doomed to talk nonsense.
-  tags: []
+  keywords: []
 
 - source: null
   attribution: Attributed to Alan Kay
   quote: |
       The best way to predict the future is to invent it.
-  tags: []
+  keywords: []
 
 - source: null
   attribution: Attributed to Heinlein by Samantha Atkins
   quote: |
       Sure the deck is stacked. But it is the only game in town. If you don't
       play then you can't win.
-  tags: []
+  keywords: []
+
+- source: |
+    [Ralph Merkle's homepage](http://www.merkle.com "Ralph Merkle's homepage").
+  attribution: Ralph Merkle
+  quote: Life is good. More is better.
+  keywords: [life, death]
 
 - source: Game of Thrones.
   attribution: Syrio Forel
   quote: |
       There is only one god, and His name is Death. And there is only one
       thing we say to Death: 'Not today'.
-  tags: []
+  keywords: []
 
 - source: '[Memorable Quotes](http://www.softpanorama.org/Skeptics/Quotes/george_carlin.shtml).'
   attribution: George Carlin
   quote: |
       I wanna live. I don't wanna die. That's the whole meaning of life: Not
       dying! I figured that shit out by myself in the third grade.
-  tags: []
+  keywords: []
 
 - source: '[Mark Harris, "The Threat From Within," Vegetarian Times, February 1995, at 70 (quoting Henry Spira)](https://books.google.com.mx/books?id=iggAAAAAMBAJ&pg=PA6&lpg=PA6&dq=Mark+Harris+"The+Threat+From+Within"&source=bl&ots=H1qQV2TQfd&sig=WqEILV_4KdV14D53vuu6zf2fF4s&hl=en&sa=X&ved=0ahUKEwj1z_jVrbnKAhXBLSYKHeEOANkQ6AEIGjAA#v=onepage&q=henry spira&f=false).'
   attribution: Henry Spira
   quote: |
       If you push for all or nothing, what you get is nothing.
-  tags: []
+  keywords: []
 
 - source: |
       The Varieties of Scientific Experience: A Personal View of the Search for God (2006).
   attribution: Carl Sagan
   quote: Extinction is the rule, survival is the exception.
-  tags: []
+  keywords: []
 
 - source: null
   attribution: null
   quote: A bet is a tax on bullshit.
-  tags: []
+  keywords: []
 
 - source: null
   attribution: null
   quote: Put your money where your mouth is.
-  tags: []
+  keywords: []
 
 - source: null
   attribution: Wentworth Miller
   quote: You only cry for help if you believe there's help to cry for.
-  tags: []
+  keywords: []
 
 - source: null
   attribution: Bob Ross
   quote: We don't make mistakes, we have happy accidents.
-  tags: []
+  keywords: []
 
 - source: '[Crypto-Gram](https://www.schneier.com/crypto-gram/archives/1999/0915.html). September 15, 1999.'
   attribution: Bruce Schneier
@@ -115,7 +121,7 @@
       proprietary security. It's true for cryptographic algorithms, security
       protocols, and security source code. For us, open source isn't just a
       business model; it's smart engineering practice.
-  tags: [open_source]
+  keywords: [open_source]
 
 
 - source: "During Q&A on Sept 29, 2013 in Washington, DC at GW's Lisner Auditorium. [Video](https://www.youtube.com/watch?v=znMBG5DQn14)."
@@ -125,36 +131,36 @@
       vegetarian... In 100 or 200 years time, we may look back on the way we
       treated animals today as something like we today look back on the way our
       forefathers treated slaves.
-  tags: [veganism, vegetarianism]
+  keywords: [veganism, vegetarianism]
 
 - source: null
   attribution: null
   quote: What do you call it when engineers do philosophy? Science.
-  tags: [science, philosophy, engineering]
+  keywords: [science, philosophy, engineering]
 
 - source: '[Entry at Quote Investigator](http://quoteinvestigator.com/2014/09/04/truth-free "The Truth Will Set You Free, But First It Will Piss You Off \| Quote Investigator")'
   attribution: '(Several)'
   quote: The truth will set you free, but first it will piss you off.
-  tags: [truth, evidence]
+  keywords: [truth, evidence]
 
 - source: "[Robin Hanson's Home Page](http://mason.gmu.edu/~rhanson/home.html \"Robin Hanson's Home Page\")"
   attribution: Robin Hanson
   quote: |
       I am addicted to "viewquakes", insights which dramatically change my
       world view.
-  tags: [truth, evidence]
+  keywords: [truth, evidence]
 
 - source: '[The Naturalisation of Heaven - The Lotus Eaters - Happiness & Motivation](https://youtu.be/r-LKJbIxFD0?t=18m54s "The Naturalisation of Heaven - The Lotus Eaters - Happiness & Motivation")'
   attribution: David Pearce
   quote: The roots of heaven and hell lie deep within the limbic system.
-  tags: [suffering, nervous_system, limbic_system]
+  keywords: [suffering, nervous_system, limbic_system]
 
 - source: The Colossus of Maroussi (1941)
   attribution: Henry Miller
   quote: |
       If men cease to believe that they will one day become gods then they will
       surely become worms.
-  tags: [progress, future, technology, autotheism]
+  keywords: [progress, future, technology, autotheism]
 
 - source: '[Facebook status](https://www.facebook.com/yudkowsky/posts/10151654833079228).'
   attribution: Eliezer Yudkowsky
@@ -165,14 +171,14 @@
       seriously, seriously not trying ambitious-enough tasks and projects, and
       playing far, far, far beneath your potential level. This is the most
       important *Umeshism*.
-  tags: []
+  keywords: []
 
 - source: '[Research Positions in the Synthetic Neurobiology Group, MIT](http://edboyden.org/researchpositions.html).'
   attribution: Ed Boyden
   quote: |
       My goal is to understand the nature of existence, and to engineer
       improvements thereupon.
-  tags: [transhumanism, science, ethics, self-improvement, technology]
+  keywords: [transhumanism, science, ethics, self-improvement, technology]
 
 - source: "Quoted in Marconi and Tesla: Pioneers of Radio Communication (2008) by Tim O'Shei, ISBN 159845076X, p. 5."
   attribution: Nikola Tesla
@@ -181,7 +187,7 @@
       like that felt by the inventor as he sees some creation of the brain
       unfolding to success... Such emotions make a man forget food, sleep,
       friends, love, everything.
-  tags: [science, technology]
+  keywords: [science, technology]
 
 - source: "The Descent of Man (1871)."
   attribution: Charles Darwin
@@ -262,3 +268,10 @@
     were able to formulate a religion, they would depict the Devil in human
     form.
   keywords: [veganism, vegetarianism, animals, religion, suffering]
+
+- source: '[Yehuda Yudkowsky](http://www.yudkowsky.net/other/yehuda "Yehuda Yudkowsky")'
+  attribution: Eliezer Yudkowsky
+  quote: |
+    The universe has a surprising ability to stab you through the heart from
+    somewhere you weren't looking.
+  keywords: [suffering, adversity]
