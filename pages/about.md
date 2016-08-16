@@ -31,7 +31,7 @@ For other personal stuff, see the
 [PGP public key]({{ site.baseurl }}/openpgp-key.txt "PGP public key in ASCII
 format") | fingerprint: `{{ site.openpgp_fingerprint }}`
 
-{% include network_profiles/buttons/all.html %}
+{% include network_profiles/buttons/about.html %}
 
 ## About the website ##################################################
 

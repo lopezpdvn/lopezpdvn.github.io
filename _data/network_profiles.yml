@@ -180,12 +180,12 @@ profiles:
   network: Effective Altruism HUB
   profile: Pedro Ivan Lopez
   tags:
-  - frontpage
   - about
   - contact
   - connect
   title: PedroIvanLopez@EffectiveAltruismHUB
   uri: https://eahub.org/user/pedro-ivan-lopez
+
 - id: effective-altruism-forum
   network: Effective Altruism Forum
   profile: PedroIvanLopez
@@ -209,7 +209,6 @@ profiles:
   network: Tumblr
   profile: dreilopz
   tags:
-  - about
   - contact
   - connect
   title: dreilopz@Tumblr
@@ -219,7 +218,6 @@ profiles:
   network: Imgur
   profile: dreilopz
   tags:
-  - about
   - contact
   - connect
   title: dreilopz@imgur
@@ -239,7 +237,6 @@ profiles:
   network: Pinterest
   profile: dreilopz
   tags:
-  - about
   - contact
   - connect
   title: dreilopz@Pinterest
@@ -249,7 +246,6 @@ profiles:
   network: 9GAG
   profile: dreilopz
   tags:
-  - about
   - contact
   - connect
   title: dreilopz@9GAG
