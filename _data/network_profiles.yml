@@ -137,6 +137,7 @@ profiles:
   - connect
   title: dreilopz@Facebook
   uri: https://www.facebook.com/dreilopz
+
 - id: indiegogo
   network: Indiegogo
   profile: Pedro Ivan Lopez
@@ -146,6 +147,18 @@ profiles:
   - connect
   title: PedroIvanLopez@Indiegogo
   uri: https://www.indiegogo.com/individuals/10848981
+
+- id: disqus
+  network: Disqus
+  profile: dreilopz
+  tags:
+  - about
+  - frontpage
+  - contact
+  - connect
+  title: dreilopz@Disqus
+  uri: https://disqus.com/by/dreilopz/
+
 - id: reddit
   network: Reddit
   profile: PedroIvanLopez
