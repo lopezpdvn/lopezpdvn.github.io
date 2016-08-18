@@ -32,6 +32,7 @@ Progress on projects:
   - Added [tech notes][]:
     - [ImageMagick][]: Short [Python script][] to recursively convert images in
       a directory
+    - [.NET][]: Avoid segmentation faults on kernel 4.6.x
 - [syspol][]: Environment variables for sound alarm files
 - [timeman][]: [*TODO commits*]:
   - Script implements syspol sound alarms environment variables
@@ -47,6 +48,7 @@ Progress on projects:
 [tech notes]: {{ site.baseurl }}/tech-notes
 [ImageMagick]: {{ site.baseurl }}/imagemagick "ImageMagick"
 [Python script]: {{ gist_prefix }}/37c50a64aec0cbd8b538fc38a786db2a#file-mogrify-recursive-py
+[.NET]: {{ site.baseurl }}/dotnet ".NET"
 
 ## Philanthropy #######################################################
 
