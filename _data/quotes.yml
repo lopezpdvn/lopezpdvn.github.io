@@ -92,9 +92,9 @@
   keywords: []
 
 - source: null
-  attribution: null
+  attribution: Alex Tabarrok
   quote: A bet is a tax on bullshit.
-  keywords: []
+  keywords: [rationality, truth, money, betting]
 
 - source: null
   attribution: null
@@ -284,3 +284,9 @@
     atrocious as extreme physical pain; yet the reason over 800,000 people in
     the world take their own lives every year is mainly psychological distress.
   keywords: [suffering, adversity, mental_illness]
+
+- source: null
+  attribution: Ryan Holiday
+  quote: |
+      If you don't know how much you need, the default easily becomes 'more'.
+  keywords: []
