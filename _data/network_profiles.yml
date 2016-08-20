@@ -179,6 +179,16 @@ profiles:
   title: lopezpdvn@HackerNews
   uri: https://news.ycombinator.com/user?id=lopezpdvn
 
+- id: stackexchange
+  network: Stack Exchange
+  profile: Pedro Ivan Lopez
+  tags:
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@StackExchange
+  uri: https://stackexchange.com/users/1481384/pedro-ivan-lopez
+
 - id: lesswrong
   network: Less Wrong
   profile: PedroIvanLopez

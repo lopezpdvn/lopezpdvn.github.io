@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "August 2016 in review"
-date: 2016-08-14
+date: 2016-08-20
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -38,6 +38,7 @@ Progress on projects:
   - Script implements syspol sound alarms environment variables
   - Added functions for interactive use
 - [pysyspol][]: Added script to randomize units of a paragraph
+- [dotfiles][]: .NET Core configuration
 
 **TODO commits total**.
 
