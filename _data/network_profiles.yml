@@ -239,6 +239,17 @@ profiles:
   title: PedroIvanLopez@Wikipedia
   uri: https://en.wikipedia.org/wiki/User:PedroIvanLopez
 
+- id: aboutme
+  network: About.me
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@about.me
+  uri: https://about.me/dreilopz
+
 - id: tumblr
   network: Tumblr
   profile: dreilopz
