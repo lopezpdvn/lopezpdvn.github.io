@@ -33,12 +33,15 @@ Progress on projects:
     - [ImageMagick][]: Short [Python script][] to recursively convert images in
       a directory
     - [.NET][]: Avoid segmentation faults on kernel 4.6.x
-- [syspol][]: Environment variables for sound alarm files
+- [syspol][]: [*TODO commits*] Environment variables for sound alarm files
 - [timeman][]: [*TODO commits*]:
   - Script implements syspol sound alarms environment variables
   - Added functions for interactive use
-- [pysyspol][]: Added script to randomize units of a paragraph
-- [dotfiles][]: .NET Core configuration
+- [pysyspol][]: [*TODO commits*] Added script to randomize units of a paragraph
+- [dotfiles][]: [*TODO commits*] .NET Core and Visual Studio Code configuration
+- [Data Structures Algorithms in C#][]: [*TODO commits*] Ported to .NET core
+- [resources-viewer][]: [*TODO commits*] Browser based static app to view
+  resources
 
 **TODO commits total**.
 
@@ -50,6 +53,9 @@ Progress on projects:
 [ImageMagick]: {{ site.baseurl }}/imagemagick "ImageMagick"
 [Python script]: {{ gist_prefix }}/37c50a64aec0cbd8b538fc38a786db2a#file-mogrify-recursive-py
 [.NET]: {{ site.baseurl }}/dotnet ".NET"
+[dotfiles]: {{ github_prefix }}/dotfiles "Misc configuration files and directories"
+[Data Structures Algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures and algorithms in C#"
+[resources-viewer]: {{ github_prefix }}/resources-viewer "Browser based static app to view resources"
 
 ## Philanthropy #######################################################
 
