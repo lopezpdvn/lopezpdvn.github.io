@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "August 2016 in review"
-date: 2016-08-20
+date: 2016-08-29
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -30,8 +30,9 @@ Progress on projects:
   - Implemented automatic generation of text/image links to social network
     profiles
   - Added [tech notes][]:
-    - [ImageMagick][]: Short [Python script][] to recursively convert images in
-      a directory
+    - [ImageMagick][]:
+      - Short [Python script][] to recursively convert images in a directory
+      - Create thumbnails in PNG format
     - [.NET][]: Avoid segmentation faults on kernel 4.6.x
 - [syspol][]: [*TODO commits*] Environment variables for sound alarm files
 - [timeman][]: [*TODO commits*]:
