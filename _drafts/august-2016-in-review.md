@@ -40,7 +40,9 @@ Progress on projects:
   - Added functions for interactive use
 - [pysyspol][]: [*TODO commits*] Added script to randomize units of a paragraph
 - [dotfiles][]: [*TODO commits*] .NET Core and Visual Studio Code configuration
-- [Data Structures Algorithms in C#][]: [*TODO commits*] Ported to .NET core
+- [Data Structures Algorithms in C#][]: [*TODO commits*]
+  - Ported to .NET core,
+  - Imported to Visual Studio Code
 - [resources-viewer][]: [*TODO commits*] Browser based static app to view
   resources
 
@@ -60,6 +62,9 @@ Progress on projects:
 
 ## Philanthropy #######################################################
 
+Donated to [Nikola Danaylov's crowdfunding campaign][campaign] for
+[Singularity 1 on 1][], one of my favorite podcasts.
+
 [Folding@Home during August][fah-stats] I scored TODO points, completed TODO
 work units and ranked TODO out of all the members of
 [The Longevity Meme team][]. My total score is TODO at the time of this
@@ -69,6 +74,8 @@ writing.  A graph of total daily production history during August can be found
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
 [fah-jun-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_august_2016.png
+[Singularity 1 on 1]: https://www.singularityweblog.com/category/podcasts/ "Singularity 1 on 1"
+[campaign]: https://konoz.io/nikola.danaylov "Singularity1on1: Interview the Future. Find Your Mission. Make a Difference"
 
 ## Other ###############################################################
 
