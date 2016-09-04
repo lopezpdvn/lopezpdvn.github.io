@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "August 2016 in review"
-date: 2016-08-29
+date: 2016-09-04
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -25,7 +25,7 @@ This is the *August 2016 in review* post. The previous monthly review post is
 
 Progress on projects:
 
-- [Personal website][]. [*TODO commits*]:
+- [Personal website][]. [*31 commits*]:
   - General maintenance and miscellaneous content
   - Implemented automatic generation of text/image links to social network
     profiles
@@ -34,19 +34,18 @@ Progress on projects:
       - Short [Python script][] to recursively convert images in a directory
       - Create thumbnails in PNG format
     - [.NET][]: Avoid segmentation faults on kernel 4.6.x
-- [syspol][]: [*TODO commits*] Environment variables for sound alarm files
-- [timeman][]: [*TODO commits*]:
-  - Script implements syspol sound alarms environment variables
-  - Added functions for interactive use
-- [pysyspol][]: [*TODO commits*] Added script to randomize units of a paragraph
-- [dotfiles][]: [*TODO commits*] .NET Core and Visual Studio Code configuration
-- [Data Structures Algorithms in C#][]: [*TODO commits*]
+- [timeman][]: [*1 commits*]
+- [pysyspol][]: [*3 commits*]
+  - Added script to randomize units of a paragraph
+  - Implemented `pysyspol.util.getdir`
+- [dotfiles][]: [*2 commits*] .NET Core and Visual Studio Code configuration
+- [Data Structures Algorithms in C#][]: [*4 commits*]
   - Ported to .NET core,
   - Imported to Visual Studio Code
-- [resources-viewer][]: [*TODO commits*] Browser based static app to view
+- [resources-viewer][]: [*6 commits*] Browser based static app to view
   resources
 
-**TODO commits total**.
+**47 commits total**.
 
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [syspol]: {{ github_prefix }}/syspol "syspol - System Policy"
@@ -65,9 +64,9 @@ Progress on projects:
 Donated to [Nikola Danaylov's crowdfunding campaign][campaign] for
 [Singularity 1 on 1][], one of my favorite podcasts.
 
-[Folding@Home during August][fah-stats] I scored TODO points, completed TODO
-work units and ranked TODO out of all the members of
-[The Longevity Meme team][]. My total score is TODO at the time of this
+[Folding@Home during August][fah-stats] I scored 40,602 points, completed 54
+work units and ranked 45th out of all the members of
+[The Longevity Meme team][]. My total score is 1,302,814 at the time of this
 writing.  A graph of total daily production history during August can be found
 [here][fah-jun-graph].
 
@@ -79,7 +78,7 @@ writing.  A graph of total daily production history during August can be found
 
 ## Other ###############################################################
 
-- My personal website got TODO views.
+- My personal website got 838 views.
 
 <br/>
 
