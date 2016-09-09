@@ -138,6 +138,16 @@ profiles:
   title: dreilopz@Facebook
   uri: https://www.facebook.com/dreilopz
 
+- id: flickr
+  network: Flickr
+  profile: dreilopz
+  tags:
+  - about
+  - contact
+  - connect
+  title: dreilopz@Flickr
+  uri: https://www.flickr.com/photos/127441830@N06
+
 - id: indiegogo
   network: Indiegogo
   profile: Pedro Ivan Lopez
