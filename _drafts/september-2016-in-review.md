@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "September 2016 in review"
-date: 2016-09-04
+date: 2016-09-12
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -28,14 +28,23 @@ Progress on projects:
 - [Personal website][]. [*TODO commits*]:
   - General maintenance and miscellaneous content
   - Added [tech notes][]:
-- [resources-viewer][]: [*TODO commits*] Browser based static app to view
+- [pysyspol][]: [*TODO commits*]
+  - Created module `medasys`, a general purpose metadata system
+  - Added `pysyspol.util.get_script_name`,
+    `pysyspol.medasys.get_tagged_resources`, `pysyspol.medasys.logging_config`,
+    `pysyspol.medasys.get_core_resources`
+- [resources-viewer][]: [*TODO commits*] Browser based static app for viewing
   resources
+  - Completed first functional version
+  - Fixed bugs
+  - Started using `pysyspol.medasys`
 
 **TODO commits total**.
 
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [tech notes]: {{ site.baseurl }}/tech-notes
 [resources-viewer]: {{ github_prefix }}/resources-viewer "Browser based static app to view resources"
+[pysyspol]: {{ github_prefix }}/pysyspol "syspol on CPython"
 
 ## Philanthropy #######################################################
 
