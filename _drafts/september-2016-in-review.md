@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "September 2016 in review"
-date: 2016-09-12
+date: 2016-09-18
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -31,13 +31,19 @@ Progress on projects:
 - [pysyspol][]: [*TODO commits*]
   - Created module `medasys`, a general purpose metadata system
   - Added `pysyspol.util.get_script_name`,
-    `pysyspol.medasys.get_tagged_resources`, `pysyspol.medasys.logging_config`,
-    `pysyspol.medasys.get_core_resources`
+  - Added functions to `pysyspol.medasys`:
+  `get_core_resources`, `logging_config`, `get_tagged_resources`,
+  `validate_paths`, `get_valid_tags`, `validate_tags`, `get_tags`,
+  `get_all_resources`
 - [resources-viewer][]: [*TODO commits*] Browser based static app for viewing
   resources
   - Completed first functional version
   - Fixed bugs
   - Started using `pysyspol.medasys`
+- [Data Structures Algorithms in C#][]: [*TODO commits*]
+  - Created types
+    - `DataStructuresAlgorithms.DataStructures.Tree.BinaryTree.BinarySearchTree.NodeInt`
+    - `DataStructuresAlgorithms.DataStructures.Tree.BinaryTree.BinarySearchTree.BinarySearchTreeInt`
 
 **TODO commits total**.
 
@@ -45,6 +51,7 @@ Progress on projects:
 [tech notes]: {{ site.baseurl }}/tech-notes
 [resources-viewer]: {{ github_prefix }}/resources-viewer "Browser based static app to view resources"
 [pysyspol]: {{ github_prefix }}/pysyspol "syspol on CPython"
+[Data Structures Algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures and algorithms in C#"
 
 ## Philanthropy #######################################################
 
