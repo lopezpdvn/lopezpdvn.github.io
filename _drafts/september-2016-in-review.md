@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "September 2016 in review"
-date: 2016-09-18
+date: 2016-09-19
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -28,6 +28,7 @@ Progress on projects:
 - [Personal website][]. [*TODO commits*]:
   - General maintenance and miscellaneous content
   - Added [tech notes][]:
+    - [Android][]
 - [pysyspol][]: [*TODO commits*]
   - Created module `medasys`, a general purpose metadata system
   - Added `pysyspol.util.get_script_name`,
@@ -52,6 +53,7 @@ Progress on projects:
 [resources-viewer]: {{ github_prefix }}/resources-viewer "Browser based static app to view resources"
 [pysyspol]: {{ github_prefix }}/pysyspol "syspol on CPython"
 [Data Structures Algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures and algorithms in C#"
+[Android]: {{ site.baseurl }}/tech-notes/android
 
 ## Philanthropy #######################################################
 
