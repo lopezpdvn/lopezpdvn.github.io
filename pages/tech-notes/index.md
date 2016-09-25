@@ -50,3 +50,4 @@ See also
 - [ImageMagick]({{ site.baseurl }}/imagemagick "ImageMagick")
 - [.NET]({{ site.baseurl }}/dotnet ".NET")
 - [Android]({{ site.baseurl }}/android "Android")
+- [Ubuntu Studio]({{ site.baseurl }}/ubuntu-studio "Ubuntu Studio")
