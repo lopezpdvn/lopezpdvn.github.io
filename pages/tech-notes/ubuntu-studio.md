@@ -11,6 +11,8 @@ keywords: [linux, audio, music, ubuntu]
 * TOC
 {:toc}
 
+## Installation
+
 Target `of` is whole device, not partition (`sdXY`, `sdXZ`, ...).
 
 {% highlight bash %}
@@ -27,7 +29,16 @@ Connect to network, select download softare and allow propietary stuff
 
 Erase disk and install Ubuntu studio
 
+Install configuration files.
+
+## Workflow
+
+Authenticate
+
+Mount remote file systems
+
+Open Pavucontrol
+
+Open QJacktl and start JACK
+
 ## References
-
-
-
