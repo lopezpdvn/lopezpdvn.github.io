@@ -50,7 +50,7 @@ Progress on projects:
   - Fixed bugs
   - Started using `pysyspol.medasys`
 
-**TODO commits total**.
+**31 commits total**.
 
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [tech notes]: {{ site.baseurl }}/tech-notes

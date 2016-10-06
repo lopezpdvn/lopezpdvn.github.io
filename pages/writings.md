@@ -10,10 +10,11 @@ All my writings. See also [projects]({{ site.baseurl }}/projects "Projects"),
 [blog]({{ site.baseurl }}/blog "Blog") and
 [tech notes]({{ site.baseurl }}/tech-notes "Tech notes").
 
-- [August 2016 in review]({% post_url 2016/2016-09-04-august-2016-in-review %}) *August 2016 personal review, summary of activities, misc notes...* (4 September 2016)
-- [July 2016 in review]({% post_url 2016/2016-08-01-july-2016-in-review %}) *July 2016 personal review, summary of activities, misc notes...* (1 August 2016)
-- [June 2016 in review]({% post_url 2016/2016-07-03-june-2016-in-review %}) *June 2016 personal review, summary of activities, misc notes...* (3 July 2016)
-- [May 2016 in review]({% post_url 2016/2016-06-03-may-2016-in-review %}) *May 2016 personal review, summary of activities, misc notes...* (3 June 2016)
+- [September 2016 in review]({% post_url 2016/2016-10-06-september-2016-in-review %}) *Personal review, summary of activities, misc notes...* (6 October 2016)
+- [August 2016 in review]({% post_url 2016/2016-09-04-august-2016-in-review %}) *Personal review, summary of activities, misc notes...* (4 September 2016)
+- [July 2016 in review]({% post_url 2016/2016-08-01-july-2016-in-review %}) *Personal review, summary of activities, misc notes...* (1 August 2016)
+- [June 2016 in review]({% post_url 2016/2016-07-03-june-2016-in-review %}) *Personal review, summary of activities, misc notes...* (3 July 2016)
+- [May 2016 in review]({% post_url 2016/2016-06-03-may-2016-in-review %}) *Personal review, summary of activities, misc notes...* (3 June 2016)
 - [April 2016 in review]({% post_url 2016/2016-05-03-april-2016-in-review %}) *April 2016 personal review, summary of activities, misc notes...* (3 May 2016)
 - [March 2016 in review]({% post_url 2016/2016-04-02-march-2016-in-review %}) *March 2016 personal review, summary of activities, misc notes...* (2 Apr 2016)
 - [February 2016 in review]({% post_url 2016/2016-03-09-february-2016-in-review %}) *February 2016 personal review, summary of activities, misc notes...* (9 Mar 2016)
