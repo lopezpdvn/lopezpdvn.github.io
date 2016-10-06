@@ -5,7 +5,7 @@ permalink: /kdenlive/
 comments: true
 keywords: [video, audio, ffmpeg, kdenlive]
 first_published: 2016-07-11
-last_updated: 2016-07-24
+last_updated: 2016-10-06
 ---
 
 * TOC
@@ -28,3 +28,22 @@ Extract a section of a video, including audio.
 [Video source](https://creativecommons.org/about/videos/made-with-cc/ "Made with Creative Commons")
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o8QxlBQBEz0" frameborder="0" allowfullscreen></iframe>
+<br/>
+
+## General steps for new projects
+
+- Create project directory
+
+- Open kdenlive, save as `project_name` in project directory
+
+- Add clips to automatically set project settings (accept suggestion)
+
+- Open project settings and set the project folder to the project directory of
+  the first step.
+
+- Input metadata
+
+- Click OK and save project.
+
+- In window Render, check *More options*. Review all options since not all
+  configuration is saved to the rendering profiles.
