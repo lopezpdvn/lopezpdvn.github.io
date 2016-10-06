@@ -5,7 +5,7 @@ permalink: /ffmpeg/
 comments: true
 tags: [video, audio, ffmpeg]
 first_published: 2016-04-17
-last_updated: 2016-07-10
+last_updated: 2016-10-06
 ---
 
 * TOC
@@ -147,6 +147,50 @@ Short Python script
 
 - Don't try to map audio channels without re-encoding
   ([info](http://comments.gmane.org/gmane.comp.video.ffmpeg.user/53517)).
+
+## Videos with wrong orientation in metadata
+
+Sometimes when recording from a device like a cellphone or a tablet, the
+resulting video will play as if it was recorded in portrait mode
+
+{% highlight bash %}
+$ ffprobe VID_20160924_012917.mp4
+ffprobe version 2.8.7 Copyright (c) 2007-2016 the FFmpeg developers
+  built with gcc 5.3.1 (GCC) 20160406 (Red Hat 5.3.1-6)
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'VID_20160924_012917.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    creation_time   : 2016-09-24 06:33:43
+  Duration: 00:04:24.47, start: 0.000000, bitrate: 12234 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 1920x1080, 12130 kb/s, SAR 1:1 DAR 16:9, 30.33 fps, 30 tbr, 90k tbn, 180k tbc (default)
+    Metadata:
+      rotate          : 90
+      creation_time   : 2016-09-24 06:33:43
+      handler_name    : VideoHandle
+    Side data:
+      displaymatrix: rotation of -90.00 degrees
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 96 kb/s (default)
+    Metadata:
+      creation_time   : 2016-09-24 06:33:43
+      handler_name    : SoundHandle
+{% endhighlight %}
+
+Below command fixes it without re-encoding.
+
+{% highlight bash %}
+$ ffmpeg -i VID_20160924_012917.mp4  -c copy -metadata:s:v:0 rotate=0 output.mp4
+{% endhighlight %}
 
 ## References
 
