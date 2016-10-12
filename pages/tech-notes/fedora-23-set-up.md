@@ -6,7 +6,7 @@ categories: en
 tags: [en, linux, tech, operating_system, firewall, security]
 comments: true
 first_published: 2016-03-31
-last_updated: 2016-06-02
+last_updated: 2016-10-12
 permalink: /fedora-23-set-up/
 ---
 
@@ -41,6 +41,20 @@ Clean *dnf* cache, upgrade system and reboot
 {% highlight bash %}
 $ sudo dnf -y clean all ; sudo dnf -y upgrade
 $ sudo systemctl reboot
+{% endhighlight %}
+
+## Configure shell history
+
+*You may not need this. Check your shell's documentation*
+
+In your user shell configuration files, set the environment variables related
+to shell history: `HISTFILE`, `HISTSIZE`
+
+As fallback, add to `/etc/profile` too
+
+{% highlight bash %}
+# File path may be different
+export HISTFILE=~/.bash_history
 {% endhighlight %}
 
 ## Install RPM Fusion
