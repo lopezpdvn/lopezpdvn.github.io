@@ -30,6 +30,8 @@ Progress on projects:
   - Added [tech notes][]:
     - [ffmpeg][]
     - [Kdenlive][]
+    - [Fedora 23 set up][]
+    - [Android][]
 - [pysyspol][]: [*TODO commits*]
   - Added module `pysyspol.digikam`
   - Added script `taskcoach-category-efforts`
@@ -44,6 +46,8 @@ Progress on projects:
 [Android]: {{ site.baseurl }}/tech-notes/android
 [ffmpeg]: {{ site.baseurl }}/ffmpeg "ffmpeg"
 [Kdenlive]: {{ site.baseurl }}/kdenlive "Kdenlive"
+[Fedora 23 set up]: {{ site.baseurl }}/fedora-23-set-up "Fedora 23 set up"
+[Android]: {{ site.baseurl }}/android "Android"
 
 ## Philanthropy #######################################################
 
