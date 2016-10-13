@@ -32,6 +32,7 @@ Progress on projects:
     - [Kdenlive][]
     - [Fedora 23 set up][]
     - [Android][]
+    - [Audacity][]
 - [pysyspol][]: [*TODO commits*]
   - Added module `pysyspol.digikam`
   - Added script `taskcoach-category-efforts`
@@ -48,6 +49,7 @@ Progress on projects:
 [Kdenlive]: {{ site.baseurl }}/kdenlive "Kdenlive"
 [Fedora 23 set up]: {{ site.baseurl }}/fedora-23-set-up "Fedora 23 set up"
 [Android]: {{ site.baseurl }}/android "Android"
+[Audacity]: {{ site.baseurl }}/audacity "Audacity"
 
 ## Philanthropy #######################################################
 
