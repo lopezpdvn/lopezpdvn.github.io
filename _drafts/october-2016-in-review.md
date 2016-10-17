@@ -33,13 +33,16 @@ Progress on projects:
     - [Fedora 23 set up][]
     - [Android][]
     - [Audacity][]
+    - [matplotlib][]
 - [pysyspol][]: [*TODO commits*]
   - Added module `pysyspol.digikam`
   - Added script `taskcoach-category-efforts`
+- [dotfiles][]: Added QJackCtl config
 
 **TODO commits total**.
 
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
+[dotfiles]: {{ github_prefix }}/dotfiles "Misc configuration files and directories"
 [tech notes]: {{ site.baseurl }}/tech-notes
 [resources-viewer]: {{ github_prefix }}/resources-viewer "Browser based static app to view resources"
 [pysyspol]: {{ github_prefix }}/pysyspol "syspol on CPython"
@@ -50,6 +53,7 @@ Progress on projects:
 [Fedora 23 set up]: {{ site.baseurl }}/fedora-23-set-up "Fedora 23 set up"
 [Android]: {{ site.baseurl }}/android "Android"
 [Audacity]: {{ site.baseurl }}/audacity "Audacity"
+[matplotlib]: {{ site.baseurl }}/matplotlib "matplotlib"
 
 ## Philanthropy #######################################################
 
