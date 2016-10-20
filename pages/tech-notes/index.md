@@ -53,3 +53,4 @@ See also
 - [Ubuntu Studio]({{ site.baseurl }}/ubuntu-studio "Ubuntu Studio")
 - [Audio engineering]({{ site.baseurl }}/audio-engineering "Audio engineering")
 - [matplotlib]({{ site.baseurl }}/matplotlib "matplotlib")
+- [Anki]({{ site.baseurl }}/anki "Anki")

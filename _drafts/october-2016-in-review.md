@@ -34,6 +34,7 @@ Progress on projects:
     - [Android][]
     - [Audacity][]
     - [matplotlib][]
+    - [Anki][]
 - [pysyspol][]: [*TODO commits*]
   - Added module `pysyspol.digikam`
   - Added script `taskcoach-category-efforts`
@@ -54,6 +55,7 @@ Progress on projects:
 [Android]: {{ site.baseurl }}/android "Android"
 [Audacity]: {{ site.baseurl }}/audacity "Audacity"
 [matplotlib]: {{ site.baseurl }}/matplotlib "matplotlib"
+[Anki]: {{ site.baseurl }}/anki "Anki"
 
 ## Philanthropy #######################################################
 
