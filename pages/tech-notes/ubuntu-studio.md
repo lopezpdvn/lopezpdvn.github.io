@@ -4,12 +4,14 @@ title: Notes on Ubuntu Studio
 permalink: /ubuntu-studio/
 comments: true
 first_published: 2016-09-21
-last_updated: 2016-09-21
+last_updated: 2016-10-28
 keywords: [linux, audio, music, ubuntu]
 ---
 
 * TOC
 {:toc}
+
+{% capture dotfiles_prefix %}https://github.com/{{ site.github_username }}/dotfiles{% endcapture %}
 
 ## Installation
 
@@ -29,16 +31,11 @@ Connect to network, select download softare and allow propietary stuff
 
 Erase disk and install Ubuntu studio
 
-Install configuration files.
+Install configuration files ([PulseAudio]({{ dotfiles_prefix }}/dotfiles/blob/master/.config/pulse/default.pa),
+[QjackCtl]({{ dotfiles_prefix }}/dotfiles/blob/master/.config/rncbc.org/QjackCtl.conf),
 
-## Workflow
+## Update
 
-Authenticate
-
-Mount remote file systems
-
-Open Pavucontrol
-
-Open QJacktl and start JACK
+Update all software: *Start* -> *System* -> *Software Updater*
 
 ## References
