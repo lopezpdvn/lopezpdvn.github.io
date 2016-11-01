@@ -4,6 +4,9 @@ title: Résumé
 permalink: /resume/
 ---
 
+{% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
+{% capture gist_prefix %}https://gist.github.com/{{ site.github_username }}{% endcapture %}
+
 **[Short PDF version](../resume.pdf)**  \|\| [Website]({{ site.url }}) \|\| <a href="mailto:{{ site.email }}" alt="Email" title="Email">
     <img class="icon" src="{{ site.baseurl }}/{{ site.images_dir }}/buttons/email.png" alt="Email" title="Email" height="15px" width="15px" />
     <span class="username">Email</span>
@@ -26,7 +29,7 @@ Software Development Engineer interested in web and large scale systems
 
 ## Education
 
-- Master of Information Engineering in Computer Science, 2015, Autonomous
+- **Master of Information Engineering in Computer Science**, 2015, Autonomous
   University of Nuevo León.  Overall Grade 94.5/100.0
 
 - Bachelor of Mechatronic Engineering, 2012, Autonomous University of Nuevo
@@ -100,36 +103,87 @@ to February 2012
 
 ## Computer Skills
 
-- *Languages*: C#, JavaScript, Java, Python, HTML, CSS, Bash/UNIX Shell
-  Scripting, VB.NET, MATLAB, LabVIEW
+- *Languages*: Python, JavaScript, C#, Java, HTML, CSS, Bash/UNIX Shell
+  Scripting, VB.NET, MATLAB, LabVIEW, XSLT
 
-- *Data/Databases*: Microsoft SQL Server, Oracle, MySQL, SQLite, JSON, YAML, XML
+- *Data/Databases*: Microsoft SQL Server, Oracle, MySQL, SQLite, JSON, YAML,
+  XML
 
-- *Applications*: Microsoft Visual Studio, Git, ClearCase, Toad, Eclipse, Cygwin,
-  Vim, GNU Make, Ant, IPython, OpenSSH
+- *Applications*: Microsoft Visual Studio, Visual Studio Code, Git, ClearCase,
+  Toad, Eclipse, Cygwin, Vim, GNU Make, Ant, IPython, OpenSSH
 
-- *Technologies*: ASP.NET 4 & 5, ASP.NET MVC 5, Docker, Node.js, Spring,
+- *Technologies*: Node.js, ASP.NET 4 & 5, ASP.NET MVC 5, Docker, Spring,
   Hibernate, ASP.NET Web Forms, Java EE, Sphinx documentation tools, Jekyll
 
-- *Operating Systems*: Microsoft Windows (Server 2003, XP, Vista, 7, 8), UNIX
-  (Fedora, Ubuntu, Red Hat Enterprise Linux, Android)
+- *Operating Systems*: UNIX (Fedora, Ubuntu, Red Hat Enterprise Linux,
+  Android), Microsoft Windows (Server 2003, XP, Vista, 7, 8, 10),
 
-- *Other*: Linux user for 7 years, proficient with UNIX command line interface,
-  technical documentation writing
+- *Other*: Linux user for 8 years, proficient with UNIX command line interface,
+  technical documentation writing, homebuilt computers enthusiast
 
 ## Other projects
 
-- [ASPNET5CO]({{ site.baseurl }}/aspnet5co): Advocacy and Community.
-  Efforts to advocate the ASP.NET 5 framework.
+- [ASPNET5CO]({{ site.baseurl }}/aspnet5co): Advocacy and Community.  Efforts
+  to advocate the ASP.NET Core framework
+
+- [Data structures and algorithms in C#][]: Data structures and algorithms in
+  C#
 
 - [mazerob]({{ site.baseurl }}/mazerob): Bluetooth-remote-control robot
-  implemented with Java Virtual Machines on a PC and a Lego NXT Brick.
+  implemented with Java Virtual Machines on a PC and a Lego NXT Brick
 
 - [printer73x]({{ site.baseurl }}/printer73x): A computer numerical control
-  system for printing binary images.
+  system for printing binary images
 
 - [cerca]({{ site.baseurl }}/cerca): A distance measurement system running on a
-  personal computer and a 8-bit microcontroller.
+  personal computer and a 8-bit microcontroller
+
+- [pysyspol][]: Cross-platform system policy for applications and environments,
+  with Python
+
+- [syspol-js][]: Cross-platform system policy for applications and
+  environments, with JavaScript
+
+- [dotfiles][]: Miscellaneous configuration files and directories
+
+- [Software engineering problems in C#][]: Software engineering problems in C#
+
+- [resources-viewer][]: Browser based static app for viewing resources
+
+- [timeman][]: Simple time management types
+
+- [syspol][]: Cross-platform system policy for applications and environments
+
+- [swebserv][]: Java program that simulates Denial-of-service attacks on
+  HTTP/web servers
+
+For other projects see my [technical notes][], as well as my [Github][] and
+[Gist][] profiles.
+
+[pysyspol]: {{ github_prefix }}/pysyspol
+[dotfiles]: {{ github_prefix }}/dotfiles
+[Data structures and algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp
+[resources-viewer]: {{ github_prefix }}/resources-viewer
+[timeman]: {{ github_prefix }}/timeman
+[syspol]: {{ github_prefix }}/syspol
+[syspol-js]: {{ github_prefix }}/syspol-js
+[Data structures and algorithms in JavaScript]: {{ github_prefix }}/data-structures-algorithms-javascript
+[Software engineering problems in C#]: {{ github_prefix }}/SoftwareEngineeringProblemsCSharp
+[swebserv]: {{ github_prefix }}/swebserv
+[Github]: https://github.com/{{ site.github_username }}
+[Gist]: https://gist.github.com/{{ site.github_username }}
+[technical notes]: {{ site.baseurl }}/tech-notes
+
+---
 
 <br/>
-**[Short PDF version](../resume.pdf)**
+**[Short PDF version](../resume.pdf)**  \|\| [Website]({{ site.url }}) \|\| <a href="mailto:{{ site.email }}" alt="Email" title="Email">
+    <img class="icon" src="{{ site.baseurl }}/{{ site.images_dir }}/buttons/email.png" alt="Email" title="Email" height="15px" width="15px" />
+    <span class="username">Email</span>
+</a> || <a href="https://github.com/{{ site.github_username }}" title="lopezpdvn@github.com">
+  <img class="icon" src="{{ site.baseurl }}/{{ site.images_dir }}/buttons/github.png" alt="lopezpdvn@github.com" title="lopezpdvn@github.com" height="15px" width="15px" />
+  <span class="username">{{ site.github_username }}</span>
+</a> || <a href="https://www.linkedin.com/in/pedroivanlopez" alt="PedroIvanLopez@linkedin" title="PedroIvanLopez@linkedin">
+  <img class="icon" src="{{ site.baseurl }}/{{ site.images_dir }}/buttons/linkedin.png" alt="PedroIvanLopez@linkedin" title="PedroIvanLopez@linkedin" height="15px" width="15px" />
+  <span class="username">PedroIvanLopez</span>
+</a>
