@@ -4,7 +4,7 @@ title: Notes on Ubuntu Studio
 permalink: /ubuntu-studio/
 comments: true
 first_published: 2016-09-21
-last_updated: 2016-10-28
+last_updated: 2016-09-21
 keywords: [linux, audio, music, ubuntu]
 ---
 

@@ -27,7 +27,7 @@ Progress on projects:
 
 - [Personal website][]. [*TODO commits*]:
   - General maintenance and miscellaneous content
-  - Added/updated [tech notes][]:
+  - Added [tech notes][]:
     - [ffmpeg][]
     - [Kdenlive][]
     - [Fedora 23 set up][]
@@ -35,8 +35,6 @@ Progress on projects:
     - [Audacity][]
     - [matplotlib][]
     - [Anki][]
-    - [Digital Audio Workstation][]
-    - [Ubuntu Studio][]
 - [pysyspol][]: [*TODO commits*]
   - Added module `pysyspol.digikam`
   - Added script `taskcoach-category-efforts`
@@ -59,7 +57,6 @@ Progress on projects:
 [matplotlib]: {{ site.baseurl }}/matplotlib "matplotlib"
 [Anki]: {{ site.baseurl }}/anki "Anki"
 [Digital Audio Workstation]: {{ site.baseurl }}/daw "Digital Audio Workstation"
-[Ubuntu Studio]: {{ site.baseurl }}/ubuntu-studio "Ubuntu Studio"
 
 ## Philanthropy #######################################################
 

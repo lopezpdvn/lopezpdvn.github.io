@@ -3,8 +3,8 @@ layout: tech-note
 title: Notes on Digital Audio Workstation
 permalink: /daw/
 comments: true
-first_published: 2016-10-28
-last_updated: 2016-10-28
+first_published: 2016-10-27
+last_updated: 2016-10-27
 keywords: [daw, audio, music, art]
 ---
 
@@ -34,9 +34,9 @@ Look for configuration files at [dotfiles]({{ dotfiles_prefix }}).
 
 Headphones output of Scarlett 2i2 -> Speakers, to record video with audio.
 
+[ASUS Eee PC 1005HA](https://www.asus.com/Notebooks/Eee_PC_1005HA_Seashell/) running
 [Ubuntu Studio]({{ site.baseurl }}/ubuntu-studio) (see section
-[Installation]({{ site.baseurl }}/ubuntu-studio#installation)) 16.04 running on
-[ASUS Eee PC 1005HA](https://www.asus.com/Notebooks/Eee_PC_1005HA_Seashell/).
+[Installation]({{ site.baseurl }}/ubuntu-studio#installation)) 16.04.
 
 *Disable network devices*: Left click on network icon on panel, uncheck *Enable
 Wi-Fi*. Left click on network icon on panel, uncheck *Enable Networking*.
@@ -46,17 +46,24 @@ Bluetooth Off*.
 
 Start *PulseAudio Volume Control*
 
-Start *QjackCtl*, load configuration *in_2i2_out_headphones_01* and start JACK
-server.
+Start *QjackCtl*, load configuration
+[in_2i2_out_headphones_01]({{ dotfiles_prefix }}/blob/master/.config/rncbc.org/QjackCtl.conf)
+and start JACK server.
 
-Start *Calf JACK Host* and open [slap_pop_00]()
+Start *Calf JACK Host* and open
+[slap_pop_00]({{ dotfiles_prefix }}/blob/master/calf_jack_host/slap_pop_00).
 
-Start *Guitarix* and load preset *slap_pop_00* from bank *bass*.
+Start *Guitarix* and load preset *slap_pop_00* from bank
+[bass]({{ dotfiles_prefix }}/blob/master/.config/guitarix/banks/bass.gx).
 
-Copy *Ardour* session template *record-single-bass-track*. Start Ardour and
-open such new session.
+Copy *Ardour* session template
+[record-single-bass-track](https://github.com/{{ site.github_username }}/ardour-session-templates).
+Start Ardour and open such new session.
 
-Connect ports in QJackCtl.
+Connect audio ports in QJackCtl. No connections in *MIDI* and *ALSA* tab.
+
+{% capture imgtext %}QjackCtl connections{% endcapture %}
+![{{ imgtext }}]({{ site.baseurl }}/{{ site.images_dir }}/2016/qjackctl_connections_screenshot_setup_00.png "{{ imgtext }}")
 
 ### Workflow
 
@@ -68,5 +75,5 @@ watch for XRUNS on Ardour and QjackCtl.
 
 Record using guide track using player independent/external to the DAW, like a
 smartphone with earphones. It's better if the guide track is panned completely
-to a single channel so that the person recording can use 1 earphone only, and
-listen with the other ear.
+to a single channel so that the person recording can use 1 earphone only while
+listening with the other ear.
