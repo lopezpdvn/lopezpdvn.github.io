@@ -8,8 +8,8 @@ permalink: /cerca/
 
 <a class="image-wrapper" href="doc/_images/cerca_picture.png"><img alt="cerca picture." src="doc/_images/cerca_picture.png" style="width: 414.4px; height: 311.2px;" /></a>
 
-- [Project's website]({{ site.url }}/cerca "cerca project's website")
 - [Github repo](https://github.com/{{ site.github_username }}/cerca "cerca's github repo")
+- [HTML documentation][]
 
 Project **cerca** is a PC-based distance measurement system, developed for the
 school course *482 - TÓPICOS SELECTOS DMI I* (spanish for selected topics for
@@ -29,10 +29,11 @@ released under the Creative Commons Attribution 3.0 Unported license, see file
 
 October 27, 2012.
 
-- [HTML documentation]({{ page.url }}doc)
+- [HTML documentation][]
 - [zip release](https://github.com/{{ site.github_username }}/cerca/zipball/v1.0.4)
 - [Video demonstration](https://www.youtube.com/watch?v=OE_qz_wE0Hs) at YouTube.
 
   <iframe width="420" height="315" src="https://www.youtube.com/embed/OE_qz_wE0Hs" frameborder="0" allowfullscreen></iframe>
 
 
+[HTML documentation]: {{ page.url }}doc

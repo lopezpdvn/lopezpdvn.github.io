@@ -9,6 +9,7 @@ permalink: /printer73x/
 <a class="image-wrapper" href="doc/_images/printer73x.png"><img alt="printer73x picture." src="doc/_images/printer73x.png" style="width: 414.4px; height: 311.2px;" /></a>
 
 - [Github repo](https://github.com/{{ site.github_username }}/printer73x "printer73x at Github")
+- [Online HTML documentation][]
 
 **printer73x** is a CNC system for printing binary images. printer73x was
 developed for the school courses _734 - PROYECTO DE IMTC I_ and _735 - PROYECTO
@@ -25,9 +26,9 @@ for this project, see file
 
 Released October 27, 2012.
 
-* [Online HTML documentation]({{ page.url }}doc)
+* [Online HTML documentation][]
 * [Zip release](https://github.com/lopezpdvn/printer73x/zipball/v1.0.2) (from
-    github).
+    GitHub).
 * [Video
   demonstrations](http://www.youtube.com/playlist?list=PL7141B5B35BD03A5E) at
   _YouTube_.
@@ -51,3 +52,6 @@ Software and electronic design and implementation:
 
 *   Iván García González
 *   [{{ site.author }}]({{ site.url }})
+
+
+[Online HTML documentation]: {{ page.url }}doc

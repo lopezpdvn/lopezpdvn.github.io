@@ -19,7 +19,7 @@ permalink: "/:title"
 images_dir: "images"
 bitcoin_main_address: "1NspYfQDQFivQk5GA2jzTsN2HaEsPYxdEZ"
 statement_org_ideas: >
-  The ideas expressed in this website do not necessarily represent the opinion
+  The ideas expressed on this website do not necessarily represent the opinion
   of my employer or any other organization.
 
 short_intro: "I'm a software engineer interested in web and large scale systems."

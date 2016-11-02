@@ -4,6 +4,13 @@ title: Other
 permalink: /other/
 ---
 
+- [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): The latest stuff.
+
+- [Tech notes]({{ site.baseurl }}/tech-notes): Technical notes
+
+- [Connect]({{ site.baseurl }}/connect) and
+  [contact info]({{ site.baseurl }}/contact)
+
 - [Philanthropy page]({{ site.baseurl }}/philanthropy). Effective altruism,
   volunteer computing, reducing meat and dairy consumption.
 
@@ -11,13 +18,6 @@ permalink: /other/
   Volunteer computing is a type of distributed computing in which computer
   owners donate their computing resources (such as processing power and
   storage) to one or more projects.
-
-- [Blog]({{ site.baseurl }}/blog "Pedro Ivan Lopez's blog"): The latest stuff.
-
-- [Connect]({{ site.baseurl }}/connect) and
-  [contact info]({{ site.baseurl }}/contact)
-
-- [Tech notes]({{ site.baseurl }}/tech-notes): Technical notes
 
 - [Music]({{ site.baseurl }}/music "Music"): I like music too.
 

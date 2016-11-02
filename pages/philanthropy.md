@@ -30,6 +30,7 @@ In 2016 I have financially supported the following organizations:
   [Major Mouse Testing Program][]
 - [SENS Research Foundation][], specifically the
   [OncoSENS Control ALT Delete Cancer][]
+- [Machine Intelligence Research Institute][]
 
 [GiveWell][] is my chosen charity at [Amazon Smile][].
 

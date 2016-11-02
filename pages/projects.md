@@ -4,6 +4,9 @@ title: Projects
 permalink: /projects/
 ---
 
+{% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
+{% capture gist_prefix %}https://gist.github.com/{{ site.github_username }}{% endcapture %}
+
 For other projects see my [technical notes][], as well as my [Github][] and
 [Gist][] profiles.
 
