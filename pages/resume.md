@@ -25,7 +25,7 @@ Contents:
 
 ## Objective
 
-Software Development Engineer interested in web and large scale systems
+Software Development Engineer interested in large scale systems and the Web.
 
 ## Education
 
@@ -61,7 +61,7 @@ trade finance application used mainly in North America and Asia
 - Fixed approximately 350 incidents, including code bugs, development of new
   features, customers with invalid data in production and outages
 
-- On-call main contact for approximately 20 weeks
+- On-call primary contact for approximately 20 weeks
 
 - Led approximately 30 Request For Change procedures, mainly to install code
   updates and to update data via SQL scripts
@@ -77,7 +77,7 @@ trade finance application used mainly in North America and Asia
 *Monterrey, Nuevo León, Mexico*.  Software Engineer, October 2012 to January
 2013
 
-- Performed testing and quality assurance of an enterprise financial web
+- Performed testing and quality assurance of an enterprise financial Web
   platform for a Mexican bank, implemented in Java Enterprise Edition and
   JavaScript
 
@@ -89,9 +89,9 @@ to February 2012
 - Developed and maintained robust control systems software in MATLAB and
   Simulink
 
-- Co-authored 1 published paper: Basin, M.; Serna, M.; Lopez-Hernandez,
-  P.I.,Central energy-to-peak filter design for uncertain linear systems,
-  Control Conference (ASCC), June 2013
+- Co-authored one published paper: Basin, M.; Serna, M.; Lopez-Hernandez, P.I.,
+  Central energy-to-peak filter design for uncertain linear systems, Control
+  Conference (ASCC), June 2013
 
 ### School of Mechanical and Electrical Engineering at UANL
 
@@ -118,8 +118,8 @@ to February 2012
 - *Operating Systems*: UNIX (Fedora, Ubuntu, Red Hat Enterprise Linux,
   Android), Microsoft Windows (Server 2003, XP, Vista, 7, 8, 10),
 
-- *Other*: Linux user for 8 years, proficient with UNIX command line interface,
-  technical documentation writing, homebuilt computers enthusiast
+- *Other*: Linux user for eight years, proficient with UNIX command line
+  interface, technical documentation writing, homebuilt computers enthusiast
 
 ## Other projects
 
@@ -136,7 +136,7 @@ to February 2012
   system for printing binary images
 
 - [cerca]({{ site.baseurl }}/cerca): A distance measurement system running on a
-  personal computer and a 8-bit microcontroller
+  personal computer and an 8-bit microcontroller
 
 - [pysyspol][]: Cross-platform system policy for applications and environments,
   with Python
