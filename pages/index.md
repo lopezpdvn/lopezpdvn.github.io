@@ -3,6 +3,6 @@ layout: default
 permalink: /
 ---
 
-{{ site.short_intro }}
+{{ site.short_intro }}.
 
 {% include network_profiles/buttons/frontpage.html %}
