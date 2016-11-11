@@ -6,6 +6,8 @@ permalink: /about/
 
 ## About me ###########################################################
 
+**{{ site.short_status }}**.
+
 My name is Pedro Ivan Lopez[^1].  {{ site.short_intro }}. I hold a Master's
 degree in Information Engineering. I live near Monterrey, México.
 [[photo]({{ site.baseurl }}/{{ site.images_dir }}/pedro_ivan_lopez_2016_01.jpg "Photo")]

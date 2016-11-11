@@ -4,6 +4,8 @@ title: Contact
 permalink: /contact/
 ---
 
+**{{ site.short_status }}**.
+
 The best way to contact me is via email:
 [{{ site.email }}](mailto:{{ site.email }})
 
