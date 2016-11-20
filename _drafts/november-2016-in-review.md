@@ -30,6 +30,8 @@ Progress on projects:
   - Added/updated [tech notes][]:
     - [Digital Audio Workstation][]
     - [Anki][]
+    - [Fedora DNF system upgrade][]
+    - [digiKam][]
 - [pysyspol][]: [*TODO commits*]
 - [pydsalg][]: [*TODO commits*]
   - Hash table
@@ -43,6 +45,8 @@ Progress on projects:
 [Anki]: {{ site.baseurl }}/anki "Anki"
 [pydsalg]: {{ github_prefix }}/pydsalg "pydsalg: Data structures and algorithms in Python"
 [Digital Audio Workstation]: {{ site.baseurl }}/daw "Digital Audio Workstation"
+[Fedora DNF system upgrade]: {{ site.baseurl }}/fedora-dnf-system-upgrade "Fedora DNF system upgrade"
+[digiKam]: {{ site.baseurl }}/digikam "digiKam"
 
 ## Philanthropy #######################################################
 

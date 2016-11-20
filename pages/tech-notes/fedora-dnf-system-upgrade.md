@@ -4,7 +4,7 @@ title: Notes on Fedora DNF system upgrade
 permalink: /fedora-dnf-system-upgrade/
 comments: true
 first_published: 2016-11-14
-last_updated: 2016-11-14
+last_updated: 2016-11-20
 keywords: [linux, os, fedora, dnf]
 ---
 
@@ -131,6 +131,8 @@ eventually the machine will reboot to the new kernel/system.
 Be sure to follow the [Optional post-upgrade tasks][] in the main official
 guide.
 
+### Old packages
+
 Regarding the output of
 
 {% highlight bash %}
@@ -139,6 +141,11 @@ $ sudo dnf list extras
 
 Don't remove the kernel packages. It's probably better not to remove any of
 these packages.
+
+### Troubleshooting software installed in user directories
+
+If an application installed in a user directory is not working correctly, try
+re-installing it.
 
 ## References
 

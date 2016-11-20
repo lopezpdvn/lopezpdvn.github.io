@@ -4,12 +4,14 @@ title: Notes on digiKam
 permalink: /digikam/
 comments: true
 first_published: 2016-04-11
-last_updated: 2016-07-31
+last_updated: 2016-11-20
 keywords: [media, images, digikam, img, metadata, tags]
 ---
 
 * TOC
 {:toc}
+
+**Important: Unless otherwise noted, not tested on version >= 5**
 
 ## Change path to collections on removable media
 
@@ -47,6 +49,24 @@ collections were modified.
 [Change path to collections on removable media]: #change-path-to-collections-on-removable-media
 
 ## Non-simultaneous multiple instances
+
+### Version >= 5.0.0
+
+Close digiKam and edit digikam configuration file, whose default path is
+`$XDG_CONFIG_HOME/digikamrc`
+
+    Database Name=/path/to/dir/containing/database/file/
+    Database Name Face=/path/to/dir/containing/facedatabase/file/
+    Database Name Thumbnails=/path/to/dir/containing/thumbnaildatabase/file/
+
+Note the trailing slashes and the fact that all paths can be the same.
+
+Then start digiKam.
+
+**Note**: Do not use command line option `--database-directory`, it doesn't
+seem to work for this purpose.
+
+### Version <5.0.0
 
 Close digiKam and edit digikam configuration file, whose default path is
 `$HOME/.kde/share/config/digikamrc`
