@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "November 2016 in review"
-date: 2016-12-11
+date: 2016-12-12
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
