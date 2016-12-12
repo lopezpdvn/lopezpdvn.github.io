@@ -18,14 +18,14 @@ permalink: /resume/
   <span class="username">PedroIvanLopez</span>
 </a>
 
-Contents:
-
 * TOC
 {:toc}
 
 ## Objective
 
 Software Development Engineer interested in large scale systems and the Web.
+
+*Self-sponsored work authorization - TN Visa*
 
 ## Education
 
@@ -41,8 +41,14 @@ Software Development Engineer interested in large scale systems and the Web.
 
 *Monterrey, Nuevo León, Mexico*. 2015-2016.
 
-Occasionally coached undergrad students on computer science and software
-engineering topics.
+Coached undergrad students on computer science and software engineering topics.
+
+### Technical Writer
+
+2015-2016
+
+Wrote technical documentation on various topics. [Technical notes][] and
+[blog](http://pedroivanlopez.com/blog).
 
 ### Infosys Ltd
 
