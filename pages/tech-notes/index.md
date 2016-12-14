@@ -57,3 +57,4 @@ See also
 - [Digital Audio Workstation]({{ site.baseurl }}/daw "Digital Audio Workstation")
 - [Fedora DNF system upgrade]({{ site.baseurl }}/fedora-dnf-system-upgrade "Fedora DNF system upgrade")
 - [Skype]({{ site.baseurl }}/skype "Skype")
+- [Java]({{ site.baseurl }}/java "Java")

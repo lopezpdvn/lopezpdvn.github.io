@@ -29,6 +29,8 @@ Progress on projects:
 - [Personal website][]. [*TODO commits*]:
   - General maintenance and miscellaneous content
   - Added/updated [tech notes][]:
+    - [Skype][]
+    - [Java][]
 - [pytaskcoach][]: [*TODO commits*]
 
 **TODO commits total**.
@@ -37,6 +39,8 @@ Progress on projects:
 [tech notes]: {{ site.baseurl }}/tech-notes
 [pytaskcoach]: {{ github_prefix }}/pytaskcoach
 [Software engineering problems in Java]: {{ github_prefix}}/SoftwareEngineeringProblemsJava "Software engineering problems in Java"
+[Skype]: {{ site.baseurl }}/skype "Skype"
+[Java]: {{ site.baseurl }}/java "Java"
 
 ## Philanthropy #######################################################
 
