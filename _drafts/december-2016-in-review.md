@@ -32,6 +32,7 @@ Progress on projects:
     - [Skype][]
     - [Java][]
     - [Firefox][]
+    - [youtube-dl][]
 - [pytaskcoach][]: [*TODO commits*]
 
 **TODO commits total**.
@@ -43,6 +44,7 @@ Progress on projects:
 [Skype]: {{ site.baseurl }}/skype "Skype"
 [Java]: {{ site.baseurl }}/java "Java"
 [Firefox]: {{ site.baseurl }}/firefox "Mozilla Firefox"
+[youtube-dl]: {{ site.baseurl }}/youtube-dl "youtube-dl"
 
 ## Philanthropy #######################################################
 

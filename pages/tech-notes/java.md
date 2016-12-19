@@ -3,7 +3,7 @@ layout: tech-note
 title: Notes on Java
 permalink: /java/
 comments: true
-first_published: 2016-12-02
+first_published: 2016-12-14
 last_updated: 2016-12-14
 keywords: [java]
 ---
