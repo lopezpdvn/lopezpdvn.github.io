@@ -31,6 +31,7 @@ Progress on projects:
   - Added/updated [tech notes][]:
     - [Skype][]
     - [Java][]
+    - [Firefox][]
 - [pytaskcoach][]: [*TODO commits*]
 
 **TODO commits total**.
@@ -41,6 +42,7 @@ Progress on projects:
 [Software engineering problems in Java]: {{ github_prefix}}/SoftwareEngineeringProblemsJava "Software engineering problems in Java"
 [Skype]: {{ site.baseurl }}/skype "Skype"
 [Java]: {{ site.baseurl }}/java "Java"
+[Firefox]: {{ site.baseurl }}/firefox "Mozilla Firefox"
 
 ## Philanthropy #######################################################
 
