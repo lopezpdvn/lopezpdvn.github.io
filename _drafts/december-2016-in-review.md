@@ -33,6 +33,7 @@ Progress on projects:
     - [Java][]
     - [Firefox][]
     - [youtube-dl][]
+    - [Audacity][]
 - [pytaskcoach][]: [*TODO commits*]
 
 **TODO commits total**.
@@ -45,6 +46,7 @@ Progress on projects:
 [Java]: {{ site.baseurl }}/java "Java"
 [Firefox]: {{ site.baseurl }}/firefox "Mozilla Firefox"
 [youtube-dl]: {{ site.baseurl }}/youtube-dl "youtube-dl"
+[Audacity]: {{ site.baseurl }}/audacity "Audacity"
 
 ## Philanthropy #######################################################
 
