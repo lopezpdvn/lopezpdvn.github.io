@@ -5,7 +5,7 @@ permalink: /ffmpeg/
 comments: true
 tags: [video, audio, ffmpeg]
 first_published: 2016-04-17
-last_updated: 2016-10-06
+last_updated: 2016-12-22
 ---
 
 * TOC
@@ -190,6 +190,16 @@ Below command fixes it without re-encoding.
 
 {% highlight bash %}
 $ ffmpeg -i VID_20160924_012917.mp4  -c copy -metadata:s:v:0 rotate=0 output.mp4
+{% endhighlight %}
+
+## Map video and audio streams into single output
+
+Merge the video stream of `normal_export.mkv` and audio stream of
+`normal_export_Audio_1.mkv` into a single container MKV
+`normal_export_final.mkv`.
+
+{% highlight bash %}
+$ ffmpeg -i normal_export.mkv  -i normal_export_Audio_1.mkv -map 0:0 -map 1:1 -c:v copy -c:a copy normal_export_final.mkv
 {% endhighlight %}
 
 ## References
