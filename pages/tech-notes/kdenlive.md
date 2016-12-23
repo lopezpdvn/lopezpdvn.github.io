@@ -5,7 +5,7 @@ permalink: /kdenlive/
 comments: true
 keywords: [video, audio, ffmpeg, kdenlive]
 first_published: 2016-07-11
-last_updated: 2016-10-06
+last_updated: 2016-12-23
 ---
 
 * TOC
@@ -47,3 +47,18 @@ Extract a section of a video, including audio.
 
 - In window Render, check *More options*. Review all options since not all
   configuration is saved to the rendering profiles.
+
+## Dealing with noise in rendered output
+
+Sometimes Kdenlive introduces an unwanted noise in the rendered outputs. The
+only way I know to eliminate such noise is to export the video and audio
+separately, and then merge with a third-party tool like ffmpeg. This Kdenlive
+exports the audio separately without the noise.
+
+Let `normal_export.mkv` be the normal rendered output with both audio and
+video, the one containing the noise. Click on *Render* and check box *More
+options* in render dialog. Check boxes *Export audio* and *Stem audio export*
+on the right and click on *Render to File*. Let this output be
+`normal_export_Audio_1.mkv`
+
+Then do [this]({{ site.baseurl }}/ffmpeg/#map-video-and-audio-streams-into-single-output)

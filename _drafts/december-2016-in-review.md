@@ -35,7 +35,9 @@ Progress on projects:
     - [youtube-dl][]
     - [Audacity][]
     - [ffmpeg][]
+    - [Kdenlive][]
 - [pytaskcoach][]: [*TODO commits*]
+- [Software engineering problems in C#][]: [*TODO commits*]
 
 **TODO commits total**.
 
@@ -49,6 +51,8 @@ Progress on projects:
 [youtube-dl]: {{ site.baseurl }}/youtube-dl "youtube-dl"
 [Audacity]: {{ site.baseurl }}/audacity "Audacity"
 [ffmpeg]: {{ site.baseurl }}/ffmpeg "ffmpeg"
+[Software engineering problems in C#]: {{ github_prefix}}/SoftwareEngineeringProblemsCSharp "Software engineering problems in C#"
+[Kdenlive]: {{ site.baseurl }}/kdenlive "Kdenlive"
 
 ## Philanthropy #######################################################
 
