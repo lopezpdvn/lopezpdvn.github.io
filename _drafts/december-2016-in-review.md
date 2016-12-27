@@ -36,6 +36,7 @@ Progress on projects:
     - [Audacity][]
     - [ffmpeg][]
     - [Kdenlive][]
+    - [LADSPA][]
 - [pytaskcoach][]: [*TODO commits*]
 - [Software engineering problems in C#][]: [*TODO commits*]
 
@@ -53,6 +54,7 @@ Progress on projects:
 [ffmpeg]: {{ site.baseurl }}/ffmpeg "ffmpeg"
 [Software engineering problems in C#]: {{ github_prefix}}/SoftwareEngineeringProblemsCSharp "Software engineering problems in C#"
 [Kdenlive]: {{ site.baseurl }}/kdenlive "Kdenlive"
+[LADSPA]: {{ site.baseurl }}/ladspa "LADSPA"
 
 ## Philanthropy #######################################################
 

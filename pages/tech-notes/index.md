@@ -59,3 +59,4 @@ See also
 - [Skype]({{ site.baseurl }}/skype "Skype")
 - [Java]({{ site.baseurl }}/java "Java")
 - [youtube-dl]({{ site.baseurl }}/youtube-dl "youtube-dl")
+- [LADSPA]({{ site.baseurl }}/ladspa "LADSPA")
