@@ -39,6 +39,7 @@ Progress on projects:
     - [LADSPA][]
 - [pytaskcoach][]: [*TODO commits*]
 - [Software engineering problems in C#][]: [*TODO commits*]
+- [pysweng][]: [*TODO commits*]
 
 **TODO commits total**.
 
@@ -55,6 +56,7 @@ Progress on projects:
 [Software engineering problems in C#]: {{ github_prefix}}/SoftwareEngineeringProblemsCSharp "Software engineering problems in C#"
 [Kdenlive]: {{ site.baseurl }}/kdenlive "Kdenlive"
 [LADSPA]: {{ site.baseurl }}/ladspa "LADSPA"
+[pysweng]: {{ github_prefix  }}/pysweng "Software engineering problems in Python"
 
 ## Philanthropy #######################################################
 
