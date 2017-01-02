@@ -118,8 +118,9 @@ to February 2012
 - *Applications*: Microsoft Visual Studio, Visual Studio Code, Git, ClearCase,
   Toad, Eclipse, Cygwin, Vim, GNU Make, Ant, IPython, OpenSSH
 
-- *Technologies*: Node.js, ASP.NET 4 & 5, ASP.NET MVC 5, Docker, Spring,
-  Hibernate, ASP.NET Web Forms, Java EE, Sphinx documentation tools, Jekyll
+- *Technologies*: .NET, Java, Node.js, ASP.NET 4 & 5, ASP.NET MVC 5, Docker,
+  Spring, Hibernate, ASP.NET Web Forms, Java EE, Sphinx documentation tools,
+  Jekyll
 
 - *Operating Systems*: UNIX (Fedora, Ubuntu, Red Hat Enterprise Linux,
   Android), Microsoft Windows (Server 2003, XP, Vista, 7, 8, 10),
