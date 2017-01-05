@@ -60,3 +60,4 @@ See also
 - [Java]({{ site.baseurl }}/java "Java")
 - [youtube-dl]({{ site.baseurl }}/youtube-dl "youtube-dl")
 - [LADSPA]({{ site.baseurl }}/ladspa "LADSPA")
+- [Fedora 24 set up]({{ site.baseurl }}/fedora-24-set-up "Fedora 24 set up")
