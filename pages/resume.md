@@ -92,8 +92,8 @@ trade finance application used mainly in North America and Asia
 *Monterrey, Nuevo León, Mexico*. Research Assistant (internship), August 2011
 to February 2012
 
-- Developed and maintained robust control systems software in MATLAB and
-  Simulink
+- Developed and maintained robust control systems software in Python, MATLAB
+  and Simulink
 
 - Co-authored one published paper: Basin, M.; Serna, M.; Lopez-Hernandez, P.I.,
   Central energy-to-peak filter design for uncertain linear systems, Control

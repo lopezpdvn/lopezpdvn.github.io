@@ -14,8 +14,8 @@ degree in Information Engineering. I live near Monterrey, México.
 
 [^1]: Pronounced /'pɛdrɔ ˈaɪ vən ˈlɔpɛs/, see [this FAQ]({{ site.baseurl }}/faq/#how-is-your-name-pronounced "How is your name pronounced?").
 
-My professional interests are software development, Python, JavaScript, C#,
-.NET, web/HTTP, ASP.NET, Node.js, Unix/Linux and open source.
+My professional interests are software development, Python, JavaScript, Java,
+C#, .NET, web/HTTP, ASP.NET, Node.js, Unix/Linux and open source.
 
 My personal interests are software/computers, rationality, [TV/films][],
 [music][], English, medicine, biotech, [philanthropy][], philosophy and
