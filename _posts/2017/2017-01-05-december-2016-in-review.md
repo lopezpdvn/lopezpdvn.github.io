@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "December 2016 in review"
-date: 2016-12-13
+date: 2017-01-05
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -14,19 +14,19 @@ excerpt: December 2016 personal review, summary of activities, misc notes...
 {% capture gist_prefix %}https://gist.github.com/{{ site.github_username }}{% endcapture %}
 
 This is the *December 2016 in review* post. The previous monthly review post is
-[here][december-review].  The contents are:
+[here][november-review].  The contents are:
 
 * TOC
 {:toc}
 
-[december-review]: {% post_url 2016/2016-11-03-october-2016-in-review %}
+[november-review]: {% post_url 2016/2016-12-12-november-2016-in-review %}
 
 ## Public code repositories activity ###################################
 
 Progress on projects:
 
-- [Software engineering problems in Java][]: [*TODO commits*]
-- [Personal website][]. [*TODO commits*]:
+- [Software engineering problems in Java][]: [*5 commits*]
+- [Personal website][]. [*14 commits*]:
   - General maintenance and miscellaneous content
   - Added/updated [tech notes][]:
     - [Skype][]
@@ -37,11 +37,11 @@ Progress on projects:
     - [ffmpeg][]
     - [Kdenlive][]
     - [LADSPA][]
-- [pytaskcoach][]: [*TODO commits*]
-- [Software engineering problems in C#][]: [*TODO commits*]
-- [pysweng][]: [*TODO commits*]
+- [pytaskcoach][]: [*3 commits*]
+- [Software engineering problems in C#][]: [*8 commits*]
+- [pysweng][]: [*1 commits*]
 
-**TODO commits total**.
+**31 commits total**.
 
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [tech notes]: {{ site.baseurl }}/tech-notes
@@ -60,19 +60,22 @@ Progress on projects:
 
 ## Philanthropy #######################################################
 
-[Folding@Home during December][fah-stats] I scored TODO points, completed TODO
-work units and ranked TODO out of all the members of
-[The Longevity Meme team][]. My total score is TODO at the time of this
+[Folding@Home during December][fah-stats] I scored 41,188 points, completed 48
+work units and ranked 42nd out of all the members of
+[The Longevity Meme team][]. My total score is 1,498,020 at the time of this
 writing.  A graph of total daily production history during December can be
-found [here][fah-nov-graph].
+found [here][fah-dec-graph].
 
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
-[fah-nov-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2016/folding_at_home_stats_december_2016.png
+[fah-dec-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2017/folding_at_home_stats_december_2016.png
 
 ## Other ###############################################################
 
-- My personal website got TODO views.
+- My personal website got 793 views.
+
+- I published a [video](https://www.youtube.com/watch?v=UBYVAQMD1ms) of me
+  playing bass guitar.
 
 <br/>
 
