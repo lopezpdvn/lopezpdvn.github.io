@@ -4,6 +4,8 @@ title: gpg
 permalink: /gpg/
 comments: true
 tags: [security, gpg]
+first_published: 2016-05-04
+last_updated: 2017-01-10
 ---
 
 * TOC
@@ -12,6 +14,12 @@ tags: [security, gpg]
 Replace `gpg` with `gpg2` if/as needed.
 
 ## Cheatsheet
+
+List a key, previously imported
+
+{% highlight bash %}
+$ gpg --list-keys <keyid>
+{% endhighlight %}
 
 Import public key
 
