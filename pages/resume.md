@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Résumé
-permalink: /resume/
+permalink: /resume-1/
 ---
 
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}

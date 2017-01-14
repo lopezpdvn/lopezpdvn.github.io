@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+# coding=utf-8
+
+'''Make resume
+'''
+
+import sys
+
+FRONT_MATTER = """---
+title: Résumé
+permalink: /resume/
+---
+"""
+
+original_resume_fp = './resume.html'
+with open(original_resume_fp) as f:
+    original_resume = f.read()
+
+with open(original_resume_fp, 'w') as f:
+    f.write(FRONT_MATTER)
+    f.write(original_resume)
+
+msg = 'Written `{}` with front matter'
+print(msg.format(original_resume_fp), file=sys.stderr)
