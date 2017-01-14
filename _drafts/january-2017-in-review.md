@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "January 2017 in review"
-date: 2017-01-10
+date: 2017-01-14
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -27,11 +27,15 @@ Progress on projects:
 
 - [Personal website][]. [*TODO commits*]:
   - General maintenance and miscellaneous content
+  - Ported resume to [JSON Resume][]
   - Added/updated [tech notes][]:
     - [Fedora 24 set up][]
     - [gpg][]
 - [Software engineering problems in C#][]: [*TODO commits*]
 - [Software engineering problems in Java][]: [*TODO commits*]
+- [Software engineering problems in JavaScript][]: [*TODO commits*]
+  - Depend on ES6-supported Node.js, dropped Babel dependency
+- [pytaskcoach][]: [*TODO commits*]
 
 **TODO commits total**.
 
@@ -41,6 +45,9 @@ Progress on projects:
 [Fedora 24 set up]: {{ site.baseurl }}/fedora-24-set-up "Fedora 24 set up"
 [Software engineering problems in Java]: {{ github_prefix}}/SoftwareEngineeringProblemsJava "Software engineering problems in Java"
 [gpg]: {{ site.baseurl }}/gpg  "gpg"
+[pytaskcoach]: {{ github_prefix }}/pytaskcoach "pytaskcoach: Taskcoach tools"
+[Software engineering problems in JavaScript]: {{ github_prefix}}/software-engineering-problems-javascript "Software engineering problems in JavaScript"
+[JSON Resume]: https://jsonresume.org/ "JSON Resume"
 
 ## Philanthropy #######################################################
 
