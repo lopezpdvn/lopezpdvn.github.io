@@ -10,7 +10,7 @@ permalink: /about/
 
 My name is Pedro Ivan Lopez[^1].  {{ site.short_intro }}. I hold a Master's
 degree in Information Engineering. I live near Monterrey, México.
-[[photo]({{ site.baseurl }}/{{ site.images_dir }}/pedro_ivan_lopez_2016_01.jpg "Photo")]
+[[photo]({{ site.baseurl }}/{{ site.images_dir }}/pedro_ivan_lopez_2017_00.jpg "Photo")]
 
 [^1]: Pronounced /'pɛdrɔ ˈaɪ vən ˈlɔpɛs/, see [this FAQ]({{ site.baseurl }}/faq/#how-is-your-name-pronounced "How is your name pronounced?").
 

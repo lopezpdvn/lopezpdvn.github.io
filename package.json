@@ -16,11 +16,14 @@
   "scripts": {
     "push": "git push origin master",
     "servelocal": "npm run build && ./bin/servelocal",
-    "build": "npm run clean && ./scripts/make_network_profiles",
-    "clean": "rm -rvf _site && rm -rvf _includes/network_profiles/buttons/* && rm -rvf _includes/network_profiles/text/*"
+    "build": "npm run clean && ./scripts/make_network_profiles && npm run resume-export",
+    "clean": "rm -rvf _site && rm -rvf _includes/network_profiles/buttons/* && rm -rvf _includes/network_profiles/text/* && rm -fv resume.html",
+    "resume-export": "resume export resume.html --theme kendall"
   },
   "devDependencies": {
-    "shelljs": "latest",
-    "gulp": "latest"
+      "resume-cli": "latest",
+      "jsonresume-theme-kendall": "latest",
+      "jsonresume-theme-short": "latest",
+      "jsonresume-theme-stackoverflow": "latest"
   }
 }
