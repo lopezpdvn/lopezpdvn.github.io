@@ -2,17 +2,13 @@
   "basics": {
     "name": "Pedro Ivan Lopez",
     "label": "Software Engineer",
-    "picture": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAk0AAAAJGM2MzQyN2Q3LWMyOGUtNDRiYi1iN2VkLTYyNWRhNjAyOGY4Yw.jpg",
+    "picture": "http://pedroivanlopez.com/images/pedro_ivan_lopez_2017_01.jpg",
     "email": "m@pedroivanlopez.com",
     "phone": "+52 818 023 1545",
     "website": "http://pedroivanlopez.com",
-    "summary": "Software Development Engineer interested in large scale systems and the Web. <em>Self-sponsored work authorization - TN Visa</em>.<br/><br/><strong><a href=\"http://pedroivanlopez.com/resume.pdf\">Short PDF version</a></strong>",
+    "summary": "I'm a Software Development Engineer interested in large scale systems and the Web.  I have 3.5 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in back-end programming in Java, C#, JavaScript, and Python; writing agent/batch/job-oriented systems for financial systems, system administration for Windows and UNIX, hardware/computer engineering and robust control software.  A lot of the software I have designed and implemented is publicly available on GitHub.</br><br/><em>Self-sponsored work authorization - TN Visa</em>.<br/><br/><strong><a href=\"http://pedroivanlopez.com/resume.pdf\">Short PDF version</a></strong>",
     "us_work_permit_msg": "Self-sponsored work authorization - TN Visa",
-    "location": {
-      "city": "Monterrey",
-      "countryCode": "MX",
-      "region": "Nuevo León"
-    },
+    "developer_experience_brief": "I have 3.5 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in back-end programming in Java, C#, JavaScript, and Python; writing agent/batch/job-oriented systems for financial systems, system administration for Windows and UNIX, hardware/computer engineering and robust control software.\nI have applied design patterns such as Dependency Injection, Object-Relational Mapping (ORM), Module, Factory method, Iterator, Reactor, Singleton & Observer. Some of the architectural patterns I'm familiar with are Inversion of Control, Event-driven architecture & Model–View–Controller. I have also experience writing data manipulation and query scripts in SQL.\nA lot of the software I have designed and implemented is publicly available on GitHub.",
     "profiles": [
       {
         "network": "GitHub",
@@ -23,6 +19,11 @@
         "network": "LinkedIn",
         "username": "pedroivanlopez",
         "url": "https://www.linkedin.com/in/pedroivanlopez"
+      },
+      {
+        "network": "Twitter",
+        "username": "lopezpdvn",
+        "url": "https://twitter.com/lopezpdvn"
       }
     ]
   },
@@ -32,14 +33,22 @@
       "position": "Instructor",
       "startDate": "2015",
       "endDate": "2016",
-      "summary": "Coached undergrad students on computer science and software engineering topics."
+      "summary": "Coached job applicants and students on computer science and software engineering topics.",
+      "highlights": [
+        "Designed customized study plans based on assessment of the client's knowledge and skills via tests and interviews",
+        "Did one on one mock interviews and provided feedback afterward",
+        "Implemented and published implementations of data structures, algorithms, and solutions to programming problems. See <a href=\"https://github.com/lopezpdvn/DataStructuresAlgorithmsCSharp\">Data structures and algorithms in C#</a>, <a href=\"https://github.com/lopezpdvn/software-engineering-problems-javascript\">Software engineering problems in JavaScript</a>.  <a href=\"https://github.com/lopezpdvn/SoftwareEngineeringProblemsCSharp\">Software engineering problems in C#</a>, <a href=\"https://github.com/lopezpdvn/pysweng\">pysweng: Software engineering problems in Python</a>, <a href=\"https://github.com/lopezpdvn/data-structures-algorithms-javascript\">Data structures and algorithms in JavaScript</a>"
+      ]
     },
     {
       "company": "Self-employment/Freelancing",
       "position": "Technical Writer",
       "startDate": "2015",
       "endDate": "2016",
-      "summary": "Wrote technical documentation on various topics. <a href=\"http://pedroivanlopez.com/tech-notes\">Technical notes</a> and <a href=\"http://pedroivanlopez.com/blog\">blog</a>."
+      "summary": "Wrote technical documentation on topics such as programming, system administration, audio and video processing and production and security",
+      "highlights": [
+          "Published more than 45 technical notes at <a href=\"http://pedroivanlopez.com/tech-notes\">http://pedroivanlopez.com/tech-notes</a>"
+      ]
     },
     {
       "company": "Infosys Ltd",
@@ -125,7 +134,7 @@
     {
       "name": "Languages",
       "keywords": [
-        "Python", "JavaScript", "C#", "Java", "HTML", "CSS", "Bash/UNIX Shell Scripting", "VB.NET", "MATLAB", "LabVIEW", "XSLT"
+        "Python", "JavaScript", "C#", "Java", "SQL", "HTML", "CSS", "Bash/UNIX Shell Scripting", "VB.NET", "MATLAB", "LabVIEW", "XSLT"
       ]
     },
     {
@@ -135,15 +144,27 @@
       ]
     },
     {
-      "name": "Applications",
-      "keywords": [
-        "Microsoft Visual Studio", "Visual Studio Code", "Git", "ClearCase", "Toad", "Eclipse", "Cygwin", "Vim", "GNU Make", "Ant", "IPython", "OpenSSH"
-      ]
-    },
-    {
       "name": "Technologies",
       "keywords": [
         ".NET", "Java", "Node.js", "ASP.NET 4 & 5", "ASP.NET MVC 5", "Docker", "Spring", "Hibernate", "ASP.NET Web Forms", "Java EE", "Sphinx documentation tools", "Jekyll"
+      ]
+    },
+    {
+      "name": "Design patterns",
+      "keywords": [
+        "Dependency Injection", "Object-Relational Mapping (ORM)", "Module", "Factory method", "Iterator", "Reactor", "Singleton", "Observer"
+      ]
+    },
+    {
+      "name": "Architectural patterns",
+      "keywords": [
+        "Inversion of Control", "Event-driven architecture", "Model–View–Controller"
+      ]
+    },
+    {
+      "name": "Applications",
+      "keywords": [
+        "Microsoft Visual Studio", "Visual Studio Code", "Git", "ClearCase", "Toad", "Eclipse", "Cygwin", "Vim", "GNU Make", "Ant", "IPython", "OpenSSH"
       ]
     },
     {
@@ -155,7 +176,7 @@
     {
       "name": "Other",
       "keywords": [
-        "Linux user for eight years", "Proficient with UNIX command line interface", "Technical documentation writing", "Homebuilt computers enthusiast"
+        "Linux user for 8 years", "Proficient with UNIX command line interface", "Technical documentation writing", "Homebuilt computers enthusiast"
       ]
     }
   ],
@@ -174,25 +195,24 @@
       "name": "Software",
       "keywords": [
         "Development",
-        "Industry"
+        "Design",
+        "Industry",
+        "Web/HTTP",
+        "Security"
       ]
     },
     {
-      "name": "Web/HTTP"
-    },
-    {
-        "name": "Open source"
-    },
-    {
-        "name": "Rationality"
-    },
-    {
-        "name": "Philanthropy"
-    },
-    {
-        "name": "TV/films",
+        "name": "Open source",
         "keywords": [
-            "comedy"
+            "Open Collaboration",
+            "Security",
+            "Open Data"
+        ]
+    },
+    {
+        "name": "Rationality",
+        "keywords": [
+            "Decision-making"
         ]
     }
   ],
@@ -266,6 +286,15 @@
     {
       "organization": "",
       "summary": "For other projects see my <a href=\"/tech-notes\">technical notes</a>, as well as my <a href=\"https://github.com/lopezpdvn\">Github</a> and <a href=\"https://gist.github.com/lopezpdvn\">Gist</a> profiles."
+    }
+  ],
+
+  "awards": [
+    {
+      "title": "Mención Honorífica de Excelencia",
+      "date": "2012-09-01",
+      "awarder": "Autonomous University of Nuevo León",
+      "summary": "Award given to students that graduated with overall grade of 95/100 or more"
     }
   ]
 

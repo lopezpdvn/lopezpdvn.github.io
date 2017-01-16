@@ -18,7 +18,8 @@
     "servelocal": "npm run build && ./bin/servelocal",
     "build": "npm run clean && ./scripts/make_network_profiles && npm run resume-export",
     "clean": "rm -rvf _site && rm -rvf _includes/network_profiles/buttons/* && rm -rvf _includes/network_profiles/text/*",
-    "resume-export": "resume export resume.html --theme kendall && ./scripts/make_resume"
+    "resume-export": "resume export resume.html --theme kendall && ./scripts/make_resume",
+    "resume-publish": "npm run resume-export && resume publish --theme kendall"
   },
   "devDependencies": {
       "resume-cli": "latest",
