@@ -27,7 +27,9 @@
       }
     ]
   },
+
   "work": [
+
     {
       "company": "Self-employment/Freelancing",
       "position": "Instructor",
@@ -36,10 +38,12 @@
       "summary": "Coached job applicants and students on computer science and software engineering topics.",
       "highlights": [
         "Designed customized study plans based on assessment of the client's knowledge and skills via tests and interviews",
-        "Did one on one mock interviews and provided feedback afterward",
-        "Implemented and published implementations of data structures, algorithms, and solutions to programming problems. See <a href=\"https://github.com/lopezpdvn/DataStructuresAlgorithmsCSharp\">Data structures and algorithms in C#</a>, <a href=\"https://github.com/lopezpdvn/software-engineering-problems-javascript\">Software engineering problems in JavaScript</a>.  <a href=\"https://github.com/lopezpdvn/SoftwareEngineeringProblemsCSharp\">Software engineering problems in C#</a>, <a href=\"https://github.com/lopezpdvn/pysweng\">pysweng: Software engineering problems in Python</a>, <a href=\"https://github.com/lopezpdvn/data-structures-algorithms-javascript\">Data structures and algorithms in JavaScript</a>"
+        "Did one-on-one mock interviews and provided feedback afterward",
+        "Implemented and published implementations of data structures, algorithms, and solutions to programming problems. See <a href=\"https://github.com/lopezpdvn/DataStructuresAlgorithmsCSharp\">Data structures and algorithms in C#</a>, <a href=\"https://github.com/lopezpdvn/software-engineering-problems-javascript\">Software engineering problems in JavaScript</a>.  <a href=\"https://github.com/lopezpdvn/SoftwareEngineeringProblemsCSharp\">Software engineering problems in C#</a>, <a href=\"https://github.com/lopezpdvn/pysweng\">pysweng: Software engineering problems in Python</a>, <a href=\"https://github.com/lopezpdvn/data-structures-algorithms-javascript\">Data structures and algorithms in JavaScript</a>",
+        "Environment: Java, C#, Python, JavaScript, Node.js, .NET Core, Visual Studio Code, xUnit, JUnit, Mocha, Maven"
       ]
     },
+
     {
       "company": "Self-employment/Freelancing",
       "position": "Technical Writer",
@@ -47,9 +51,12 @@
       "endDate": "2016",
       "summary": "Wrote technical documentation on topics such as programming, system administration, audio and video processing and production and security",
       "highlights": [
-          "Published more than 45 technical notes at <a href=\"http://pedroivanlopez.com/tech-notes\">http://pedroivanlopez.com/tech-notes</a>"
+          "Published more than 45 technical notes at <a href=\"http://pedroivanlopez.com/tech-notes\">http://pedroivanlopez.com/tech-notes</a>",
+          "Some of the software tools and applications I wrote about are Fedora Linux, FFmpeg, Windows, Python, JavaScript, Node.js, OpenSSH, Git, Android, Anki, Cygwin, Audacity, among others",
+          "Environment: Jekyll, Markdown, Fedora, Windows, Python"
       ]
     },
+
     {
       "company": "Infosys Ltd",
       "position": "Systems Engineer",
@@ -63,7 +70,8 @@
         "On-call primary contact for approximately 20 weeks",
         "Led approximately 30 Request For Change procedures, mainly to install code updates and to update data via SQL scripts",
         "Supported production and test environments for clients and other teams in the bank",
-        "Knowledge management via documentation of known issues and fixes, to coach offshore resources"
+        "Knowledge management via documentation of known issues and fixes, to coach offshore resources",
+        "Environment: Java, .NET, C#, JavaScript, SQL, Bash, Hibernate, Spring, Eclipse, Toad, ClearCase, RedHat Linux, Windows Server, Autosys, Windows Script Host"
       ]
     },
 
@@ -72,9 +80,11 @@
       "position": "Software Engineer",
       "startDate": "2012-10",
       "endDate": "2013-01",
-      "summary": "Monterrey, Nuevo León, Mexico",
+      "summary": "Monterrey, Nuevo León, Mexico. Tested and validated a financial web application and platform",
       "highlights": [
-        "Performed testing and quality assurance of an enterprise financial Web platform for a Mexican bank, implemented in Java Enterprise Edition and JavaScript"
+        "Performed testing and quality assurance of an enterprise financial Web platform for a Mexican bank, implemented in Java Enterprise Edition and JavaScript",
+        "Types of tests performed: black box, system, functional, acceptance",
+        "Environment: Internet Explorer, Mozilla Firefox, Excel, JavaScript"
       ]
     },
 
@@ -83,10 +93,12 @@
       "position": "Research Assistant",
       "startDate": "2011-08",
       "endDate": "2012-02",
-      "summary": "Monterrey, Nuevo León, Mexico. Internship.",
+      "summary": "Monterrey, Nuevo León, Mexico. Internship. Research topics: control engineering, robust control, linear systems, filters.",
       "highlights": [
         "Developed and maintained robust control systems software in Python, MATLAB and Simulink",
-        "Co-authored one published paper: Basin, M.; Serna, M.; Lopez-Hernandez, P.I., Central energy-to-peak filter design for uncertain linear systems, Control Conference (ASCC), June 2013"
+        "Co-authored one published paper: Basin, M.; Serna, M.; Lopez-Hernandez, P.I., <a href=\"http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6606296&isnumber=6605987\">Central energy-to-peak filter design for uncertain linear systems</a>, Control Conference (ASCC), June 2013",
+        "Performed system administration of workstations and maintenance of hardware units",
+        "Environment: Python, MATLAB, LabVIEW, NI Elvis, LaTeX"
       ]
     },
 
@@ -97,11 +109,16 @@
       "endDate": "2012-08",
       "summary": "Monterrey, Nuevo León, Mexico. Internship.",
       "highlights": [
-        "Supported students in designing and troubleshooting electronic circuits and programming in Python, MATLAB and LabVIEW"
+        "Supported students in designing and troubleshooting programs in Python, MATLAB and LabVIEW",
+        "Performed system administration of workstations and maintenance of hardware units",
+        "Assisted professors with teaching electronics and programming during laboratory sessions",
+        "Environment: Python, MATLAB, LabVIEW, NI Elvis, LaTeX, BASIC"
       ]
     }
   ],
+
   "education": [
+
     {
       "institution": "Autonomous University of Nuevo León",
       "area": "Information Engineering in Computer Science",
@@ -110,31 +127,79 @@
       "endDate": "2015",
       "gpa": "4.0 = 94.5/100.0",
       "grade": "95.5/100.0",
-      "desc": "Graduated with honors"
+      "courses": [
+        "Research Methodology",
+        "Quantitative Methods (Statistics)",
+        "Discrete Mathematics for Geometric Design",
+        "Programming and Simulation",
+        "Information Systems",
+        "Object Oriented Programming",
+        "Database Management and Design",
+        "E-Business Oriented Information Systems",
+        "Computer Science Seminar",
+        "Management of Information Technology Projects",
+        "Technologies for Internet Information Security",
+        "Technologies for Organizational Change",
+        "Information Technology Management and Planning",
+        "Decision Support Systems",
+        "Human–computer Interaction"
+      ]
     },
+
     {
       "institution": "Autonomous University of Nuevo León",
-      "area": "Mechatronic Engineering",
+      "area": "Mechatronic Engineering. Intelligent Machines Design",
       "studyType": "Bachelor",
       "endDate": "2012",
       "gpa": "4.0 = 95.9/100.0",
-      "grade": "95.9/100.0"
+      "grade": "95.9/100.0",
+      "desc": "Graduated with honors",
+      "courses": [
+        "Basic Programming",
+        "Probability and Statistics",
+        "Discrete Mathematics",
+        "Data Structures",
+        "Advanced Programming",
+        "Theoretical Computer Science",
+        "Digital Electronics",
+        "Object Oriented Programming",
+        "Data Acquisition",
+        "Robot Architecture",
+        "Artificial Intelligence and Neural Networks",
+        "Project Management",
+        "Human–Computer Interaction",
+        "Machine Vision",
+        "Perception",
+        "Machine Perception"
+      ]
     }
+
   ],
+
   "publications": [
+
     {
       "name": "Central energy-to-peak filter design for uncertain linear systems",
       "publisher": "Control Conference (ASCC)",
       "releaseDate": "2013-06-23",
       "website": "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6606296&isnumber=6605987",
       "summary": "This paper presents the central finite-dimensional energy-to-peak filter for linear systems that is optimal with respect to a modified Bolza-Meyer quadratic criterion including the first degree state-dependent term and the attenuation control term with the opposite sign. The obtained solution is based on reducing the original energy-to-peak filtering problem to the corresponding mean-module filtering problem, using the technique proposed in [1]. The paper first presents the central energy-to-peak filter for linear systems, based on the optimal mean-module filter from [2], assuming the standard filtering conditions of stabilizability, detectability, and noise orthonormality. Finally, to relax the standard conditions, the paper presents the generalized version of the designed energy-to-peak filter in the absence of the noise orthonormality. Numerical simulations are conducted to verify performance of the designed energy-to-peak filter for linear systems against the central suboptimal H∞ filter [3]. The simulation results show a definite advantage in the values of the noise-output energy-to-peak norm in favor of the designed filter."
+    },
+
+    {
+      "name": "Technical notes",
+      "publisher": "Self published",
+      "website": "http://pedroivanlopez.com/tech-notes/",
+      "summary": "Technical documentation on topics such as programming, system administration, audio and video processing and production and security"
     }
+
   ],
+
   "skills": [
     {
       "name": "Languages",
       "keywords": [
-        "Python", "JavaScript", "C#", "Java", "SQL", "HTML", "CSS", "Bash/UNIX Shell Scripting", "VB.NET", "MATLAB", "LabVIEW", "XSLT"
+        "Python", "JavaScript", "C#", "Java", "SQL", "HTML", "CSS", "Bash/UNIX Shell Scripting", "VB.NET", "MATLAB", "LabVIEW", "XSLT", "LaTeX"
       ]
     },
     {
@@ -146,7 +211,7 @@
     {
       "name": "Technologies",
       "keywords": [
-        ".NET", "Java", "Node.js", "ASP.NET 4 & 5", "ASP.NET MVC 5", "Docker", "Spring", "Hibernate", "ASP.NET Web Forms", "Java EE", "Sphinx documentation tools", "Jekyll"
+        ".NET", "Java", "Node.js", "ASP.NET 4 & 5", "ASP.NET MVC 5", "Docker", "Spring", "Hibernate", "ASP.NET Web Forms", "Java EE", "Sphinx documentation tools", "Jekyll", "lejOS"
       ]
     },
     {
@@ -164,7 +229,7 @@
     {
       "name": "Applications",
       "keywords": [
-        "Microsoft Visual Studio", "Visual Studio Code", "Git", "ClearCase", "Toad", "Eclipse", "Cygwin", "Vim", "GNU Make", "Ant", "IPython", "OpenSSH"
+        "Microsoft Visual Studio", "Visual Studio Code", "Git", "ClearCase", "Toad", "Eclipse", "Cygwin", "Vim", "GNU Make", "Ant", "IPython", "OpenSSH", "Maven"
       ]
     },
     {
@@ -180,6 +245,7 @@
       ]
     }
   ],
+
   "languages": [
     {
       "language": "Spanish",
@@ -190,6 +256,7 @@
       "fluency": "Full professional proficiency"
     }
   ],
+
   "interests": [
     {
       "name": "Software",
@@ -221,67 +288,80 @@
     {
       "organization": "ASPNET5CO",
       "website": "http://pedroivanlopez.com/aspnet5co",
-      "summary": "Advocacy and Community. Efforts to advocate the ASP.NET Core framework"
+      "summary": "Advocacy and Community. Efforts to advocate the ASP.NET Core framework",
+      "startDate": "2015-04-02"
     },
     {
       "organization": "Data structures and algorithms in C#",
       "website": "https://github.com/lopezpdvn/DataStructuresAlgorithmsCSharp",
-      "summary": "Data structures and algorithms in C#"
+      "summary": "Data structures and algorithms in C#",
+      "startDate": "2015-06-26"
     },
     {
       "organization": "mazerob",
       "website": "http://pedroivanlopez.com/mazerob",
-      "summary": "Bluetooth-remote-control robot implemented with Java Virtual Machines on a PC and a Lego NXT Brick"
+      "summary": "Bluetooth-remote-control robot implemented with Java Virtual Machines on a PC and a Lego NXT Brick",
+      "startDate": "2015-07-15"
     },
     {
       "organization": "printer73x",
       "website": "http://pedroivanlopez.com/printer73x",
-      "summary": "A computer numerical control system for printing binary images"
+      "summary": "A computer numerical control system for printing binary images",
+      "startDate": "2011-12-03"
     },
     {
       "organization": "cerca",
       "website": "http://pedroivanlopez.com/cerca",
-      "summary": "A distance measurement system running on a personal computer and an 8-bit microcontroller"
+      "summary": "A distance measurement system running on a personal computer and an 8-bit microcontroller",
+      "startDate": "2012-11-02"
     },
     {
       "organization": "pysyspol",
       "website": "https://github.com/lopezpdvn/pysyspol",
-      "summary": "Cross-platform system policy for applications and environments, with Python"
+      "summary": "Cross-platform system policy for applications and environments, with Python",
+      "startDate": "2016-06-11"
     },
     {
       "organization": "syspol-js",
       "website": "https://github.com/lopezpdvn/syspol-js",
-      "summary": "Cross-platform system policy for applications and environments, with JavaScript"
+      "summary": "Cross-platform system policy for applications and environments, with JavaScript",
+      "startDate": "2015-12-26"
     },
     {
       "organization": "dotfiles",
       "website": "https://github.com/lopezpdvn/dotfiles",
-      "summary": "Miscellaneous configuration files and directories"
+      "summary": "Miscellaneous configuration files and directories",
+      "startDate": "2015-07-27"
     },
     {
       "organization": "Software engineering problems in C#",
       "website": "https://github.com/lopezpdvn/SoftwareEngineeringProblemsCSharp",
-      "summary": "Software engineering problems in C#"
+      "summary": "Software engineering problems in C#",
+      "startDate": "2015-08-06"
     },
     {
       "organization": "resources-viewer",
       "website": "https://github.com/lopezpdvn/resources-viewer",
-      "summary": "Browser based static app for viewing resources"
+      "summary": "Browser based static app for viewing resources",
+      "startDate": "2015-08-24"
     },
     {
       "organization": "timeman",
       "website": "https://github.com/lopezpdvn/timeman",
-      "summary": "Simple time management types"
+      "summary": "Simple time management types",
+      "startDate": "2016-07-06"
     },
     {
       "organization": "syspol",
       "website": "https://github.com/lopezpdvn/syspol",
-      "summary": "Cross-platform system policy for applications and environments"
+      "summary": "Cross-platform system policy for applications and environments",
+      "startDate": "2015-08-09"
     },
     {
       "organization": "swebserv",
       "website": "https://github.com/lopezpdvn/swebserv",
-      "summary": "Java program that simulates Denial-of-service attacks on HTTP/web servers"
+      "summary": "Java program that simulates Denial-of-service attacks on HTTP/web servers",
+      "startDate": "2013-07-09"
     },
     {
       "organization": "",

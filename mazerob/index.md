@@ -16,7 +16,8 @@ on Java Virtual Machines on a personal computer and a Lego NXT Brick configured
 as a master-slave architecture. Project mazerob was supervised by Professor
 [Elisa Schaeffer](http://elisa.dyndns-web.com "Elisa Schaeffer") and partially
 funded by [UANL](http://www.uanl.mx) through the
-[PROVERICYT](http://www.uanl.mx/universidad/investigacion/apoyos/provericyt.html)
+[PROVERICYT](http://www.uanl.mx/universidad/investigacion/apoyos/provericyt.html).
+See also [UANL - PISIS: Verano Científico](http://pisis.fime.uanl.mx/Verano/estudiantes.html).
 
 ## Development version
 
