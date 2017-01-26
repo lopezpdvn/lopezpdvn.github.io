@@ -48,12 +48,21 @@ Extract a section of a video, including audio.
 - In window Render, check *More options*. Review all options since not all
   configuration is saved to the rendering profiles.
 
+## Project settings
+
+When you add clips that don't match the video project settings, Kdenlive
+usually automatically suggests changes to the project settings. If it doesn't,
+you will have to manually configure them by editing or creating a new project
+profile.
+
 ## Dealing with noise in rendered output
 
 Sometimes Kdenlive introduces an unwanted noise in the rendered outputs. The
 only way I know to eliminate such noise is to export the video and audio
 separately, and then merge with a third-party tool like ffmpeg. This Kdenlive
 exports the audio separately without the noise.
+
+For this to work, it is recommended to always better to work with separate video and audio signals. So, if your video clips are container files with audio, *split the audio*.
 
 Let `normal_export.mkv` be the normal rendered output with both audio and
 video, the one containing the noise. Click on *Render* and check box *More
