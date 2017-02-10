@@ -4,7 +4,7 @@ title: Connect
 permalink: /connect/
 ---
 
-**{{ site.short_status }}**.
+{{ site.short_status }}
 
 {% include network_profiles/buttons/all.html %}
 
