@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "January 2017 in review"
-date: 2017-02-19
+date: 2017-02-20
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
