@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "March 2017 in review"
-date: 2017-03-25
+date: 2017-04-02
 lang: en
 categories: en
 tags: [en, month-in-review, tech_notes]
@@ -25,13 +25,13 @@ This is the *March 2017 in review* post. The previous monthly review post is
 
 Progress on projects:
 
-- [Personal website][]. [*1 commit*]:
-- [timeman][]. [*3 commit*]:
+- [Personal website][]. [*2 commits*]:
+- [timeman][]. [*3 commits*]:
   - Using functions from [pytaskcoach][] and [pyatt][]
 - [pytaskcoach][]: [*1 commit*]
-- [pyatt][]: [*3 commit*]
+- [pyatt][]: [*3 commits*]
 
-**8 commits total**.
+**9 commits total**.
 
 [Personal website]: {{ github_prefix }}/lopezpdvn.github.io "Pedro Ivan Lopez's website"
 [tech notes]: {{ site.baseurl }}/tech-notes
@@ -44,19 +44,18 @@ Progress on projects:
 
 ## Philanthropy #######################################################
 
-[Folding@Home during March][fah-stats] I scored TODO points, completed TODO
-work units and ranked TODO out of all the members of
-[The Longevity Meme team][]. My total score is TODO at the time of this
-writing.  A graph of total daily production history during March can be
-found [here][fah-jan-graph].
+[Folding@Home during March][fah-stats] I scored 119,483 points, completed 40
+work units and ranked 42nd out of all the members of [The Longevity Meme
+team][]. My total score is 1,728,347 at the time of this writing.  A graph of
+total daily production history during March can be found [here][fah-mar-graph].
 
 [fah-stats]: http://folding.extremeoverclocking.com/user_summary.php?s=&u=648628 "dreilopz - User Summary - EXTREME Overclocking Folding @ Home Stats"
 [The Longevity Meme team]: http://folding.extremeoverclocking.com/user_list.php?s=&t=32461 "The Longevity Meme Individual Users List"
-[fah-jan-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2017/folding_at_home_stats_march_2017.png
+[fah-mar-graph]: {{ site.baseurl }}/{{ site.images_dir }}/2017/folding_at_home_stats_march_2017.png
 
 ## Other ###############################################################
 
-- My personal website got TODO views.
+- My personal website got 268 views.
 
 <br/>
 
