@@ -142,6 +142,24 @@ $ sudo dnf list extras
 Don't remove the kernel packages. It's probably better not to remove any of
 these packages.
 
+#### Manually remove kernel packages
+
+After upgrading, sometimes DNF stops removing old kernel packages automatically
+when it installs a newest version of the kernel. To remove old versions, look
+them up with
+
+{% highlight bash %}
+$ sudo dnf list extras
+{% endhighlight %}
+
+And remove with
+
+{% highlight bash %}
+$ sudo dnf remove kernel-core-<version>
+{% endhighlight %}
+
+Where `<version>` is the *long package version*, for example `4.9.10-100.fc24`.
+
 ### Troubleshooting software installed in user directories
 
 If an application installed in a user directory is not working correctly, try
