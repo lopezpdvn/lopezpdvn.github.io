@@ -145,8 +145,8 @@ these packages.
 #### Manually remove kernel packages
 
 After upgrading, sometimes DNF stops removing old kernel packages automatically
-when it installs a newest version of the kernel. To remove old versions, look
-them up with
+when it installs a new version of the kernel. To remove old versions, look them
+up with
 
 {% highlight bash %}
 $ sudo dnf list extras

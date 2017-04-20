@@ -21,7 +21,7 @@
     "resume-export": "resume export resume.html --theme kendall && ./scripts/make_resume",
     "resume-publish": "npm run resume-export && resume publish --theme kendall"
   },
-  "devDependencies": {
+  "optionalDependencies": {
       "resume-cli": "latest",
       "jsonresume-theme-kendall": "latest",
       "jsonresume-theme-short": "latest",
