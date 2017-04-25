@@ -62,12 +62,16 @@ automatically lock the screen. You don't have to select a screen saver.
 
 A few recommended power settings.
 
-Press `Meta`+`E` to open *File Explorer*, and go to *Control Panel\Hardware and
-Sound\Power Options\System Settings*. Click on *Change settings that are
-currently unavailable*
+Press `Meta`+`E` to open *File Explorer*, and go to *Control Panel\All Control
+Panel Items*. Click on *Power Options*, then on *Require a password on wakeup*
+and then on *Change settings that are currently unavailable*
 
-Do nothing when the power button is pressed and when the lid is closed. Select
-*Require a password (recommended)* in section *Password protection on wakeup*.
+Do nothing when the power button is pressed, when the sleep button is pressed
+and when the lid is closed.
+
+Select *Require a password (recommended)* in section *Password protection on
+wakeup*.
+
 In section *Shutdown settings* uncheck *Turn on fast startup* and check
 *Sleep*, *Hibernate* and *Lock*.
 
@@ -113,11 +117,12 @@ Connect to the internet to let Windows update itself.
 
 *Settings* -> *Windows Defender*
 
-- *Get better, faster protection by sending Microsoft info about potential
-  security problems Windows Defender finds*: off.
+- *Cloud-based Protetion. Get better, faster protection by sending Microsoft
+  info about potential security problems Windows Defender finds*: off.
 
-- *Help us make Windows Defender better by sending Microsoft samples so we can
-  improve our anti-virus and malware measures...*: off.
+- *Automatic sample submission. Help us make Windows Defender better by sending
+  Microsoft samples so we can improve our anti-virus and malware measures...*:
+  off.
 
 Add exclusions as necessary.
 
@@ -141,9 +146,10 @@ running an unrecognized app from the Internet*.
 
 ## Windows Firewall
 
-Go to *Control Panel\All Control Panel Items\Windows Firewall\Customize
-Settings*. For both private and public network settings, select *Turn on
-Windows Firewall* and check *Notify me when Windows Firewall blocks a new app*.
+Go to *Control Panel\All Control Panel Items\Windows Firewall* and then click
+on *Change notification settings*. For both private and public network
+settings, select *Turn on Windows Firewall* and check *Notify me when Windows
+Firewall blocks a new app*.
 
 ## Analyze and optimize local partitions
 
