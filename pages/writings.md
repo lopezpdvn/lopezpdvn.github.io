@@ -10,6 +10,12 @@ All my writings. See also [projects]({{ site.baseurl }}/projects "Projects"),
 [blog]({{ site.baseurl }}/blog "Blog") and
 [tech notes]({{ site.baseurl }}/tech-notes "Tech notes").
 
+- [March 2017 in review]({% post_url 2017/2017-04-02-march-2017-in-review %}) *Personal review, summary of activities, misc notes...* (2 April 2016)
+- [February 2017 in review]({% post_url 2017/2017-03-04-february-2017-in-review %}) *Personal review, summary of activities, misc notes...* (4 March 2016)
+- [January 2017 in review]({% post_url 2017/2017-02-20-january-2017-in-review %}) *Personal review, summary of activities, misc notes...* (20 February 2016)
+- [December 2016 in review]({% post_url 2017/2017-01-05-december-2016-in-review %}) *Personal review, summary of activities, misc notes...* (5 January 2016)
+- [November 2016 in review]({% post_url 2016/2016-12-12-november-2016-in-review %}) *Personal review, summary of activities, misc notes...* (12 December 2016)
+- [October 2016 in review]({% post_url 2016/2016-11-03-october-2016-in-review %}) *Personal review, summary of activities, misc notes...* (3 November 2016)
 - [September 2016 in review]({% post_url 2016/2016-10-06-september-2016-in-review %}) *Personal review, summary of activities, misc notes...* (6 October 2016)
 - [August 2016 in review]({% post_url 2016/2016-09-04-august-2016-in-review %}) *Personal review, summary of activities, misc notes...* (4 September 2016)
 - [July 2016 in review]({% post_url 2016/2016-08-01-july-2016-in-review %}) *Personal review, summary of activities, misc notes...* (1 August 2016)
