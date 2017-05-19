@@ -13,7 +13,6 @@ keywords: [sql, database, data, sqlserver]
 
 Search by table and/or column name.
 
-
 {% highlight sql %}
 SELECT COLUMN_NAME
 --SELECT DISTINCT table_name

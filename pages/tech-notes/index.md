@@ -63,3 +63,4 @@ See also
 - [Fedora 24 set up]({{ site.baseurl }}/fedora-24-set-up "Fedora 24 set up")
 - [Microsoft SQL Server]({{ site.baseurl }}/microsoft-sql-server "Microsoft SQL Server")
 - [Zoho]({{ site.baseurl }}/zoho "zoho")
+- [POSIX Shell]({{ site.baseurl }}/posix-shell "POSIX Shell")
