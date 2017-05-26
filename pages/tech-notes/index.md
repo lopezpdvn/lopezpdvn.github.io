@@ -64,3 +64,4 @@ See also
 - [Microsoft SQL Server]({{ site.baseurl }}/microsoft-sql-server "Microsoft SQL Server")
 - [Zoho]({{ site.baseurl }}/zoho "zoho")
 - [POSIX Shell]({{ site.baseurl }}/posix-shell "POSIX Shell")
+- [SQL]({{ site.baseurl }}/sql "SQL")
