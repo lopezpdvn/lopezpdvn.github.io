@@ -65,3 +65,4 @@ See also
 - [Zoho]({{ site.baseurl }}/zoho "zoho")
 - [POSIX Shell]({{ site.baseurl }}/posix-shell "POSIX Shell")
 - [SQL]({{ site.baseurl }}/sql "SQL")
+- [Visual Studio]({{ site.baseurl }}/visual-studio "Visual Studio")
