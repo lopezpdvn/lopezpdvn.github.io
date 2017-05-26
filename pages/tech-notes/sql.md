@@ -1,15 +1,17 @@
 ---
 layout: tech-note
-title: Microsoft SQL Server
-permalink: /microsoft-sql-server/
+title: SQL
+permalink: /sql/
 comments: true
-first_published: 2017-04-27
-last_updated: 2017-04-27
-keywords: [sql, database, data, sqlserver]
+first_published: 2017-05-19
+last_updated: 2017-05-19
+keywords: [sql, database, data]
 ---
 
 * TOC
 {:toc}
+
+## Information schema
 
 Search by table and/or column name.
 
@@ -27,6 +29,19 @@ WHERE 1=1
 ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME
 {% endhighlight %}
 
+Search stored procedures and functions by name. Column `ROUTINE_DEFINITION` is
+the definition text of the function or procedure.
+
+{% highlight sql %}
+SELECT *
+FROM INFORMATION_SCHEMA.ROUTINES
+WHERE LOWER(ROUTINE_NAME) LIKE '%searchstring%'
+{% endhighlight %}
+
 <br/>
+
+## References
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Information_schema)
 
 ---
