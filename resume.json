@@ -31,6 +31,16 @@
   "work": [
 
     {
+      "company": "Epicor Software Corporation",
+      "position": "Software Developer",
+      "startDate": "2017",
+      "summary": "Developing software in ERP system for financial, supply chain and manufacturing modules.",
+      "highlights": [
+        "Environment: Environment: .NET, C#, Visual Studio 2015"
+      ]
+    },
+
+    {
       "company": "Self-employment/Freelancing",
       "position": "Freelance Consultant",
       "startDate": "2015",
