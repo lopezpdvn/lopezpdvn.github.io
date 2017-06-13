@@ -4,7 +4,7 @@ title: SQL
 permalink: /sql/
 comments: true
 first_published: 2017-05-19
-last_updated: 2017-05-19
+last_updated: 2017-06-12
 keywords: [sql, database, data]
 ---
 
@@ -36,6 +36,19 @@ the definition text of the function or procedure.
 SELECT *
 FROM INFORMATION_SCHEMA.ROUTINES
 WHERE LOWER(ROUTINE_NAME) LIKE '%searchstring%'
+{% endhighlight %}
+
+## Dummy true expression
+
+Use `1=1`:
+
+{% highlight sql %}
+SELECT *
+FROM INFORMATION_SCHEMA.ROUTINES
+WHERE 1=1
+  AND LOWER(ROUTINE_NAME) LIKE '%searchstring%'
+  OR ...
+  AND ...
 {% endhighlight %}
 
 <br/>

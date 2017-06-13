@@ -66,4 +66,4 @@ See also
 - [POSIX Shell]({{ site.baseurl }}/posix-shell "POSIX Shell")
 - [SQL]({{ site.baseurl }}/sql "SQL")
 - [Visual Studio]({{ site.baseurl }}/visual-studio "Visual Studio")
-- [zip]({{ site.baseurl }}/zip "zip")
+- [zip]({{ site.baseurl }}/zip "Zip")
