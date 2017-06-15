@@ -67,3 +67,4 @@ See also
 - [SQL]({{ site.baseurl }}/sql "SQL")
 - [Visual Studio]({{ site.baseurl }}/visual-studio "Visual Studio")
 - [zip]({{ site.baseurl }}/zip "Zip")
+- [Notepad++]({{ site.baseurl }}/notepad++ "Notepad++")
