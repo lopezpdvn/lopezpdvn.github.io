@@ -69,3 +69,4 @@ See also
 - [zip]({{ site.baseurl }}/zip "Zip")
 - [Notepad++]({{ site.baseurl }}/notepad++ "Notepad++")
 - [TFS]({{ site.baseurl }}/tfs "TFS")
+- [PowerShell]({{ site.baseurl }}/powershell "PowerShell")
