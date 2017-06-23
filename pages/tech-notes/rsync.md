@@ -2,6 +2,7 @@
 layout: tech-note
 title: Notes on rsync
 permalink: /rsync/
+last_updated: 2017-06-22
 comments: true
 tags: [rsync, file_system, synchronization]
 ---
@@ -116,3 +117,6 @@ $ rsync -anrvz --exclude-from=$exclude_file $srcdir/ $dstdir
 {% endhighlight %}
 
 You may add delete options.
+
+See function `pysyspol.fs.rsync_multiple` of
+[pysyspol project](https://github.com/lopezpdvn/pysyspol).
