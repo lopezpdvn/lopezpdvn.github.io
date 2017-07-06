@@ -21,6 +21,12 @@ List a key, previously imported
 $ gpg --list-keys <keyid>
 {% endhighlight %}
 
+List a key, previously imported
+
+{% highlight bash %}
+$ gpg --with-fingerprint --list-keys <keyid>
+{% endhighlight %}
+
 Import public key
 
 {% highlight bash %}
