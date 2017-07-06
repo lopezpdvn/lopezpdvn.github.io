@@ -343,3 +343,29 @@
   quote: |
       We are stubborn on vision. We are flexible on details.
   keywords: [motivation]
+
+- source: null
+  attribution: null
+  quote: |
+      Programming today is a race between software engineers striving to build
+      bigger and better idiot-proof programs, and the Universe trying to
+      produce bigger and better idiots. So far, the Universe is winning.
+  keywords: [rationality, programming, sweng]
+
+- source: null
+  attribution: Ralph Merkle
+  quote: |
+      Cryonics is an experiment. So far the control group isn't doing very well.
+  keywords: [cryonics]
+
+- source: On What Matters, vol. 2, Oxford, 2011, p. 616
+  attribution: Derek Parfit
+  quote: |
+      We live during the hinge of history. Given the scientific and
+      technological discoveries of the last two centuries, the world has never
+      changed as fast. We shall soon have even greater powers to transform, not
+      only our surroundings, but ourselves and our successors. If we act wisely
+      in the next few centuries, humanity will survive its most dangerous and
+      decisive period. Our descendants could, if necessary, go elsewhere,
+      spreading through this galaxy.
+  keywords: [futurism, ethics]
