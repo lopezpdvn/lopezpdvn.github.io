@@ -35,6 +35,25 @@ In *Microsoft SQL Server Management Studio*, open *Object Explorer*. Right
 click on server and click on *Properties*. Select page *Memory* and modify
 *Maximum server memory (in MB):*; 1024 is a good value.
 
+## `group_concat`: concatenate aggregated rows
+
+Taken from
+[this blog post](http://blog.shlomoid.com/2008/11/emulating-mysqls-groupconcat-function.html).
+
+{% highlight sql %}
+SELECT table_name, 
+       LEFT(column_names,LEN(column_names) - 1)   AS column_names 
+FROM   (SELECT table_name, 
+               (SELECT column_name + ',' AS [text()] 
+                FROM   information_schema.columns AS internal 
+                WHERE  internal.table_name = table_names.table_name 
+                FOR xml PATH ('') 
+               ) AS column_names 
+        FROM   (SELECT   table_name 
+                FROM     information_schema.columns 
+                GROUP BY table_name) AS table_names) AS pre_trimmed;
+{% endhighlight %}
+
 <br/>
 
 ---
