@@ -1,10 +1,10 @@
 ---
 layout: tech-note
-title: Notes on Fedora DNF system upgrade
+title: Fedora DNF system upgrade
 permalink: /fedora-dnf-system-upgrade/
 comments: true
 first_published: 2016-11-14
-last_updated: 2016-11-20
+last_updated: 2017-08-13
 keywords: [linux, os, fedora, dnf]
 ---
 
@@ -165,14 +165,35 @@ Where `<version>` is the *long package version*, for example `4.9.10-100.fc24`.
 If an application installed in a user directory is not working correctly, try
 re-installing it.
 
+### Troubleshooting sshd
+
+After upgrade, trying to connect to sshd port displays *connection refused*, while other ports may show *no route to host*.
+
+Run below command
+
+{% highlight bash %}
+$ sudo tcpdump -n host <host_ip_address> and port <port_number>
+{% endhighlight %}
+
+Then try to ssh again. If tpcdump dumps flags S and R, it means that although
+the server's firewall is not blocking port `<port_number>`, there is no service
+listening to it.
+
+In my case, my sshd server configuration file had
+[this issue](https://ask.fedoraproject.org/en/question/102726/f25-sshd-not-starting-on-boot-after-recent-updates/ "F25 SSHD not starting on boot after recent updates?").
+
 ## References
 
 - [DNF system upgrade][dnf-sys-upgrade]
 - [Fedora 24 installation guide][f24-install]
+- [Fedora 25 installation guide][f25-install]
 - [Disk cloning][diskclone]
+- [Fedora 24 End of Life](https://fedoramagazine.org/fedora-24-eol/ "Fedora 24 End of Life")
+- [Upgrading Fedora 24 to Fedora 25](https://fedoramagazine.org/upgrading-fedora-24-fedora-25/ "Upgrading Fedora 24 to Fedora 25")
 
 [dnf-sys-upgrade]: https://fedoraproject.org/wiki/DNF_system_upgrade
 [f24-install]: https://docs.fedoraproject.org/en-US/Fedora/24/html/Installation_Guide/index.html
+[f25-install]: https://docs.fedoraproject.org/en-US/Fedora/25/html/Installation_Guide/index.html "Fedora 25 Installation Guide"
 [diskclone]: https://wiki.archlinux.org/index.php/disk_cloning
 [Optional post-upgrade tasks]: https://fedoraproject.org/wiki/DNF_system_upgrade#Optional_post-upgrade_tasks
 
