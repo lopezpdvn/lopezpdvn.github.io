@@ -40,6 +40,9 @@ highlight: pygments
 gems:
   - jekyll-gist
 
+plugins:
+  - jekyll-sitemap
+
 defaults:
   -
     scope:
