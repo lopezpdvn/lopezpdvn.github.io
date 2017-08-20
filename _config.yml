@@ -40,6 +40,7 @@ highlight: pygments
 gems:
   - jekyll-gist
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 defaults:
   -
