@@ -5,22 +5,23 @@ email: m@pedroivanlopez.com
 openpgp_fingerprint: '7E7B 148F FA0F 101A 2506 D3AD C1FB 65BC 220B 9160'
 description: > # this means to ignore newlines until "baseurl:"
   Pedro Ivan Lopez's website.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://pedroivanlopez.com" # the base hostname & protocol for your site
-include: [_images, _modules, _sources, _static, resume.pdf, business_card.pdf]
-exclude: [gulpfile.js, package.json, node_modules, tmp, bin, TODO.md, business_card]
 twitter_username: lopezpdvn
 github_username:  lopezpdvn
 facebook_username: dreilopz
 timezone: America/Monterrey
+bitcoin_main_address: "1NspYfQDQFivQk5GA2jzTsN2HaEsPYxdEZ"
+
 permalink: "pretty"
 #permalink: "/blog/:year/:month/:title"
 permalink: "/:title"
 images_dir: "images"
-bitcoin_main_address: "1NspYfQDQFivQk5GA2jzTsN2HaEsPYxdEZ"
 statement_org_ideas: >
   The ideas expressed on this website do not necessarily represent the opinion
   of my employer or any other organization.
+include: [_images, _modules, _sources, _static, resume.pdf, business_card.pdf]
+exclude: [gulpfile.js, package.json, node_modules, tmp, bin, TODO.md, business_card]
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://pedroivanlopez.com" # the base hostname & protocol for your site
 
 short_intro: "I'm a software engineer interested in large scale systems and the Web"
 
@@ -37,10 +38,12 @@ markdown: kramdown
 
 highlight: pygments
 
+# GitHub Pages documentation calls this entry `plugins`.
 gems:
   - jekyll-gist
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 defaults:
   -
