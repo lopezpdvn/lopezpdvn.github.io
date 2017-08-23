@@ -3,8 +3,8 @@ layout: tech-note
 title: OpenSSH server on Windows with Cygwin
 permalink: /openssh-server-cygwin-windows/
 comments: true
-first_published: May 12 2016
-last_updated: May 17, 2016
+first_published: 2016-05-12
+last_updated: 2017-07-22
 tags: [windows, unix, cygwin, ssh, openssh, security]
 ---
 
@@ -46,7 +46,8 @@ sshd_config`:
     AuthorizedKeysFile  .ssh/authorized_keys
     PasswordAuthentication no
     PermitEmptyPasswords no
-    UsePrivilegeSeparation yes
+    StrictMode yes
+    #UsePrivilegeSeparation yes # deprecated in recent versions of OpenSSH
 
 ### Firewall
 
@@ -64,7 +65,8 @@ usually is `%SystemDrive%\<name of cygwin root dir>\usr\sbin\sshd.exe`. Click
 Select *Allow the connection* and click *Next*.
 
 Select the domains applicable to your network connection (at least one). Click
-*Next*.
+*Next*. Make sure that your network connection actually has the proper network
+location category.
 
 Enter a name and description of the inbound rule. Click *Next*.
 
