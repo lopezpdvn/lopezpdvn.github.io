@@ -73,3 +73,4 @@ See also
 - [Cron on Cygwin]({{ site.baseurl }}/cron-on-cygwin "Cron on Cygwin")
 - [Fedora 25 set up]({{ site.baseurl }}/fedora-25-set-up "Fedora 25 set up")
 - [Microsoft Outlook]({{ site.baseurl }}/outlook "Microsoft Outlook")
+- [Edit PDFs files on Linux]({{ site.baseurl }}/pdf-edit-linux "Microsoft Outlook")
