@@ -376,8 +376,25 @@
   keywords: [social]
 
 - source: (HATH, II, 232; N. p.11)
-  attribution: Nietzsche
+  attribution: Nietzsche, quoted by Lou
   quote: |
-      Nietzsche, quoted by Lou: "People who think deeply feel themselves to be
-      comedians in their relationship with others because they first have to
-      simulate a surface in order to be understood."
+      People who think deeply feel themselves to be comedians in their
+      relationship with others because they first have to simulate a surface in
+      order to be understood.
+
+- source: Attributed by Scott Berkun
+  attribution: Washington Roebling
+  quote: |
+      Man is after all a finite being in capacities and powers of doing actual
+      work. But when it comes to planning, one mind can in a few hours think
+      out enough work to keep a thousand men employed for years.
+  keywords: []
+
+- source: |
+    Attributed by Aubrey de Grey in
+    [interview by London Real](https://youtu.be/1JA7qOEcd3U?t=1h11m0s)
+  attribution: Aubrey de Grey's godfather
+  quote: |
+      Pay attention to what people are not saying more than what they are
+      saying because those tend to be the most important things.
+  keywords: []
