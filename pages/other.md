@@ -29,3 +29,5 @@ permalink: /other/
 - [Favorite quotes]({{ site.baseurl }}/quotes).
 
 - [Bookmarks / External resources]({{ site.baseurl }}/bookmarks).
+
+- [Misc social networks communication]({{ site.baseurl }}/misc-social-networks-communication/2017-09)
