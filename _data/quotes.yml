@@ -77,7 +77,7 @@
   quote: |
       I wanna live. I don't wanna die. That's the whole meaning of life: Not
       dying! I figured that shit out by myself in the third grade.
-  keywords: []
+  keywords: [death, life]
 
 - source: '[Mark Harris, "The Threat From Within," Vegetarian Times, February 1995, at 70 (quoting Henry Spira)](https://books.google.com.mx/books?id=iggAAAAAMBAJ&pg=PA6&lpg=PA6&dq=Mark+Harris+"The+Threat+From+Within"&source=bl&ots=H1qQV2TQfd&sig=WqEILV_4KdV14D53vuu6zf2fF4s&hl=en&sa=X&ved=0ahUKEwj1z_jVrbnKAhXBLSYKHeEOANkQ6AEIGjAA#v=onepage&q=henry spira&f=false).'
   attribution: Henry Spira
@@ -398,3 +398,34 @@
       Pay attention to what people are not saying more than what they are
       saying because those tend to be the most important things.
   keywords: []
+
+- source: null
+  attribution: Franz Kafka
+  quote: It's often safer to be in chains than to be free
+  keywords: []
+
+- source: Game of Thrones. Eastwatch.
+  attribution: Beric Dondarrion
+  quote: |
+      Here we all are, at the edge of the world, at the same moment, heading in
+      the same direction for the same reason.
+  keywords: []
+
+- source: Game of Thrones. Beyond the wall.
+  attribution: Beric Dondarrion
+  quote: |
+      > - Jon Snow: So what are you fighting for?
+      > - Beric Dondarrion: Life. Death is the enemy. The first enemy, and the
+      > last.
+      > - Jon: But we all die.
+      > - Beric: The enemy always wins. And we stil need to fight him. That's
+      > all I know.
+  keywords: [death, life]
+
+- source: The Aristrocrats (2005)
+  attribution: George Carlin
+  quote: |
+      I do like finding out where the line is drawn, deliberately crossing it,
+      bringing some of them with me across the line, and having them be happy
+      that I did.
+  keywords: [comedy, political_correctness]
