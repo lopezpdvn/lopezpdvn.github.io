@@ -77,3 +77,4 @@ See also
 - [robocopy]({{ site.baseurl }}/robocopy "Robocopy")
 - [C#]({{ site.baseurl }}/c# "C#")
 - [C]({{ site.baseurl }}/c "C")
+- [Haskell]({{ site.baseurl }}/haskell "Haskell")
