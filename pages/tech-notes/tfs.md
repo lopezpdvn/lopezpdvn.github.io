@@ -3,7 +3,7 @@ layout: tech-note
 title: TFS
 permalink: /tfs/
 first_published: 2017-06-15
-last_updated: 2017-11-16
+last_updated: 2017-12-07
 keywords: [visualstudio, tfs]
 ---
 
@@ -43,6 +43,18 @@ Run below to delete specific workspace
 ```
 tf workspace /delete /server:https://[yours].visualstudio.com/DefaultCollection [workspacename];[username]
 ```
+
+## Search changeset comments
+
+Install `TFS Power Tools`. Open developer command prompt. Launch GUI app
+_Search Changesets_ with command
+
+```
+tfpt searchcs
+```
+
+Make sure that the the server name URL includes the TFS collection, for
+example: `http://some-host-name:51234/tfs/CollectionName`
 
 ## References
 
