@@ -4,7 +4,7 @@ title: Fedora DNF system upgrade
 permalink: /fedora-dnf-system-upgrade/
 comments: true
 first_published: 2016-11-14
-last_updated: 2017-08-13
+last_updated: 2017-12-23
 keywords: [linux, os, fedora, dnf]
 ---
 
@@ -181,6 +181,7 @@ listening to it.
 
 In my case, my sshd server configuration file had
 [this issue](https://ask.fedoraproject.org/en/question/102726/f25-sshd-not-starting-on-boot-after-recent-updates/ "F25 SSHD not starting on boot after recent updates?").
+To fix it, [run bash from GRUB](https://wiki.archlinux.org/index.php/reset_root_password#Using_GRUB_to_invoke_bash).
 
 ## References
 
