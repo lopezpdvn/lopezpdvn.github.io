@@ -4,7 +4,7 @@ title: Fedora DNF system upgrade
 permalink: /fedora-dnf-system-upgrade/
 comments: true
 first_published: 2016-11-14
-last_updated: 2017-12-23
+last_updated: 2017-12-26
 keywords: [linux, os, fedora, dnf]
 ---
 
@@ -122,7 +122,7 @@ $ sudo dd if=/dev/sdX of=/mnt/backup_body/mbr.img bs=512 count=1
 
 After running `sudo dnf system-upgrade reboot`, the system reboots and starts
 upgrading while displaying status information on the screen. At some point the
-text displayed doesn't see to make any sense, for example I saw a lot of `[`
+text displayed doesn't seem to make any sense, for example I saw a lot of `[`
 characters separated by newlines. This is OK, let the upgrade continue and
 eventually the machine will reboot to the new kernel/system.
 
