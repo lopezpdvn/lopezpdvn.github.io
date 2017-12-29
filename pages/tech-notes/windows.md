@@ -3,6 +3,7 @@ layout: tech-note
 title: Notes on Windows
 permalink: /windows/
 comments: true
+last_updated: 2017-12-28
 tags: [windows, sysadmin]
 ---
 
@@ -20,3 +21,7 @@ Exceptions are
 - You wish to backup not only user data but system state too. However, in this
   case, you should consider using [system
   images](http://windows.microsoft.com/en-us/windows7/what-is-a-system-image).
+
+## Remote Desktop Protocol Certificates Changes
+
+- [Verify thumbprints](https://superuser.com/questions/643139/where-is-my-rdp-server-certificate-stored)
