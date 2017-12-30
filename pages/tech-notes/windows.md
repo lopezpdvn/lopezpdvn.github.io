@@ -3,7 +3,7 @@ layout: tech-note
 title: Notes on Windows
 permalink: /windows/
 comments: true
-last_updated: 2017-12-28
+last_updated: 2017-12-30
 tags: [windows, sysadmin]
 ---
 
@@ -23,5 +23,7 @@ Exceptions are
   images](http://windows.microsoft.com/en-us/windows7/what-is-a-system-image).
 
 ## Remote Desktop Protocol Certificates Changes
+
+keywords: rdp.
 
 - [Verify thumbprints](https://superuser.com/questions/643139/where-is-my-rdp-server-certificate-stored)
