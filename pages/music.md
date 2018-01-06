@@ -12,14 +12,13 @@ permalink: /music/
 Check out these videos of me playing bass. Here's the
 [playlist on YouTube](https://www.youtube.com/playlist?list=PLrJXVc9tUY-fw-3fSY_ulV4Tp2wy03H3e).
 
-<br/>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=0AcghxZvLeU" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0AcghxZvLeU" frameborder="0" allowfullscreen></iframe>
 
 <br/>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=UBYVAQMD1ms" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UBYVAQMD1ms" frameborder="0" allowfullscreen></iframe>
 
 <br/>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=GUTyn1CNx8U" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GUTyn1CNx8U" frameborder="0" allowfullscreen></iframe>
 
 <br/>
 
