@@ -6,7 +6,7 @@ categories: en
 tags: [en, web, chrome]
 comments: true
 first_published: 2016-06-06
-last_updated: 2017-07-27
+last_updated: 2018-01-07
 permalink: /chrome/
 ---
 
@@ -28,3 +28,8 @@ executable is `google-chrome`. Switch for profile selection is
 
 Option `--user-data-dir=<path_to_dir>`. Inside `<path_to_dir>` you have the
 several [profile directories](#profiles), including the default one.
+
+## Increase security with site isolation
+
+`chrome://flags/#enable-site-per-process`, see
+[Google Chrome Help](https://support.google.com/chrome/answer/7623121).
