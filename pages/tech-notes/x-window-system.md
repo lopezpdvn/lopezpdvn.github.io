@@ -3,6 +3,7 @@ layout: tech-note
 title: Notes on X Window System
 permalink: /x/
 comments: true
+last_updated: 2018-01-09
 tags: [sysadmin, x]
 ---
 
@@ -10,6 +11,8 @@ tags: [sysadmin, x]
 {:toc}
 
 ## X Windows authorization
+
+*Keywords: vnc, remote desktop.*
 
 Suppose you are user *foo*. Do this to execute a graphical application as
 another user *bar*.

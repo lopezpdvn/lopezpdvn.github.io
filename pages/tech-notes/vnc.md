@@ -5,7 +5,7 @@ permalink: /vnc/
 comments: true
 tags: [sysadmin, system_administration, vnc, ssh]
 first_published: 2016-05-20
-last_updated: 2016-05-25
+last_updated: 2018-01-09
 ---
 
 * TOC
@@ -49,6 +49,10 @@ $ vncviewer &
 {% endhighlight %}
 
 And enter `localhost:<localport>` and password.
+
+## See also
+
+- [X Windows authorization]({{ site.baseurl }}/x/#x-windows-authorization).
 
 ## References
 
