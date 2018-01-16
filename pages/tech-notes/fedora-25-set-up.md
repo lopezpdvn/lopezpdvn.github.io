@@ -8,7 +8,6 @@ comments: true
 first_published: 2017-08-14
 last_updated: 2017-08-14
 permalink: /fedora-25-set-up/
-redirect_from: /fedora/
 ---
 
 * TOC

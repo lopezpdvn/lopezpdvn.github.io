@@ -1,13 +1,13 @@
 ---
 layout: tech-note
-title: "Fedora 25 set up"
+title: "Fedora 26 set up"
 lang: en
 categories: en
 tags: [en, linux, tech, operating_system, firewall, security, fedora]
 comments: true
-first_published: 2017-08-14
-last_updated: 2017-08-14
-permalink: /fedora-25-set-up/
+first_published: 2018-01-15
+last_updated: 2018-01-15
+permalink: /fedora-26-set-up/
 redirect_from: /fedora/
 ---
 
@@ -68,13 +68,18 @@ Install [RPM Fusion](http://rpmfusion.org).
 sudo dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 {% endhighlight %}
 
+## GUI apps with elevated permissions
+
+Some of the configuration can be done with GUI apps. See
+[X Windows authorization]({{ site.baseurl }}/x/#x-windows-authorization).
+
 ## Firewall configuration
 
-I configure services but keep them globally disabled, and then selectively
-enable them with *rich rules*. When editing the rich rules, using a MAC address
-as *source* doesn't work when the source has its MAC address spoofed. I haven't
-tested with the source with real hardware MAC address. Using a IP in *source*
-works OK.
+I configure services with `firewall-config` but keep them globally disabled,
+and then selectively enable them with *rich rules*. When editing the rich
+rules, using a MAC address as *source* doesn't work when the source has its MAC
+address spoofed. I haven't tested with the source with real hardware MAC
+address. Using a IP in *source* works OK.
 
 ## Local email with *postfix* and *mailx*
 
@@ -165,7 +170,7 @@ List targets
 $ systemctl list-units --type=target
 {% endhighlight %}
 
-[This table](https://wiki.archlinux.org/index.php/systemd#Targets_table)
+[This table](https://wiki.archlinux.org/index.php/systemd#Mapping_between_SysV_runlevels_and_systemd_targets)
 roughly maps *systemd* targets to SysV runlevels. SysV runlevel 3 ~=
 `multiuser.target` and SysV runlevel 5 ~= `graphical.target`.
 
@@ -211,7 +216,7 @@ $ sudo dnf -y install ffmpeg
 {% highlight bash %}
 $ sudo dnf -y install ruby-devel redhat-rpm-config
 $ sudo dnf -y groupinstall "C Development Tools and Libraries"
-$ gem install jekyll 'jekyll-gist'
+$ gem install jekyll 'jekyll-gist' 'jekyll-sitemap' 'jekyll-seo-tag' 'jekyll-redirect-from'
 {% endhighlight %}
 
 ## Other software
@@ -225,10 +230,21 @@ $ sudo dnf -y install libreoffice-calc libreoffice-writer libreoffice-impress re
 If you have specified an IP address on wich sshd has to listen to
 (`sshd_config`), add `network-online.target` to its systemd unit.
 
+{% highlight bash %}
+$ sudo vi /etc/systemd/system/multi-user.target.wants/sshd.service
+{% endhighlight %}
+
+Add `network-online.target` to `Wants` and `After`
+
+{% highlight bash %}
+$ sudo systemctl daemon-reload
+{% endhighlight %}
+
 ## References
 
 - <https://ask.fedoraproject.org/en/question/81052/local-user-mail/>
 - <https://wiki.archlinux.org/index.php/systemd>
+- <https://ask.fedoraproject.org/en/question/102726/f25-sshd-not-starting-on-boot-after-recent-updates/>
 
 [dnf-upgrade]: {{ site.baseurl }}/fedora-dnf-system-upgrade "Notes on Fedora DNF system upgrade"
 
