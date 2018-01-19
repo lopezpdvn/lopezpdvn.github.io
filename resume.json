@@ -5,9 +5,9 @@
     "picture": "http://pedroivanlopez.com/images/pedro_ivan_lopez_2017_01.jpg",
     "email": "m@pedroivanlopez.com",
     "website": "http://pedroivanlopez.com",
-    "summary": "I'm a Software Development Engineer interested in large scale systems and the Web.  I have +4 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in application programming in C#, Java, JavaScript, and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software.  A lot of the software I have designed and implemented is publicly available on GitHub.<br/><br/>Other Résumé versions: <a href=\"http://pedroivanlopez.com/resume.pdf\"><strong>PDF</strong></a>, <a href=\"http://pedroivanlopez.com/resume-one-page.pdf\"><strong>One-page PDF</strong></a>, <a href=\"http://pedroivanlopez.com/resume.docx\"><strong>MS Word</strong></a>, <a href=\"http://pedroivanlopez.com/resume-one-page.docx\"><strong>One-page MS Word</strong></a>, <a href=\"http://pedroivanlopez.com/resume.json\"><strong>JSON Résumé</strong></a>",
+    "summary": "I'm a Software Development Engineer interested in large scale systems and the Web. I have 5 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in application programming in C#, Java, JavaScript, and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software. A lot of the software I have designed and implemented is publicly available on GitHub.<br/><br/>Other Résumé versions: <a href=\"http://pedroivanlopez.com/resume.pdf\"><strong>PDF</strong></a>, <a href=\"http://pedroivanlopez.com/resume-one-page.pdf\"><strong>One-page PDF</strong></a>, <a href=\"http://pedroivanlopez.com/resume.docx\"><strong>MS Word</strong></a>, <a href=\"http://pedroivanlopez.com/resume-one-page.docx\"><strong>One-page MS Word</strong></a>, <a href=\"http://pedroivanlopez.com/resume.json\"><strong>JSON Résumé</strong></a>",
     "us_work_permit_msg": "",
-    "developer_experience_brief": "I have +4 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in application programming in C#, Java, JavaScript, and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software.\nI worked with design patterns Dependency Injection, Object-Relational Mapping (ORM), Module, Factory method, Iterator, Reactor, Singleton & Observer. Some of the architectural patterns I'm familiar with are Multitier Architecture, Inversion of Control, Event-driven architecture & Model–View–Controller. I have also experience writing data manipulation and query scripts in SQL.\nA lot of the software I have designed and implemented is publicly available on GitHub.",
+    "developer_experience_brief": "I have 5 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in application programming in C#, Java, JavaScript, and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software.\nI worked with design patterns Dependency Injection, Object-Relational Mapping (ORM), Module, Factory method, Iterator, Reactor, Singleton & Observer. Some of the architectural patterns I'm familiar with are Multitier Architecture, Inversion of Control, Event-driven architecture & Model–View–Controller. I have also experience writing data manipulation and query scripts in SQL.\nA lot of the software I have designed and implemented is publicly available on GitHub.",
     "profiles": [
       {
         "network": "GitHub",
@@ -24,7 +24,7 @@
         "username": "lopezpdvn",
         "url": "https://twitter.com/lopezpdvn"
       }
-    ]
+   ]
   },
 
   "work": [
@@ -33,9 +33,14 @@
       "company": "Epicor Software Corporation",
       "position": "Software Developer",
       "startDate": "2017",
-      "summary": "Developing software in ERP system for financial, supply chain and manufacturing modules.",
+      "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements customers in North and South America.",
       "highlights": [
-        "Environment: Environment: .NET, C#, Visual Studio 2015"
+        "Delivered the first mobile access dashboard solution of the Monterrey branch, a responsive HTML5 client with C#/.NET on the backend",
+        "Developed 5 custom file formatters for the ACH network and Positive Pay bank services",
+        "Wrote T-SQL code generators in Python for data/schema definition and data querying",
+        "Created 15 new forms/modules for the Epicor ERP",
+        "Customized financial, supply chain and manufacturing modules of the Epicor ERP system 10+",
+        "Environment: .NET 4.6, C# 6, T-SQL for SQL Server 2016, Visual Studio 2017, Infragistics"
       ]
     },
 
