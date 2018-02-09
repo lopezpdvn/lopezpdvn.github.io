@@ -79,3 +79,4 @@ See also
 - [C]({{ site.baseurl }}/c "C")
 - [Haskell]({{ site.baseurl }}/haskell "Haskell")
 - [Fedora 26 set up]({{ site.baseurl }}/fedora-26-set-up "Fedora 26 set up")
+- [WhatsApp]({{ site.baseurl }}/whatsapp "WhatsApp")
