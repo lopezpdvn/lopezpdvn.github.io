@@ -3,7 +3,7 @@ layout: tech-note
 title: TFS
 permalink: /tfs/
 first_published: 2017-06-15
-last_updated: 2017-12-07
+last_updated: 2018-03-22
 keywords: [visualstudio, tfs]
 ---
 
@@ -56,6 +56,13 @@ tfpt searchcs
 Make sure that the the server name URL includes the TFS collection, for
 example: `http://some-host-name:51234/tfs/CollectionName`
 
+## Checking membership to groups
+
+```
+tfssecurity /m “{name of project group}” n:{domain\username} /collection:{URL of TFS App Tier}
+```
+
 ## References
 
 - [Branching and Merging (Team Explorer Everywhere)](https://msdn.microsoft.com/en-us/library/gg475908(v=vs.100).aspx)
+- [Determining User Membership in TFS Security Group in TFS 2010](https://blogs.technet.microsoft.com/chrad/2010/12/17/tfs-2010-securityhow-to-determine-if-a-user-is-a-member-of-a-tfs-group-or-a-windows-group/)
