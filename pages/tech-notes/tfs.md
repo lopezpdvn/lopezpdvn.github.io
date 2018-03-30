@@ -3,7 +3,7 @@ layout: tech-note
 title: TFS
 permalink: /tfs/
 first_published: 2017-06-15
-last_updated: 2018-03-22
+last_updated: 2018-03-30
 keywords: [visualstudio, tfs]
 ---
 
@@ -59,8 +59,13 @@ example: `http://some-host-name:51234/tfs/CollectionName`
 ## Checking membership to groups
 
 ```
-tfssecurity /m “{name of project group}” n:{domain\username} /collection:{URL of TFS App Tier}
+tfssecurity /m "{name of project group}" n:{domain\username} /collection:{URL of TFS App Tier}
 ```
+
+## TFS in Visual Studio is slow
+
+Check in or store elsewhere pending changes, for all workspaces. Remove all
+local and remote workspaces. End all related TFS and Visual Studio processes.
 
 ## References
 
