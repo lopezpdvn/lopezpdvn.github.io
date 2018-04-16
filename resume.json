@@ -33,14 +33,16 @@
       "company": "Epicor Software Corporation",
       "position": "Software Developer",
       "startDate": "2017",
-      "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements customers in North and South America.",
+      "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements customers in North and South America. My role also involves project management responsibilities and technical tasks on a wide range of technologies of the Epicor 10 platform.",
       "highlights": [
         "Delivered the first mobile access dashboard solution of the Monterrey branch, a responsive HTML5 client with C#/.NET on the backend",
         "Developed 5 custom file formatters for the ACH network and Positive Pay bank services",
         "Wrote T-SQL code generators in Python for data/schema definition and data querying",
         "Created 15 new forms/modules for the Epicor ERP",
         "Customized financial, supply chain and manufacturing modules of the Epicor ERP system 10+",
-        "Environment: .NET 4.6, C# 6, T-SQL for SQL Server 2016, Visual Studio 2017, Infragistics"
+        "Close and direct communication with customers",
+        "Worked on most of the technologies of the Epicor 10 platform, although I've had more experience with client & server ICE SDK projects",
+        "Environment: .NET 4.6, C# 6, T-SQL for SQL Server 2016, Visual Studio 2017, JIRA, Infragistics, Service Connect"
       ]
     },
 
