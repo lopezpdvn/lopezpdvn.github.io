@@ -4,7 +4,7 @@ title: Notes on .NET
 permalink: /dotnet/
 comments: true
 first_published: 2016-08-18
-last_updated: 2016-08-18
+last_updated: 2018-05-04
 keywords: [csharp, dotnet, dotnetcore]
 ---
 
@@ -30,3 +30,16 @@ Avoid segmentation faults on kernel 4.6.x (see issue
 {% highlight bash %}
 $ export COMPlus_INTERNAL_ThreadSuspendInjection=0
 {% endhighlight %}
+
+## Performance measurement
+
+For quick performance measurements, use good old
+[System.Diagnostics.Stopwatch][sw]. On Windows, a simple option for logging the
+sampling of elapsed time is to write to the Event Log via
+[System.Diagnostics.EventLog][evtlog] class.
+
+Compile in release mode, close applications and stop services that are not
+needed. Don't attach debuggers to the processes that you are measuring.
+
+[sw]: https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch
+[evtlog]: https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.eventlog
