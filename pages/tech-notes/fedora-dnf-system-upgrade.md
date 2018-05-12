@@ -4,7 +4,7 @@ title: Fedora DNF system upgrade
 permalink: /fedora-dnf-system-upgrade/
 comments: true
 first_published: 2016-11-14
-last_updated: 2018-01-17
+last_updated: 2018-05-12
 keywords: [linux, os, fedora, dnf]
 ---
 
@@ -12,6 +12,12 @@ keywords: [linux, os, fedora, dnf]
 {:toc}
 
 Complementary/personal steps to [main guide][dnf-sys-upgrade].
+
+## Ensure enough storage space for kernels
+
+Usually dnf only keeps the 3 latest kernel versions, but sometimes it fails to
+remove old kernel package groups. See
+[Manually remove kernel packages](#manually-remove-kernel-packages).
 
 ## Backup
 
