@@ -7,6 +7,9 @@ permalink: /projects/
 {% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 {% capture gist_prefix %}https://gist.github.com/{{ site.github_username }}{% endcapture %}
 
+_I need to update this list, but since most of my public projects are
+software-based, you can just take a look at my [GitHub][] profile._
+
 For other projects see my [technical notes][], as well as my [Github][] and
 [Gist][] profiles.
 
