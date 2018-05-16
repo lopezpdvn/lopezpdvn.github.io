@@ -1,13 +1,14 @@
 ---
 layout: tech-note
-title: "Fedora 26 set up"
+title: "Fedora 27 set up"
 lang: en
 categories: en
 tags: [en, linux, tech, operating_system, firewall, security, fedora]
 comments: true
-first_published: 2018-01-15
-last_updated: 2018-01-15
-permalink: /fedora-26-set-up/
+first_published: 2018-05-12
+last_updated: 2018-05-16
+permalink: /fedora-27-set-up/
+redirect_from: /fedora/
 ---
 
 * TOC
@@ -243,7 +244,7 @@ $ sudo systemctl daemon-reload
 
 - <https://ask.fedoraproject.org/en/question/81052/local-user-mail/>
 - <https://wiki.archlinux.org/index.php/systemd>
-- <https://ask.fedoraproject.org/en/question/102726/f25-sshd-not-starting-on-boot-after-recent-updates/>
+- <https://ask.fedoraproject.org/en/question/102727/f25-sshd-not-starting-on-boot-after-recent-updates/>
 
 [dnf-upgrade]: {{ site.baseurl }}/fedora-dnf-system-upgrade "Notes on Fedora DNF system upgrade"
 

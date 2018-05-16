@@ -81,3 +81,4 @@ See also
 - [Fedora 26 set up]({{ site.baseurl }}/fedora-26-set-up "Fedora 26 set up")
 - [WhatsApp]({{ site.baseurl }}/whatsapp "WhatsApp")
 - [React Native]({{ site.baseurl }}/react-native "React Native")
+- [Fedora 27 set up]({{ site.baseurl }}/fedora-27-set-up "Fedora 27 set up")
