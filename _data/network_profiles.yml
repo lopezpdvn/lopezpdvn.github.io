@@ -53,36 +53,7 @@ profiles:
   - connect
   title: lopezpdvn@Twitter
   uri: https://twitter.com/lopezpdvn
-- id: rss
-  network: Posts RSS feed
-  profile: Pedro Ivan Lopez
-  tags:
-  - frontpage
-  - about
-  - contact
-  - connect
-  title: Posts RSS feed
-  uri: http://pedroivanlopez.com/feed.xml
-- id: vcard
-  network: vCard
-  profile: Pedro Ivan Lopez
-  tags:
-  - frontpage
-  - about
-  - contact
-  - connect
-  title: Personal vCard
-  uri: http://pedroivanlopez.com/pedro_ivan_lopez_vcard.vcf
-- id: googleplus
-  network: Google+
-  profile: Pedro Ivan Lopez
-  tags:
-  - frontpage
-  - about
-  - contact
-  - connect
-  title: '@Google+'
-  uri: https://plus.google.com/111670795346386828992
+
 - id: youtube
   network: YouTube
   profile: dreilopz
@@ -93,6 +64,28 @@ profiles:
   - connect
   title: '@YouTube'
   uri: https://www.youtube.com/user/dreilopz
+
+- id: rss
+  network: Posts RSS feed
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: Posts RSS feed
+  uri: http://pedroivanlopez.com/feed.xml
+
+- id: vcard
+  network: vCard
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: Personal vCard
+  uri: http://pedroivanlopez.com/pedro_ivan_lopez_vcard.vcf
 
 - id: openpgp
   network: OpenPGP
@@ -157,6 +150,17 @@ profiles:
   - connect
   title: PedroIvanLopez@Indiegogo
   uri: https://www.indiegogo.com/individuals/10848981
+
+- id: googleplus
+  network: Google+
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: '@Google+'
+  uri: https://plus.google.com/111670795346386828992
 
 - id: disqus
   network: Disqus
