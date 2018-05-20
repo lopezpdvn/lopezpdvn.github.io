@@ -131,6 +131,17 @@ profiles:
   title: dreilopz@Facebook
   uri: https://www.facebook.com/dreilopz
 
+- id: medium
+  network: Medium
+  profile: lopezpdvn
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: lopezpdvn@medium
+  uri: https://medium.com/@lopezpdvn
+
 - id: flickr
   network: Flickr
   profile: dreilopz
