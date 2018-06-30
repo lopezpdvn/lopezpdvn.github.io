@@ -3,7 +3,7 @@ layout: tech-note
 title: TFS
 permalink: /tfs/
 first_published: 2017-06-15
-last_updated: 2018-03-30
+last_updated: 2018-06-29
 keywords: [visualstudio, tfs]
 ---
 
@@ -67,7 +67,16 @@ tfssecurity /m "{name of project group}" n:{domain\username} /collection:{URL of
 Check in or store elsewhere pending changes, for all workspaces. Remove all
 local and remote workspaces. End all related TFS and Visual Studio processes.
 
+## Get branches created by user
+
+Use URL `http://{instance_with_port_and_possibly_path}/{collection_name}/_apis/tfvc/branches[/path]?includeParent=false&includeChildren=true&includeDeleted=false&includeLinks=false`
+
+- `[/path]` is optional
+- `includeChildren=true` means branch of branches, which TFS calls children. It
+  does not necessarily _children_ like children in a file system hierarchy.
+
 ## References
 
 - [Branching and Merging (Team Explorer Everywhere)](https://msdn.microsoft.com/en-us/library/gg475908(v=vs.100).aspx)
 - [Determining User Membership in TFS Security Group in TFS 2010](https://blogs.technet.microsoft.com/chrad/2010/12/17/tfs-2010-securityhow-to-determine-if-a-user-is-a-member-of-a-tfs-group-or-a-windows-group/)
+- [TFVC branches](https://docs.microsoft.com/en-us/vsts/integrate/previous-apis/tfvc/branches?view=vsts)
