@@ -220,7 +220,7 @@
     {
       "name": "Languages",
       "keywords": [
-        "Python", "JavaScript", "C#", "Java", "SQL", "HTML", "CSS", "Bash/UNIX Shell Scripting", "VB.NET", "MATLAB", "LabVIEW", "XSLT", "LaTeX"
+        "C#", "JavaScript", "Python", "LINQ", "Java", "SQL", "HTML", "CSS", "Bash/UNIX Shell Scripting", "VB.NET", "MATLAB", "LabVIEW", "XSLT", "LaTeX"
       ]
     },
     {
