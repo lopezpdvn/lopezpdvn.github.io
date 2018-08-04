@@ -65,6 +65,14 @@ profiles:
   title: '@YouTube'
   uri: https://www.youtube.com/user/dreilopz
 
+- id: spotify
+  network: Spotify
+  profile: dreilopz
+  tags:
+  - connect
+  title: '@Spotify'
+  uri: https://open.spotify.com/user/dreilopz
+
 - id: rss
   network: Posts RSS feed
   profile: Pedro Ivan Lopez
