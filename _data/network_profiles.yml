@@ -69,6 +69,9 @@ profiles:
   network: Spotify
   profile: dreilopz
   tags:
+  - frontpage
+  - about
+  - contact
   - connect
   title: '@Spotify'
   uri: https://open.spotify.com/user/dreilopz
