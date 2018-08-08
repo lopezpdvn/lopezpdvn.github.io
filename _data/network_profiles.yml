@@ -142,6 +142,14 @@ profiles:
   title: dreilopz@Facebook
   uri: https://www.facebook.com/dreilopz
 
+- id: instagram
+  network: Instagram
+  profile: lopezpdvn
+  tags:
+  - connect
+  title: '@Instagram'
+  uri: https://www.instagram.com/lopezpdvn
+
 - id: medium
   network: Medium
   profile: lopezpdvn
