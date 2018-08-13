@@ -146,6 +146,9 @@ profiles:
   network: Instagram
   profile: lopezpdvn
   tags:
+  - frontpage
+  - about
+  - contact
   - connect
   title: '@Instagram'
   uri: https://www.instagram.com/lopezpdvn
