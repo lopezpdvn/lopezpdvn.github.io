@@ -4,7 +4,7 @@ title: Zoho
 permalink: /zoho/
 comments: true
 first_published: 2017-05-08
-last_updated: 2017-05-08
+last_updated: 2018-08-26
 keywords: [email]
 ---
 
@@ -15,15 +15,12 @@ keywords: [email]
 
 Login to Zoho.
 
-Click on the *Zoho Apps* icon at the top left, and click on *Email* in section
-*Email & collaboration*.
+Click on the _Mail_.
 
-In the new page displayed, click on *Access Zoho Mail* at the top right.
+Left click on profile picture at the top right, to display the user right pane.
+This pane shows a summary of your storage usage.
 
-In the *Zoho Mail* app, hover on *Control Panel* at the top of the screen, and
-click on *Mail & Docs*.
-
-In the new page displayed, click on *Mail Storage* in the left pane.
+Another place to look it is _Control Panel_ > _Mail Storage_.
 
 <br/>
 
