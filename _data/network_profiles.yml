@@ -164,6 +164,17 @@ profiles:
   title: lopezpdvn@medium
   uri: https://medium.com/@lopezpdvn
 
+- id: bandcamp
+  network: Bandcamp
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@bandcamp
+  uri: https://bandcamp.com/dreilopz
+
 - id: flickr
   network: Flickr
   profile: dreilopz
