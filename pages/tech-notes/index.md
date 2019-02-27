@@ -84,3 +84,4 @@ See also
 - [Fedora 27 set up]({{ site.baseurl }}/fedora-27-set-up "Fedora 27 set up")
 - [GnuCash]({{ site.baseurl }}/gnucash "GnuCash")
 - [Instagram]({{ site.baseurl }}/instagram "Instagram")
+- [LINQ]({{ site.baseurl }}/linq "LINQ")
