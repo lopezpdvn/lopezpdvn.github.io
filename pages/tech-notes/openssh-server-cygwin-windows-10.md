@@ -4,7 +4,7 @@ title: OpenSSH server on Windows with Cygwin
 permalink: /openssh-server-cygwin-windows/
 comments: true
 first_published: 2016-05-12
-last_updated: 2017-07-22
+last_updated: 2019-03-09
 tags: [windows, unix, cygwin, ssh, openssh, security]
 ---
 
@@ -90,6 +90,19 @@ the `sshd` service configured in the previous section.
 
 Start the service `sshd` or restart the computer. Set up your public key
 authentication and login from the remote computer.
+
+### Troubleshooot
+
+#### Logging
+
+By default, `sshd` logs to the windows event system at _Windows
+Logs_/_Application_ with source = `sshd`.
+
+#### Public key authentication in Windows 10 
+
+Using public key authentication in Windows requires having a separate user account. It appears that some Windows systems can disable this feature completely.
+
+I've seen an instance of a system where the server won't allow public key authentication failing with error `sshd: PID XXXX: fatal: seteuid YYYYYYY: No such device or address`.
 
 ## Uninstall
 
