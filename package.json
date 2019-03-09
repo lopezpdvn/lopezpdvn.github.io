@@ -26,5 +26,8 @@
     "jsonresume-theme-kendall": "latest",
     "jsonresume-theme-short": "latest",
     "jsonresume-theme-stackoverflow": "latest"
+  },
+  "dependencies": {
+    "npm": "^6.9.0"
   }
 }
