@@ -28,6 +28,9 @@
     "jsonresume-theme-stackoverflow": "latest"
   },
   "dependencies": {
-    "npm": "^6.9.0"
+    "npm": "latest"
+  },
+  "devDependencies": {
+    "uglify-js": "latest"
   }
 }
