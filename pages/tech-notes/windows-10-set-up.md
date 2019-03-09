@@ -6,7 +6,7 @@ categories: en
 tags: [en, windows, operating_system, tech]
 comments: true
 first_published: 2016-05-07
-last_updated: 2016-05-28
+last_updated: 2019-03-09
 permalink: /windows-10-set-up/
 ---
 
@@ -174,6 +174,12 @@ while.
   in the future* = off.
 - *Let website provide locally relevant content by accessing my language list*: off.
 
+### Activity History
+
+_Keywords: timeline, task view, multiple desktops, virtual desktops._
+
+Uncheck everything, switch off activity for every account and clear activity history.
+
 ### Location
 
 Off.
@@ -232,6 +238,16 @@ Open *Windows Firewall with Advanced Security*. In left column click on
 *Inbound Rules*. Order the rules by name and look for a set of rules whose name
 start with the string *File and Printer Sharing (Echo Request -*. Select the
 rule(s) applicable to your need case and enabled them without modification.
+
+## Adjust visual effects for best performance
+
+Go to _Control Panel\All Control Panel Items\System_. Click on _Advanced system
+settinsg_. In tab _Advanced_ click on _Performance_ _Settings_. Select _Adjust
+for best performance_ and click OK.
+
+Then, go to _Control Panel\All Control Panel Items\Ease of Access Center_.
+Click on _make the computer easier to see_. Check _Turn off all unnecessary
+animations_ and click OK.
 
 ## Misc
 
