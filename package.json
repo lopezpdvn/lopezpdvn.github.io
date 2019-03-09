@@ -22,9 +22,9 @@
     "resume-publish": "npm run resume-export && resume publish --theme kendall"
   },
   "optionalDependencies": {
-      "resume-cli": "latest",
-      "jsonresume-theme-kendall": "latest",
-      "jsonresume-theme-short": "latest",
-      "jsonresume-theme-stackoverflow": "latest"
+    "resume-cli": "latest",
+    "jsonresume-theme-kendall": "latest",
+    "jsonresume-theme-short": "latest",
+    "jsonresume-theme-stackoverflow": "latest"
   }
 }
