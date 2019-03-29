@@ -15,3 +15,12 @@ keywords: [youtube, video]
 
 I'm on YouTube as
 [dreilopz](https://www.youtube.com/user/dreilopz).
+
+## Developer console control
+
+{% highlight javascript %}
+const playCmd = () => $('.video-stream').play();
+let delay = 1000;
+let videoTimer = setTimeout(playCmd, delay);
+// clearTimeout(videoTimer);
+{% endhighlight %}
