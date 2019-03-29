@@ -85,3 +85,4 @@ See also
 - [GnuCash]({{ site.baseurl }}/gnucash "GnuCash")
 - [Instagram]({{ site.baseurl }}/instagram "Instagram")
 - [LINQ]({{ site.baseurl }}/linq "LINQ")
+- [YouTube]({{ site.baseurl }}/youtube "YouTube")
