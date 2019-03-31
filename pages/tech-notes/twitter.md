@@ -15,3 +15,7 @@ keywords: [twitter, social]
 
 I'm on Twitter as
 [lopezpdvn](https://twitter.com/lopezpdvn)
+
+## References
+
+- [Advanced search](https://twitter.com/search-advanced)
