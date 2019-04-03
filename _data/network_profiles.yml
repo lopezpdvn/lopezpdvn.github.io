@@ -336,6 +336,16 @@ profiles:
   title: dreilopz@soundcloud
   uri: https://soundcloud.com/dreilopz
 
+- id: snapchat
+  network: Snapchat
+  profile: lopezpdvn
+  tags:
+  - about
+  - contact
+  - connect
+  title: lopezpdvn@Snapchat
+  uri: https://www.snapchat.com/add/lopezpdvn
+
 - id: pinterest
   network: Pinterest
   profile: dreilopz
