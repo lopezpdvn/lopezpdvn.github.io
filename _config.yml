@@ -39,7 +39,7 @@ markdown: kramdown
 highlight: pygments
 
 # GitHub Pages documentation calls this entry `plugins`.
-gems:
+plugins:
   - jekyll-gist
   - jekyll-sitemap
   - jekyll-seo-tag
