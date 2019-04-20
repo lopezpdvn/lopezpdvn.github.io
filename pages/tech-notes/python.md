@@ -5,7 +5,7 @@ permalink: /python/
 comments: true
 tags: [python, programming]
 first_published: Apr 2, 2016
-last_updated: 2016-05-23
+last_updated: 2019-04-20
 ---
 
 * TOC
@@ -52,6 +52,11 @@ $ python -m json.tool <path to json file>
 {% endhighlight %}
 
 ## Templates
+
+### Sample project template
+
+[Python Packaging Authority](https://github.com/pypa)
+[sample project](https://github.com/pypa/sampleproject).
 
 ### Short script
 
