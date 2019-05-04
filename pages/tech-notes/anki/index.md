@@ -14,6 +14,7 @@ keywords: [anki, memory, space_repetition, flashcard]
 - [Render HTML with Jekyll to use on Anki]({{ site.baseurl}}/anki-jekyll)
 - [Decrease today's new card limit](./decrease-todays-new-card-limit/)
 - [Bury all new cards of a deck](./bury-all-new-cards-of-a-deck/)
+- [Anki Card Styling](./card-styling/)
 
 <br/>
 
