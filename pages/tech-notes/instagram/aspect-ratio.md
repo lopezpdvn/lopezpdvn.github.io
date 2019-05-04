@@ -4,7 +4,7 @@ title: Instagram aspect ratio
 permalink: /instagram/aspect-ratio
 comments: true
 first_published: 2019-04-21
-last_updated: 2019-04-21
+last_updated: 2019-05-04
 keywords: [instagram, social, photo, image, video]
 ---
 
@@ -14,3 +14,7 @@ keywords: [instagram, social, photo, image, video]
 ## Images
 
 - 540/283 ~= 1.91 (horizontal, landscape)
+
+## Videos
+
+- x/x = 1 (square)
