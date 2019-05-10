@@ -14,6 +14,7 @@ keywords: [instagram, social, photo, image, video]
 ## Images
 
 - 540/283 ~= 1.91 (horizontal, landscape)
+- 4/5 = 0.8 (vertical, portrait)
 
 ## Videos
 
