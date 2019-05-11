@@ -11,10 +11,4 @@ keywords: [haskell, programming_language, functional_programming]
 * TOC
 {:toc}
 
-## Installation
-
-### Fedora
-
-{% highlight bash %}
-$ sudo dnf -y install ghc-haskell-platform-devel
-{% endhighlight %}
+- [Installation](./install/)
