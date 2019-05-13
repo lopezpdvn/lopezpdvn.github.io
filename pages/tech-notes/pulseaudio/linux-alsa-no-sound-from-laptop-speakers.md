@@ -5,7 +5,7 @@ permalink: /pulseaudio/linux-alsa-no-sound-from-laptop-speakers/
 comments: true
 first_published: 2019-05-13
 last_updated: 2019-05-13
-keywords: [audio]
+keywords: [audio, speakers, sound, jack, headphones]
 ---
 
 * TOC
