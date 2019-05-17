@@ -4,18 +4,19 @@ title: Instagram aspect ratio
 permalink: /instagram/aspect-ratio
 comments: true
 first_published: 2019-04-21
-last_updated: 2019-05-04
+last_updated: 2019-05-17
 keywords: [instagram, social, photo, image, video]
 ---
 
 * TOC
 {:toc}
 
-## Images
+## Images and video
 
+- x/x = 1 (square)
 - 540/283 ~= 1.91 (horizontal, landscape)
 - 4/5 = 0.8 (vertical, portrait)
 
-## Videos
+Max resolution is 1350px.
 
-- x/x = 1 (square)
+- <https://colorlib.com/wp/size-of-the-instagram-picture/>
