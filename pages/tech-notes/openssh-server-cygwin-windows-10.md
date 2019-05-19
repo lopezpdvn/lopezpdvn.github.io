@@ -4,15 +4,14 @@ title: OpenSSH server on Windows with Cygwin
 permalink: /openssh-server-cygwin-windows/
 comments: true
 first_published: 2016-05-12
-last_updated: 2019-03-09
+last_updated: 2019-05-19
 tags: [windows, unix, cygwin, ssh, openssh, security]
 ---
 
 * TOC
 {:toc}
 
-OpenSSH server with privilege separation and public key authentication. Tested
-on Windows 10 only.
+OpenSSH server with public key authentication. Tested on Windows 10 only.
 
 ## Install
 
@@ -26,15 +25,8 @@ rights.
 Run the interactive program `ssh-host-config` and answer as follows:
 
 - *Should StrictModes be used*: yes
-- *Should privilege separation be used*: yes
 - *Do you want to install sshd as a service?*: yes
 - *Enter the value of CYGWIN for the daemon*: (leave empty, just press enter)
-- *Do you want to use a different account name?*: yes
-- *Enter the new user name*: `<account name>`
-- *Reenter*: `<account name>`
-- *Create new privileged user account \<hostname\>\\<account name\>*: yes
-- *Please enter password*: `<account password>`
-- *Reenter*: `<account password>`
 
 Edit/uncomment `/etc/sshd_config` as below. Your needs may vary here, read `man
 sshd_config`:
