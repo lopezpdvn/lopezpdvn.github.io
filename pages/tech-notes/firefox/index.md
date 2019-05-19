@@ -13,6 +13,8 @@ permalink: /firefox/
 * TOC
 {:toc}
 
+- [Import data from Pocket](./import-data-from-pocket/)
+
 ## Add-ons
 
 - [NoScript](https://noscript.net/)
