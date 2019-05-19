@@ -6,7 +6,7 @@ categories: en
 keywords: [tech, security, web, internet, firefox, browser]
 comments: true
 first_published: 2016-06-24
-last_updated: 2016-12-19
+last_updated: 2019-05-18
 permalink: /firefox/
 ---
 
@@ -39,3 +39,10 @@ WHERE LOWER(ia.content) LIKE '%searchstr%'
   OR LOWER(k.keyword) LIKE '%searchstr%'
 GROUP BY b.title, p.url, ia.content
 {% endhighlight %}
+
+## Import data from Pocket
+
+Let x be the path to a Pocket export HTML file. Optionally edit x so you export
+archived/read pocket entries.
+
+Show all Bookmarks on Firefox, and click on...
