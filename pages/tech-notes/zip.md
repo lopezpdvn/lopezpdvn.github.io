@@ -3,7 +3,7 @@ layout: tech-note
 title: ZIP
 permalink: /zip/
 first_published: 2017-06-11
-last_updated: 2017-06-11
+last_updated: 2019-07-05
 keywords: [zip, compression]
 ---
 
@@ -36,3 +36,9 @@ c.txt
 e.txt
 j.txt
 ```
+
+## Misc
+
+{% highlight bash %}
+for i in *zip; do mkdir -p "$i"_extracted && unzip "$i" -d "$i"_extracted ; done
+{% endhighlight %}
