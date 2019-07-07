@@ -217,6 +217,9 @@ $ sudo dnf -y install ffmpeg
 $ sudo dnf -y install ruby-devel redhat-rpm-config
 $ sudo dnf -y groupinstall "C Development Tools and Libraries"
 $ gem install jekyll 'jekyll-gist' 'jekyll-sitemap' 'jekyll-seo-tag' 'jekyll-redirect-from'
+$ cd /path/to/jekyll/project
+$ bundle install --path ~/.gem
+$ bundle exec jekyll serve
 {% endhighlight %}
 
 ## Other software
