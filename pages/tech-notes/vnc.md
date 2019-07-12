@@ -5,7 +5,7 @@ permalink: /vnc/
 comments: true
 tags: [sysadmin, system_administration, vnc, ssh]
 first_published: 2016-05-20
-last_updated: 2018-01-09
+last_updated: 2019-07-12
 ---
 
 * TOC
@@ -14,7 +14,7 @@ last_updated: 2018-01-09
 ## Setup
 
 Follow instructions at
-[Fedora documentation](https://docs.fedoraproject.org/en-US/Fedora/23/html/System_Administrators_Guide/ch-TigerVNC.html).
+[Fedora documentation](https://docs.fedoraproject.org/en-US/fedora/f30/system-administrators-guide/infrastructure-services/TigerVNC/).
 
 Password length on server should be maximum 8 characters. Further characters
 are ignored.
