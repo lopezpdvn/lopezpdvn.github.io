@@ -4,12 +4,14 @@ title: Notes on .NET
 permalink: /dotnet/
 comments: true
 first_published: 2016-08-18
-last_updated: 2018-05-04
+last_updated: 2019-07-19
 keywords: [csharp, dotnet, dotnetcore]
 ---
 
 * TOC
 {:toc}
+
+- [NET Core on Fedora](./dotnet-core-on-fedora).
 
 ## .NET Core on Linux
 
