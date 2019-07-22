@@ -45,6 +45,17 @@ ffmpeg -i "${INFILE}" \
   "${OUTFILE}" >/dev/null 2>&1
 ```
 
+## windows 10 command line notifications and event
+
+Message is posted to Windows logs _System_, source _Application Popup_, level
+_Information_.
+
+{% highlight batch %}
+C:\Users\pedro.lopez>msg * /TIME:1 /V "my dudeeee"
+Sending message to session Console, display time 1
+Async message sent to session Console
+{% endhighlight %}
+
 <br/>
 
 ---
