@@ -3,7 +3,7 @@ layout: tech-note
 title: Cron on Cygwin
 permalink: /cron-on-cygwin/
 first_published: 2017-06-23
-last_updated: 2017-06-23
+last_updated: 2019-08-05
 keywords: [windows, cron, cygwin]
 ---
 
@@ -30,7 +30,7 @@ $ cygrunsrv --remove cron
 Run `cron-config` and answer:
 
 - *Do you want to install the cron daemon as a service?* yes
-- *Enter the value of CYGWIN for the daemon:* ntsec
+- *Enter the value of CYGWIN for the daemon:*
 - *Do you want the cron daemon to run as yourself?* yes
 - *Please enter the password for user <your_username>*: <your_password>
 - *Do you want to start the cron daemon as a service now?*: yes
