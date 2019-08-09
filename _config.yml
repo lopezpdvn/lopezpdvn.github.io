@@ -60,4 +60,6 @@ collections:
 feed:
   collections:
     ustruct:
-      path: "ustruct.xml"
+      path: "ustruct-feed"
+    posts:
+      path: "feed"
