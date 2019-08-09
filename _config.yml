@@ -51,3 +51,11 @@ defaults:
       path: ""
     values:
       author: "Pedro Ivan Lopez"
+
+collections:
+  ustruct:
+    output: true
+
+feed:
+  collections:
+    - ustruct
