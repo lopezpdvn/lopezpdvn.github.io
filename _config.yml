@@ -61,5 +61,3 @@ feed:
   collections:
     ustruct:
       path: "ustruct.xml"
-    posts:
-      path: "feed"
