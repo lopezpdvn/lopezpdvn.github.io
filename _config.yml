@@ -59,4 +59,5 @@ collections:
 
 feed:
   collections:
-    - ustruct
+    ustruct:
+      path: "ustruct.xml"
