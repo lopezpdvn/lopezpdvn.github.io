@@ -573,12 +573,22 @@
 - source: null
   attribution: Claude Monet
   quote: |
-    Every day I discover  
-    more and more  
-    beautiful things.  
-    It's enough to drive one mad.  
-    I have such a desire  
-    to do everything,  
+    Every day I discover
+    more and more
+    beautiful things.
+    It's enough to drive one mad.
+    I have such a desire
+    to do everything,
     my head is bursting with it.
   keywords: [life, learning, aging]
 
+- source: The Art of Learning
+  attribution: Josh Waitzkin
+  quote: |
+    Mental resilience is arguably the most critical trait of a world-class
+    performer, and it should be nurtured continuously. Left to my own devices,
+    I am always looking for ways to become more and more psychologically
+    impregnable.  When uncomfortable, my instinct is not to avoid the
+    discomfort but to become at peace with it. My instinct is always to seek
+    out challenges as opposed to avoiding them.
+  keywords: [psychology, mental_health]
