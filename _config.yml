@@ -44,7 +44,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
-  - jekyll-feed
 
 defaults:
   -
@@ -52,12 +51,3 @@ defaults:
       path: ""
     values:
       author: "Pedro Ivan Lopez"
-
-collections:
-  ustruct:
-    output: true
-
-feed:
-  collections:
-    ustruct:
-      path: "ustruct.xml"
