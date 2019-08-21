@@ -45,6 +45,12 @@ ffmpeg -i "${INFILE}" \
   "${OUTFILE}" >/dev/null 2>&1
 ```
 
+## images to gif
+
+keywords: png, jpg, image
+
+If they're just a handful, manually screen record to GIF with ShareX.
+
 <br/>
 
 ---
