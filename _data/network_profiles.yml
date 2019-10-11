@@ -77,6 +77,15 @@ profiles:
   title: '@YouTube'
   uri: https://www.youtube.com/user/dreilopz
 
+- id: mastodon.social
+  network: mastodon.social
+  profile: lopezpdvn@mastodon.social
+  tags:
+  - contact
+  - connect
+  title: '@lopezpdvn@mastodon.social'
+  uri: https://mastodon.social/@lopezpdvn
+
 - id: spotify
   network: Spotify
   profile: dreilopz
