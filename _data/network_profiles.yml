@@ -366,6 +366,15 @@ profiles:
   title: dreilopz@soundcloud
   uri: https://soundcloud.com/dreilopz
 
+- id: twitch
+  network: Twitch
+  profile: dreilopz
+  tags:
+  - contact
+  - connect
+  title: dreilopz@twitch
+  uri: https://www.twitch.tv/dreilopz
+
 - id: snapchat
   network: Snapchat
   profile: lopezpdvn
