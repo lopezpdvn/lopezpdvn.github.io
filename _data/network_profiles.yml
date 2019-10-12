@@ -196,6 +196,15 @@ profiles:
   title: dreilopz@bandcamp
   uri: https://bandcamp.com/dreilopz
 
+- id: discord
+  network: Discord
+  profile: lopezpdvn
+  tags:
+  - contact
+  - connect
+  title: lopezpdvn@discord
+  uri: https://discordapp.com/channels/@lopezpdvn
+
 - id: flickr
   network: Flickr
   profile: dreilopz
