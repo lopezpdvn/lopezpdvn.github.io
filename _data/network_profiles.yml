@@ -185,57 +185,6 @@ profiles:
   title: lopezpdvn@medium
   uri: https://medium.com/@lopezpdvn
 
-- id: bandcamp
-  network: Bandcamp
-  profile: dreilopz
-  tags:
-  - frontpage
-  - about
-  - contact
-  - connect
-  title: dreilopz@bandcamp
-  uri: https://bandcamp.com/dreilopz
-
-- id: discord
-  network: Discord
-  profile: lopezpdvn
-  tags:
-  - contact
-  - connect
-  title: lopezpdvn@discord
-  uri: https://discordapp.com/channels/@lopezpdvn
-
-- id: flickr
-  network: Flickr
-  profile: dreilopz
-  tags:
-  - about
-  - contact
-  - connect
-  title: dreilopz@Flickr
-  uri: https://www.flickr.com/photos/127441830@N06
-
-- id: indiegogo
-  network: Indiegogo
-  profile: Pedro Ivan Lopez
-  tags:
-  - about
-  - contact
-  - connect
-  title: PedroIvanLopez@Indiegogo
-  uri: https://www.indiegogo.com/individuals/10848981
-
-- id: googleplus
-  network: Google+
-  profile: Pedro Ivan Lopez
-  tags:
-  - frontpage
-  - about
-  - contact
-  - connect
-  title: '@Google+'
-  uri: https://plus.google.com/111670795346386828992
-
 - id: disqus
   network: Disqus
   profile: dreilopz
@@ -326,6 +275,57 @@ profiles:
   - connect
   title: PedroIvanLopez@Wikipedia
   uri: https://en.wikipedia.org/wiki/User:PedroIvanLopez
+
+- id: bandcamp
+  network: Bandcamp
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@bandcamp
+  uri: https://bandcamp.com/dreilopz
+
+- id: discord
+  network: Discord
+  profile: lopezpdvn
+  tags:
+  - contact
+  - connect
+  title: lopezpdvn@discord
+  uri: https://discordapp.com/channels/@lopezpdvn
+
+- id: flickr
+  network: Flickr
+  profile: dreilopz
+  tags:
+  - about
+  - contact
+  - connect
+  title: dreilopz@Flickr
+  uri: https://www.flickr.com/photos/127441830@N06
+
+- id: indiegogo
+  network: Indiegogo
+  profile: Pedro Ivan Lopez
+  tags:
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@Indiegogo
+  uri: https://www.indiegogo.com/individuals/10848981
+
+- id: googleplus
+  network: Google+
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: '@Google+'
+  uri: https://plus.google.com/111670795346386828992
 
 - id: aboutme
   network: About.me
