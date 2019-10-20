@@ -41,11 +41,15 @@
       "company": "Epicor Software Corporation",
       "position": "Software Developer",
       "startDate": "2017-02-07",
-      "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements of customers in North and South America. My role also involves project management responsibilities and technical tasks on a wide range of technologies of the Epicor ERP 10 platform.",
+
+      "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements of customers in North and South America. My role also involves project management responsibilities and technical tasks on a wide range of technologies of the Epicor ICE Framework and ERP 10 platform.",
+
       "highlights": [
+
         "Reduced execution time of mass update by 90% by porting business logic from client to server, and by porting database access from Entity Framework to stored procedures in T-SQL",
-        "Delivered the first mobile access dashboard solution of the Monterrey branch, a responsive HTML5 client with C#/.NET on the backend",
-        "Developed 5 custom file formatters for the ACH network and Positive Pay bank services",
+        "Achieved the highest billable utilization out of all engineers and software architects of the Mexican team in FY2019",
+        "Delivered the first mobile access dashboard solution of the Mexico branch, a responsive HTML5 client with C#/.NET on the backend",
+        "Developed 12 custom file formatters for the ACH network and Positive Pay bank services",
         "Wrote T-SQL code generators in Python for data/schema definition and data querying",
         "Created 15 new forms/modules for the Epicor ERP",
         "Customized financial, supply chain and manufacturing modules of the Epicor ERP system 10+",
@@ -55,8 +59,10 @@
         "Led engineers in upgrading multiple product customizations from Epicor 10.1 to 10.2",
         "Performed onboarding of new senior resource by mentoring work on an assigned project",
         "Eased troubleshooting of delivered products deployed on customer's site, by shipping software with optional diagnostic tracing",
-        "Environment: .NET 4.6, C# 6, T-SQL for SQL Server 2016, Visual Studio 2017, JIRA, Infragistics, Epicor ERP 10, Service Connect"
+        "Environment: .NET 4.7.2, C# 7.3, LINQ, Entity Framework 6, LINQ to Entities, LINQ to XML, Infragistics, Epicor Internet Component Environment (ICESDK& ICE Tools), T-SQL for SQL Server 2016, Visual Studio 2019, JIRA, Service Connect, Windows Subsystem for Linux, Windows Server 2012, Windows 10"
+
       ]
+
     },
 
     {
