@@ -19,7 +19,18 @@ statement_org_ideas: >
   The ideas expressed on this website do not necessarily represent the opinion
   of my employer or any other organization.
 include: [_images, _modules, _sources, _static, resume.pdf, business_card.pdf]
-exclude: [gulpfile.js, package.json, node_modules, tmp, bin, TODO.md, business_card]
+
+exclude: [
+  gulpfile.js,
+  package.json,
+  node_modules,
+  tmp,
+  bin,
+  TODO.md,
+  business_card,
+  resume.docx
+]
+
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://pedroivanlopez.com" # the base hostname & protocol for your site
 
