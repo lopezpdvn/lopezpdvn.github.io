@@ -231,24 +231,66 @@
   ],
 
   "skills": [
+
     {
       "name": "Languages",
       "keywords": [
-        "C#", "JavaScript", "Python", "LINQ", "Java", "SQL", "HTML", "CSS", "Bash/UNIX Shell Scripting", "VB.NET", "MATLAB", "LabVIEW", "XSLT", "LaTeX"
+        "JavaScript",
+        "C#",
+        "TypeScript",
+        "Python",
+        "LINQ",
+        "Java",
+        "SQL",
+        "HTML",
+        "CSS",
+        "Bash/UNIX Shell Scripting",
+        "VB.NET",
+        "MATLAB",
+        "LabVIEW",
+        "XSLT",
+        "LaTeX"
       ]
     },
+
     {
       "name": "Data/Databases",
       "keywords": [
-        "Microsoft SQL Server", "Oracle", "MySQL", "SQLite", "JSON", "YAML", "XML"
+        "Microsoft SQL Server",
+        "Entity Framework 6",
+        "Oracle",
+        "MySQL",
+        "SQLite",
+        "JSON",
+        "YAML",
+        "XML"
       ]
     },
+
     {
       "name": "Technologies",
       "keywords": [
-        ".NET", "Java", "Node.js", "ASP.NET 4 & 5", "ASP.NET MVC 5", "Docker", "Spring", "Hibernate", "ASP.NET Web Forms", "Java EE", "Sphinx documentation tools", "Jekyll", "lejOS"
+        ".NET 4.7.2",
+        "LINQ to Entities",
+        "LINQ to XML",
+        "Infragistics",
+        "Epicor Internet Component Environment (ICE SDK & ICE Tools)",
+        "Java",
+        "Node.js",
+        "xUnit",
+        "Jekyll",
+        "ASP.NET 4 & 5",
+        "ASP.NET MVC 5",
+        "Docker",
+        "Spring",
+        "Hibernate",
+        "ASP.NET Web Forms",
+        "Java EE",
+        "Sphinx documentation tools",
+        "lejOS"
       ]
     },
+
     {
       "name": "Design patterns",
       "keywords": [
