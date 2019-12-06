@@ -48,8 +48,9 @@
 
         "Reduced execution time of mass update by 90% by porting business logic from client to server, and by porting database access from Entity Framework to stored procedures in T-SQL",
         "Achieved the highest billable utilization out of all engineers and software architects of the Mexican team in FY2019",
+        "One of the top 10 employees of the Monterrey branch in Q4 2019, recognized by the company for making a significant business impact and demonstrating corporate core values",
         "Delivered the first mobile access dashboard solution of the Mexico branch, a responsive HTML5 client with C#/.NET on the backend",
-        "Developed 12 custom file formatters for the ACH network and Positive Pay bank services",
+        "Developed 18 custom electronic interfaces for the ACH network and Positive Pay bank services",
         "Wrote T-SQL code generators in Python for data/schema definition and data querying",
         "Created 15 new forms/modules for the Epicor ERP",
         "Customized financial, supply chain and manufacturing modules of the Epicor ERP system 10+",
