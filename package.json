@@ -28,7 +28,7 @@
     "jsonresume-theme-stackoverflow": "latest"
   },
   "dependencies": {
-    "npm": "^6.10.1"
+    "npm": "^6.13.4"
   },
   "devDependencies": {
     "handlebars": "^4.1.2",
