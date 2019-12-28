@@ -31,7 +31,7 @@
     "npm": "^6.13.4"
   },
   "devDependencies": {
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.3.0",
     "lodash": "latest",
     "uglify-js": "latest",
     "underscore.string": "^3.3.5",
