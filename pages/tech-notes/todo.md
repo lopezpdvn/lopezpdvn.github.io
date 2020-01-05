@@ -53,4 +53,9 @@ If they're just a handful, manually screen record to GIF with ShareX.
 
 <br/>
 
+## OneDrive file upload max size
+
+OneDrive = 100 GB, OneDrive for Business = 15 GB (will be 100 GB sometime in 2020),
+[source](https://support.office.com/en-us/article/invalid-file-names-and-file-types-in-onedrive-onedrive-for-business-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa?ui=en-US&rs=en-US&ad=US#individualfilesize).
+
 ---
