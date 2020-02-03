@@ -63,5 +63,6 @@ OneDrive = 100 GB, OneDrive for Business = 15 GB (will be 100 GB sometime in 202
 1. not an element of, ∉, ∉∉∉∉
 1. element of, ∈, ∈∈∈∈
 1. proportion, ∷, ∷∷∷∷
+1. if and only if, ⇔, ⇔⇔⇔⇔
 
 ---
