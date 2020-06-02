@@ -36,6 +36,7 @@
     "uglify-js": "latest",
     "underscore.string": "^3.3.5",
     "mem": ">=4.0.0",
-    "minimist": ">=1.2.3"
+    "minimist": ">=1.2.3",
+    "https-proxy-agent": ">=2.2.3"
   }
 }
