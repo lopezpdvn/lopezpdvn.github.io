@@ -10,6 +10,9 @@ keywords: [.net, visualstudio, c#]
 * TOC
 {:toc}
 
+
+- [Build/add/ship build datetime](./buid-build-datetime/)
+
 ## Installation
 
 - [Microsoft Visual Studio Team Foundation Server 2015 Power Tools](https://marketplace.visualstudio.com/items?itemName=TFSPowerToolsTeam.MicrosoftVisualStudioTeamFoundationServer2015Power)
