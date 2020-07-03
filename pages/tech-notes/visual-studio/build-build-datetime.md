@@ -1,7 +1,7 @@
 ---
 layout: tech-note
 title: Build/add/ship build datetime
-permalink: /buid-build-datetime/
+permalink: /visual-studio/buid-build-datetime/
 first_published: 2020-07-03
 last_updated: 2020-07-03
 keywords: [.net, visualstudio, c#]
