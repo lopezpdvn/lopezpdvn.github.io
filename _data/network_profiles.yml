@@ -23,6 +23,18 @@ profiles:
   - connect
   title: lopezpdvn@GitHub
   uri: https://github.com/lopezpdvn
+
+- id: leetcode
+  network: LeetCode
+  profile: lopezpdvn
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: lopezpdvn@LeetCode
+  uri: https://leetcode.com/lopezpdvn/
+
 - id: gist
   network: Gist@GitHub.com
   profile: lopezpdvn
@@ -64,6 +76,15 @@ profiles:
   - connect
   title: '@YouTube'
   uri: https://www.youtube.com/user/dreilopz
+
+- id: mastodon.social
+  network: mastodon.social
+  profile: lopezpdvn@mastodon.social
+  tags:
+  - contact
+  - connect
+  title: '@lopezpdvn@mastodon.social'
+  uri: https://mastodon.social/@lopezpdvn
 
 - id: spotify
   network: Spotify
@@ -164,48 +185,6 @@ profiles:
   title: lopezpdvn@medium
   uri: https://medium.com/@lopezpdvn
 
-- id: bandcamp
-  network: Bandcamp
-  profile: dreilopz
-  tags:
-  - frontpage
-  - about
-  - contact
-  - connect
-  title: dreilopz@bandcamp
-  uri: https://bandcamp.com/dreilopz
-
-- id: flickr
-  network: Flickr
-  profile: dreilopz
-  tags:
-  - about
-  - contact
-  - connect
-  title: dreilopz@Flickr
-  uri: https://www.flickr.com/photos/127441830@N06
-
-- id: indiegogo
-  network: Indiegogo
-  profile: Pedro Ivan Lopez
-  tags:
-  - about
-  - contact
-  - connect
-  title: PedroIvanLopez@Indiegogo
-  uri: https://www.indiegogo.com/individuals/10848981
-
-- id: googleplus
-  network: Google+
-  profile: Pedro Ivan Lopez
-  tags:
-  - frontpage
-  - about
-  - contact
-  - connect
-  title: '@Google+'
-  uri: https://plus.google.com/111670795346386828992
-
 - id: disqus
   network: Disqus
   profile: dreilopz
@@ -297,6 +276,57 @@ profiles:
   title: PedroIvanLopez@Wikipedia
   uri: https://en.wikipedia.org/wiki/User:PedroIvanLopez
 
+- id: bandcamp
+  network: Bandcamp
+  profile: dreilopz
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: dreilopz@bandcamp
+  uri: https://bandcamp.com/dreilopz
+
+- id: discord
+  network: Discord
+  profile: lopezpdvn
+  tags:
+  - contact
+  - connect
+  title: lopezpdvn@discord
+  uri: https://discordapp.com/channels/@lopezpdvn
+
+- id: flickr
+  network: Flickr
+  profile: dreilopz
+  tags:
+  - about
+  - contact
+  - connect
+  title: dreilopz@Flickr
+  uri: https://www.flickr.com/photos/127441830@N06
+
+- id: indiegogo
+  network: Indiegogo
+  profile: Pedro Ivan Lopez
+  tags:
+  - about
+  - contact
+  - connect
+  title: PedroIvanLopez@Indiegogo
+  uri: https://www.indiegogo.com/individuals/10848981
+
+- id: googleplus
+  network: Google+
+  profile: Pedro Ivan Lopez
+  tags:
+  - frontpage
+  - about
+  - contact
+  - connect
+  title: '@Google+'
+  uri: https://plus.google.com/111670795346386828992
+
 - id: aboutme
   network: About.me
   profile: dreilopz
@@ -335,6 +365,15 @@ profiles:
   - connect
   title: dreilopz@soundcloud
   uri: https://soundcloud.com/dreilopz
+
+- id: twitch
+  network: Twitch
+  profile: dreilopz
+  tags:
+  - contact
+  - connect
+  title: dreilopz@twitch
+  uri: https://www.twitch.tv/dreilopz
 
 - id: snapchat
   network: Snapchat

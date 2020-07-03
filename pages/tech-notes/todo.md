@@ -44,7 +44,6 @@ ffmpeg -i "${INFILE}" \
        -pix_fmt yuv420p \
   "${OUTFILE}" >/dev/null 2>&1
 ```
-
 ## windows 10 command line notifications and event
 
 Message is posted to Windows logs _System_, source _Application Popup_, level
@@ -55,7 +54,25 @@ C:\Users\pedro.lopez>msg * /TIME:1 /V "my dudeeee"
 Sending message to session Console, display time 1
 Async message sent to session Console
 {% endhighlight %}
+=======
+## images to gif
+
+keywords: png, jpg, image
+
+If they're just a handful, manually screen record to GIF with ShareX.
 
 <br/>
+
+## OneDrive file upload max size
+
+OneDrive = 100 GB, OneDrive for Business = 15 GB (will be 100 GB sometime in 2020),
+[source](https://support.office.com/en-us/article/invalid-file-names-and-file-types-in-onedrive-onedrive-for-business-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa?ui=en-US&rs=en-US&ad=US#individualfilesize).
+
+## Unicode most used characters
+
+1. not an element of, ∉, ∉∉∉∉
+1. element of, ∈, ∈∈∈∈
+1. proportion, ∷, ∷∷∷∷
+1. if and only if, ⇔, ⇔⇔⇔⇔
 
 ---

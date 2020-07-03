@@ -5,14 +5,22 @@
     "picture": "http://pedroivanlopez.com/images/pedro_ivan_lopez_2017_01.jpg",
     "email": "m@pedroivanlopez.com",
     "website": "http://pedroivanlopez.com",
-    "summary": "I'm a Software Development Engineer interested in large-scale systems and the Web. I have 5 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in application programming in C#, Java, JavaScript, and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software. A lot of the software I have designed and implemented is publicly available on GitHub.<br/><br/>Other Résumé versions: <a href=\"http://pedroivanlopez.com/resume.pdf\"><strong>PDF</strong></a>, <a href=\"http://pedroivanlopez.com/resume-one-page.pdf\"><strong>One-page PDF</strong></a>, <a href=\"http://pedroivanlopez.com/resume.docx\"><strong>MS Word</strong></a>, <a href=\"http://pedroivanlopez.com/resume-one-page.docx\"><strong>One-page MS Word</strong></a>, <a href=\"http://pedroivanlopez.com/resume.json\"><strong>JSON Résumé</strong></a>",
+
+    "summary": "I'm a Software Development Engineer interested in large-scale systems and the Web. I have 5 years of experience in software engineering and have been programming for over 13 years. My primary development experience is in application programming in C#, JavaScript, TypeScript, Java and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software. A lot of the software I have designed and implemented is publicly available on GitHub.<br/><br/>Other Résumé versions: <a href=\"http://pedroivanlopez.com/resume.pdf\"><strong>PDF</strong></a>, <a href=\"http://pedroivanlopez.com/resume.json\"><strong>JSON Résumé</strong></a>",
+
     "us_work_permit_msg": "",
+
     "developer_experience_brief": "I have 5 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in application programming in C#, Java, JavaScript, and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software.\nI worked with design patterns Dependency Injection, Object-Relational Mapping (ORM), Module, Factory method, Iterator, Reactor, Singleton & Observer. Some of the architectural patterns I'm familiar with are Multitier Architecture, Inversion of Control, Event-driven architecture & Model–View–Controller. I have also experience writing data manipulation and query scripts in SQL.\nA lot of the software I have designed and implemented is publicly available on GitHub.",
     "profiles": [
       {
         "network": "GitHub",
         "username": "lopezpdvn",
         "url": "https://github.com/lopezpdvn"
+      },
+      {
+        "network": "LeetCode",
+        "username": "lopezpdvn",
+        "url": "https://leetcode.com/lopezpdvn/"
       },
       {
         "network": "LinkedIn",
@@ -33,11 +41,16 @@
       "company": "Epicor Software Corporation",
       "position": "Software Developer",
       "startDate": "2017-02-07",
-      "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements of customers in North and South America. My role also involves project management responsibilities and technical tasks on a wide range of technologies of the Epicor ERP 10 platform.",
+
+      "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements of customers in North and South America. My role also involves project management responsibilities and technical tasks on a wide range of technologies of the Epicor ICE Framework and ERP 10 platform.",
+
       "highlights": [
+
         "Reduced execution time of mass update by 90% by porting business logic from client to server, and by porting database access from Entity Framework to stored procedures in T-SQL",
-        "Delivered the first mobile access dashboard solution of the Monterrey branch, a responsive HTML5 client with C#/.NET on the backend",
-        "Developed 5 custom file formatters for the ACH network and Positive Pay bank services",
+        "Achieved the highest billable utilization out of all engineers and software architects of the Mexican team in FY2019",
+        "One of the top 10 employees of the Monterrey branch in Q4 2019, recognized by the company for making a significant business impact and demonstrating corporate core values",
+        "Delivered the first mobile access dashboard solution of the Mexico branch, a responsive HTML5 client with C#/.NET on the backend",
+        "Developed 18 custom electronic interfaces for the ACH network and Positive Pay bank services",
         "Wrote T-SQL code generators in Python for data/schema definition and data querying",
         "Created 15 new forms/modules for the Epicor ERP",
         "Customized financial, supply chain and manufacturing modules of the Epicor ERP system 10+",
@@ -47,8 +60,10 @@
         "Led engineers in upgrading multiple product customizations from Epicor 10.1 to 10.2",
         "Performed onboarding of new senior resource by mentoring work on an assigned project",
         "Eased troubleshooting of delivered products deployed on customer's site, by shipping software with optional diagnostic tracing",
-        "Environment: .NET 4.6, C# 6, T-SQL for SQL Server 2016, Visual Studio 2017, JIRA, Infragistics, Epicor ERP 10, Service Connect"
+        "Environment: .NET 4.7.2, C# 7.3, LINQ, Entity Framework 6, LINQ to Entities, LINQ to XML, Infragistics, Epicor Internet Component Environment (ICE SDK & ICE Tools), T-SQL for SQL Server 2016, Visual Studio 2019, JIRA, Service Connect, Windows Subsystem for Linux, Windows Server 2012, Windows 10"
+
       ]
+
     },
 
     {
@@ -217,24 +232,66 @@
   ],
 
   "skills": [
+
     {
       "name": "Languages",
       "keywords": [
-        "C#", "JavaScript", "Python", "LINQ", "Java", "SQL", "HTML", "CSS", "Bash/UNIX Shell Scripting", "VB.NET", "MATLAB", "LabVIEW", "XSLT", "LaTeX"
+        "JavaScript",
+        "C#",
+        "TypeScript",
+        "Python",
+        "LINQ",
+        "Java",
+        "SQL",
+        "HTML",
+        "CSS",
+        "Bash/UNIX Shell Scripting",
+        "VB.NET",
+        "MATLAB",
+        "LabVIEW",
+        "XSLT",
+        "LaTeX"
       ]
     },
+
     {
       "name": "Data/Databases",
       "keywords": [
-        "Microsoft SQL Server", "Oracle", "MySQL", "SQLite", "JSON", "YAML", "XML"
+        "Microsoft SQL Server",
+        "Entity Framework 6",
+        "Oracle",
+        "MySQL",
+        "SQLite",
+        "JSON",
+        "YAML",
+        "XML"
       ]
     },
+
     {
       "name": "Technologies",
       "keywords": [
-        ".NET", "Java", "Node.js", "ASP.NET 4 & 5", "ASP.NET MVC 5", "Docker", "Spring", "Hibernate", "ASP.NET Web Forms", "Java EE", "Sphinx documentation tools", "Jekyll", "lejOS"
+        ".NET 4.7.2",
+        "LINQ to Entities",
+        "LINQ to XML",
+        "Infragistics",
+        "Epicor Internet Component Environment (ICE SDK & ICE Tools)",
+        "Java",
+        "Node.js",
+        "xUnit",
+        "Jekyll",
+        "ASP.NET 4 & 5",
+        "ASP.NET MVC 5",
+        "Docker",
+        "Spring",
+        "Hibernate",
+        "ASP.NET Web Forms",
+        "Java EE",
+        "Sphinx documentation tools",
+        "lejOS"
       ]
     },
+
     {
       "name": "Design patterns",
       "keywords": [

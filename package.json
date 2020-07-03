@@ -28,13 +28,15 @@
     "jsonresume-theme-stackoverflow": "latest"
   },
   "dependencies": {
-    "npm": "^6.10.1"
+    "npm": "^6.13.4"
   },
   "devDependencies": {
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.3.0",
     "lodash": "latest",
     "uglify-js": "latest",
     "underscore.string": "^3.3.5",
-    "mem": ">=4.0.0"
+    "mem": ">=4.0.0",
+    "minimist": ">=1.2.3",
+    "https-proxy-agent": ">=2.2.3"
   }
 }
