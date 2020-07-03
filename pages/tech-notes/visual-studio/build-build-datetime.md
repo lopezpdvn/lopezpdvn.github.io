@@ -1,6 +1,6 @@
 ---
 layout: tech-note
-title: Build/add/ship build datetime
+title: Build/add/ship build datetime with Visual Studio
 permalink: /visual-studio/buid-build-datetime/
 first_published: 2020-07-03
 last_updated: 2020-07-03
