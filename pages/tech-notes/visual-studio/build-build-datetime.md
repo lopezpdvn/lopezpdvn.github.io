@@ -1,9 +1,9 @@
 ---
 layout: tech-note
 title: Build/add/ship build datetime with Visual Studio
-permalink: /visual-studio/buid-build-datetime/
+permalink: /visual-studio/build-build-datetime/
 first_published: 2020-07-03
-last_updated: 2020-07-03
+last_updated: 2020-08-22
 keywords: [.net, visualstudio, c#]
 ---
 
@@ -20,7 +20,7 @@ keywords: [.net, visualstudio, c#]
    echo %date% %time% > "$(ProjectDir)\Resources\BuildDateTime.txt"
    {% endhighlight %}
 
-1. In code retrieve
+4. In code retrieve
 
    {% highlight csharp %}
    string x = Properties.Resources.BuildDateTime;
