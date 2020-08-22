@@ -11,7 +11,7 @@ keywords: [.net, visualstudio, c#]
 {:toc}
 
 
-- [Build/add/ship build datetime](./buid-build-datetime/)
+- [Build/add/ship build datetime](./build-build-datetime/)
 
 ## Installation
 
