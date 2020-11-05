@@ -48,7 +48,8 @@ $ virtualenv -p $PYTHON_EXE .
 Python interpreter JSON command line tool
 
 {% highlight bash %}
-$ python -m json.tool <path to json file>
+$ python3 -m json.tool <path to json file>
+$ python3 -c "import sys, json; json.dump(json.load(sys.stdin), sys.stdout, indent=2, separators=(',', ':'))" < ugly.json > pretty.json
 {% endhighlight %}
 
 ## Templates
