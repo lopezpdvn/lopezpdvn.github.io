@@ -214,3 +214,8 @@ $ ffmpeg -i normal_export.mkv  -i normal_export_Audio_1.mkv -map 0:0 -map 1:1 -c
 - <https://askubuntu.com/questions/123798/how-to-hear-my-voice-in-speakers-with-a-mic>
 - <http://blog.superuser.com/2012/02/24/ffmpeg-the-ultimate-video-and-audio-manipulation-tool/>
 - <https://trac.ffmpeg.org/wiki>
+
+<!---
+Example of video of hamster jumping to Low Rider song (crop, black/white square,
+text on screen, instagram size...): https://1drv.ms/u/s!AlNxrGhEcYyqvTIhoD6HJUyBaUaD?e=tksCO3
+--->
