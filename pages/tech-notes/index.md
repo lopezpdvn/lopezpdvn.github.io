@@ -68,7 +68,6 @@ See also
 - [Visual Studio]({{ site.baseurl }}/visual-studio "Visual Studio")
 - [zip]({{ site.baseurl }}/zip "Zip")
 - [Notepad++]({{ site.baseurl }}/notepad++ "Notepad++")
-- [TFS]({{ site.baseurl }}/tfs "TFS")
 - [PowerShell]({{ site.baseurl }}/powershell "PowerShell")
 - [Cron on Cygwin]({{ site.baseurl }}/cron-on-cygwin "Cron on Cygwin")
 - [Fedora 25 set up]({{ site.baseurl }}/fedora-25-set-up "Fedora 25 set up")
@@ -91,3 +90,4 @@ See also
 - [LINQPad]({{ site.baseurl }}/linqpad "LINQPad")
 - [Epicor ERP]({{ site.baseurl }}/epicor-erp "Epicor ERP")
 - [Postman]({{ site.baseurl }}/postman "Postman")
+- [Team Foundation Version Control (TFVC)]({{ site.baseurl }}/tfvc "Team Foundation Version Control (TFVC)")
