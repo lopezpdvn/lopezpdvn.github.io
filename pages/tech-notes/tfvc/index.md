@@ -74,9 +74,18 @@ Use URL `http://{instance_with_port_and_possibly_path}/{collection_name}/_apis/t
 - `[/path]` is optional
 - `includeChildren=true` means branch of branches, which TFS calls children. It
   does not necessarily _children_ like children in a file system hierarchy.
+  
+## Get version from command line
+
+Open developer command prompt for VS, change dir to one that is a child of a workspace and run
+
+```
+tf get
+```
 
 ## References
 
-- [Branching and Merging (Team Explorer Everywhere)](https://msdn.microsoft.com/en-us/library/gg475908(v=vs.100).aspx)
-- [Determining User Membership in TFS Security Group in TFS 2010](https://blogs.technet.microsoft.com/chrad/2010/12/17/tfs-2010-securityhow-to-determine-if-a-user-is-a-member-of-a-tfs-group-or-a-windows-group/)
-- [TFVC branches](https://docs.microsoft.com/en-us/vsts/integrate/previous-apis/tfvc/branches?view=vsts)
+1. [Branching and Merging (Team Explorer Everywhere)](https://msdn.microsoft.com/en-us/library/gg475908(v=vs.100).aspx)
+1. [Determining User Membership in TFS Security Group in TFS 2010](https://blogs.technet.microsoft.com/chrad/2010/12/17/tfs-2010-securityhow-to-determine-if-a-user-is-a-member-of-a-tfs-group-or-a-windows-group/)
+1. [TFVC branches](https://docs.microsoft.com/en-us/vsts/integrate/previous-apis/tfvc/branches?view=vsts)
+1. [Use Team Foundation version control commands](https://docs.microsoft.com/en-us/azure/devops/repos/tfvc/use-team-foundation-version-control-commands?view=azure-devops)
