@@ -11,3 +11,12 @@ Instagram scripts:
 ```bash
 youtube-dl <URL>
 ```
+
+
+## wsl
+
+wsl update upgrade ubuntu
+
+```
+sudo apt-get update && sudo apt-get --with-new-pkgs upgrade
+```
