@@ -2,7 +2,7 @@
 layout: tech-note
 title: Notes on rsync
 permalink: /rsync/
-last_updated: 2017-06-22
+last_updated: 2021-01-23
 comments: true
 tags: [rsync, file_system, synchronization]
 ---
@@ -15,6 +15,14 @@ All command include dry-run switch `-n`.
 {% highlight bash %}
 $ src=/some/dir0
 $ dst=/other/dir1
+{% endhighlight %}
+
+## SSH
+
+Let the user be authenticated and able to login directly to host `hst0`, then use
+
+{% highlight bash %}
+$ src=hst0://abs/path/in/remote/host
 {% endhighlight %}
 
 ## Mirroring
