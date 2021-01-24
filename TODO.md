@@ -20,3 +20,10 @@ wsl update upgrade ubuntu
 ```
 sudo apt-get update && sudo apt-get --with-new-pkgs upgrade
 ```
+
+## restart windows service
+
+```
+powershell -command "Restart-Service nameofsvc -Force"
+
+```
