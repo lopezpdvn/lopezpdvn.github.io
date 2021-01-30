@@ -12,7 +12,7 @@ keywords: [.net, visualstudio, c#]
 
 1. Create folder `Properties` in `ProjectDir`
 
-1. In tab _Resources_ of project properties, add a new text file
+1. In tab _Resources_ of project properties, add a new text file `BuildDateTime`
 
 1. Add command to pre-build event
 
