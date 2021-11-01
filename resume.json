@@ -243,6 +243,8 @@
         "LINQ",
         "Java",
         "SQL",
+        "Hack",
+        "Haskell",
         "HTML",
         "CSS",
         "Bash/UNIX Shell Scripting",
@@ -257,6 +259,8 @@
     {
       "name": "Data/Databases",
       "keywords": [
+        "Hive",
+        "Presto",
         "Microsoft SQL Server",
         "Entity Framework 6",
         "Oracle",
