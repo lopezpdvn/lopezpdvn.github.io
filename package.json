@@ -35,7 +35,7 @@
     "https-proxy-agent": "^5.0.0",
     "lodash": "latest",
     "mem": "^6.1.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "uglify-js": "latest",
     "underscore.string": "^3.3.5"
   }
