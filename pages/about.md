@@ -9,17 +9,17 @@ permalink: /about/
 {{ site.short_status }}
 
 My name is Pedro Ivan Lopez[^1].  {{ site.short_intro }}. I hold a Master's
-degree in Information Engineering. I live near Monterrey, México.
+degree in Information Engineering. I live in the San Francisco Bay Area.
 [[photo]({{ site.baseurl }}/{{ site.images_dir }}/pedro_ivan_lopez_2017_00.jpg "Photo")]
 
 [^1]: Pronounced /'pɛdrɔ ˈaɪ vən ˈlɔpɛs/, see [this FAQ]({{ site.baseurl }}/faq/#how-is-your-name-pronounced "How is your name pronounced?").
 
-My professional interests are software development, Python, JavaScript, Java,
-C#, .NET, web/HTTP, ASP.NET, Node.js, Unix/Linux and open source.
+I work at Meta.
+My professional interests are software development, Haskell, Python,
+JavaScript, TypeScript, Unix/Linux and open source.
 
-My personal interests are software/computers, rationality, [TV/films][],
-[music][], English, medicine, biotech, [philanthropy][], philosophy and
-[reducetarianism][].
+My personal interests are software/computers, rationality, 
+shitposting, [music][], medicine, biotech, [philanthropy][], philosophy.
 
 [reducetarianism]: http://reducetarian.org "Aspire to eat less meat? Then you're a Reducetarian!"
 [philanthropy]: {{ site.baseurl }}/philanthropy "Philanthropy page"
