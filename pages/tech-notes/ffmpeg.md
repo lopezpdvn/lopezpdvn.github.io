@@ -204,16 +204,17 @@ $ ffmpeg -i normal_export.mkv  -i normal_export_Audio_1.mkv -map 0:0 -map 1:1 -c
 
 ## References
 
-- <https://trac.ffmpeg.org/wiki/AudioChannelManipulation>
-- <https://trac.ffmpeg.org/wiki/audio%20types>
-- <https://wiki.archlinux.org/index.php/FFmpeg>
-- <https://trac.ffmpeg.org/wiki/Encode/H.264>
-- <https://trac.ffmpeg.org/wiki/Capture/Desktop>
-- <https://ffmpeg.org/ffmpeg-devices.html>
-- <http://wiki.oz9aec.net/index.php/High_quality_screen_capture_with_Ffmpeg>
-- <https://askubuntu.com/questions/123798/how-to-hear-my-voice-in-speakers-with-a-mic>
-- <http://blog.superuser.com/2012/02/24/ffmpeg-the-ultimate-video-and-audio-manipulation-tool/>
-- <https://trac.ffmpeg.org/wiki>
+1. [How to Install FFmpeg on Windows, Mac, Linux Ubuntu and Debian](https://www.videoproc.com/resource/how-to-install-ffmpeg.htm)
+1. <https://trac.ffmpeg.org/wiki/AudioChannelManipulation>
+1. <https://trac.ffmpeg.org/wiki/audio%20types>
+1. <https://wiki.archlinux.org/index.php/FFmpeg>
+1. <https://trac.ffmpeg.org/wiki/Encode/H.264>
+1. <https://trac.ffmpeg.org/wiki/Capture/Desktop>
+1. <https://ffmpeg.org/ffmpeg-devices.html>
+1. <http://wiki.oz9aec.net/index.php/High_quality_screen_capture_with_Ffmpeg>
+1. <https://askubuntu.com/questions/123798/how-to-hear-my-voice-in-speakers-with-a-mic>
+1. <http://blog.superuser.com/2012/02/24/ffmpeg-the-ultimate-video-and-audio-manipulation-tool/>
+1. <https://trac.ffmpeg.org/wiki>
 
 <!---
 Example of video of hamster jumping to Low Rider song (crop, black/white square,
