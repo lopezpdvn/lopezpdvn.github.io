@@ -25,7 +25,8 @@
     "resume-cli": "latest",
     "jsonresume-theme-kendall": "latest",
     "jsonresume-theme-short": "latest",
-    "jsonresume-theme-stackoverflow": "latest"
+    "jsonresume-theme-stackoverflow": "latest",
+    "jekyll-theme-chirpy": "latest"
   },
   "dependencies": {
     "npm": "^9.2.0"
