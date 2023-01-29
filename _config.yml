@@ -19,7 +19,9 @@ statement_org_ideas: >
   The ideas expressed on this website do not necessarily represent the opinion
   of my employer or any other organization.
 include: [_images, _modules, _sources, _static, resume.pdf, business_card.pdf]
-theme: jekyll-theme-chirpy
+
+remote_theme: pages-themes/midnight@v0.2.0
+
 
 exclude: [
   gulpfile.js,
@@ -57,6 +59,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jekyll-feed
+  - jekyll-remote-theme
 
 defaults:
   -
