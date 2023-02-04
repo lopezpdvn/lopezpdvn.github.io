@@ -39,30 +39,30 @@
     .ni    { color: #800080 } // Name.Entity
     .ne    { color: #fff; font-weight: bold } // Name.Exception
     
-    .nf    { color: #900; font-weight: bold } // Name.Function
-    .nn    { color: #555 } // Name.Namespace
-    .nt    { color: #000080 } // Name.Tag
-    .nv    { color: #008080 } // Name.Variable
+    .nf    { color: #ddd; font-weight: bold } // Name.Function
+    .nn    { color: #aaa } // Name.Namespace
+    .nt    { color: #99ccff } // Name.Tag
+    .nv    { color: #00cc99 } // Name.Variable
     .ow    { font-weight: bold } // Operator.Word
     .w     { color: #bbb } // Text.Whitespace
     .mf    { color: #099 } // Literal.Number.Float
     .mh    { color: #099 } // Literal.Number.Hex
     .mi    { color: #099 } // Literal.Number.Integer
     .mo    { color: #099 } // Literal.Number.Oct
-    .sb    { color: #d14 } // Literal.String.Backtick
-    .sc    { color: #d14 } // Literal.String.Char
-    .sd    { color: #d14 } // Literal.String.Doc
-    .s2    { color: #d14 } // Literal.String.Double
-    .se    { color: #d14 } // Literal.String.Escape
-    .sh    { color: #d14 } // Literal.String.Heredoc
-    .si    { color: #d14 } // Literal.String.Interpol
-    .sx    { color: #d14 } // Literal.String.Other
-    .sr    { color: #009926 } // Literal.String.Regex
-    .s1    { color: #d14 } // Literal.String.Single
-    .ss    { color: #990073 } // Literal.String.Symbol
+    .sb    { color: #ff7777 } // Literal.String.Backtick
+    .sc    { color: #ff7777 } // Literal.String.Char
+    .sd    { color: #ff7777 } // Literal.String.Doc
+    .s2    { color: #ff7777 } // Literal.String.Double
+    .se    { color: #ff7777 } // Literal.String.Escape
+    .sh    { color: #ff7777 } // Literal.String.Heredoc
+    .si    { color: #ff7777 } // Literal.String.Interpol
+    .sx    { color: #ff7777 } // Literal.String.Other
+    .sr    { color: #00cc00 } // Literal.String.Regex
+    .s1    { color: #ff7777 } // Literal.String.Single
+    .ss    { color: #cc00cc } // Literal.String.Symbol
     .bp    { color: #999 } // Name.Builtin.Pseudo
-    .vc    { color: #008080 } // Name.Variable.Class
-    .vg    { color: #008080 } // Name.Variable.Global
-    .vi    { color: #008080 } // Name.Variable.Instance
+    .vc    { color: #00cc99 } // Name.Variable.Class
+    .vg    { color: #00cc99 } // Name.Variable.Global
+    .vi    { color: #00cc99 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
 }
