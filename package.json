@@ -29,7 +29,7 @@
     "jekyll-theme-chirpy": "latest"
   },
   "dependencies": {
-    "npm": "^9.2.0"
+    "npm": "^9.7.2"
   },
   "devDependencies": {
     "handlebars": "^4.7.7",
