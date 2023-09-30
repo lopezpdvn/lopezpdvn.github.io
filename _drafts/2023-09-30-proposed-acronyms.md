@@ -21,7 +21,7 @@ Where LEV is longevity escape velocity
 
 (eg "as a LEVIOLP with long-ish AGI timelines, my retirement strategy is...")
 
-Then add the AGI component for fun: LEVIOLPSAGIT, LEVIOLPLAGIT, etc...
+Optionally, add the AGI timelines component for fun: LEVIOLPSAGIT, LEVIOLPLAGIT, etc...
 
 <br/>
 
