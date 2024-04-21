@@ -16,7 +16,7 @@ degree in Information Engineering. I live in the San Francisco Bay Area.
 
 I work at Meta.
 My professional interests are software development, Haskell, Python,
-JavaScript, TypeScript, Unix/Linux and open source.
+JavaScript, TypeScript, social networks, large scale systems and Unix/Linux.
 
 My personal interests are software/computers, rationality, 
 shitposting, [music][], medicine, biotech, [philanthropy][], philosophy.
