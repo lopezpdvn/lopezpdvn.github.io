@@ -37,7 +37,7 @@ exclude: [
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://pedroivanlopez.com" # the base hostname & protocol for your site
 
-short_intro: "I'm a software engineer interested in large scale systems and the Web"
+short_intro: "I'm a software engineer interested in social networks and large scale systems"
 
 short_status: ""
 
