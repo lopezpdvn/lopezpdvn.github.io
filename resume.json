@@ -37,10 +37,22 @@
 
   "work": [
 
+        {
+      "company": "Meta Platforms, Inc.",
+      "position": "Software Engineer",
+      "address": "1 Hacker Way Menlo Park, CA 94025 United States of America",
+      "startDate": "2021-08-23",
+      "summary": "",
+      "highlights": [
+      ]
+
+    },
+
     {
       "company": "Epicor Software Corporation",
       "position": "Software Developer",
       "startDate": "2017-02-07",
+      "endDate": "2021-08-13",
 
       "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements of customers in North and South America. My role also involves project management responsibilities and technical tasks on a wide range of technologies of the Epicor ICE Framework and ERP 10 platform.",
 
@@ -157,8 +169,8 @@
 
     {
       "institution": "Autonomous University of Nuevo León",
-      "area": "Information Engineering in Computer Science",
-      "studyType": "Master",
+      "area": "Information Systems Engineering",
+      "studyType": "Master of Science",
       "startDate": "2013-01-01",
       "endDate": "2015-01-01",
       "gpa": "4.0 = 94.5/100.0",
@@ -186,7 +198,8 @@
       "institution": "Autonomous University of Nuevo León",
       "area": "Mechatronic Engineering. Intelligent Machines Design. Mención Honorífica de Excelencia.",
       "studyType": "Bachelor",
-      "endDate": "2012-01-01",
+      "startDate": "2006-01-01",
+      "endDate": "2012-06-30",
       "gpa": "4.0 = 95.9/100.0",
       "grade": "95.9/100.0",
       "desc": "Mención Honorífica de Excelencia / Graduated with honors",
