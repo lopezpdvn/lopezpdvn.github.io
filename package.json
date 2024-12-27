@@ -26,6 +26,7 @@
     "jsonresume-theme-kendall": "latest",
     "jsonresume-theme-short": "latest",
     "jsonresume-theme-stackoverflow": "latest",
+    "jsonresume-theme-even": "latest",
     "jekyll-theme-chirpy": "latest"
   },
   "dependencies": {
