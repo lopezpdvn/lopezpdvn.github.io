@@ -1,0 +1,476 @@
+{
+  "basics": {
+    "name": "Pedro Ivan Lopez",
+    "label": "Software Engineer",
+    "picture": "http://pedroivanlopez.com/images/pfp_800.png",
+    "email": "m@pedroivanlopez.com",
+    "website": "http://pedroivanlopez.com",
+
+    "summary": "I'm a Software Development Engineer interested in large-scale systems and the Web. I have 5 years of experience in software engineering and have been programming for over 13 years. My primary development experience is in application programming in C#, JavaScript, TypeScript, Java and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software. A lot of the software I have designed and implemented is publicly available on GitHub.<br/><br/>Other Résumé versions: <a href=\"http://pedroivanlopez.com/resume.pdf\"><strong>PDF</strong></a>, <a href=\"http://pedroivanlopez.com/resume.json\"><strong>JSON Résumé</strong></a>",
+
+    "us_work_permit_msg": "",
+
+    "developer_experience_brief": "I have 5 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in application programming in C#, Java, JavaScript, and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software.\nI worked with design patterns Dependency Injection, Object-Relational Mapping (ORM), Module, Factory method, Iterator, Reactor, Singleton & Observer. Some of the architectural patterns I'm familiar with are Multitier Architecture, Inversion of Control, Event-driven architecture & Model–View–Controller. I have also experience writing data manipulation and query scripts in SQL.\nA lot of the software I have designed and implemented is publicly available on GitHub.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "lopezpdvn",
+        "url": "https://github.com/lopezpdvn"
+      },
+      {
+        "network": "LeetCode",
+        "username": "lopezpdvn",
+        "url": "https://leetcode.com/lopezpdvn/"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "pedroivanlopez",
+        "url": "https://www.linkedin.com/in/pedroivanlopez"
+      },
+      {
+        "network": "Twitter",
+        "username": "lopezpdvn",
+        "url": "https://twitter.com/lopezpdvn"
+      }
+   ]
+  },
+
+  "work": [
+
+        {
+      "company": "Meta Platforms, Inc.",
+      "position": "Software Engineer",
+      "address": "1 Hacker Way Menlo Park, CA 94025 United States of America",
+      "startDate": "2021-08-23",
+      "summary": "",
+      "highlights": [
+      ]
+
+    },
+
+    {
+      "company": "Epicor Software Corporation",
+      "position": "Software Developer",
+      "startDate": "2017-02-07",
+      "endDate": "2021-08-13",
+
+      "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements of customers in North and South America. My role also involves project management responsibilities and technical tasks on a wide range of technologies of the Epicor ICE Framework and ERP 10 platform.",
+
+      "highlights": [
+
+        "Reduced execution time of mass update by 90% by porting business logic from client to server, and by porting database access from Entity Framework to stored procedures in T-SQL",
+        "Achieved the highest billable utilization out of all engineers and software architects of the Mexican team in FY2019",
+        "One of the top 10 employees of the Monterrey branch in Q4 2019, recognized by the company for making a significant business impact and demonstrating corporate core values",
+        "Delivered the first mobile access dashboard solution of the Mexico branch, a responsive HTML5 client with C#/.NET on the backend",
+        "Developed 18 custom electronic interfaces for the ACH network and Positive Pay bank services",
+        "Wrote T-SQL code generators in Python for data/schema definition and data querying",
+        "Created 15 new forms/modules for the Epicor ERP",
+        "Customized financial, supply chain and manufacturing modules of the Epicor ERP system 10+",
+        "Close and direct communication with customers",
+        "Worked on most of the technologies of the Epicor 10 platform, especially with client & server ICE SDK projects",
+        "Enabled functional testing previously blocked by the corruption of test data, by restoring 22 million records to 15 relational database tables from database backups",
+        "Led engineers in upgrading multiple product customizations from Epicor 10.1 to 10.2",
+        "Performed onboarding of new senior resource by mentoring work on an assigned project",
+        "Eased troubleshooting of delivered products deployed on customer's site, by shipping software with optional diagnostic tracing",
+        "Environment: .NET 4.7.2, C# 7.3, LINQ, Entity Framework 6, LINQ to Entities, LINQ to XML, Infragistics, Epicor Internet Component Environment (ICE SDK & ICE Tools), T-SQL for SQL Server 2016, Visual Studio 2019, JIRA, Service Connect, Windows Subsystem for Linux, Windows Server 2012, Windows 10"
+
+      ]
+
+    },
+
+    {
+      "company": "Self-employment/Freelancing",
+      "position": "Freelance Consultant",
+      "startDate": "2015-02-01",
+      "endDate": "2016-12-01",
+      "summary": "Coached job applicants and students on computer science and software engineering topics.",
+      "highlights": [
+        "Designed custom study plans based on assessment of the client's knowledge and skills via tests and interviews",
+        "Did one-on-one mock interviews and provided feedback afterward",
+        "Published implementations of data structures, algorithms, and solutions to programming problems. See <a href=\"https://github.com/lopezpdvn/DataStructuresAlgorithmsCSharp\">Data structures and algorithms in C#</a>, <a href=\"https://github.com/lopezpdvn/software-engineering-problems-javascript\">Software engineering problems in JavaScript</a>.  <a href=\"https://github.com/lopezpdvn/SoftwareEngineeringProblemsCSharp\">Software engineering problems in C#</a>, <a href=\"https://github.com/lopezpdvn/pysweng\">pysweng: Software engineering problems in Python</a>, <a href=\"https://github.com/lopezpdvn/data-structures-algorithms-javascript\">Data structures and algorithms in JavaScript</a>",
+        "Environment: Java, C#, Python, JavaScript, Node.js, .NET Core, Visual Studio Code, xUnit, JUnit, Mocha, Maven"
+      ]
+    },
+
+    {
+      "company": "Self-employment/Freelancing",
+      "position": "Technical Writer",
+      "startDate": "2015-02-01",
+      "endDate": "2016-12-01",
+      "summary": "Wrote technical documentation on topics such as programming, system administration, audio and video processing and production and security",
+      "highlights": [
+          "Published more than 45 technical notes at <a href=\"http://pedroivanlopez.com/tech-notes\">http://pedroivanlopez.com/tech-notes</a>",
+          "Some of the software tools and applications I wrote about are Fedora Linux, FFmpeg, Windows, Python, JavaScript, Node.js, OpenSSH, Git, Android, Anki, Cygwin, Audacity, among others",
+          "Environment: Jekyll, Markdown, Fedora, Windows, Python"
+      ]
+    },
+
+    {
+      "company": "Infosys Ltd",
+      "position": "Systems Engineer",
+      "startDate": "2013-01-14",
+      "endDate": "2015-02-13",
+      "summary": "Monterrey, Nuevo León, Mexico. Contractor for a Fortune 100 multinational banking and financial services corporation. Development, administration and support team for a global trade finance application used mainly in North America and Asia",
+      "highlights": [
+        "Coded and tested new agents/batch-jobs or new features of existing jobs in Java, C#, JavaScript and Windows Batch",
+        "Designed and implemented a Windows Script Host script in JavaScript to retrieve scanned image and metadata files from the scanner workstations to our server and prepare for further processing",
+        "Fixed approximately 350 incidents, including code bugs, development of new features, customers with invalid data in production and outages",
+        "On-call primary contact for approximately 20 weeks",
+        "Led approximately 30 Request For Change procedures, mainly to install code updates and to update data via SQL scripts",
+        "Supported production and test environments for clients and other teams in the bank",
+        "Knowledge management via documentation of known issues and fixes, to coach offshore resources",
+        "Environment: Java, .NET, C#, JavaScript, SQL, Bash, Hibernate, Spring, Eclipse, Toad, ClearCase, RedHat Linux, Windows Server, Autosys, Windows Script Host"
+      ]
+    },
+
+    {
+      "company": "Center for the Development of the Software Industry",
+      "position": "Software Engineer",
+      "startDate": "2012-10-01",
+      "endDate": "2013-01-31",
+      "summary": "Monterrey, Nuevo León, Mexico. Tested and validated a financial web application and platform",
+      "highlights": [
+        "Performed testing and quality assurance of an enterprise financial Web platform for a Mexican bank, implemented in Java Enterprise Edition and JavaScript",
+        "Types of tests performed: black box, system, functional, acceptance",
+        "Environment: Internet Explorer, Mozilla Firefox, Excel, JavaScript"
+      ]
+    },
+
+    {
+      "company": "School of Physics and Mathematics at UANL",
+      "position": "Research Assistant",
+      "startDate": "2011-08-01",
+      "endDate": "2012-02-28",
+      "summary": "Monterrey, Nuevo León, Mexico. Internship. Research topics: control engineering, robust control, linear systems, filters.",
+      "highlights": [
+        "Developed and maintained robust control systems software in Python, MATLAB and Simulink",
+        "Co-authored one published paper: Basin, M.; Serna, M.; Lopez-Hernandez, P.I., <a href=\"http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6606296&isnumber=6605987\">Central energy-to-peak filter design for uncertain linear systems</a>, Control Conference (ASCC), June 2013",
+        "Performed system administration of workstations and maintenance of hardware units",
+        "Environment: Python, MATLAB, LabVIEW, NI Elvis, LaTeX"
+      ]
+    },
+
+    {
+      "company": "School of Mechanical and Electrical Engineering at UANL",
+      "position": "Laboratory Assistant",
+      "startDate": "2012-02-01",
+      "endDate": "2012-08-31",
+      "summary": "Monterrey, Nuevo León, Mexico. Internship.",
+      "highlights": [
+        "Supported students in designing and troubleshooting programs in Python, MATLAB and LabVIEW",
+        "Performed system administration of workstations and maintenance of hardware units",
+        "Assisted professors with teaching electronics and programming during laboratory sessions",
+        "Environment: Python, MATLAB, LabVIEW, NI Elvis, LaTeX, BASIC"
+      ]
+    }
+  ],
+
+  "education": [
+
+    {
+      "institution": "Autonomous University of Nuevo León",
+      "area": "Information Systems Engineering",
+      "studyType": "Master of Science",
+      "startDate": "2013-01-01",
+      "endDate": "2015-01-01",
+      "gpa": "4.0 = 94.5/100.0",
+      "grade": "95.5/100.0",
+      "courses": [
+        "Research Methodology",
+        "Quantitative Methods (Statistics)",
+        "Discrete Mathematics for Geometric Design",
+        "Programming and Simulation",
+        "Information Systems",
+        "Object Oriented Programming",
+        "Database Management and Design",
+        "E-Business Oriented Information Systems",
+        "Computer Science Seminar",
+        "Management of Information Technology Projects",
+        "Technologies for Internet Information Security",
+        "Technologies for Organizational Change",
+        "Information Technology Management and Planning",
+        "Decision Support Systems",
+        "Human–computer Interaction"
+      ]
+    },
+
+    {
+      "institution": "Autonomous University of Nuevo León",
+      "area": "Mechatronic Engineering. Intelligent Machines Design. Mención Honorífica de Excelencia.",
+      "studyType": "Bachelor",
+      "startDate": "2006-01-01",
+      "endDate": "2012-06-30",
+      "gpa": "4.0 = 95.9/100.0",
+      "grade": "95.9/100.0",
+      "desc": "Mención Honorífica de Excelencia / Graduated with honors",
+      "courses": [
+        "Basic Programming",
+        "Probability and Statistics",
+        "Discrete Mathematics",
+        "Data Structures",
+        "Advanced Programming",
+        "Theoretical Computer Science",
+        "Digital Electronics",
+        "Object Oriented Programming",
+        "Data Acquisition",
+        "Robot Architecture",
+        "Artificial Intelligence and Neural Networks",
+        "Project Management",
+        "Human–Computer Interaction",
+        "Machine Vision",
+        "Perception",
+        "Machine Perception"
+      ]
+    }
+
+  ],
+
+  "publications": [
+
+    {
+      "name": "Central energy-to-peak filter design for uncertain linear systems",
+      "publisher": "Control Conference (ASCC)",
+      "releaseDate": "2013-06-23",
+      "website": "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6606296&isnumber=6605987",
+      "summary": "This paper presents the central finite-dimensional energy-to-peak filter for linear systems that is optimal with respect to a modified Bolza-Meyer quadratic criterion including the first degree state-dependent term and the attenuation control term with the opposite sign. The obtained solution is based on reducing the original energy-to-peak filtering problem to the corresponding mean-module filtering problem, using the technique proposed in [1]. The paper first presents the central energy-to-peak filter for linear systems, based on the optimal mean-module filter from [2], assuming the standard filtering conditions of stabilizability, detectability, and noise orthonormality. Finally, to relax the standard conditions, the paper presents the generalized version of the designed energy-to-peak filter in the absence of the noise orthonormality. Numerical simulations are conducted to verify performance of the designed energy-to-peak filter for linear systems against the central suboptimal H∞ filter [3]. The simulation results show a definite advantage in the values of the noise-output energy-to-peak norm in favor of the designed filter."
+    },
+
+    {
+      "name": "Technical notes",
+      "publisher": "Self-published",
+      "website": "http://pedroivanlopez.com/tech-notes/",
+      "summary": "Technical documentation on topics such as programming, system administration, audio/video processing and production and security"
+    }
+
+  ],
+
+  "skills": [
+
+    {
+      "name": "Languages",
+      "keywords": [
+        "JavaScript",
+        "C#",
+        "TypeScript",
+        "Python",
+        "LINQ",
+        "Java",
+        "SQL",
+        "Hack",
+        "Haskell",
+        "HTML",
+        "CSS",
+        "Bash/UNIX Shell Scripting",
+        "VB.NET",
+        "MATLAB",
+        "LabVIEW",
+        "XSLT",
+        "LaTeX"
+      ]
+    },
+
+    {
+      "name": "Data/Databases",
+      "keywords": [
+        "Hive",
+        "Presto",
+        "Microsoft SQL Server",
+        "Entity Framework 6",
+        "Oracle",
+        "MySQL",
+        "SQLite",
+        "JSON",
+        "YAML",
+        "XML"
+      ]
+    },
+
+    {
+      "name": "Technologies",
+      "keywords": [
+        ".NET 4.7.2",
+        "LINQ to Entities",
+        "LINQ to XML",
+        "Infragistics",
+        "Epicor Internet Component Environment (ICE SDK & ICE Tools)",
+        "Java",
+        "Node.js",
+        "xUnit",
+        "Jekyll",
+        "ASP.NET 4 & 5",
+        "ASP.NET MVC 5",
+        "Docker",
+        "Spring",
+        "Hibernate",
+        "ASP.NET Web Forms",
+        "Java EE",
+        "Sphinx documentation tools",
+        "lejOS"
+      ]
+    },
+
+    {
+      "name": "Design patterns",
+      "keywords": [
+        "Dependency Injection", "Object-Relational Mapping (ORM)", "Module", "Factory method", "Iterator", "Reactor", "Singleton", "Observer"
+      ]
+    },
+    {
+      "name": "Architectural patterns",
+      "keywords": [
+        "Inversion of Control", "Event-driven architecture", "Model–View–Controller"
+      ]
+    },
+    {
+      "name": "Applications",
+      "keywords": [
+        "Microsoft Visual Studio", "Visual Studio Code", "Git", "ClearCase", "Toad", "Eclipse", "Cygwin", "Vim", "GNU Make", "Ant", "IPython", "OpenSSH", "Maven"
+      ]
+    },
+    {
+      "name": "Operating Systems",
+      "keywords": [
+        "UNIX (Fedora, Ubuntu, Red Hat Enterprise Linux, Android)", "Microsoft Windows (Server 2003, XP, Vista, 7, 8, 10)"
+      ]
+    },
+    {
+      "name": "Other",
+      "keywords": [
+        "Linux user for 8 years", "Proficient with UNIX command line interface", "Technical documentation writing", "Homebuilt computers enthusiast"
+      ]
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Full professional proficiency"
+    }
+  ],
+
+  "interests": [
+    {
+      "name": "Software",
+      "keywords": [
+        "Development",
+        "Design",
+        "Industry",
+        "Web/HTTP",
+        "Security"
+      ]
+    },
+    {
+        "name": "Open source",
+        "keywords": [
+            "Open Collaboration",
+            "Security",
+            "Open Data"
+        ]
+    },
+    {
+        "name": "Rationality",
+        "keywords": [
+            "Decision-making"
+        ]
+    }
+  ],
+
+  "volunteer": [
+    {
+      "organization": "ASPNET5CO",
+      "website": "http://pedroivanlopez.com/aspnet5co",
+      "summary": "Advocacy and Community. Efforts to advocate the ASP.NET Core framework",
+      "startDate": "2015-04-02"
+    },
+    {
+      "organization": "Data structures and algorithms in C#",
+      "website": "https://github.com/lopezpdvn/DataStructuresAlgorithmsCSharp",
+      "summary": "Data structures and algorithms in C#",
+      "startDate": "2015-06-26"
+    },
+    {
+      "organization": "mazerob",
+      "website": "http://pedroivanlopez.com/mazerob",
+      "summary": "Bluetooth-remote-control robot implemented with Java Virtual Machines on a PC and a Lego NXT Brick",
+      "startDate": "2015-07-15"
+    },
+    {
+      "organization": "printer73x",
+      "website": "http://pedroivanlopez.com/printer73x",
+      "summary": "A computer numerical control system for printing binary images",
+      "startDate": "2011-12-03"
+    },
+    {
+      "organization": "cerca",
+      "website": "http://pedroivanlopez.com/cerca",
+      "summary": "A distance measurement system running on a personal computer and an 8-bit microcontroller",
+      "startDate": "2012-11-02"
+    },
+    {
+      "organization": "pysyspol",
+      "website": "https://github.com/lopezpdvn/pysyspol",
+      "summary": "Cross-platform system policy for applications and environments, with Python",
+      "startDate": "2016-06-11"
+    },
+    {
+      "organization": "syspol-js",
+      "website": "https://github.com/lopezpdvn/syspol-js",
+      "summary": "Cross-platform system policy for applications and environments, with JavaScript",
+      "startDate": "2015-12-26"
+    },
+    {
+      "organization": "dotfiles",
+      "website": "https://github.com/lopezpdvn/dotfiles",
+      "summary": "Miscellaneous configuration files and directories",
+      "startDate": "2015-07-27"
+    },
+    {
+      "organization": "Software engineering problems in C#",
+      "website": "https://github.com/lopezpdvn/SoftwareEngineeringProblemsCSharp",
+      "summary": "Software engineering problems in C#",
+      "startDate": "2015-08-06"
+    },
+    {
+      "organization": "resources-viewer",
+      "website": "https://github.com/lopezpdvn/resources-viewer",
+      "summary": "Browser based static app for viewing resources",
+      "startDate": "2015-08-24"
+    },
+    {
+      "organization": "timeman",
+      "website": "https://github.com/lopezpdvn/timeman",
+      "summary": "Simple time management types",
+      "startDate": "2016-07-06"
+    },
+    {
+      "organization": "syspol",
+      "website": "https://github.com/lopezpdvn/syspol",
+      "summary": "Cross-platform system policy for applications and environments",
+      "startDate": "2015-08-09"
+    },
+    {
+      "organization": "swebserv",
+      "website": "https://github.com/lopezpdvn/swebserv",
+      "summary": "Java program that simulates Denial-of-service attacks on HTTP/web servers",
+      "startDate": "2013-07-09"
+    },
+    {
+      "organization": "",
+      "summary": "For other projects see my <a href=\"/tech-notes\">technical notes</a>, as well as my <a href=\"https://github.com/lopezpdvn\">Github</a> and <a href=\"https://gist.github.com/lopezpdvn\">Gist</a> profiles."
+    }
+  ],
+
+  "awards": [
+    {
+      "title": "Mención Honorífica de Excelencia",
+      "date": "2012-09-01",
+      "awarder": "Autonomous University of Nuevo León",
+      "summary": "Award given to students that graduated with overall grade of 95/100 or more"
+    }
+  ]
+
+}
