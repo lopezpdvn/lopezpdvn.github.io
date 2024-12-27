@@ -1,16 +1,14 @@
 {
   "basics": {
     "name": "Pedro Ivan Lopez",
-    "label": "Software Engineer",
+    "label": "Engineer",
     "picture": "http://pedroivanlopez.com/images/pfp_800.png",
     "email": "m@pedroivanlopez.com",
-    "website": "http://pedroivanlopez.com",
 
-    "summary": "I'm a Software Development Engineer interested in large-scale systems and the Web. I have 5 years of experience in software engineering and have been programming for over 13 years. My primary development experience is in application programming in C#, JavaScript, TypeScript, Java and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software. A lot of the software I have designed and implemented is publicly available on GitHub.<br/><br/>Other Résumé versions: <a href=\"http://pedroivanlopez.com/resume.pdf\"><strong>PDF</strong></a>, <a href=\"http://pedroivanlopez.com/resume.json\"><strong>JSON Résumé</strong></a>",
+    "summary": "Software engineer. Master's degree in Information Systems Engineering.",
 
     "us_work_permit_msg": "",
 
-    "developer_experience_brief": "I have 5 years of experience in software engineering and have been programming for over 12 years. My primary development experience is in application programming in C#, Java, JavaScript, and Python; including multitier architecture applications and agent/batch/job-oriented programs for financial systems. I have also worked on system administration for Windows and UNIX, hardware/computer engineering and robust control software.\nI worked with design patterns Dependency Injection, Object-Relational Mapping (ORM), Module, Factory method, Iterator, Reactor, Singleton & Observer. Some of the architectural patterns I'm familiar with are Multitier Architecture, Inversion of Control, Event-driven architecture & Model–View–Controller. I have also experience writing data manipulation and query scripts in SQL.\nA lot of the software I have designed and implemented is publicly available on GitHub.",
     "profiles": [
       {
         "network": "GitHub",
@@ -26,24 +24,29 @@
         "network": "LinkedIn",
         "username": "pedroivanlopez",
         "url": "https://www.linkedin.com/in/pedroivanlopez"
-      },
-      {
-        "network": "Twitter",
-        "username": "lopezpdvn",
-        "url": "https://twitter.com/lopezpdvn"
       }
    ]
   },
 
   "work": [
 
-        {
+    {
       "company": "Meta Platforms, Inc.",
       "position": "Software Engineer",
-      "address": "1 Hacker Way Menlo Park, CA 94025 United States of America",
+      "address": "1 Hacker Way<br>Menlo Park, CA<br>94025<br>United States of America",
       "startDate": "2021-08-23",
-      "summary": "",
+      "summary": "1 Hacker Way<br>Menlo Park<br>CA<br>94025<br>United States of America",
       "highlights": [
+        "Help build the next generation of systems behind Meta's products, create web and/or mobile applications that reach over two billion people, and build high volume servers to support content.",
+        "Harness passion for technology and help build highly scalable performant solutions.",
+        "Develop knowledge of algorithms and computer science concepts and ability to apply that knowledge to real world systems and production problems, taking architectural decisions.",
+        "Employ specialty knowledge across the following areas: data processing, programming languages, databases, networking, and operating systems.",
+        "Utilize knowledge of database management system software, development environment software, object oriented development software, program testing software, operating system software, and various programming languages.",
+        "Utilize knowledge of computer hardware and software, including applications and programming, and of systems architecture and components, including networking and storage.",
+        "Building large-scale infrastructure applications",
+        "Designing and completing medium to large features independently without guidance",
+        "Experience owning a particular component, feature or system",
+        "Environment: Python, Haskell, PHP, Hack, SQL, Apache Thrift, Presto, Apache Hive."
       ]
 
     },
@@ -54,7 +57,7 @@
       "startDate": "2017-02-07",
       "endDate": "2021-08-13",
 
-      "summary": "As a Software Developer of the Custom Solutions Group, I mainly work on extending our base products to better fit the business requirements of customers in North and South America. My role also involves project management responsibilities and technical tasks on a wide range of technologies of the Epicor ICE Framework and ERP 10 platform.",
+      "summary": "Boulevard Antonio L. Rodríguez #1882 Plaza Sur<br>Col Sta. María<br>Monterrey, Nuevo Leon<br>Mexico<br>CP 64650<br><br>As a Software Developer of the Custom Solutions Group, I worked on extending our base products to better fit the business requirements of customers in North and South America. My role also involved project management responsibilities and technical tasks on a wide range of technologies of the Epicor ICE Framework and ERP 10 platform.",
 
       "highlights": [
 
@@ -79,11 +82,28 @@
     },
 
     {
+        "company": "Infosys Ltd",
+        "position": "Systems Engineer",
+        "startDate": "2013-01-14",
+        "endDate": "2015-02-13",
+        "summary": "Corporativo Santa Maria<br>No. 130 Boulevard Díaz Ordaz<br>18th Floor, Col. Santa Maria<br>Monterrey, Nuevo León<br>Mexico<br>CP 64650<br>Phone +52 81 8850 9300<br>Fax +52 81 8850 9301<br><br>Monterrey, Nuevo León, Mexico. Contractor for a Fortune 100 multinational banking and financial services corporation. Development, administration and support team for a global trade finance application used mainly in North America and Asia", "highlights": [
+          "Coded and tested new agents/batch-jobs or new features of existing jobs in Java, C#, JavaScript and Windows Batch",
+          "Designed and implemented a Windows Script Host script in JavaScript to retrieve scanned image and metadata files from the scanner workstations to our server and prepare for further processing",
+          "Fixed approximately 350 incidents, including code bugs, development of new features, customers with invalid data in production and outages",
+          "On-call primary contact for approximately 20 weeks",
+          "Led approximately 30 Request For Change procedures, mainly to install code updates and to update data via SQL scripts",
+          "Supported production and test environments for clients and other teams in the bank",
+          "Knowledge management via documentation of known issues and fixes, to coach offshore resources",
+          "Environment: Java, .NET, C#, JavaScript, SQL, Bash, Hibernate, Spring, Eclipse, Toad, ClearCase, RedHat Linux, Windows Server, Autosys, Windows Script Host"
+        ]
+      },
+
+    {
       "company": "Self-employment/Freelancing",
       "position": "Freelance Consultant",
       "startDate": "2015-02-01",
       "endDate": "2016-12-01",
-      "summary": "Coached job applicants and students on computer science and software engineering topics.",
+      "summary": "Rincón de los Cedros 216<br>Col. Rincón de Anáhuac<br>San Nicolás de los Garza, Nuevo León<br>México<br>CP 66422<br><br>Coached job applicants and students on computer science and software engineering topics.",
       "highlights": [
         "Designed custom study plans based on assessment of the client's knowledge and skills via tests and interviews",
         "Did one-on-one mock interviews and provided feedback afterward",
@@ -97,7 +117,7 @@
       "position": "Technical Writer",
       "startDate": "2015-02-01",
       "endDate": "2016-12-01",
-      "summary": "Wrote technical documentation on topics such as programming, system administration, audio and video processing and production and security",
+      "summary": "Rincón de los Cedros 216<br>Col. Rincón de Anáhuac<br>San Nicolás de los Garza, Nuevo León<br>México<br>CP 66422<br><br>Wrote technical documentation on topics such as programming, system administration, audio and video processing and production and security",
       "highlights": [
           "Published more than 45 technical notes at <a href=\"http://pedroivanlopez.com/tech-notes\">http://pedroivanlopez.com/tech-notes</a>",
           "Some of the software tools and applications I wrote about are Fedora Linux, FFmpeg, Windows, Python, JavaScript, Node.js, OpenSSH, Git, Android, Anki, Cygwin, Audacity, among others",
@@ -105,30 +125,14 @@
       ]
     },
 
-    {
-      "company": "Infosys Ltd",
-      "position": "Systems Engineer",
-      "startDate": "2013-01-14",
-      "endDate": "2015-02-13",
-      "summary": "Monterrey, Nuevo León, Mexico. Contractor for a Fortune 100 multinational banking and financial services corporation. Development, administration and support team for a global trade finance application used mainly in North America and Asia",
-      "highlights": [
-        "Coded and tested new agents/batch-jobs or new features of existing jobs in Java, C#, JavaScript and Windows Batch",
-        "Designed and implemented a Windows Script Host script in JavaScript to retrieve scanned image and metadata files from the scanner workstations to our server and prepare for further processing",
-        "Fixed approximately 350 incidents, including code bugs, development of new features, customers with invalid data in production and outages",
-        "On-call primary contact for approximately 20 weeks",
-        "Led approximately 30 Request For Change procedures, mainly to install code updates and to update data via SQL scripts",
-        "Supported production and test environments for clients and other teams in the bank",
-        "Knowledge management via documentation of known issues and fixes, to coach offshore resources",
-        "Environment: Java, .NET, C#, JavaScript, SQL, Bash, Hibernate, Spring, Eclipse, Toad, ClearCase, RedHat Linux, Windows Server, Autosys, Windows Script Host"
-      ]
-    },
+
 
     {
       "company": "Center for the Development of the Software Industry",
       "position": "Software Engineer",
       "startDate": "2012-10-01",
       "endDate": "2013-01-31",
-      "summary": "Monterrey, Nuevo León, Mexico. Tested and validated a financial web application and platform",
+      "summary": "Loma Redonda 1515 Poniente<br>Colonia Loma Larga<br>Monterrey, Nuevo León<br>México<br>C.P. 64710<br>+52 (81)83-29-4000 Ext. 7750<br><br>Tested and validated a financial web application and platform",
       "highlights": [
         "Performed testing and quality assurance of an enterprise financial Web platform for a Mexican bank, implemented in Java Enterprise Edition and JavaScript",
         "Types of tests performed: black box, system, functional, acceptance",
@@ -137,11 +141,11 @@
     },
 
     {
-      "company": "School of Physics and Mathematics at UANL",
+      "company": "School of Physics and Mathematics at Universidad Autónoma de Nuevo León",
       "position": "Research Assistant",
       "startDate": "2011-08-01",
       "endDate": "2012-02-28",
-      "summary": "Monterrey, Nuevo León, Mexico. Internship. Research topics: control engineering, robust control, linear systems, filters.",
+      "summary": "Ciudad Universitaria, Pedro de Alba s/n<br>San Nicolás de los Garza, Nuevo León<br>México<br>C.P. 66455<br>+52 (81) 8329-4000<br><br>Internship. Research topics: control engineering, robust control, linear systems, filters.",
       "highlights": [
         "Developed and maintained robust control systems software in Python, MATLAB and Simulink",
         "Co-authored one published paper: Basin, M.; Serna, M.; Lopez-Hernandez, P.I., <a href=\"http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6606296&isnumber=6605987\">Central energy-to-peak filter design for uncertain linear systems</a>, Control Conference (ASCC), June 2013",
@@ -151,11 +155,11 @@
     },
 
     {
-      "company": "School of Mechanical and Electrical Engineering at UANL",
+      "company": "School of Mechanical and Electrical Engineering at Universidad Autónoma de Nuevo León",
       "position": "Laboratory Assistant",
       "startDate": "2012-02-01",
       "endDate": "2012-08-31",
-      "summary": "Monterrey, Nuevo León, Mexico. Internship.",
+      "summary": "Ciudad Universitaria, Pedro de Alba s/n<br>San Nicolás de los Garza, Nuevo León<br>México<br>C.P. 66455<br>+52 (81) 8329-4000<br><br>Internship.",
       "highlights": [
         "Supported students in designing and troubleshooting programs in Python, MATLAB and LabVIEW",
         "Performed system administration of workstations and maintenance of hardware units",
@@ -168,7 +172,7 @@
   "education": [
 
     {
-      "institution": "Autonomous University of Nuevo León",
+      "institution": "Universidad Autónoma de Nuevo León",
       "area": "Information Systems Engineering",
       "studyType": "Master of Science",
       "startDate": "2013-01-01",

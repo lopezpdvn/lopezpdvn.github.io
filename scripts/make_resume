@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
+# resume export Pedro_Ivan_Lopez_Resume_2025.pdf -r ./resume_tn.json -t jsonresume-theme-kendall
+
 '''Make resume
 '''
 
