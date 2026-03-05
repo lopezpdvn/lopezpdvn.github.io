@@ -4,6 +4,20 @@ title: tmp
 permalink: /tmp/
 ---
 
+# 2026-03-05, thoughts on art
+
+i am the opposite of a purist
+
+DJs and VJs are the kind of artists i admire the most, in theory, because they mix reality at will
+
+my definition of art is very simple
+
+art one of the largest sets but smaller than the universal set. most things are art
+
+art is mind-dependent, so value is relative
+
+a simple art definition like this enables theoretical exploration of art objects in altered states of consciusness, alien consciusness and machine consciousness
+
 # 2026-03-04
 
 ## prompt: what are you in denial about?
