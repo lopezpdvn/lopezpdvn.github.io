@@ -4,6 +4,16 @@ title: tmp
 permalink: /tmp/
 ---
 
+# 2026-03-20 biostasis without survival
+
+signing up for biostasis and cryonics is rational even if we knew for sure (we don't) that it won't work for preserving personal identity and survival. this refers to the scenarios where the entity uploaded is not a mind (it's a philosophical zombie, mind uploading failed, etc...)
+
+reasons:
+
+1. personally, this is the most important one. biostasis has always been an art project in addition to the attempt to survive. art involves putting a signature of the artists' mind into the univers: `artist mind's signature in the brain -> art object -> artist's mind signature outside the artist's brain`. the preserved brain is, at least, a signature of the artist's mind, which can seed artistic endeavors in virtual and/or physical reality. so you have `artist mind's signature preserved -> art object -> artist's mind signature outside the preserved artist`. picture AI agents that are instructed to create generative art projects and take seeds from the preserved brain of the artist. the artist can also be uploaded and participate actively with other artists (including humans) in art projects, even if the uploaded entity is "dead". this has the potential to create massive amounts of art objects.
+
+2. therapy tools for humans close to the preserved person. basically, picture family and friends of the deceased person, that want to interact with the uploaded entity, for conflict resolution, trauma recovery, brainstorming, or simply to keep company. this converges with the idea that in the future nobody will be really alone anymore, since very sophisticated entities like advanced LLMs and/or uploaded humans will be around everywhere.
+
 # 2026-03-05, thoughts on art
 
 i am the opposite of a purist
