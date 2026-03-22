@@ -4,6 +4,11 @@ title: tmp
 permalink: /tmp/
 ---
 
+# Reductionist Patronizing Tax
+
+the tendency for any sufficiently simplified analysis of human behavior or social dynamics to come off as patronizing, condescending, or rude. The "tax" appears when a model gains explanatory power by zooming out, compressing context, and treating people more like predictable components of a system than like full human subjects with lived experience. In other words, the clearer and more reductionist the model becomes, the more it risks sounding like it is talking down to the people it explains.
+
+
 # 2026-03-20 biostasis without survival
 
 signing up for biostasis and cryonics is rational even if we knew for sure (we don't) that it won't work for preserving personal identity and survival. this refers to the scenarios where the entity uploaded is not a mind (it's a philosophical zombie, mind uploading failed, etc...)
