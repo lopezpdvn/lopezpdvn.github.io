@@ -4,6 +4,10 @@ title: tmp
 permalink: /tmp/
 ---
 
+# everyone is someone else's useful idiot
+
+everyone is someone else's useful idiot
+
 # Reductionist Patronizing Tax
 
 the tendency for any sufficiently simplified analysis of human behavior or social dynamics to come off as patronizing, condescending, or rude. The "tax" appears when a model gains explanatory power by zooming out, compressing context, and treating people more like predictable components of a system than like full human subjects with lived experience. In other words, the clearer and more reductionist the model becomes, the more it risks sounding like it is talking down to the people it explains.
