@@ -4,6 +4,16 @@ title: tmp
 permalink: /tmp/
 ---
 
+# Functional nihilism
+
+we are so alone, so young and so isolated
+
+alone: the universe is vast but almost empty of life, let alone intelligent life
+
+young: The first _homo sapiens_ appear in the final single second of the 12-hour universal day (if you compress the universe's age into 12 hours)
+
+isolated: we can't communicate with the simulators, with other simulations, or with other universes in the multiverse
+
 # everyone is someone else's useful idiot
 
 everyone is someone else's useful idiot
