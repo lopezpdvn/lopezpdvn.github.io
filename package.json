@@ -30,7 +30,7 @@
     "jekyll-theme-chirpy": "latest"
   },
   "dependencies": {
-    "npm": "^9.7.2"
+    "npm": "^9.9.4"
   },
   "devDependencies": {
     "handlebars": "^4.7.7",
