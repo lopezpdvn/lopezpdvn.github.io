@@ -2,43 +2,32 @@
   "name": "Pedro-Ivan-Lopez's-website",
   "version": "1.1.0",
   "description": "Pedro Ivan Lopez's website",
-  "homepage": "http://pedroivanlopez.com",
+  "homepage": "https://pedroivanlopez.com",
   "license": "CC-BY-NC-ND-4.0",
   "author": {
     "name": "Pedro Ivan Lopez",
     "email": "m@pedroivanlopez.com",
-    "url": "http://pedroivanlopez.com"
+    "url": "https://pedroivanlopez.com"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/lopezpdvn/lopezpdvn.github.io"
   },
   "scripts": {
-    "push": "git push origin master",
-    "servelocal": "npm run build && ./bin/servelocal",
-    "build": "npm run clean && ./scripts/make_network_profiles && npm run resume-export",
-    "clean": "rm -rvf _site && rm -rvf _includes/network_profiles/buttons/* && rm -rvf _includes/network_profiles/text/*",
+    "serve": "bundle exec jekyll serve",
+    "build": "./scripts/make_network_profiles && npm run resume-export && bundle exec jekyll build",
+    "clean": "rm -rf _site",
     "resume-export": "resume export resume.html --theme kendall && ./scripts/make_resume",
     "resume-publish": "npm run resume-export && resume publish --theme kendall"
   },
-  "optionalDependencies": {
-    "resume-cli": "latest",
-    "jsonresume-theme-kendall": "latest",
-    "jsonresume-theme-short": "latest",
-    "jsonresume-theme-stackoverflow": "latest",
-    "jsonresume-theme-even": "latest",
-    "jekyll-theme-chirpy": "latest"
-  },
-  "dependencies": {
-    "npm": "^9.7.2"
-  },
+  "private": true,
   "devDependencies": {
-    "handlebars": "^4.7.7",
-    "https-proxy-agent": "^5.0.0",
-    "lodash": "latest",
-    "mem": "^6.1.0",
-    "minimist": "^1.2.6",
-    "uglify-js": "latest",
-    "underscore.string": "^3.3.5"
+    "jsonresume-theme-kendall": "*",
+    "resume-cli": "*"
+  },
+  "overrides": {
+    "jest-extended": "^4.0.2",
+    "markdown-it": "^14.1.0",
+    "pug": "^3.0.3"
   }
 }
