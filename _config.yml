@@ -11,8 +11,6 @@ facebook_username: dreilopz
 timezone: America/Monterrey
 bitcoin_main_address: "1NspYfQDQFivQk5GA2jzTsN2HaEsPYxdEZ"
 
-permalink: "pretty"
-#permalink: "/blog/:year/:month/:title"
 permalink: "/:title"
 images_dir: "images"
 statement_org_ideas: >
@@ -43,7 +41,7 @@ exclude: [
 ]
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://pedroivanlopez.com" # the base hostname & protocol for your site
+url: "https://pedroivanlopez.com" # the base hostname & protocol for your site
 
 short_intro: "I'm a software engineer interested in social networks and large scale systems"
 
@@ -58,7 +56,7 @@ button_img_size: 30
 # Build settings
 markdown: kramdown
 
-highlight: pygments
+highlighter: rouge
 
 # GitHub Pages documentation calls this entry `plugins`.
 plugins:
