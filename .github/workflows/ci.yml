@@ -1,0 +1,35 @@
+name: CI
+
+# GitHub Pages only builds the publishing branch (master). This builds every
+# branch/PR with the same github-pages gem and checks internal links, so
+# breakage shows up before merge.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      LC_ALL: C.UTF-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+      - name: Build
+        run: bundle exec jekyll build --strict_front_matter
+      - name: Check internal links
+        # /aspnet5co and /anki-jekyll are project sites from other repos,
+        # served under the same domain; they don't exist in this build.
+        run: >
+          bundle exec htmlproofer _site
+          --disable-external
+          --no-enforce-https
+          --ignore-files "/\/(cerca|mazerob|printer73x)\/doc\//"
+          --ignore-urls "/^\/(aspnet5co|anki-jekyll)(\/|$)/"

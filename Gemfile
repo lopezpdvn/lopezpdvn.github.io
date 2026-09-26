@@ -12,3 +12,7 @@ gem "wdm", "~> 0.1", platforms: [:windows]
 
 # Required by Jekyll 3.x on Ruby >= 3.0 for `jekyll serve`
 gem "webrick", "~> 1.8"
+
+group :test do
+  gem "html-proofer", "~> 5.0"
+end

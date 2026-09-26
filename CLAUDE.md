@@ -10,17 +10,20 @@ Personal website (pedroivanlopez.com, see `CNAME`), a Jekyll site hosted on GitH
 
 | Task | Command |
 |---|---|
+| Install | `bundle install` (Gemfile uses the `github-pages` gem, which is the same Jekyll 3.10 + plugins as production) |
 | Local serve | `bundle exec jekyll serve` |
-| Full rebuild of generated files (clean, network profiles, résumé) | `npm run build` |
-| Regenerate social/network profile includes only | `./scripts/make_network_profiles` (Python 3 + PyYAML) |
-| Regenerate `resume.html` from `resume.json` | `npm run resume-export` (needs `resume-cli` and `jsonresume-theme-kendall`) |
+| Build (what CI runs) | `bundle exec jekyll build --strict_front_matter` |
+| Internal link check (what CI runs) | see the `htmlproofer` step in `.github/workflows/ci.yml`; run it with `LC_ALL=C.UTF-8` or nokogiri chokes on non-ASCII |
+| Regenerate network profile includes | `./scripts/make_network_profiles` (Python 3 + PyYAML) |
+| Regenerate `resume.html` from `resume.json` | `npm install && npm run resume-export` |
 
-There are no tests or linters.
+CI (`.github/workflows/ci.yml`) runs on every push/PR. GitHub Pages itself only builds `master`, so work on a branch and merge after CI passes.
 
-Known build issues:
-- The `Gemfile` pins Jekyll `~> 3.8.5`, but `_config.yml` uses `remote_theme` and `jekyll-remote-theme`, which are not in the `Gemfile`. A local `bundle exec jekyll` build may fail until you add that gem or switch to the `github-pages` gem.
-- `npm run servelocal` calls `./bin/servelocal`, but `/bin` is gitignored and not in the repo.
-- `npm run clean` deletes the committed `_includes/network_profiles/*` files. Always regenerate them afterwards.
+Gotchas:
+- `_config.yml` `exclude:` replaces Jekyll's default excludes. Anything tooling-related at the repo root (e.g. `vendor/`, lockfiles) must be listed there or the build breaks or publishes it.
+- Liquid runs on all Markdown. Code samples containing `{{`/`{%` need `{% raw %}…{% endraw %}`, and `{% capture %}` variables must be defined before first use.
+- `/aspnet5co` and `/anki-jekyll` are project sites from other repos under the same domain, so they're ignored by the link check.
+- `npm audit` still reports `extract-zip` (via puppeteer in `resume-cli`). There is no upstream fix; it's only used for local PDF export. Regenerating `resume.html` with the current kendall theme changes its markup (photo becomes gravatar unless `basics.image` is set).
 
 ## Architecture
 
