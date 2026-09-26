@@ -12,9 +12,11 @@ keywords: [api, rest, postman, javascript]
 
 ## Visualize new lines in strings
 
+{% raw %}
 ```javascript
 const template = '{{{stdErr}}}';
 pm.visualizer.set(template, {
     stdErr: pm.response.json()['stdErr'].replace(/\n/g, '<br>')
 });
 ```
+{% endraw %}
