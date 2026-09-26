@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Personal website (pedroivanlopez.com, see `CNAME`), a Jekyll site hosted on GitHub Pages. GitHub Pages builds it on push to `master`. Nothing is built in CI, so any generated file the site needs must be committed.
+Personal website (pedroivanlopez.com, see `CNAME`), a Jekyll site hosted on GitHub Pages. GitHub Pages builds it on push to `master`. Pages runs no custom build steps, so generated files (network-profile includes, `resume.html`) must be committed.
 
 ## Commands
 
