@@ -1,9 +1,11 @@
 - q: When did you start using the GNU/Linux operating system?
+  id: when-did-you-start-using-the-gnulinux-operating-system
   a: |
       In late 2008, the first GNU/Linux distribution I installed and used was
       Fedora 9.
 
 - q: How is your name pronounced?
+  id: how-is-your-name-pronounced
   a: |
       Short answer:  /'pɛdrɔ ˈaɪ vən ˈlɔpɛs/
 
@@ -13,12 +15,14 @@
           (/'pɛdrɔ iˈvɑːn ˈlɔpɛs/) pronunciations.
 
 - q: What does *dreilopz* mean?
+  id: what-does-dreilopz-mean
   a: |
       It's my main internet nickname that I use on some sites. The "word"
       *dreilopz* is just a pronounceable permutation of the set of characters
       in my name (Pedro I. Lopez).
 
 - q: What websites do you maintain?
+  id: what-websites-do-you-maintain
   a: |
       As of 2016, just two:
 
@@ -30,9 +34,11 @@
         historical purposes.
 
 - q: When did you start being a vegetarian?
+  id: when-did-you-start-being-a-vegetarian
   a: In September 2011.
 
 - q: Why are you a vegetarian?
+  id: why-are-you-a-vegetarian
   a: |
       In short, because it's ethically efficient. A great body of robust
       evidence points out that the more vegan one is, the better society is as
@@ -42,6 +48,7 @@
       to care more about moral progress.
 
 - q: What happened to the music videos on your YouTube channel?
+  id: what-happened-to-the-music-videos-on-your-youtube-channel
   a: |
       I removed some pre-2013 recordings of me playing covers and original
       songs on the guitar and bass from my [YouTube
@@ -51,6 +58,7 @@
       original stuff, so I think it's best to keep it private.
 
 - q: Why do you use your middle name?
+  id: why-do-you-use-your-middle-name
   a: |
       In short, because I think it's a good choice for optimizing
       recognizability.
@@ -72,6 +80,7 @@
       way, my full name is Pedro Iván López Hernández.
 
 - q: What are your favorite music genres?
+  id: what-are-your-favorite-music-genres
   a: |
       At heart, I'm a rhythm kind of guy, so I tend to listen more to metal
       (progressive, tech, death, etc.), EDM and some jazz/fusion too. I also
@@ -79,14 +88,17 @@
       [music](../music).
 
 - q: Do you play any musical instruments?
+  id: do-you-play-any-musical-instruments
   a: Yes, I play guitar and bass guitar. See page [music](../music).
 
 - q: What are your favorite TV/film genres?
+  id: what-are-your-favorite-tvfilm-genres
   a: |
       Comedy is my favorite TV/film genre, particularly sitcoms and stand up. I
       do watch a lot of other stuff, though.
 
 - q: Why are you public about your giving?
+  id: why-are-you-public-about-your-giving
   a: |
       Because I want to inspire and encourage people to give effectively, and
       help develop a culture of giving. Research shows that when people know
@@ -100,6 +112,7 @@
       where your mouth is."
 
 - q: Why do you sometimes post stuff privately, and later make it public?
+  id: why-do-you-sometimes-post-stuff-privately-and-later-make-it-public
   a: |
       In short, it's because I judge some content not worthy of my *immediate
       attention points*, while still thinking it might be useful for

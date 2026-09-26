@@ -52,7 +52,7 @@ Progress on projects:
 [resources-viewer]: {{ github_prefix }}/resources-viewer "Browser based static app to view resources"
 [pysyspol]: {{ github_prefix }}/pysyspol "syspol on CPython"
 [Data Structures Algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures and algorithms in C#"
-[Android]: {{ site.baseurl }}/tech-notes/android
+[Android]: {{ site.baseurl }}/android/
 [ffmpeg]: {{ site.baseurl }}/ffmpeg "ffmpeg"
 [Kdenlive]: {{ site.baseurl }}/kdenlive "Kdenlive"
 [Fedora 23 set up]: {{ site.baseurl }}/fedora-23-set-up "Fedora 23 set up"

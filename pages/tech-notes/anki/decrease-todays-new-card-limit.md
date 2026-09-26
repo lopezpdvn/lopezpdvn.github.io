@@ -12,7 +12,7 @@ keywords: [anki, memory, space_repetition, flashcard]
 {:toc}
 
 In short, this is accomplished by
-[burying all new cards](#bury-all-new-cards-of-a-deck) and then unburying new
+[burying all new cards]({{ site.baseurl }}/anki/bury-all-new-cards-of-a-deck/) and then unburying new
 cards selectively. After you have buried all new cards, open the browser and
 search `deck:deckname is:new`[^1]. Display the `Due` field, which should
 display integers numbers in parentheses. Select all the cards you want to

@@ -13,10 +13,10 @@ This post describes how to set up a debugging and development environment for
 Android based systems on an Ubuntu machine, specially for flashing custom
 recoveries and ROMs, but not for coding. I'm basically pulling together
 information from other sources across the web, be sure to check out the
-[References](#references) and other external links for more details.  You only
+[References]({{ site.baseurl }}/set-up-debugging-development-environment-for-android-on-linux/#references) and other external links for more details.  You only
 need admin privileges to configure the permissions of the USB device with
 `udev` rules (see [Configure device group ownership and
-permissions](#configure-device-group-ownership-and-permissions)).
+permissions]({{ site.baseurl }}/set-up-debugging-development-environment-for-android-on-linux/#configure-device-group-ownership-and-permissions)).
 
 Although some information is specific to the [LG Nexus
 4](https://en.wikipedia.org/wiki/Nexus_4) and
@@ -201,7 +201,7 @@ List of devices attached
 <device serial no.>       unauthorized usb:<Bus>-<Device>
 {% endhighlight %}
 
-<a name="confirm-adb-key" ></a>
+<span id="confirm-adb-key"></span>
 The Nexus 4 will ask you to confirm USB debugging from the host Linux system.
 Click OK if the RSA key fingerprint shown by the phone matches the output of
 the below command (code snippet copied from [this forum

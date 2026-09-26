@@ -10,6 +10,8 @@ permalink: /october-2015-in-review/
 excerpt: October 2015 personal review, summary of activities, misc notes...
 ---
 
+{% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
+
 This is the October 2015 in review post. The previous monthly review post is
 [here]({% post_url 2015/2015-10-07-september-2015-in-review %}).  As you may
 notice from the contents of this post, October was kind of a slow month.
@@ -60,7 +62,6 @@ Progress on projects:
 - [nodejsplay][] [*2 commits*] Added command line interfaces to some scripts.
 - [Personal website][]: [*17 commits*] Blog posts and general maintenance.
 
-{% capture github_prefix %}https://github.com/{{ site.github_username }}{% endcapture %}
 
 [Syspol]: {{ github_prefix }}/syspol
 [dotfiles]: {{ github_prefix }}/dotfiles

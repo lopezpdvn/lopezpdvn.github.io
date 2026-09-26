@@ -57,7 +57,7 @@ Progress on projects:
 [resources-viewer]: {{ github_prefix }}/resources-viewer "Browser based static app to view resources"
 [pysyspol]: {{ github_prefix }}/pysyspol "syspol on CPython"
 [Data Structures Algorithms in C#]: {{ github_prefix }}/DataStructuresAlgorithmsCSharp "Data structures and algorithms in C#"
-[Android]: {{ site.baseurl }}/tech-notes/android
+[Android]: {{ site.baseurl }}/android/
 [Ubuntu Studio]: {{ site.baseurl }}/ubuntu-studio "Ubuntu Studio"
 [Audio engineering]: {{ site.baseurl }}/audio-engineering "Audio engineering"
 [dotfiles]: {{ github_prefix }}/dotfiles "Misc configuration files and directories"
