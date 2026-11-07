@@ -4,6 +4,12 @@ title: tmp
 permalink: /tmp/
 ---
 
+# political views are algorithmic
+
+<img width="1156" height="1020" alt="image" src="https://github.com/user-attachments/assets/045343a2-6cb8-40e9-9999-184b2814e994" />
+<img width="560" height="416" alt="Obsidian_bFSK1chsOx" src="https://github.com/user-attachments/assets/684b6680-d2c3-46bd-88ac-c54e8ab3563c" />
+<img width="938" height="932" alt="chrome_A6w0LGsUE8" src="https://github.com/user-attachments/assets/8df0e667-30bd-4a0a-a313-a39ebc401260" />
+
 # Functional nihilism and comedy
 
 we are so alone, so young and so isolated
