@@ -11,10 +11,21 @@ layout: null
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    {% comment %}
+      Posts are always in the feed. Pages opt in with `feed: true` and need a `date`
+      timestamp. A page's description stands in for its body, because page content may
+      not be rendered yet when this file renders.
+    {% endcomment %}
+    {% assign feed_pages = site.pages | where: "feed", true %}
+    {% assign feed_items = site.posts | concat: feed_pages | sort: "date" | reverse %}
+    {% for post in feed_items limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
+        {% if post.collection == "posts" %}
         <description>{{ post.content | xml_escape }}</description>
+        {% else %}
+        <description>{{ post.description | default: post.title | xml_escape }}</description>
+        {% endif %}
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
