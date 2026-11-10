@@ -9,14 +9,21 @@ permalink: /blog/
   <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS.</a></p>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% comment %} Same items as feed.xml: all posts plus pages with feed: true. {% endcomment %}
+    {% assign feed_pages = site.pages | where: "feed", true %}
+    {% assign blog_items = site.posts | concat: feed_pages | sort: "date" | reverse %}
+    {% for post in blog_items %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        {% if post.collection == "posts" %}
         {{ post.excerpt }}... <a href="{{ post.url | prepend: site.baseurl }}">See whole post</a>
+        {% else %}
+        <p>{{ post.description | default: post.title }}</p> <a href="{{ post.url | prepend: site.baseurl }}">See whole note</a>
+        {% endif %}
 
       </li>
     {% endfor %}

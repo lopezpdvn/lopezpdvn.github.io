@@ -9,6 +9,17 @@ permalink: /writings/
 All my writings. See also [projects]({{ site.baseurl }}/projects "Projects"),
 [blog]({{ site.baseurl }}/blog "Blog") and
 [tech notes]({{ site.baseurl }}/tech-notes "Tech notes").
+{% comment %}
+  Notes published by the notes publisher (generated_by: notes-publish) list themselves here, newest first,
+  derived from the site files, so a republish never adds a second entry and an
+  unpublish removes it. The hand-written list continues below.
+{% endcomment %}
+{% assign pub_pages = site.pages | where: "generated_by", "notes-publish" %}
+{% assign pub_posts = site.posts | where: "generated_by", "notes-publish" %}
+{% assign pub_items = pub_posts | concat: pub_pages | sort: "date" | reverse %}
+{% for item in pub_items -%}
+- [{{ item.title }}]({{ item.url | prepend: site.baseurl }}){% if item.description %} *{{ item.description }}*{% endif %} ({{ item.date | date: "%-d %b %Y" }})
+{% endfor -%}
 
 - [March 2017 in review]({% post_url 2017/2017-04-02-march-2017-in-review %}) *Personal review, summary of activities, misc notes...* (2 April 2016)
 - [February 2017 in review]({% post_url 2017/2017-03-04-february-2017-in-review %}) *Personal review, summary of activities, misc notes...* (4 March 2016)
