@@ -10,18 +10,6 @@ permalink: /tmp/
 <img width="560" height="416" alt="Obsidian_bFSK1chsOx" src="https://github.com/user-attachments/assets/684b6680-d2c3-46bd-88ac-c54e8ab3563c" />
 <img width="938" height="932" alt="chrome_A6w0LGsUE8" src="https://github.com/user-attachments/assets/8df0e667-30bd-4a0a-a313-a39ebc401260" />
 
-# Functional nihilism and comedy
-
-we are so alone, so young and so isolated
-
-alone: the universe is vast but almost empty of life, let alone intelligent life
-
-young: The first _homo sapiens_ appear in the final single second of the 12-hour universal day (if you compress the universe's age into 12 hours)
-
-isolated: we can't communicate with the simulators, with other simulations, or with other universes in the multiverse
-
-among the very few reasonable responses are existential angst, denial and laughter. i recommend choosing laughter, hence, comedy
-
 # everyone is someone else's useful idiot
 
 everyone is someone else's useful idiot
